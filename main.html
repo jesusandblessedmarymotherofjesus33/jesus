@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرة العذراء مريم و الرب يسوع</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body dir="rtl">
+    <header>
+        <h1 id="title">سيرة العذراء مريم و الرب يسوع</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('mary')">سيرة العذراء مريم</a></li>
+                <li><a href="#" onclick="showSection('jesus')">سيرة الرب يسوع</a></li>
+                <li><a href="index.html">العودة للصفحة الرئيسية</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="mary">
+        <h2>سيرة العذراء مريم</h2>
+        <p>
+            العذراء مريم هي والدة يسوع المسيح، وتحتل مكانة عظيمة في المسيحية.
+            تُعرف بطهارتها وقداستها، وتكرمها الكنائس في جميع أنحاء العالم.
+        </p>
+    </section>
+
+    <section id="jesus" style="display: none;">
+        <h2>سيرة الرب يسوع</h2>
+        <p>
+            يسوع المسيح هو ابن الله، وُلد من العذراء مريم بقدرة الروح القدس.
+            جاء ليخلص البشرية من الخطيئة، عاش حياة مليئة بالمحبة والتعاليم الإلهية،
+            وصنع العديد من المعجزات. صُلب وقام من بين الأموات في اليوم الثالث.
+        </p>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById("mary").style.display = "none";
+            document.getElementById("jesus").style.display = "none";
+
+            document.getElementById(sectionId).style.display = "block";
+        }
+    </script>
+</body>
+</html>

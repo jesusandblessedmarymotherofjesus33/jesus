@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القديسة الطاهرة العذراء مريم</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- زر فتح وإغلاق القائمة الجانبية -->
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+    <!-- القائمة الجانبية -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+        <h2>القائمة</h2>
+        <ul>
+            <li><a href="main.html">السيرة</a></li>
+            <li><a href="support.html">الدعم</a></li>
+            <li class="dropdown">
+                <a href="#">🌍 اللغة</a>
+                <ul class="dropdown-menu">
+                    <li onclick="changeLanguage('ar')">العربية</li>
+                    <li onclick="changeLanguage('en')">English</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <header>
+        <h1>القديسة الطاهرة العذراء مريم</h1>
+    </header>
+
+    <section class="home">
+        <h2>مرحبًا بك في الموقع</h2>
+        <p>تعرف على سيرة العذراء مريم وسيرة الرب يسوع المسيح من خلال موقعنا المتكامل.</p>
+        <button onclick="start()">ابدأ</button>
+    </section>
+
+    <!-- ✅ قسم تعريف الموقع -->
+    <section class="about-site">
+        <h2>💡 عن الموقع</h2>
+        <p>يهدف هذا الموقع إلى تقديم معلومات دقيقة عن سيرة القديسة الطاهرة العذراء مريم وسيرة الرب يسوع المسيح.  
+        نقدم محتوى موثوقًا يعتمد على المصادر الدينية والتاريخية لتعزيز المعرفة والإيمان.</p>
+    </section>
+
+    <script src="script.js"></script>
+    
+<!-- ✅ قسم الصورة -->
+<section class="image-section">
+    <h2>🌟 صورة السيد المسيح والعذراء مريم</h2>
+    <img src="jesusandblessedvirginmary.jpg" alt="السيد المسيح والعذراء مريم">
+</section>
+<!-- ✅ قسم الصلاة -->
+<section class="prayer-section">
+    <h2>🙏 صلاة السلام لك يا مريم</h2>
+    <p class="prayer-text">
+        السلام لكِ يا مريم، يا ممتلئة نعمة، الرب معكِ، مباركة أنتِ في النساء،  
+        ومباركة هي ثمرة بطنك سيدنا يسوع.  
+        يا قديسة مريم، يا والدة الله، صلّي لأجلنا نحن الخطاة،  
+        الآن وفي ساعة موتنا. آمين.
+    </p>
+</section>
+<!-- ✅ قسم معرض الصور -->
+<section class="gallery">
+    <h2>🖼️ معرض الصور</h2>
+    <div class="gallery-container">
+        <img src="تنزيل.jpeg" alt="صورة 1" onclick="openFullScreen(this)">
+        <img src="images/image2.jpg" alt="صورة 2" onclick="openFullScreen(this)">
+        <img src="images/image3.jpg" alt="صورة 3" onclick="openFullScreen(this)">
+        <img src="images/image4.jpg" alt="صورة 4" onclick="openFullScreen(this)">
+    </div>
+</section>
+
+<!-- ✅ نافذة تكبير الصور -->
+<div id="fullscreen-container" class="fullscreen-container" onclick="closeFullScreen()">
+    <img id="fullscreen-image">
+</div>
+</body>
+</html>
