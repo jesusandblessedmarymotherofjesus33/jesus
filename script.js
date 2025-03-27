@@ -1,4 +1,4 @@
- فتح وإغلاق القائمة الجانبية
+// فتح وإغلاق القائمة الجانبية
 function toggleSidebar() {
     let sidebar = document.getElementById("sidebar");
     let body = document.body;
