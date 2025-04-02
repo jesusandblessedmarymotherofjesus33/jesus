@@ -3,76 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="site-title"> القديسة الطاهرة العذراء مريم ام الله الأعظم من الكل والارحم من الكل والاقوي من الكل</title>
+    <title>القديسة العذراء مريم الطاهرة</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="jabm.jpg">
 </head>
 <body>
-
-    <!-- زر القائمة الجانبية -->
-    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
-
-    <!-- القائمة الجانبية -->
-    <div class="sidebar" id="sidebar">
-        <button class="close-btn" onclick="toggleSidebar()">✖</button>
-        <h2 id="menu-title">القائمة</h2>
-        <ul>
-            <li><a href="main.html" id="menu-bio">السيرة</a></li>
-            <li><a href="support.html" id="menu-support">الدعم</a></li>
-            <li class="dropdown">
-                <a href="#">🌍 <span id="menu-lang">اللغة</span></a>
-                <ul class="dropdown-menu">
-                    <li onclick="changeLanguage('ar')">العربية</li>
-                    <li onclick="changeLanguage('en')">English</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
     <header>
-        <h1 id="main-title">القديسة الطاهرة العذراء مريم</h1>
+        <h1>القديسة العذراء مريم الطاهرة</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="prayers.html">الصلوات</a></li>
+                <li><a href="calendar.html">التقويم</a></li>
+                <li><a href="media.html">مكتبة الوسائط</a></li>
+                <li><a href="support.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <section class="home">
-        <h2 id="welcome-title">مرحبًا بك في الموقع</h2>
-        <p id="welcome-text">تعرف على سيرة العذراء مريم وسيرة الرب يسوع المسيح من خلال موقعنا.</p>
-        <button onclick="start()" id="start-btn">ابدأ</button>
-    </section>
-
-    <!-- عن الموقع -->
-    <section class="about-site">
-        <h2 id="about-title">💡 عن الموقع</h2>
-        <p id="about-text">
-            يهدف هذا الموقع إلى تقديم معلومات دقيقة عن سيرة القديسة الطاهرة العذراء مريم وسيرة الرب يسوع المسيح.
-        </p>
-    </section>
-
-    <!-- صورة -->
-    <section class="image-section">
-        <h2 id="image-title">🌟 صورة السيد المسيح والعذراء مريم</h2>
-        <img src="jesusandblessedvirginmary.jpg" alt="السيد المسيح والعذراء مريم">
-    </section>
-
-    <!-- الصلاة -->
-    <section class="prayer-section">
-        <h2 id="prayer-title">🙏 صلاة السلام لك يا مريم</h2>
-        <p id="prayer-text" class="prayer-text">
-            السلام لكِ يا مريم، يا ممتلئة نعمة، الرب معكِ مبارك انت في السماء مباركه ثمره بطنك سيدنا يسوع  المسيح القديسه يا طاهره الوالده الله صلي من أجلنا نحن الخطاه الان وكل اوان وفي ساعه موتنا امين
-        </p>
-    </section>
-
-    <!-- معرض الصور -->
-    <section class="gallery">
-        <h2 id="gallery-title">🖼️ معرض الصور</h2>
-        <div class="gallery-container">
-            <img src="images/image1.jpg" alt="صورة 1" onclick="openFullScreen(this)">
-            <img src="images/image2.jpg" alt="صورة 2" onclick="openFullScreen(this)">
-            <img src="images/image3.jpg" alt="صورة 3" onclick="openFullScreen(this)">
-        </div>
-    </section>
-
-    <script src="lang-data.js"></script>
-    <script src="script.js"></script>
-
+    <main>
+        <aside>
+            <h2>القائمة الجانبية</h2>
+            <ul>
+                <li><a href="#">صلوات يومية</a></li>
+                <li><a href="#">ترانيم</a></li>
+                <li><a href="#">أعياد وقديسين</a></li>
+            </ul>
+        </aside>
+        <section>
+            <h2>مرحبًا بك في موقع القديسة العذراء مريم الطاهرة</h2>
+            <p>هنا يمكنك استكشاف الصلوات والمناسبات المسيحية والاستماع إلى الترانيم الروحية.</p>
+        </section>
+    </main>
 </body>
 </html>
