@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة الوسائط</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .media-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .media-item {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+            background-color: #f9f9f9;
+        }
+        .media-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .media-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .media-item h3 {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #333;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مكتبة الوسائط</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="prayers.html">الصلوات</a></li>
+                <li><a href="calendar.html">التقويم</a></li>
+                <li><a href="media.html">مكتبة الوسائط</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="media-container">
+        <!-- صورة 1 -->
+        <div class="media-item">
+            <img src="jabm.jpg" alt="صورة القديسة مريم">
+            <h3>صورة القديسة مريم</h3>
+        </div>
+
+        <!-- صورة 2 -->
+        <div class="media-item">
+            <img src="jabm.jpg" alt="صورة الكنيسة">
+            <h3>صورة الكنيسة</h3>
+        </div>
+
+        <!-- فيديو 1 -->
+        <div class="media-item">
+            <video controls>
+                <source src="path/to/video1.mp4" type="video/mp4">
+                <p>متصفحك لا يدعم الفيديو.</p>
+            </video>
+            <h3>فيديو عن القديسين</h3>
+        </div>
+
+        <!-- فيديو 2 -->
+        <div class="media-item">
+            <video controls>
+                <source src="path/to/video2.mp4" type="video/mp4">
+                <p>متصفحك لا يدعم الفيديو.</p>
+            </video>
+            <h3>فيديو عن حياة البابا كيرلس</h3>
+        </div>
+
+        <!-- صورة 3 -->
+        <div class="media-item">
+            <img src="jabm.jpg" alt="صورة الميلاد">
+            <h3>صورة ميلاد المسيح</h3>
+        </div>
+
+        <!-- صورة الملاك ميخائيل -->
+        <div class="media-item">
+            <img src="path/to/michael-archangel.jpg" alt="صورة الملاك ميخائيل">
+            <h3>صورة الملاك ميخائيل</h3>
+        </div>
+
+        <!-- صورة جميع الملائكة -->
+        <div class="media-item">
+            <img src="angels.jpg" alt="صورة جميع الملائكة">
+            <h3>صورة جميع الملائكة</h3>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
