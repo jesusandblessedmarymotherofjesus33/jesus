@@ -3,164 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>القديسة العذراء مريم</title>
+    <meta name="google-site-verification" content="CCXAuBk4djgB7HMA4AeE66ul9_zDfENFb62m1I8lLeQ" />
+    <title>القديسة الطاهرة العذراء مريم</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-        }
-        header {
-            background-color: #3b3a3a;
-            color: white;
-            padding: 15px;
-            width: 100%;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .main-content {
-            margin: 20px;
-            flex: 1;
-        }
-
-        /* تصميم الشريط الجانبي */
-        .sidebar {
-            width: 250px;
-            background-color: #f4f4f4;
-            padding: 15px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-        .sidebar h2 {
-            font-size: 1.5em;
-            color: #333;
-        }
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .sidebar ul li {
-            margin-bottom: 15px;
-        }
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 1.2em;
-        }
-        .sidebar ul li a:hover {
-            color: #007BFF;
-        }
-
-        .content-area {
-            margin-left: 270px;
-        }
-
-        .section {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .section img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-        }
-        .section h2 {
-            font-size: 2em;
-            margin-top: 20px;
-            color: #3b3a3a;
-        }
-
-        footer {
-            background-color: #3b3a3a;
-            color: white;
-            padding: 10px;
-            margin-top: 50px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
 
-    <header>
-        <h1>القديسة العذراء مريم</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="prayers.html">الصلوات</a></li>
-                <li><a href="calendar.html">التقويم</a></li>
-                <li><a href="media.html">مكتبة الوسائط</a></li>
-                <li><a href="support.html">اتصل بنا</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- زر فتح وإغلاق القائمة الجانبية -->
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
 
-    <!-- الشريط الجانبي -->
-    <div class="sidebar">
-        <h2>القائمة الجانبية</h2>
+    <!-- القائمة الجانبية -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+        <h2>القائمة</h2>
         <ul>
+            <li><a href="main.html">السيرة</a></li>
+            <li><a href="support.html">الدعم</a></li>
             <li><a href="index.html">الرئيسية</a></li>
             <li><a href="prayers.html">الصلوات</a></li>
-            <li><a href="calendar.html">التقويم المسيحي</a></li>
+            <li><a href="calendar.html">التقويم</a></li>
             <li><a href="media.html">مكتبة الوسائط</a></li>
             <li><a href="support.html">اتصل بنا</a></li>
+     
+            <li class="dropdown">
+                <a href="#">🌍 اللغة</a>
+                <ul class="dropdown-menu">
+                    <li onclick="changeLanguage('ar')">العربية</li>
+                    <li onclick="changeLanguage('en')">English</li>
+                </ul>
+            </li>
         </ul>
     </div>
 
-    <!-- المحتوى الرئيسي -->
-    <div class="content-area">
-        <div class="main-content">
-            <!-- القسم الأول: صورة مع نص ترحيبي -->
-            <div class="section">
-                <img src="path/to/welcome-image.jpg" alt="القديسة مريم">
-                <h2>أهلاً بكم في موقع القديسة العذراء مريم</h2>
-                <p>نحن هنا لتكريم والاحتفال بحياة السيدة العذراء مريم وأعمالها المقدسة.</p>
-            </div>
+    <header>
+        <h1>القديسة الطاهرة العذراء مريم</h1>
+    </header>
 
-            <!-- القسم الثاني: روابط مباشرة إلى الصفحات المهمة -->
-            <div class="section">
-                <h2>اكتشف المزيد</h2>
-                <p>يمكنك استكشاف المزيد من المحتوى المفيد من خلال الروابط التالية:</p>
-                <ul>
-                    <li><a href="prayers.html">الصلوات</a></li>
-                    <li><a href="calendar.html">التقويم المسيحي</a></li>
-                    <li><a href="media.html">مكتبة الوسائط</a></li>
-                </ul>
-            </div>
+    <section class="home">
+        <h2>مرحبًا بك في الموقع</h2>
+        <p>تعرف على سيرة العذراء مريم وسيرة الرب يسوع المسيح من خلال موقعنا المتكامل.</p>
+        <button onclick="start()">ابدأ</button>
+    </section>
 
-            <!-- القسم الثالث: نبذة عن الموقع -->
-            <div class="section">
-                <h2>نبذة عن الموقع</h2>
-                <p>موقعنا يهدف إلى تقديم محتوى ديني وروحي عن السيدة العذراء مريم، بالإضافة إلى تقويم الأعياد المسيحية، الصلوات، وغيرها من المحتويات الروحية التي تهم المؤمنين.</p>
-            </div>
-        </div>
-    </div>
+    <!-- ✅ قسم تعريف الموقع -->
+    <section class="about-site">
+        <h2>💡 عن الموقع</h2>
+        <p>يهدف هذا الموقع إلى تقديم معلومات دقيقة عن سيرة القديسة الطاهرة العذراء مريم وسيرة الرب يسوع المسيح.  
+        نقدم محتوى موثوقًا يعتمد على المصادر الدينية والتاريخية لتعزيز المعرفة والإيمان.</p>
+    </section>
 
+    <script src="script.js"></script>
     
+<!-- ✅ قسم الصورة -->
+<section class="image-section">
+    <h2>🌟 صورة السيد المسيح والعذراء مريم</h2>
+    <img src="jesusandblessedvirginmary.jpg" alt="السيد المسيح والعذراء مريم">
+</section>
+<!-- ✅ قسم الصلاة -->
+<section class="prayer-section">
+    <h2>🙏 صلاة السلام لك يا مريم</h2>
+    <p class="prayer-text">
+        السلام لكِ يا مريم، يا ممتلئة نعمة، الرب معكِ، مباركة أنتِ في النساء،  
+        ومباركة هي ثمرة بطنك سيدنا يسوع.  
+        يا قديسة مريم، يا والدة الله، صلّي لأجلنا نحن الخطاة،  
+        الآن وفي ساعة موتنا. آمين.
+    </p>
+</section>
+<!-- ✅ قسم معرض الصور -->
+<section class="gallery">
+    <h2>🖼️ معرض الصور</h2>
+    <div class="gallery-container">
+        <img src="تنزيل.jpeg" alt="صورة 1" onclick="openFullScreen(this)">
+        <img src="images/image2.jpg" alt="صورة 2" onclick="openFullScreen(this)">
+        <img src="images/image3.jpg" alt="صورة 3" onclick="openFullScreen(this)">
+        <img src="images/image4.jpg" alt="صورة 4" onclick="openFullScreen(this)">
+    </div>
+</section>
 
+<!-- ✅ نافذة تكبير الصور -->
+<div id="fullscreen-container" class="fullscreen-container" onclick="closeFullScreen()">
+    <img id="fullscreen-image">
+</div>
+<link rel="icon" href="تنزيل.pneg" type="image/pneg">
 </body>
 </html>
