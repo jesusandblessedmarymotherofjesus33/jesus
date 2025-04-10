@@ -1101,7 +1101,7 @@ body {
 header {
     background: linear-gradient(to right, #4CAF50, #81C784); /* تدرج لوني هادئ */
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
