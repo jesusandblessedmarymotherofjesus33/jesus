@@ -1,3 +1,18 @@
+<script>
+  let toTopBtn = document.getElementById("toTopBtn");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      toTopBtn.style.display = "block";
+    } else {
+      toTopBtn.style.display = "none";
+    }
+  };
+
+  toTopBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
 // فتح وإغلاق القائمة الجانبية
 function toggleSidebar() {
     let sidebar = document.getElementById("sidebar");
