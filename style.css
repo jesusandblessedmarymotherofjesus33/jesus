@@ -1080,3 +1080,168 @@ footer {
     width: 100%;
     bottom: 0;
 }
+/* إعادة تعيين بعض الإعدادات الافتراضية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* تنسيق الجسم العام */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3); /* تدرج لوني خفيف */
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    color: #333;
+}
+
+/* تنسيق الهيدر */
+header {
+    background: linear-gradient(to right, #4CAF50, #81C784); /* تدرج لوني هادئ */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+/* تنسيق شريط التنقل */
+nav {
+    background-color: #333;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    float: right;
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* تنسيق المحتوى الرئيسي */
+.container {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* تنسيق القائمة الجانبية */
+.sidebar {
+    width: 220px;
+    background: #ffffff;
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar:hover {
+    transform: translateX(10px);
+}
+
+.sidebar h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.sidebar a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #4CAF50;
+    color: white;
+    padding-left: 20px;
+}
+
+/* تنسيق المحتوى الرئيسي */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background: #4CAF50; /* خلفية خضراء زاهية */
+    color: white; /* النص باللون الأبيض */
+    text-align: center; /* محاذاة النص في المنتصف */
+    padding: 20px 0; /* إضافة حشو في الأعلى والأسفل */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* تغطية عرض الصفحة بالكامل */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* إضافة ظلال لأسفل الفوتر */
+    border-radius: 15px 15px 0 0; /* جعل الحواف العلوية دائرية */
+    margin-top: 20px; /* إضافة مسافة بين المحتوى والفوتر */
+}
+
+/* تنسيق النص داخل الفوتر */
+footer p {
+    font-size: 1.2em;
+    font-weight: 600; /* جعل النص أكثر سمكًا */
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* إضافة تأثير التمرير على الفوتر */
+footer:hover {
+    background: #388E3C; /* تغيير اللون عند التمرير */
+    transform: translateY(-5px); /* رفع الفوتر قليلاً عند التمرير */
+    box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.3); /* زيادة الظلال */
+    cursor: pointer; /* تغيير شكل المؤشر عند التمرير */
+}
+
+/* إضافة تصميم فاصل خطي أعلى الفوتر */
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+/* تأثيرات اضافية على الأزرار */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+
