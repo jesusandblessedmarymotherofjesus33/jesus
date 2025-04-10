@@ -687,3 +687,180 @@ footer {
     60% { transform: scale(1.05); opacity: 1; }
     100% { transform: scale(1); }
 }
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(to bottom, #E3F2FD, #BBDEFB);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(to right, #1E3C58, #2A4D69);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #FFD700;
+    animation: slideDown 1s ease-in-out;
+}
+
+nav {
+    background: #D9E3F0;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid #FFD700;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #1E3C58;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #FFD700;
+    bottom: 0;
+    left: -100%;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    left: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    font-size: 26px;
+    color: #1E3C58;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: #FFD700;
+    bottom: -5px;
+    left: 25%;
+    border-radius: 2px;
+    animation: underline 1s ease-in-out;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 20px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1E3C58;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background: #1E3C58;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #FFD700;
+    color: #1E3C58;
+}
+
+footer {
+    background: linear-gradient(to right, #1E3C58, #2A4D69);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid #FFD700;
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes underline {
+    from { width: 0; }
+    to { width: 50%; }
+}
