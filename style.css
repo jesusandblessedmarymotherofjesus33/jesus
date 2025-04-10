@@ -1101,14 +1101,14 @@ body {
 header {
     background: linear-gradient(to right, #4CAF50, #81C784); /* تدرج لوني هادئ */
     color: white;
-    padding: 10px;
+    padding: 40px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.5em;
-    letter-spacing: 2px;
+    font-size: 1.5em;
+    letter-spacing: ذ1px;
 }
 
 /* تنسيق شريط التنقل */
@@ -1243,5 +1243,10 @@ button:hover {
     background-color: #388E3C;
     transform: scale(1.05);
 }
-
+/* استعلام وسائط لتقليص حجم العنوان في الهيدر على الهواتف */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em; /* تصغير حجم الخط في الهواتف */
+    }
+}
 
