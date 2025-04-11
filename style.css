@@ -1417,3 +1417,137 @@ footer:hover {
 
 
 
+/* إعدادات أولية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fef6e4, #f0f8ff);
+  background-attachment: fixed;
+  color: #333;
+  direction: rtl;
+  min-height: 100vh;
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ffeb3b30;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  background: linear-gradient(270deg, #2196f3, #ffca28, #81d4fa, #ce93d8);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleGradient 10s ease infinite;
+}
+
+/* حركة التدرج في العنوان */
+@keyframes titleGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* شريط التنقل */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffffcc;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav a {
+  color: #673ab7;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff9800;
+  transform: scale(1.1);
+}
+
+/* الحاوية */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 20px;
+}
+
+/* القائمة الجانبية */
+.sidebar {
+  flex: 1 1 250px;
+  background: linear-gradient(180deg, #fffde7, #e3f2fd);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar h3 {
+  color: #3f51b5;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #ffffffaa;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: #ffecb3;
+  color: #000;
+}
+
+/* المحتوى */
+.main-content {
+  flex: 3 1 600px;
+  background-color: #ffffffcc;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 1s ease;
+}
+
+/* الفوتر */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to right, #2196f3, #4caf50);
+  color: white;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+footer:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(to right, #00bcd4, #8bc34a);
+}
+
+/* حركة بسيطة عند تحميل المحتوى */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
