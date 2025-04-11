@@ -1266,3 +1266,154 @@ header h1 {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+/* إعادة ضبط */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* جسم الصفحة */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+  direction: rtl;
+  padding: 0;
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(90deg, #fff8dc, #fef3c7);
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+  background: linear-gradient(90deg, #2196f3, #fef3c7, #2196f3);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textFlow 8s ease infinite;
+}
+
+/* حركة التدرج داخل النص */
+@keyframes textFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* شريط التنقل */
+nav {
+  background-color: #fff8dc;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #2196f3;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #ff9800;
+  transform: scale(1.1);
+}
+
+/* الحاوية */
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+/* القائمة الجانبية */
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 {
+  color: #2196f3;
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fef3c7;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #ffe082;
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+  flex-grow: 1;
+  background-color: #ffffff;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+
+/* الفوتر */
+footer {
+  background-color: #2196f3;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+footer:hover {
+  background-color: #1e88e5;
+  transform: translateY(-4px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
