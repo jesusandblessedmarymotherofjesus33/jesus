@@ -1249,4 +1249,20 @@ button:hover {
         font-size: 1.8em; /* تصغير حجم الخط في الهواتف */
     }
 }
+/* ألوان متحركة داخل العنوان */
+header h1 {
+    font-size: 2.5em;
+    background: linear-gradient(270deg, #ffffff, #c8e6c9, #81c784, #4caf50, #388e3c);
+    background-size: 1000% 1000%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateTitle 10s ease infinite;
+    letter-spacing: 2px;
+}
 
+/* الحركة نفسها */
+@keyframes animateTitle {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
