@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>أقوال وآيات</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      direction: rtl;
+      font-family: "Arial", sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2e3b55;
+    }
+    blockquote {
+      background-color: #ffffff;
+      border-right: 5px solid #6b4e9b;
+      margin: 20px auto;
+      padding: 15px;
+      font-size: 18px;
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 700px;
+    }
+  </style>
+</head>
+<body>
+  <h1>قول اليوم</h1>
+  <blockquote id="dailyQuote">جارٍ تحميل الاقتباس...</blockquote>
+
+  <script>
+    const quotes = [
+      "«الرب نوري وخلاصي، ممن أخاف؟ الرب حصن حياتي، ممن أرتعب؟» - مزمور 27: 1",
+      "«تعالوا إليّ يا جميع المتعبين والثقيلي الأحمال، وأنا أريحكم» - متى 11: 28",
+      "«كل الأشياء تعمل معاً للخير للذين يحبون الله» - رومية 8: 28",
+      "«أنا هو الطريق والحق والحياة. ليس أحد يأتي إلى الآب إلا بي» - يوحنا 14: 6",
+      "«لا تخف لأني معك، لا تتلفت لأني إلهك» - إشعياء 41: 10",
+      "«إن نسيت الأم رضيعها فأنا لا أنساك» - إشعياء 49: 15",
+      "«اثبتوا فيّ وأنا فيكم» - يوحنا 15: 4",
+      "«مبارك الرب الذي لم يبعد صلاتي ولا رحمته عني» - مزمور 66: 20",
+      "«اذكر خالقك في أيام شبابك» - جامعة 12: 1",
+      "«كل من يسأل يأخذ، ومن يطلب يجد، ومن يقرع يُفتح له» - متى 7: 8",
+      "«إذا سقطتَ فانهض، وإذا أخطأتَ فتُب، لأن الله رحوم» - القديس أغسطينوس",
+      "«الصلاة سلاح لا يُقهر» - القديس يوحنا الذهبي الفم",
+      "«اجعل سلامك مع نفسك أولًا، فيصير لك سلام مع الآخرين» - القديس سيرافيم الساروفي",
+      "«العذراء مريم هي السماء الثانية، لأنها حملت الكلمة المتجسد» - القديس كيرلس الكبير",
+      "«الصمت أفضل من كلام كثير لا فائدة منه» - القديس أنبا أنطونيوس",
+      "«من يقتني المحبة، يقتني الله، لأن الله محبة» - القديس باسيليوس الكبير",
+      "«قلب نقي يُبصر الله» - القديس يوحنا السلمي"
+    ];
+
+    const today = new Date();
+    const dayOfYear = Math.floor(
+      (today - new Date(today.getFullYear(), 0, 0)) / 86400000
+    );
+    const index = dayOfYear % quotes.length;
+
+    document.getElementById("dailyQuote").textContent = quotes[index];
+  </script>
+</body>
+  </html><!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>أقوال وآيات</title>
+  <link rel="stylesheet" href="maryandjesus.css">
+  <style>
+    body {
+      direction: rtl;
+      font-family: "Arial", sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2e3b55;
+    }
+    blockquote {
+      background-color: #ffffff;
+      border-right: 5px solid #6b4e9b;
+      margin: 20px auto;
+      padding: 15px;
+      font-size: 18px;
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 700px;
+    }
+  </style>
+</head>
+<body>
+  <h1>قول اليوم</h1>
+  <blockquote id="dailyQuote">جارٍ تحميل الاقتباس...</blockquote>
+
+  <script>
+    const quotes = [
+      "«الرب نوري وخلاصي، ممن أخاف؟ الرب حصن حياتي، ممن أرتعب؟» - مزمور 27: 1",
+      "«تعالوا إليّ يا جميع المتعبين والثقيلي الأحمال، وأنا أريحكم» - متى 11: 28",
+      "«كل الأشياء تعمل معاً للخير للذين يحبون الله» - رومية 8: 28",
+      "«أنا هو الطريق والحق والحياة. ليس أحد يأتي إلى الآب إلا بي» - يوحنا 14: 6",
+      "«لا تخف لأني معك، لا تتلفت لأني إلهك» - إشعياء 41: 10",
+      "«إن نسيت الأم رضيعها فأنا لا أنساك» - إشعياء 49: 15",
+      "«اثبتوا فيّ وأنا فيكم» - يوحنا 15: 4",
+      "«مبارك الرب الذي لم يبعد صلاتي ولا رحمته عني» - مزمور 66: 20",
+      "«اذكر خالقك في أيام شبابك» - جامعة 12: 1",
+      "«كل من يسأل يأخذ، ومن يطلب يجد، ومن يقرع يُفتح له» - متى 7: 8",
+      "«إذا سقطتَ فانهض، وإذا أخطأتَ فتُب، لأن الله رحوم» - القديس أغسطينوس",
+      "«الصلاة سلاح لا يُقهر» - القديس يوحنا الذهبي الفم",
+      "«اجعل سلامك مع نفسك أولًا، فيصير لك سلام مع الآخرين» - القديس سيرافيم الساروفي",
+      "«العذراء مريم هي السماء الثانية، لأنها حملت الكلمة المتجسد» - القديس كيرلس الكبير",
+      "«الصمت أفضل من كلام كثير لا فائدة منه» - القديس أنبا أنطونيوس",
+      "«من يقتني المحبة، يقتني الله، لأن الله محبة» - القديس باسيليوس الكبير",
+      "«قلب نقي يُبصر الله» - القديس يوحنا السلمي"
+    ];
+
+    const today = new Date();
+    const dayOfYear = Math.floor(
+      (today - new Date(today.getFullYear(), 0, 0)) / 86400000
+    );
+    const index = dayOfYear % quotes.length;
+
+    document.getElementById("dailyQuote").textContent = quotes[index];
+  </script>
+</body>
+</html>
