@@ -1,50 +1,121 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سيرة العذراء مريم و الرب يسوع</title>
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body dir="rtl">
-    <header>
-        <h1 id="title">سيرة العذراء مريم و الرب يسوع</h1>
-        <div class="main-content">
-  <section id="mary">
-    <h2>سيرة العذراء مريم</h2>
-    <p>العذراء مريم هي والدة الرب يسوع، وتُعتبر من أعظم نساء الكتاب المقدس. وُلدت من يواقيم وحنة، وتلقت البشارة من الملاك جبرائيل بأنها ستلد المخلّص. تميزت بالطاعة والتواضع والإيمان العميق.</p>
-  </section>
+<section class="saint-section">
+  <div class="saint-card">
+    <h2>الرب يسوع المسيح</h2>
+    <p>
+      الرب يسوع المسيح هو ابن الله المتجسد، وُلد من العذراء مريم في بيت لحم. عاش حياة ملؤها التعليم والمحبة،
+      وأتم خلاص البشرية من خلال صلبه وقيامته. دعا الناس إلى التوبة وعلّمهم عن محبة الله.
+    </p>
+    <h4>بعض معجزاته:</h4>
+    <ul>
+      <li>تحويل الماء إلى خمر في عرس قانا الجليل</li>
+      <li>شفاء المرضى والأبرص والأعمى</li>
+      <li>إقامة لعازر من الموت</li>
+      <li>المشي على الماء وتهدئة البحر</li>
+      <li>إشباع الجموع من خمس خبزات وسمكتين</li>
+    </ul>
+  </div>
 
-  <section id="jesus">
-    <h2>سيرة الرب يسوع</h2>
-    <p>الرب يسوع هو ابن الله، تجسّد من الروح القدس ومن مريم العذراء. بدأ خدمته العلنية بعد معموديته من يوحنا المعمدان، وقام بالتعليم والمعجزات، وأعلن عن ملكوت الله.</p>
-  </section>
+  <div class="saint-card">
+    <h2>السيدة العذراء مريم</h2>
+    <p>
+      السيدة العذراء مريم هي أم النور ووالدة الإله، المختارة من بين النساء لتكون وعاء التجسد الإلهي. حياتها كانت
+      مثالاً للطهارة والتواضع، وما زالت شفاعتها حية ومؤثرة في حياة المؤمنين حتى اليوم.
+    </p>
+    <h4>بعض معجزاتها:</h4>
+    <ul>
+      <li>ظهورها في كنيسة الزيتون سنة 1968</li>
+      <li>شفاءات عديدة من أمراض مستعصية بشفاعتها</li>
+      <li>نزول زيت وطيب من أيقونتها في بيوت كثيرة</li>
+      <li>حماية مؤمنين من الحوادث والخطر بشفاعتها</li>
+    </ul>
+  </div>
+</section>
+<script src="script.js"></script>
+<!-- سكريبت الظهور بعد التحميل -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 800);
+    });
 
-  <section id="miracles">
-    <h2>معجزات الرب يسوع</h2>
-    <p>من معجزاته: تحويل الماء إلى خمر، شفاء المرضى، إقامة الموتى، تهدئة البحر، إشباع الجموع.</p>
-  </section>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
 
-  <section id="teachings">
-    <h2>تعاليم الرب يسوع</h2>
-    <p>علّم المحبة، التوبة، الغفران، السلام، والاتكال على الله. من أشهر تعاليمه: الموعظة على الجبل، الأمثال، وصايا الملكوت.</p>
-  </section>
+    function openFullScreen(img) {
+      const container = document.getElementById("fullscreen-container");
+      const fullImg = document.getElementById("fullscreen-image");
+      fullImg.src = img.src;
+      container.style.display = "flex";
+    }
 
-  <section id="passion">
-    <h2>آلام الرب يسوع</h2>
-    <p>تعرض للآلام من أجل خلاصنا، واحتمل الصلب والجلد والإهانة طوعًا، ليكفر عن خطايانا.</p>
-  </section>
+    function closeFullScreen() {
+      document.getElementById("fullscreen-container").style.display = "none";
+    }
 
-  <section id="resurrection">
-    <h2>قيامة الرب يسوع</h2>
-    <p>في اليوم الثالث قام من الأموات منتصرًا على الموت، معلنًا الحياة الأبدية لكل من يؤمن به.</p>
-  </section>
+    function start() {
+      window.location.href = "main.html";
+    }
 
-  <section id="apparitions">
-    <h2>ظهورات العذراء</h2>
-    <p>ظهرت العذراء مريم في أماكن كثيرة عبر التاريخ، مثل فاطيما، لورد، وزيتون، دائمًا لتشجع الناس على التوبة والصلاة والسلام.</p>
-  </section>
-</div>
+    function changeLanguage(lang) {
+      alert("سيتم تحويل اللغة إلى: " + lang);
+    }
+  </script>
+<script>
+function sayAmen() {
+  alert("آمين!");
+}
+
+function lightCandle() {
+  const candleBtn = event.target;
+  candleBtn.classList.toggle("candle-lit");
+  candleBtn.innerText = candleBtn.classList.contains("candle-lit") ? "أُضيئت شمعة" : "أضئ شمعة";
+}
+
+function copyPrayer() {
+  const prayer = document.getElementById("good-friday-prayer").innerText;
+  navigator.clipboard.writeText(prayer).then(() => {
+    alert("تم نسخ الصلاة!");
+  });
+}
+function lightCandle() {
+  const container = document.getElementById('candleContainer');
+  const candle = document.createElement('div');
+  candle.classList.add('candle');
+
+  const flame = document.createElement('div');
+  flame.classList.add('flame');
+
+  candle.appendChild(flame);
+  container.appendChild(candle);
+}
+function lightPrayer() {
+  const section = document.getElementById("prayerSection");
+  section.classList.add("glow");
+}
+</script>
+<script>
+  // إظهار الزر عند التمرير
+  window.onscroll = function () {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // تنفيذ الرجوع للأعلى
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+</script>
 </body>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="رجوع لأعلى">↑</button>
 </html>
