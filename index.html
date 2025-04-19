@@ -1,131 +1,270 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="CCXAuBk4djgB7HMA4AeE66ul9_zDfENFb62m1I8lLeQ" />
-    <title>القديسة الطاهرة العذراء مريم</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="CCXAuBk4djgB7HMA4AeE66ul9_zDfENFb62m1I8lLeQ" />
+  <title>القديسة الطاهرة العذراء مريم</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body * {
+      visibility: hidden;
+    }
+    body.loaded * {
+      visibility: visible;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hidden-on-load {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 1s; }
+    .delay-2 { animation-delay: 1.5s; }
+    .delay-3 { animation-delay: 2s; }
+    .delay-4 { animation-delay: 2.5s; }
+    .delay-5 { animation-delay: 3s; }
+    .delay-6 { animation-delay: 3.5s; }
+    .delay-7 { animation-delay: 4s; }
+  </style>
 </head>
+
 <body>
-    <header class="holy-header">
-  <img src="images/christandmary.jpg" alt="السيد المسيح والعذراء مريم أم الله الأعظم من الكل" class="holy-image">
-  <h1 class="holy-title">العذراء مريم أم الله الأعظم من الكل والأرحم من الكل والأقوى من الكل</h1>
-    </header>
+  <header class="holy-header hidden-on-load delay-1">
+    <img src="christandmary.jpg" alt="السيد المسيح والعذراء مريم أم الله الأعظم من الكل" class="holy-image">
+    <h1 class="holy-title">العذراء مريم أم الله الأعظم من الكل والأرحم من الكل والأقوى من الكل</h1>
+    <h1 class="holy-title"> القديسة الطاهرة العذراء مريم ام الله الاعظم  من الكل والارحم من الكل والاقوي من الكل </h1>
+  </header>
 
-    <!-- زر فتح وإغلاق القائمة الجانبية -->
-    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+  <button class="menu-toggle hidden-on-load delay-2" onclick="toggleSidebar()">☰</button>
 
-    <!-- القائمة الجانبية -->
-    <div class="sidebar" id="sidebar">
-        <button class="close-btn" onclick="toggleSidebar()">✖</button>
-        <h2>القائمة</h2>
-        <ul>
-            <li><a href="main.html">السيرة</a></li>
-            <li><a href="support.html">الدعم</a></li>
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="prayers.html">الصلوات</a></li>
-            <li><a href="calendar.html">التقويم</a></li>
-            <li><a href="media.html">مكتبة الوسائط</a></li>
-            <li><a href="support.html">اتصل بنا</a></li>
-            <li><a href="motherofjesus.html">القديسه الطلهره العذراء مريم ام الله الاعظم من الكل والارحم من الكل والاقوي من الكل</a></li>
-
-            <li><a href="quotes.html">اقوال وايات</a></li>
-            <li><a href="holyweek.html">اسبوع الالام واحد القيامه المجيد وسبت النور امين</a></li>
-            <li class="dropdown">
-                <a href="#">🌍 اللغة</a>
-                <ul class="dropdown-menu">
-                    <li onclick="changeLanguage('ar')">العربية</li>
-                    <li onclick="changeLanguage('en')">English</li>
-                </ul>
-            </li>
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">✖</button>
+    <h2>القائمة</h2>
+    <ul>
+      <li><a href="main.html">السيرة</a></li>
+      <li><a href="support.html">الدعم</a></li>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="prayers.html">الصلوات</a></li>
+      <li><a href="calendar.html">التقويم</a></li>
+      <li><a href="media.html">مكتبة الوسائط</a></li>
+      <li><a href="support.html">اتصل بنا</a></li>
+      <li><a href="motherofjesus.html">القديسه الطلهره العذراء مريم ام الله الاعظم من الكل والارحم من الكل والاقوي من الكل</a></li>
+      <li><a href="quotes.html">اقوال وايات</a></li>
+      <li><a href="holyweek.html">اسبوع الالام واحد القيامه المجيد وسبت النور امين</a></li>
+      <li class="dropdown">
+        <a href="#">🌍 اللغة</a>
+        <ul class="dropdown-menu">
+          <li onclick="changeLanguage('ar')">العربية</li>
+          <li onclick="changeLanguage('en')">English</li>
         </ul>
-    </div>
+      </li>
+    </ul>
+  </div>
 
-    <header>
-        <h1>القديسة الطاهرة العذراء مريم</h1>
-    </header>
+  <header class="hidden-on-load delay-3">
+    <h1>القديسة الطاهرة العذراء مريم</h1>
+  </header>
 
-    <section class="home">
-        <h2>مرحبًا بك في الموقع</h2>
-        <p>تعرف على سيرة العذراء مريم وسيرة الرب يسوع المسيح من خلال موقعنا المتكامل.</p>
-        <button onclick="start()">ابدأ</button>
-    </section>
+  <section class="home hidden-on-load delay-3">
+    <h2>مرحبًا بك في الموقع</h2>
+    <p>تعرف على سيرة العذراء مريم وسيرة الرب يسوع المسيح من خلال موقعنا المتكامل.</p>
+    <button onclick="start()">ابدأ</button>
+  </section>
 
-    <!-- ✅ قسم تعريف الموقع -->
-    <section class="about-site">
-        <h2>💡 عن الموقع</h2>
-        <p>يهدف هذا الموقع إلى تقديم معلومات دقيقة عن سيرة القديسة الطاهرة العذراء مريم وسيرة الرب يسوع المسيح.  
-        نقدم محتوى موثوقًا يعتمد على المصادر الدينية والتاريخية لتعزيز المعرفة والإيمان.</p>
-    </section>
+  <section class="about-site hidden-on-load delay-4">
+    <h2>💡 عن الموقع</h2>
+    <p>يهدف هذا الموقع إلى تقديم معلومات دقيقة عن سيرة القديسة الطاهرة العذراء مريم وسيرة الرب يسوع المسيح.  
+      نقدم محتوى موثوقًا يعتمد على المصادر الدينية والتاريخية لتعزيز المعرفة والإيمان.</p>
+  </section>
 
-    <script src="script.js"></script>
-    
-<!-- ✅ قسم الصورة -->
-<section class="image-section">
+  <section class="image-section hidden-on-load delay-5">
     <h2>🌟 صورة السيد المسيح والعذراء مريم</h2>
     <img src="jesusandblessedvirginmary.jpg" alt="السيد المسيح والعذراء مريم">
-</section>
-<!-- ✅ قسم الصلاة -->
-<section class="prayer-section">
+  </section>
+
+  <section class="prayer-section hidden-on-load delay-5"><button onclick="lightPrayer()">أضئ شمعة</button>
     <h2>🙏 صلاة السلام لك يا مريم</h2>
     <p class="prayer-text">
-        السلام لكِ يا مريم، يا ممتلئة نعمة، الرب معكِ، مباركة أنتِ في النساء،  
-        ومباركة هي ثمرة بطنك سيدنا يسوع.  
-        يا قديسة مريم، يا والدة الله، صلّي لأجلنا نحن الخطاة،  
-        الآن وفي ساعة موتنا. آمين.
+      السلام لكِ يا مريم، يا ممتلئة نعمة، الرب معكِ، مباركة أنتِ في النساء،  
+      ومباركة هي ثمرة بطنك سيدنا يسوع.  
+      يا قديسة مريم، يا والدة الله، صلّي لأجلنا نحن الخطاة،  
+      الآن وفي ساعة موتنا. آمين.
     </p>
+<div class="prayer-actions">
+  <button onclick="sayAmen()">آمين</button>
+  <button onclick="lightCandle()">أضئ شمعة</button>
+  <div class="candle-container" id="candleContainer"></div>
+  <button onclick="copyPrayer()">نسخ الصلاة</button>
+</div>
+  </section>
+  <!-- ✅ صلاة الجمعة العظيمة -->
+<section class="prayer-section hidden-on-load delay-7">
+  <h2>🙏 صلاة الجمعة العظيمة</h2>
+  <p class="prayer-text"><button onclick="lightPrayer()">أضئ شمعة</button>
+    يا من علّقت على خشبة الصليب في يوم الجمعة العظيمة،  
+    يا من بذلت ذاتك لأجل خلاصنا،  
+    نسجد لك ونمجّدك، يا حمل الله الحامل خطيئة العالم.  
+  
+    يا يسوع الحبيب، امنحنا أن نتأمل آلامك بقلوب منسحقة،  
+    وأن نحيا حياة توبة حقيقية.  
+    اجعلنا شهودًا لقيامتك ومحبّتك للعالم.  
+  
+    آمين.
+  </p>
+<div class="prayer-actions">
+  <button onclick="sayAmen()">آمين</button>
+  <button onclick="lightCandle()">أضئ شمعة</button>
+  <div class="candle-container" id="candleContainer"></div>
+  <button onclick="copyPrayer()">نسخ الصلاة</button>
+</div>
 </section>
-<!-- ✅ قسم معرض الصور -->
-<section class="gallery">
+<!-- ✅ قسم صلاة أبانا الذي -->
+<section class="prayer-section hidden-on-load delay-6"><button onclick="lightPrayer()">أضئ شمعة</button>
+  <h2>🙏 صلاة أبانا الذي في السماوات</h2>
+  <p class="prayer-text">
+    أبانا الذي في السماوات، ليتقدس اسمك، ليأتِ ملكوتك، لتكن مشيئتك، كما في السماء كذلك على الأرض.  
+    خبزنا كفافنا أعطنا اليوم، واغفر لنا ذنوبنا كما نغفر نحن أيضاً للمذنبين إلينا.  
+    ولا تدخلنا في تجربة، لكن نجنا من الشرير.  
+    بالمسيح يسوع ربنا. آمين.
+  </p>
+  <div class="prayer-actions">
+  <button onclick="sayAmen()">آمين</button>
+  <button onclick="lightCandle()">أضئ شمعة</button>
+  <div class="candle-container" id="candleContainer"></div>
+  <button onclick="copyPrayer()">نسخ الصلاة</button>
+</div>
+</section>
+  <section class="gallery hidden-on-load delay-6">
     <h2>🖼️ معرض الصور</h2>
     <div class="gallery-container">
-        <img src="تنزيل.jpeg" alt="صورة 1" onclick="openFullScreen(this)">
-        <img src="images/image2.jpg" alt="صورة 2" onclick="openFullScreen(this)">
-        <img src="images/image3.jpg" alt="صورة 3" onclick="openFullScreen(this)">
-        <img src="images/image4.jpg" alt="صورة 4" onclick="openFullScreen(this)">
+      <img src="تنزيل.jpeg" alt="صورة 1" onclick="openFullScreen(this)">
+      <img src="images/image2.jpg" alt="صورة 2" onclick="openFullScreen(this)">
+      <img src="imagesimage3.jpg" alt="صورة 3" onclick="openFullScreen(this)">
+      <img src="images/image4.jpg" alt="صورة 4" onclick="openFullScreen(this)">
     </div>
-</section>
+  </section>
 
-<!-- ✅ نافذة تكبير الصور -->
-<div id="fullscreen-container" class="fullscreen-container" onclick="closeFullScreen()">
+  <div id="fullscreen-container" class="fullscreen-container" onclick="closeFullScreen()">
     <img id="fullscreen-image">
-</div>
-<link rel="icon" href="تنزيل.pneg" type="image/pneg">
-   <li><a href="main.html">السيرة</a></li>
-            <li><a href="support.html">الدعم</a></li>
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="prayers.html">الصلوات</a></li>
-            <li><a href="calendar.html">التقويم</a></li>
-            <li><a href="media.html">مكتبة الوسائط</a></li>
-            <li><a href="support.html">اتصل بنا</a></li>
- thevirginmaryandourgod jesus
-<footer>
+  </div>
+
+  <footer class="hidden-on-load delay-7">
     <div class="footer-container">
-        <div class="footer-links">
-            <h3>الصفحات الدينية</h3>
-            <ul>
-                <li><a href="index.html">الصفحة الرئيسية</a></li>
-                <li><a href="prayers.html">الصلوات</a></li>
-                <li><a href="bible.html">الكتاب المقدس</a></li>
-                <li><a href="index.html">القديسون</a></li>
-                <li><a href="index.html">من نحن</a></li>
-                <li><a href="support.html">اتصل بنا</a></li>
-                <li><a href="motherofjesus.htm">القديسه العذراء مريم ام الله الاعظم من الكل والارحم من الكل والاقوي من الكل</a></li>
-                       <li><a href="quotes.html">اقوال وايات</a></li>
-            <li><a href="holyweek.html">اسبوع الالام واحد القيامه المجيد وسبت النور امين</a></li>
-            
-            </ul>
+      <div class="footer-links">
+        <h3>الصفحات الدينية</h3>
+        <ul>
+          <li><a href="index.html">الصفحة الرئيسية</a></li>
+          <li><a href="prayers.html">الصلوات</a></li>
+          <li><a href="bible.html">الكتاب المقدس</a></li>
+          <li><a href="index.html">القديسون</a></li>
+          <li><a href="index.html">من نحن</a></li>
+          <li><a href="support.html">اتصل بنا</a></li>
+          <li><a href="motherofjesus.htm">القديسه العذراء مريم ام الله الاعظم من الكل والارحم من الكل والاقوي من الكل</a></li>
+          <li><a href="quotes.html">اقوال وايات</a></li>
+          <li><a href="holyweek.html">اسبوع الالام واحد القيامه المجيد وسبت النور امين</a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <div class="daily-verse">
+          <h3>الآية اليومية</h3>
+          <p>«الرَّبُّ نُورِي وَخَلاَصِي، مِمَّنْ أَخَافُ؟» – مزمور 27: 1</p>
         </div>
-        <div class="footer-info">
-            <div class="daily-verse">
-  <h3>الآية اليومية</h3>
-  <p>«الرَّبُّ نُورِي وَخَلاَصِي، مِمَّنْ أَخَافُ؟» – مزمور 27: 1</p>
-</div>
-        </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
+  <!-- سكريبت الظهور بعد التحميل -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 800);
+    });
 
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    function openFullScreen(img) {
+      const container = document.getElementById("fullscreen-container");
+      const fullImg = document.getElementById("fullscreen-image");
+      fullImg.src = img.src;
+      container.style.display = "flex";
+    }
+
+    function closeFullScreen() {
+      document.getElementById("fullscreen-container").style.display = "none";
+    }
+
+    function start() {
+      window.location.href = "main.html";
+    }
+
+    function changeLanguage(lang) {
+      alert("سيتم تحويل اللغة إلى: " + lang);
+    }
+  </script>
+<script>
+function sayAmen() {
+  alert("آمين!");
+}
+
+function lightCandle() {
+  const candleBtn = event.target;
+  candleBtn.classList.toggle("candle-lit");
+  candleBtn.innerText = candleBtn.classList.contains("candle-lit") ? "أُضيئت شمعة" : "أضئ شمعة";
+}
+
+function copyPrayer() {
+  const prayer = document.getElementById("good-friday-prayer").innerText;
+  navigator.clipboard.writeText(prayer).then(() => {
+    alert("تم نسخ الصلاة!");
+  });
+}
+function lightCandle() {
+  const container = document.getElementById('candleContainer');
+  const candle = document.createElement('div');
+  candle.classList.add('candle');
+
+  const flame = document.createElement('div');
+  flame.classList.add('flame');
+
+  candle.appendChild(flame);
+  container.appendChild(candle);
+}
+function lightPrayer() {
+  const section = document.getElementById("prayerSection");
+  section.classList.add("glow");
+}
+</script>
+<script>
+  // إظهار الزر عند التمرير
+  window.onscroll = function () {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // تنفيذ الرجوع للأعلى
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+</script>
 </body>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="رجوع لأعلى">↑</button>
 </html>
