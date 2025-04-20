@@ -217,6 +217,169 @@ function toggleDarkMode() {
 </body>
 <button onclick="scrollToTop()" id="scrollTopBtn" title="رجوع لأعلى">↑</button>
 </html>
+<!-- صندوق صلاة اليوم -->
+<div id="daily-prayer" class="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md max-w-xl mx-auto my-6">
+  <h2 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white text-center">صلاة اليوم</h2>
+  <p id="prayer-text" class="text-gray-700 dark:text-gray-300 whitespace-pre-line mb-4 text-lg leading-relaxed"></p>
 
+  <!-- أزرار المشاركة والتعليق -->
+  <div class="flex flex-col sm:flex-row justify-between gap-2">
+    <button onclick="sharePrayer()" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 w-full sm:w-auto">
+      مشاركة على واتساب
+    </button>
+    <button onclick="document.getElementById('comment-section').classList.toggle('hidden')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 w-full sm:w-auto">
+      أضف تعليقًا
+    </button>
+  </div>
+
+  <!-- قسم كتابة التعليق -->
+  <div id="comment-section" class="hidden mt-4">
+    <textarea id="comment-input" rows="3" placeholder="اكتب تعليقك هنا..." class="w-full p-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white"></textarea>
+    <button onclick="submitComment()" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">إرسال التعليق</button>
+  </div>
+
+  <!-- عرض التعليقات -->
+  <div id="comments-list" class="mt-6">
+    <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">التعليقات:</h3>
+    <ul id="comment-container" class="space-y-2 text-gray-800 dark:text-gray-200 text-sm"></ul>
+  </div>
+</div>
+
+<!-- سكربت JS -->
+<script>
+  const prayers = [
+    `يا رب، في هذا اليوم أرفع إليك قلبي المنكسر...  
+    ...وأن أثق أنك تمسك بيدي دومًا.  
+    — القديس أغسطينوس`,
+
+    `يا إلهي الحبيب، علمني أن أقبل مشيئتك في كل حين...  
+    ...واجعلني أعيش في بركتك وحضورك.  
+    — القديسة تريزا الطفل يسوع`,
+
+    `يا رب، علّمني الصبر في ضيقاتي...  
+    ...ولا تتركني لحظة بعيدًا عنك.  
+    — القديس يوحنا الذهبي الفم`,
+
+    `يا يسوع، مخلّصي، خذني كما أنا...  
+    ...ولتسكن فيّ إلى الأبد.  
+    — القديسة كاترينا السيانية`,
+
+    `يا روح الله، الحي فيّ...  
+    ...إلى أن أراك وجهًا لوجه.  
+    — القديس أنطونيوس الكبير`,
+
+    `يا رب، عندما أشعر بالوحدة...  
+    ...وسلامي وسط العواصف.  
+    — القديسة مونيكا`,
+
+    `يا يسوع، أعطني قلبك المتواضع...  
+    ...لأكون لك وحدك.  
+    — القديس فرنسيس الأسيزي`,
+
+    `يا رب، بارك يومي هذا...  
+    ...وأحمل نورك في كل مكان.  
+    — القديس نيقولاوس`,
+
+    `يا رب، إليك أرفع عيني...  
+    ...ولا تسمح أن أنفصل عنك أبدًا.  
+    — القديسة رفقا`,
+
+    `يا إلهي، يا من رأيت المجد في الألم...  
+    ...واكتب اسمي في قلبك للأبد.  
+    — القديس بولس الرسول`,
+
+    `يا رب، اجعل قلبي مستقيمًا أمامك...  
+    ...وتسبّحك روحي كل حين.  
+    — القديس مكاريوس الكبير`,
+
+    `يا يسوع، حينما أشعر بالضعف...  
+    ...بل يرجو غفرانك على الدوام.  
+    — القديسة فيرونيكا`,
+
+    `يا رب، أنر لي عتمة قلبي...  
+    ...واملك على أفكاري ومشيئتي.  
+    — القديس يوحنا الدريجي`,
+
+    `يا يسوع، لا تسمح أن أسير وحدي...  
+    ...واجعلني أستند على محبتك للأبد.  
+    — القديسة بربارة`,
+
+    `يا رب، اغفر لي كل ما فات...  
+    ...وانر حياتي بنور وجهك.  
+    — القديس موسى الأسود`,
+
+    `يا إلهي، علّمني أن أحب كما أحببت...  
+    ...ووصيتك طريقي كل يوم.  
+    — القديس أرسانيوس`,
+
+    `يا رب، حينما أضعف، كن قوتي...  
+    ...لأحيا بك ولك دومًا.  
+    — القديس إيرينيئوس`,
+
+    `يا يسوع، اجعلني أبحث عنك...  
+    ...يشع منك لا مني.  
+    — القديسة تريزا الأفيلية`,
+
+    `يا رب، بارك عائلتي وأحبائي...  
+    ...تعكس نورك وتفرح بحضورك.  
+    — القديس يوحنا المعمدان`,
+
+    `يا إلهي، لا أطلب منك سوى نفسك...  
+    ...وأفرح بكوني ابنك الحبيب.  
+    — القديسة مارينا`,
+
+    `يا يسوع، اغمرني بحبك العجيب...  
+    ...بل أكون مرآة لك في العالم.  
+    — القديس لاون الكبير`,
+
+    `يا رب، أعطني سكينة في كل قرار...  
+    ...وأنا أضع كل شيء بين يديك.  
+    — القديسة هيلانة`,
+
+    `يا يسوع، طهر لساني وفكري...  
+    ...ونبع حياة لكل من يسمع.  
+    — القديس مقاريوس السكندري`,
+
+    `يا رب، اشفِ كل من يتألم الآن...  
+    ...ومن جراحنا تسابيح.  
+    — القديسة ماريا جوريتي`,
+
+    `يا رب، إليك أرجع كل المجد...  
+    ...لأنك تستحق كل المجد.  
+    — القديس أثناسيوس الرسولي`,
+
+    `يا رب، عند نهاية هذا اليوم...  
+    ...وقيامتي في نورك الدائم.  
+    — القديس باسيليوس الكبير`
+  ];
+
+  const today = new Date().getDate();
+  const prayerIndex = (today - 1) % prayers.length;
+  const prayerText = prayers[prayerIndex];
+  document.getElementById("prayer-text").textContent = prayerText;
+
+  function sharePrayer() {
+    const url = `https://wa.me/?text=${encodeURIComponent(prayerText + "\n\n" + window.location.href)}`;
+    window.open(url, '_blank');
+  }
+
+  function submitComment() {
+    const commentInput = document.getElementById("comment-input");
+    const container = document.getElementById("comment-container");
+    const comment = commentInput.value.trim();
+    if (comment !== "") {
+      const now = new Date();
+      const date = now.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
+      const time = now.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+      const li = document.createElement("li");
+      li.innerHTML = `<div class="bg-gray-100 dark:bg-gray-700 p-2 rounded-md">
+        <p>${comment}</p>
+        <span class="text-xs text-gray-500">تم الإرسال في ${date} - ${time}</span>
+      </div>`;
+      container.prepend(li);
+      commentInput.value = "";
+    }
+  }
+</script>
 </body>
 </html>
