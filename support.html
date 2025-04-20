@@ -3,184 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سيرة العذراء مريم و الرب يسوع</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body dir="rtl">
-    <header>                
-        
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اتصل بنا</title>
-    <style>
-        body { font-family: Arial, sans-serif; direction: rtl; text-align: right; }
-        form { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
-        label, input, textarea { display: block; width: 100%; margin-bottom: 10px; }
-        button { background: #008CBA; color: white; padding: 10px; border: none; cursor: pointer; }
-        button:hover { background: #005f6b; }
-    </style><!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Page title</title>
-    </head>
-    <body>
-        
-    </body>
-    </html>
+    <title>نموذج التواصل</title>
+    <link rel="stylesheet" href="styles.css"> <!-- إذا كنت تستخدم CSS مخصص -->
 </head>
 <body>
 
-<h2>اتصل بنا</<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Page title</title>
-</head>
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اتصل بنا</title>
-    <style>
-        body { font-family: Arial, sans-serif; direction: rtl; text-align: right; }
-        .container { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
-        label, input, textarea { display: block; width: 100%; margin-bottom: 10px; }
-        button { background: #008CBA; color: white; padding: 10px; border: none; cursor: pointer; width: 100%; }
-        button:hover { background: #005f6b; }
-    </style>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اتصل بنا</title>
-    <style>
-        body { font-family: Arial, sans-serif; direction: rtl; text-align: right; }
-        form { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
-        label, input, textarea { display: block; width: 100%; margin-bottom: 10px; }
-        button { background: #008CBA; color: white; padding: 10px; border: none; cursor: pointer; }
-        button:hover { background: #005f6b; }
-    </style>
-</head>
-<body>
+    <div class="contact-form-container">
+        <h2>نموذج التواصل</h2>
+        <form action="process_contact.php" method="POST">
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" name="name" required class="p-2 w-full bg-gray-50 dark:bg-gray-900 border rounded-lg mb-4">
 
-<h2>اتصل بنا</h2>
-<form action="https://formspree.io/f/mzzevngw" method="POST">
-    <label for="name">الاسم:</label>
-    <input type="text" id="name" name="name" required>
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required class="p-2 w-full bg-gray-50 dark:bg-gray-900 border rounded-lg mb-4">
 
-    <label for="email">البريد الإلكتروني:</label>
-    <input type="email" id="email" name="email" required>
+            <label for="message">رسالتك:</label>
+            <textarea id="message" name="message" rows="4" required class="p-2 w-full bg-gray-50 dark:bg-gray-900 border rounded-lg mb-4"></textarea>
 
-    <label for="message">الرسالة:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <button type="submit">إرسال</button>
-</form>
-<script src="script.js"></script><!-- سكريبت الظهور بعد التحميل -->
-  <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.body.classList.add("loaded");
-      }, 800);
-    });
-
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("open");
-    }
-
-    function openFullScreen(img) {
-      const container = document.getElementById("fullscreen-container");
-      const fullImg = document.getElementById("fullscreen-image");
-      fullImg.src = img.src;
-      container.style.display = "flex";
-    }
-
-    function closeFullScreen() {
-      document.getElementById("fullscreen-container").style.display = "none";
-    }
-
-    function start() {
-      window.location.href = "main.html";
-    }
-
-    function changeLanguage(lang) {
-      alert("سيتم تحويل اللغة إلى: " + lang);
-    }
-  </script>
-<script>
-function sayAmen() {
-  alert("آمين!");
-}
-
-function lightCandle() {
-  const candleBtn = event.target;
-  candleBtn.classList.toggle("candle-lit");
-  candleBtn.innerText = candleBtn.classList.contains("candle-lit") ? "أُضيئت شمعة" : "أضئ شمعة";
-}
-
-function copyPrayer() {
-  const prayer = document.getElementById("good-friday-prayer").innerText;
-  navigator.clipboard.writeText(prayer).then(() => {
-    alert("تم نسخ الصلاة!");
-  });
-}
-function lightCandle() {
-  const container = document.getElementById('candleContainer');
-  const candle = document.createElement('div');
-  candle.classList.add('candle');
-
-  const flame = document.createElement('div');
-  flame.classList.add('flame');
-
-  candle.appendChild(flame);
-  container.appendChild(candle);
-}
-function lightPrayer() {
-  const section = document.getElementById("prayerSection");
-  section.classList.add("glow");
-}
-</script>
-<script>
-  // إظهار الزر عند التمرير
-  window.onscroll = function () {
-    const btn = document.getElementById("scrollTopBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
-
-  // تنفيذ الرجوع للأعلى
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-<script>
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-</script>
-</script>
-</body>
-<button onclick="scrollToTop()" id="scrollTopBtn" title="رجوع لأعلى">↑</button>
-</html>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">إرسال</button>
+        </form>
+    </div>
 
 </body>
 </html>
