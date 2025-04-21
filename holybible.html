@@ -399,8 +399,41 @@
 
       // أكمل باقي التأملات هنا حتى 100...
     ];
+    
+  <!-- سكريبت الظهور بعد التحميل -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 800);
+    });
 
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
 
+    function openFullScreen(img) {
+      const container = document.getElementById("fullscreen-container");
+      const fullImg = document.getElementById("fullscreen-image");
+      fullImg.src = img.src;
+      container.style.display = "flex";
+    }
+
+    function closeFullScreen() {
+      document.getElementById("fullscreen-container").style.display = "none";
+    }
+
+    function start() {
+      window.location.href = "main.html";
+    }
+
+    function changeLanguage(lang) {
+      alert("سيتم تحويل اللغة إلى: " + lang);
+    }
+  </script>
+<script>
+function sayAmen() {
+  alert("آمين!");
     function openFullScreen(img) {
       const container = document.getElementById("fullscreen-container");
       const fullImg = document.getElementById("fullscreen-image");
