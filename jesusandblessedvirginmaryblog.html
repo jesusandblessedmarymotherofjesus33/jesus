@@ -244,6 +244,35 @@
     }
   ];
 
+  <!-- سكريبت الظهور بعد التحميل -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 800);
+    });
+
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    function openFullScreen(img) {
+      const container = document.getElementById("fullscreen-container");
+      const fullImg = document.getElementById("fullscreen-image");
+      fullImg.src = img.src;
+      container.style.display = "flex";
+    }
+
+    function closeFullScreen() {
+      document.getElementById("fullscreen-container").style.display = "none";
+    }
+
+    function start() {
+      window.location.href = "main.html";
+    }
+
+    function changeLanguage(lang) {
+
   let currentPost = 0;
 
   function showPost(index) {
@@ -284,34 +313,6 @@
   window.onload = () => loadComments();
 </script>
 
-  <!-- سكريبت الظهور بعد التحميل -->
-  <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.body.classList.add("loaded");
-      }, 800);
-    });
-
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("open");
-    }
-
-    function openFullScreen(img) {
-      const container = document.getElementById("fullscreen-container");
-      const fullImg = document.getElementById("fullscreen-image");
-      fullImg.src = img.src;
-      container.style.display = "flex";
-    }
-
-    function closeFullScreen() {
-      document.getElementById("fullscreen-container").style.display = "none";
-    }
-
-    function start() {
-      window.location.href = "main.html";
-    }
-
-    function changeLanguage(lang) {
-
+  
 </body>
   </html>
