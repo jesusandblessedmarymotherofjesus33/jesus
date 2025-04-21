@@ -2,125 +2,272 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>مدونة روحية</title>
+  <title>مدونة القديسة العذراء مريم الطاهرة</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .post-preview {
+      background-color: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .post-preview h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .post-preview p {
+      margin: 5px 0;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #4a90e2;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .full-post {
+      display: none;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .full-post h2 {
+      color: #333;
+    }
+
+    .comment-box {
+      margin-top: 30px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #3399ff;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .comments-list p {
+      background-color: #eaf3ff;
+      padding: 8px;
+      border-radius: 6px;
+      margin-top: 8px;
+      border-right: 4px solid #4a90e2;
+    }
+
+    .back-button {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #ddd;
+      color: #333;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>مدونة روحية</h1>
-  <div class="tabs">
-    <div class="tab active" onclick="showPost(0)">الرب يسوع</div>
-    <div class="tab" onclick="showPost(1)">العذراء مريم</div>
-    <div class="tab" onclick="showPost(2)">القيامة</div>
+<header>مدونة القديسة العذراء مريم الطاهرة</header>
+
+<div class="container" id="mainPage">
+
+  <!-- معاينة المنشورات -->
+  <div class="post-preview">
+    <h2>سيرة الرب يسوع</h2>
+    <p>الرب يسوع هو ابن الله الحي، جاء ليخلص العالم.</p>
+    <p>وُلد في مذود بتواضع ليعلّمنا المحبة والبساطة.</p>
+    <p>عاش بلا خطيئة، وكان مثال الطهارة والقداسة.</p>
+    <p>أحب الخطاة، وغفر للزناة، وشفى المرضى.</p>
+    <p>مشى بين الناس وصنع خيرًا في كل مكان.</p>
+    <a class="read-more" href="#" onclick="showPost(0)">اقرأ الآن</a>
   </div>
 
-  <div id="posts">
-    <!-- منشور الرب يسوع -->
-    <div class="card" id="post0">
-      <h2>سيرة الرب يسوع ابن الله</h2>
-      <p>1. الرب يسوع هو ابن الله الحي، جاء ليخلص العالم.</p>
-      <p>2. وُلد في مذود بتواضع ليعلّمنا المحبة والبساطة.</p>
-      <p>3. عاش بلا خطيئة، وكان مثال الطهارة والقداسة.</p>
-      <p>4. أحب الخطاة، وغفر للزناة، وشفى المرضى.</p>
-      <p>5. مشى بين الناس وصنع خيرًا في كل مكان.</p>
-      <p>6. بكلماته هدأ العواصف، وبلمساته أقام الموتى.</p>
-      <p>7. دُعي المعلّم، وهو أعظم من كل معلّمي الأرض.</p>
-      <p>8. علّمنا أن نحب أعداءنا ونصلي لأجل مضطهدينا.</p>
-      <p>9. دخل أورشليم كملك وديع، لا كفاتح متكبر.</p>
-      <p>10. غسل أرجل التلاميذ ليعلمنا الاتضاع.</p>
-      <p>11. سلّم نفسه للموت طوعًا من أجل خطايانا.</p>
-      <p>12. صُلِب بين لصين، لكنه غفر لصالبيه.</p>
-      <p>13. مات ودفن، لكنه لم يبق في القبر.</p>
-      <p>14. قام في اليوم الثالث، وأظهر مجده للعالم.</p>
-      <p>15. هو الطريق والحق والحياة.</p>
-      <p>16. لا يأتي أحد إلى الآب إلا به.</p>
-      <p>17. هو الراعي الصالح الذي يبذل نفسه عن الخراف.</p>
-      <p>18. مجده لا يزول، ومحبته لا تنتهي.</p>
-      <p>19. الرب يسوع هو البداية والنهاية.</p>
-      <p>20. من يؤمن به ينال الحياة الأبدية.</p>
-    </div>
-
-    <!-- منشور العذراء مريم -->
-    <div class="card" id="post1" style="display:none;">
-      <h2>العذراء مريم الطاهرة</h2>
-      <p>1. مريم هي الأم الطاهرة التي اختارها الله من بين النساء.</p>
-      <p>2. قال لها الملاك: "السلام لكِ، الرب معكِ".</p>
-      <p>3. امتلأت نعمة وطهارة، وصارت أم الكلمة المتجسد.</p>
-      <p>4. حملت يسوع في أحشائها وهي عذراء.</p>
-      <p>5. قالت "ليكن لي كقولك" بتواضع كامل.</p>
-      <p>6. زارت أليصابات وامتلأت الأرض تهليلاً.</p>
-      <p>7. غنت: "تعظم نفسي الرب وتبتهج روحي بالله مخلصي".</p>
-      <p>8. رافقت ابنها في الخدمة حتى الصليب.</p>
-      <p>9. شاركت آلامه بقلب أمٍ مليء بالإيمان.</p>
-      <p>10. كانت صامتة، متأملة، قوية بالإيمان.</p>
-      <p>11. العذراء شفيعة المؤمنين وملجأ الخطاة.</p>
-      <p>12. تطلب من ابنها الرحمة لكل من يلجأ إليها.</p>
-      <p>13. هي باب السماء، ومصدر الرجاء.</p>
-      <p>14. مجدها من الله، وتواضعها رفعها فوق الملائكة.</p>
-      <p>15. كل جيل يطوبها ويكرمها.</p>
-      <p>16. ظهرت في أماكن كثيرة تشهد لمحبة الله.</p>
-      <p>17. شفاعتها قوية ومحبّتها لا تزول.</p>
-      <p>18. العذراء أم الكنيسة وأم كل المؤمنين.</p>
-      <p>19. نصرخ إليها في الشدائد، فتسرع بالإجابة.</p>
-      <p>20. السلام لكِ يا مريم، يا أم النور، يا أم الله.</p>
-    </div>
-
-    <!-- منشور القيامة -->
-    <div class="card" id="post2" style="display:none;">
-      <h2>المسيح قام! حقًا قام!</h2>
-      <p>1. في فجر اليوم الثالث، أشرق النور من القبر وامتلأت الخليقة فرحًا.</p>
-      <p>2. قيامة المسيح هي إعلان النصر على الموت والخطيئة.</p>
-      <p>3. لم يُترك القبر فارغًا فحسب، بل امتلأت القلوب رجاءً حيًا.</p>
-      <p>4. بصليبه افتدانا، وبقيامته أعطانا الحياة الأبدية.</p>
-      <p>5. هو لا يُعرف بين الأموات، بل بين الأحياء إلى الأبد.</p>
-      <p>6. قيامة الرب يسوع شهادة أبدية على محبته غير المحدودة.</p>
-      <p>7. الموت لم يعد نهاية، بل بوابة للحياة في المسيح.</p>
-      <p>8. يسوع قام ليقيمنا معه، لنكون شركاء المجد.</p>
-      <p>9. كل دمعة حزن على الصليب تحوّلت إلى ترنيمة فرح في القيامة.</p>
-      <p>10. الحجر الذي دُحرج من على القبر، دحرج معه كل يأس في قلوبنا.</p>
-      <p>11. نحن أبناء القيامة، أبناء النور، لا نخشى ظلمة الموت.</p>
-      <p>12. بقيامته، أظهر أنه الإله الحقيقي وحده، المنتصر الأبدي.</p>
-      <p>13. المجد لك أيها القائم من بين الأموات، واهب الحياة.</p>
-      <p>14. كل جرح نال جسده صار بركة لنا وشفاء.</p>
-      <p>15. في القيامة، أعاد الله تشكيل معنى الحياة والموت.</p>
-      <p>16. نعيش كل يوم برجاء، لأن القبر لم يُغلق على ربنا.</p>
-      <p>17. الرب يسوع قام، وقيامته هي بداية خلاص كل من يؤمن به.</p>
-      <p>18. القيامة هي صرخة الحب الأقوى من الألم، والأقوى من الموت.</p>
-      <p>19. فلنحتفل لا بيوم فقط، بل بحياة كلها قيامة معه.</p>
-      <p>20. المسيح قام، فلتقم قلوبنا من كل ما هو باطل، لنحيا له إلى الأبد.</p>
-    </div>
-
-    <!-- التعليقات -->
-    <div class="comment-box">
-      <textarea id="commentInput" placeholder="اكتب تعليقك هنا..."></textarea>
-      <button onclick="addComment()">أضف تعليق</button>
-      <div class="comments-list" id="commentsList"></div>
-    </div>
+  <div class="post-preview">
+    <h2>العذراء مريم الطاهرة</h2>
+    <p>مريم هي الأم الطاهرة التي اختارها الله من بين النساء.</p>
+    <p>قال لها الملاك: "السلام لكِ، الرب معكِ".</p>
+    <p>امتلأت نعمة وطهارة، وصارت أم الكلمة المتجسد.</p>
+    <p>قالت "ليكن لي كقولك" بتواضع كامل.</p>
+    <p>غنت: "تعظم نفسي الرب وتبتهج روحي بالله مخلصي".</p>
+    <a class="read-more" href="#" onclick="showPost(1)">اقرأ الآن</a>
   </div>
+
+  <div class="post-preview">
+    <h2>القيامة المجيدة</h2>
+    <p>في فجر اليوم الثالث، أشرق النور من القبر وامتلأت الخليقة فرحًا.</p>
+    <p>قيامة المسيح هي إعلان النصر على الموت والخطيئة.</p>
+    <p>لم يُترك القبر فارغًا فحسب، بل امتلأت القلوب رجاءً حيًا.</p>
+    <p>بصليبه افتدانا، وبقيامته أعطانا الحياة الأبدية.</p>
+    <p>هو لا يُعرف بين الأموات، بل بين الأحياء إلى الأبد.</p>
+    <a class="read-more" href="#" onclick="showPost(2)">اقرأ الآن</a>
+  </div>
+
+</div>
+
+<!-- صفحة المنشور الكامل -->
+<div class="container full-post" id="fullPost">
+  <h2 id="postTitle"></h2>
+  <div id="postContent"></div>
+
+  <!-- التعليقات -->
+  <div class="comment-box">
+    <textarea id="commentInput" placeholder="اكتب تعليقك هنا..."></textarea>
+    <button onclick="addComment()">أضف تعليق</button>
+    <div class="comments-list" id="commentsList"></div>
+  </div>
+
+  <a class="back-button" href="#" onclick="goBack()">رجوع</a>
 </div>
 
 <script>
+  const posts = [
+    {
+      title: "سيرة الرب يسوع",
+      paragraphs: [
+        "1. الرب يسوع هو ابن الله الحي، جاء ليخلص العالم.",
+        "2. وُلد في مذود بتواضع ليعلّمنا المحبة والبساطة.",
+        "3. عاش بلا خطيئة، وكان مثال الطهارة والقداسة.",
+        "4. أحب الخطاة، وغفر للزناة، وشفى المرضى.",
+        "5. مشى بين الناس وصنع خيرًا في كل مكان.",
+        "6. بكلماته هدأ العواصف، وبلمساته أقام الموتى.",
+        "7. علّمنا أن نحب أعداءنا ونصلي لأجل مضطهدينا.",
+        "8. غسل أرجل التلاميذ ليعلمنا الاتضاع.",
+        "9. سلّم نفسه للموت طوعًا من أجل خطايانا.",
+        "10. صُلِب بين لصين، لكنه غفر لصالبيه.",
+        "11. قام في اليوم الثالث، وأظهر مجده للعالم.",
+        "12. من يؤمن به ينال الحياة الأبدية.",
+        "13. هو الراعي الصالح الذي يبذل نفسه عن الخراف.",
+        "14. لا يأتي أحد إلى الآب إلا به.",
+        "15. مجده لا يزول، ومحبته لا تنتهي.",
+        "16. الرب يسوع هو البداية والنهاية.",
+        "17. دُعي المعلّم، وهو أعظم من كل معلّمي الأرض.",
+        "18. الموت لم يغلبه، بل هو غلب الموت.",
+        "19. كل من يتبعه لا يسير في الظلمة.",
+        "20. الرب يسوع هو نور العالم ومخلصه."
+      ]
+    },
+    {
+      title: "العذراء مريم الطاهرة",
+      paragraphs: [
+        "1. مريم هي الأم الطاهرة التي اختارها الله من بين النساء.",
+        "2. قال لها الملاك: \"السلام لكِ، الرب معكِ\".",
+        "3. امتلأت نعمة وطهارة، وصارت أم الكلمة المتجسد.",
+        "4. حملت يسوع في أحشائها وهي عذراء.",
+        "5. قالت \"ليكن لي كقولك\" بتواضع كامل.",
+        "6. زارت أليصابات وامتلأت الأرض تهليلاً.",
+        "7. غنت: \"تعظم نفسي الرب وتبتهج روحي بالله مخلصي\".",
+        "8. رافقت ابنها في الخدمة حتى الصليب.",
+        "9. شاركت آلامه بقلب أمٍ مليء بالإيمان.",
+        "10. كانت صامتة، متأملة، قوية بالإيمان.",
+        "11. العذراء شفيعة المؤمنين وملجأ الخطاة.",
+        "12. تطلب من ابنها الرحمة لكل من يلجأ إليها.",
+        "13. هي باب السماء، ومصدر الرجاء.",
+        "14. مجدها من الله، وتواضعها رفعها فوق الملائكة.",
+        "15. كل جيل يطوبها ويكرمها.",
+        "16. ظهرت في أماكن كثيرة تشهد لمحبة الله.",
+        "17. شفاعتها قوية ومحبّتها لا تزول.",
+        "18. العذراء أم الكنيسة وأم كل المؤمنين.",
+        "19. نصرخ إليها في الشدائد، فتسرع بالإجابة.",
+        "20. السلام لكِ يا مريم، يا أم النور، يا أم الله."
+      ]
+    },
+    {
+      title: "القيامة المجيدة",
+      paragraphs: [
+        "1. في فجر اليوم الثالث، أشرق النور من القبر وامتلأت الخليقة فرحًا.",
+        "2. قيامة المسيح هي إعلان النصر على الموت والخطيئة.",
+        "3. لم يُترك القبر فارغًا فحسب، بل امتلأت القلوب رجاءً حيًا.",
+        "4. بصليبه افتدانا، وبقيامته أعطانا الحياة الأبدية.",
+        "5. هو لا يُعرف بين الأموات، بل بين الأحياء إلى الأبد.",
+        "6. قيامة الرب يسوع شهادة أبدية على محبته غير المحدودة.",
+        "7. يسوع قام ليقيمنا معه، لنكون شركاء المجد.",
+        "8. كل دمعة على الصليب تحوّلت إلى ترنيمة في القيامة.",
+        "9. نحن أبناء القيامة، لا نخشى ظلمة الموت.",
+        "10. بقيامته، أظهر أنه الإله الحقيقي وحده، المنتصر الأبدي.",
+        "11. المجد لك أيها القائم من بين الأموات، واهب الحياة.",
+        "12. في القيامة، أعاد الله تشكيل معنى الحياة والموت.",
+        "13. نعيش كل يوم برجاء، لأن القبر لم يُغلق على ربنا.",
+        "14. الرب يسوع قام، وقيامته هي بداية خلاص كل من يؤمن به.",
+        "15. القيامة هي صرخة الحب الأقوى من الموت.",
+        "16. فلنحتفل لا بيوم فقط، بل بحياة كلها قيامة معه.",
+        "17. المسيح قام، فلتقم قلوبنا من كل ما هو باطل.",
+        "18. من يؤمن بالقيامة لا يخاف شيئًا.",
+        "19. نور المسيح القائم يغلب كل ظلمة.",
+        "20. المسيح قام! حقًا قام!"
+      ]
+    }
+  ];
+
   let currentPost = 0;
 
   function showPost(index) {
-    document.querySelectorAll('.tab').forEach((tab, i) => {
-      tab.classList.toggle('active', i === index);
-    });
-
-    for (let i = 0; i < 3; i++) {
-      document.getElementById(`post${i}`).style.display = (i === index) ? 'block' : 'none';
-    }
-
     currentPost = index;
+    document.getElementById("mainPage").style.display = "none";
+    document.getElementById("fullPost").style.display = "block";
+
+    const post = posts[index];
+    document.getElementById("postTitle").innerText = post.title;
+    document.getElementById("postContent").innerHTML = post.paragraphs.map(p => `<p>${p}</p>`).join('');
     loadComments();
+  }
+
+  function goBack() {
+    document.getElementById("mainPage").style.display = "block";
+    document.getElementById("fullPost").style.display = "none";
   }
 
   function addComment() {
     const input = document.getElementById("commentInput");
     const comment = input.value.trim();
     if (!comment) return;
-    const key = `comments_post_${currentPost}`;
+    const key = `comments_${currentPost}`;
     const comments = JSON.parse(localStorage.getItem(key)) || [];
     comments.push(comment);
     localStorage.setItem(key, JSON.stringify(comments));
@@ -129,34 +276,14 @@
   }
 
   function loadComments() {
-    const key = `comments_post_${currentPost}`;
+    const key = `comments_${currentPost}`;
     const comments = JSON.parse(localStorage.getItem(key)) || [];
     const list = document.getElementById("commentsList");
     list.innerHTML = comments.map(c => `<p>${c}</p>`).join('');
   }
 
-  window.onload = loadComments;
+  window.onload = () => loadComments();
 </script>
-المسيح و القديسه  العذراء مريم الطاهره <script>
-function sayAmen() {
-  alert("آمين!");
-}
-
-function lightCandle() {
-  const candleBtn = event.target;
-  candleBtn.classList.toggle("candle-lit");
-  candleBtn.innerText = candleBtn.classList.contains("candle-lit") ? "أُضيئت شمعة" : "أضئ شمعة";
-}
-
-function copyPrayer() {
-  const prayer = document.getElementById("good-friday-prayer").innerText;
-  navigator.clipboard.writeText(prayer).then(() => {
-    alert("تم نسخ الصلاة!");
-  });
-}
-</script>
-  
-  </footer>
 
   <!-- سكريبت الظهور بعد التحميل -->
   <script>
@@ -186,65 +313,6 @@ function copyPrayer() {
     }
 
     function changeLanguage(lang) {
-      alert("سيتم تحويل اللغة إلى: " + lang);
-    }
-  </script>
-<script>
-function sayAmen() {
-  alert("آمين!");
-}
 
-function lightCandle() {
-  const candleBtn = event.target;
-  candleBtn.classList.toggle("candle-lit");
-  candleBtn.innerText = candleBtn.classList.contains("candle-lit") ? "أُضيئت شمعة" : "أضئ شمعة";
-}
-
-function copyPrayer() {
-  const prayer = document.getElementById("good-friday-prayer").innerText;
-  navigator.clipboard.writeText(prayer).then(() => {
-    alert("تم نسخ الصلاة!");
-  });
-}
-function lightCandle() {
-  const container = document.getElementById('candleContainer');
-  const candle = document.createElement('div');
-  candle.classList.add('candle');
-
-  const flame = document.createElement('div');
-  flame.classList.add('flame');
-
-  candle.appendChild(flame);
-  container.appendChild(candle);
-}
-function lightPrayer() {
-  const section = document.getElementById("prayerSection");
-  section.classList.add("glow");
-}
-</script>
-<script>
-  // إظهار الزر عند التمرير
-  window.onscroll = function () {
-    const btn = document.getElementById("scrollTopBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
-
-  // تنفيذ الرجوع للأعلى
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-<script>
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-</script>
-</script>
 </body>
-<button onclick="scrollToTop()" id="scrollTopBtn" title="رجوع لأعلى">↑</button>
-</html>
-</body>
-</html>
+  </html>
