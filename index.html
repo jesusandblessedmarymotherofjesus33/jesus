@@ -273,5 +273,22 @@ function toggleDarkMode() {
 </script>
 </script>
 </body>
+    <button id="darkToggle">☀️</button>
+<button id="toTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ للأعلى</button>
+
+<script>
+  // زر الوضع الليلي
+  const toggleBtn = document.getElementById('darkToggle');
+  toggleBtn.onclick = () => {
+    document.body.classList.toggle('dark-mode');
+    toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+  }
+
+  // زر العودة للأعلى
+  const toTop = document.getElementById('toTop');
+  window.onscroll = () => {
+    toTop.style.display = window.scrollY > 200 ? 'block' : 'none';
+  }
+</script>
 <button onclick="scrollToTop()" id="scrollTopBtn" title="رجوع لأعلى">↑</button>
 </html>
