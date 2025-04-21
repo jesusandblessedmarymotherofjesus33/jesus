@@ -28,37 +28,20 @@
       padding: 20px;
       margin-bottom: 25px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: relative;
     }
     .post h2 {
       margin-top: 0;
       color: #6a1b9a;
     }
-    .read-more {
+    .read-more, .copy-btn, .like-btn, .amen-btn, .light-candle-btn {
       background-color: #6a1b9a;
       color: white;
       padding: 10px 15px;
       border-radius: 6px;
       text-decoration: none;
       display: inline-block;
-      margin-top: 10px;
-    }
-    .like-btn, .copy-btn, .candle-btn {
-      position: absolute;
-      top: 10px;
-      font-size: 20px;
+      margin: 10px 5px 0 0;
       cursor: pointer;
-      color: #6a1b9a;
-    }
-    .like-btn {
-      right: 50px;
-    }
-    .copy-btn {
-      right: 20px;
-    }
-    .candle-btn {
-      left: 10px;
-      font-size: 30px;
     }
     .comment-box {
       margin-top: 20px;
@@ -87,6 +70,10 @@
       font-size: 18px;
       border-radius: 6px;
       margin: 8px 0;
+    }
+    .stats {
+      margin-top: 10px;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -173,6 +160,36 @@
       }
     ];
 
+    function createPost(post, index) {
+      const previewText = post.content.slice(0, 5).join('<br>');
+      const fullText = post.content.map(p => `<p>${p}</p>`).join('');
+      const likes = localStorage.getItem(`likes_${index}`) || 0;
+      const candles = localStorage.getItem(`candles_${index}`) || 0;
+      return `
+        <div class="post">
+          <h2>${post.title}</h2>
+          <div id="preview-${index}">${previewText}</div>
+          <div id="full-${index}" style="display:none">${fullText}</div>
+          <a href="#" class="read-more" onclick="togglePost(${index})">اقرأ الآن</a>
+          <div>
+            <button class="like-btn" onclick="likePost(${index})">إعجاب</button>
+            <button class="copy-btn" onclick="copyPost(${index})">نسخ</button>
+            <button class="amen-btn" onclick="sayAmen(${index})">آمين</button>
+            <button class="light-candle-btn" onclick="lightCandle(${index})">أضئ شمعة</button>
+          </div>
+          <div class="stats">
+            <span id="likes-${index}">إعجابات: ${likes}</span> |
+            <span id="candles-${index}">شموع: ${candles}</span>
+          </div>
+          <div class="comment-box">
+            <textarea id="comment-${index}" placeholder="اكتب تعليقك هنا..."></textarea>
+            <button onclick="addComment(${index})">أضف تعليق</button>
+            <div class="comments-list" id="comments-${index}"></div>
+          </div>
+        </div>
+      `;
+    }
+    
   <!-- سكريبت الظهور بعد التحميل -->
   <script>
     window.addEventListener("load", () => {
@@ -202,26 +219,6 @@
 
     function changeLanguage(lang) {
 
-    function createPost(post, index) {
-      const previewText = post.content.slice(0, 5).join('<br>');
-      const fullText = post.content.map(p => `<p>${p}</p>`).join('');
-      return `
-        <div class="post">
-          <span class="candle-btn">🕯️</span>
-          <h2>${post.title}</h2>
-          <div id="preview-${index}">${previewText}</div>
-          <div id="full-${index}" style="display:none">${fullText}</div>
-          <a href="#" class="read-more" onclick="togglePost(${index})">اقرأ الآن</a>
-          <span class="like-btn" onclick="likePost(${index})">👍 0</span>
-          <span class="copy-btn" onclick="copyPost(${index})">📋</span>
-          <div class="comment-box">
-            <textarea id="comment-${index}" placeholder="اكتب تعليقك هنا..."></textarea>
-            <button onclick="addComment(${index})">أضف تعليق</button>
-            <div class="comments-list" id="comments-${index}"></div>
-          </div>
-        </div>
-      `;
-    }
 
     function renderPosts() {
       const container = document.getElementById('postsContainer');
@@ -241,19 +238,6 @@
       }
     }
 
-    function likePost(index) {
-      const likeButton = document.querySelector(`.like-btn:nth-child(${index + 2})`);
-      let likeCount = parseInt(likeButton.innerText.split(' ')[1]);
-      likeButton.innerText = `👍 ${likeCount + 1}`;
-    }
-
-    function copyPost(index) {
-      const postContent = document.getElementById(`full-${index}`).innerText;
-      navigator.clipboard.writeText(postContent).then(() => {
-        alert("تم النسخ إلى الحافظة!");
-      });
-    }
-
     function addComment(index) {
       const input = document.getElementById(`comment-${index}`);
       const comment = input.value.trim();
@@ -271,6 +255,32 @@
       const comments = JSON.parse(localStorage.getItem(key) || '[]');
       const list = document.getElementById(`comments-${index}`);
       list.innerHTML = comments.map(c => `<p>${c}</p>`).join('');
+    }
+
+    function likePost(index) {
+      const key = `likes_${index}`;
+      let count = parseInt(localStorage.getItem(key) || '0');
+      count++;
+      localStorage.setItem(key, count);
+      document.getElementById(`likes-${index}`).innerText = `إعجابات: ${count}`;
+    }
+
+    function lightCandle(index) {
+      const key = `candles_${index}`;
+      let count = parseInt(localStorage.getItem(key) || '0');
+      count++;
+      localStorage.setItem(key, count);
+      document.getElementById(`candles-${index}`).innerText = `شموع: ${count}`;
+    }
+
+    function copyPost(index) {
+      const text = posts[index].content.join('\n');
+      navigator.clipboard.writeText(text);
+      alert("تم نسخ المحتوى!");
+    }
+
+    function sayAmen(index) {
+      alert("آمين! باركك الرب.");
     }
 
     window.onload = renderPosts;
