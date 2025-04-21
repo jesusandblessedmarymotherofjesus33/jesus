@@ -2112,7 +2112,7 @@ button:hover, .custom-button:hover {
 
 /* === الفوتر === */
 footer {
-  background-color: #eee;
+  background-color: #blue;
   color: #444;
   text-align: center;
 }
@@ -2140,4 +2140,11 @@ footer h3 {
   .sidebar {
     width: 100%;
   }
+}
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const body = document.body;
+  
+  sidebar.classList.toggle("open");
+  body.classList.toggle("sidebar-open");
 }
