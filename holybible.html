@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تأملات وتعاليم الكتاب المقدس</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: #2f2f2f;
+      padding: 15px;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    .sidebar a:hover {
+      background-color: #555;
+    }
+
+    .content {
+      width: 75%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .devotion-card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .devotion-card:nth-child(odd) {
+      background-color: #f0f8ff;
+    }
+
+    .devotion-card:nth-child(even) {
+      background-color: #fafad2;
+    }
+
+    .devotion-card h3 {
+      margin: 0;
+      color: #4CAF50;
+    }
+
+    .devotion-card p {
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .devotion-card small {
+      color: gray;
+    }
+
+    .devotion-card .quote {
+      font-style: italic;
+      color: #444;
+      margin-top: 15px;
+    }
+
+    .devotion-card .read-more {
+      background-color: #4CAF50;
+      color: white;
+      padding: 6px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .devotion-card .read-more:hover {
+      background-color: #45a049;
+    }
+
+    .share-buttons button {
+      background-color: #eee;
+      border: none;
+      padding: 6px 12px;
+      margin-left: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .share-buttons button:hover {
+      background-color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .content {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>تأملات وتعاليم الكتاب المقدس</h1>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>قائمة الصفحات</h2>
+      <a href="index.html">الرئيسية</a>
+      <a href="salat-alyawm.html">صلاة اليوم</a>
+      <a href="ta2amolat.html">تأملات الكتاب المقدس</a>
+      <a href="qodisin.html">القديسين</a>
+      <button class="toggle-dark" onclick="document.body.classList.toggle('dark-mode')">وضع ليلي</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h2>تأملات الكتاب المقدس لهذا اليوم</h2>
+
+      <div id="devotions">
+        <!-- سيتم ملء هذا القسم بالتأملات تلقائيًا -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // قائمة الـ 100 تأمل
+    const devotions = [
+      { title: "المحبة لا تسقط أبدًا", type: "محبة", content: "المحبة الحقيقية لا تعرف الأنانية، بل تبذل نفسها للآخرين.", quote: "بِالْمَحَبَّةِ تَكْمُلُ النَّامُوسَ" },
+      { title: "الإيمان يُرِيك ما لا يُرى", type: "إيمان", content: "بالإيمان ندخل العمق ونعيش في رجاء الأمور غير المنظورة.", quote: "إِيمَانُكِ خَلَّصَكِ" },
+      { title: "التواضع يجلب النعمة", type: "تواضع", content: "الله يقاوم المستكبرين ويُعطي نعمة للمتواضعين.", quote: "تَوَاضَعُوا فِي يَدِ اللَّهِ" },
+
+      { title: "الرجاء لا يُخزي", type: "رجاء", content: "الرجاء في الله يصنع سلامًا في القلب مهما كانت الظروف.", quote: "لَيْسَ لَكُمْ فَرَحٌ إِلَّا فِيَّ" },
+      { title: "الصلاة تنير الطريق", type: "صلاة", content: "حين نصلي، نستقبل نور الله ونعرف طريقنا وسط الظلمة.", quote: "مَطْلَبُكُمْ يَكُونُ" },
+      { title: "الغفران شفاء للنفس", type: "غفران", content: "من يغفر يحرر نفسه من ثقل المرارة والألم.", quote: "مَنْ غَفَرَ لِلنَّاسِ يَغْفِرُ لَهُ اللَّهُ" },
+
+      { title: "الاتكال على الله", type: "اتكال", content: "اتكل على الرب بكل قلبك ولا تعتمد على فهمك.", quote: "تَوَكَّلْتُ عَلَى اللَّهِ" },
+      { title: "الوداعة قوة الروح", type: "وداعة", content: "الوديع يرث الأرض لأن قوته ليست من العالم بل من الله.", quote: "طُوبَى لِلْوُدَعَاء" },
+      { title: "الحق يحرركم", type: "حق", content: "اعرف الحق، والحق يحررك من قيود الخوف والخطيئة.", quote: "أَنَا هُوَ الطَّرِيقُ وَالْحَقُّ وَالْحَيَاةُ" },
+
+      { title: "التوبة حياة جديدة", type: "توبة", content: "كل توبة صادقة تفتح باب الرجاء وتبدأ عهدًا جديدًا.", quote: "تُوبُوا فَتُغْفَرْ لَكُمْ" },
+      { title: "السلام الداخلي", type: "سلام", content: "سلام الله يفوق كل عقل، ويحفظ القلب وسط العواصف.", quote: "سلامي أترك لكم، سلامي أعطيكم" },
+      { title: "الثقة في مواعيد الله", type: "إيمان", content: "من يثق في مواعيد الرب لا يتزعزع مهما تأخر الوعد.", quote: "إِيمَانُكِ خَلَّصَكِ" },
+
+      // أكمل باقي التأملات هنا حتى 100...
+    ];
+
+    function displayDevotions() {
+      const devotionsContainer = document.getElementById('devotions');
+      const today = new Date();
+      const dayOfMonth = today.getDate();  // الحصول على اليوم من الشهر
+      const startIndex = (dayOfMonth - 1) * 3;  // بدء من أول تأمل في هذا اليوم
+
+      // عرض 3 تأملات في اليوم
+      const todaysDevotions = devotions.slice(startIndex, startIndex + 3);
+
+      todaysDevotions.forEach(devotion => {
+        const devotionCard = document.createElement('div');
+        devotionCard.classList.add('devotion-card');
+
+        devotionCard.innerHTML = `
+          <h3>${devotion.title}</h3>
+          <p>${devotion.content}</p>
+          <small>${devotion.type}</small>
+          <div class="quote">" ${devotion.quote} "</div>
+          <a href="#" class="read-more">اقرأ المزيد</a>
+        `;
+
+        devotionsContainer.appendChild(devotionCard);
+      });
+    }
+
+    // تنفيذ عند تحميل الصفحة
+    window.onload = displayDevotions;
+  </script>
+</body>
+  </html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تأملات وتعاليم الكتاب المقدس</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: #2f2f2f;
+      padding: 15px;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    .sidebar a:hover {
+      background-color: #555;
+    }
+
+    .content {
+      width: 75%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .devotion-card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .devotion-card:nth-child(odd) {
+      background-color: #f0f8ff;
+    }
+
+    .devotion-card:nth-child(even) {
+      background-color: #fafad2;
+    }
+
+    .devotion-card h3 {
+      margin: 0;
+      color: #4CAF50;
+    }
+
+    .devotion-card p {
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .devotion-card small {
+      color: gray;
+    }
+
+    .devotion-card .quote {
+      font-style: italic;
+      color: #444;
+      margin-top: 15px;
+    }
+
+    .devotion-card .read-more {
+      background-color: #4CAF50;
+      color: white;
+      padding: 6px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .devotion-card .read-more:hover {
+      background-color: #45a049;
+    }
+
+    .share-buttons button {
+      background-color: #eee;
+      border: none;
+      padding: 6px 12px;
+      margin-left: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .share-buttons button:hover {
+      background-color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .content {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>تأملات وتعاليم الكتاب المقدس</h1>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>قائمة الصفحات</h2>
+      <a href="index.html">الرئيسية</a>
+      <a href="salat-alyawm.html">صلاة اليوم</a>
+      <a href="ta2amolat.html">تأملات الكتاب المقدس</a>
+      <a href="qodisin.html">القديسين</a>
+      <button class="toggle-dark" onclick="document.body.classList.toggle('dark-mode')">وضع ليلي</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h2>تأملات الكتاب المقدس لهذا اليوم</h2>
+
+      <div id="devotions">
+        <!-- سيتم ملء هذا القسم بالتأملات تلقائيًا -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // قائمة الـ 100 تأمل
+    const devotions = [
+      { title: "المحبة لا تسقط أبدًا", type: "محبة", content: "المحبة الحقيقية لا تعرف الأنانية، بل تبذل نفسها للآخرين.", quote: "بِالْمَحَبَّةِ تَكْمُلُ النَّامُوسَ" },
+      { title: "الإيمان يُرِيك ما لا يُرى", type: "إيمان", content: "بالإيمان ندخل العمق ونعيش في رجاء الأمور غير المنظورة.", quote: "إِيمَانُكِ خَلَّصَكِ" },
+      { title: "التواضع يجلب النعمة", type: "تواضع", content: "الله يقاوم المستكبرين ويُعطي نعمة للمتواضعين.", quote: "تَوَاضَعُوا فِي يَدِ اللَّهِ" },
+
+      { title: "الرجاء لا يُخزي", type: "رجاء", content: "الرجاء في الله يصنع سلامًا في القلب مهما كانت الظروف.", quote: "لَيْسَ لَكُمْ فَرَحٌ إِلَّا فِيَّ" },
+      { title: "الصلاة تنير الطريق", type: "صلاة", content: "حين نصلي، نستقبل نور الله ونعرف طريقنا وسط الظلمة.", quote: "مَطْلَبُكُمْ يَكُونُ" },
+      { title: "الغفران شفاء للنفس", type: "غفران", content: "من يغفر يحرر نفسه من ثقل المرارة والألم.", quote: "مَنْ غَفَرَ لِلنَّاسِ يَغْفِرُ لَهُ اللَّهُ" },
+
+      { title: "الاتكال على الله", type: "اتكال", content: "اتكل على الرب بكل قلبك ولا تعتمد على فهمك.", quote: "تَوَكَّلْتُ عَلَى اللَّهِ" },
+      { title: "الوداعة قوة الروح", type: "وداعة", content: "الوديع يرث الأرض لأن قوته ليست من العالم بل من الله.", quote: "طُوبَى لِلْوُدَعَاء" },
+      { title: "الحق يحرركم", type: "حق", content: "اعرف الحق، والحق يحررك من قيود الخوف والخطيئة.", quote: "أَنَا هُوَ الطَّرِيقُ وَالْحَقُّ وَالْحَيَاةُ" },
+
+      { title: "التوبة حياة جديدة", type: "توبة", content: "كل توبة صادقة تفتح باب الرجاء وتبدأ عهدًا جديدًا.", quote: "تُوبُوا فَتُغْفَرْ لَكُمْ" },
+      { title: "السلام الداخلي", type: "سلام", content: "سلام الله يفوق كل عقل، ويحفظ القلب وسط العواصف.", quote: "سلامي أترك لكم، سلامي أعطيكم" },
+      { title: "الثقة في مواعيد الله", type: "إيمان", content: "من يثق في مواعيد الرب لا يتزعزع مهما تأخر الوعد.", quote: "إِيمَانُكِ خَلَّصَكِ" },
+
+      // أكمل باقي التأملات هنا حتى 100...
+    ];
+    
+  <!-- سكريبت الظهور بعد التحميل -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 800);
+    });
+
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    function openFullScreen(img) {
+      const container = document.getElementById("fullscreen-container");
+      const fullImg = document.getElementById("fullscreen-image");
+      fullImg.src = img.src;
+      container.style.display = "flex";
+    }
+
+    function closeFullScreen() {
+      document.getElementById("fullscreen-container").style.display = "none";
+    }
+
+    function start() {
+      window.location.href = "main.html";
+    }
+
+    function changeLanguage(lang) {
+
+
+    function displayDevotions() {
+      const devotionsContainer = document.getElementById('devotions');
+      const today = new Date();
+      const dayOfMonth = today.getDate();  // الحصول على اليوم من الشهر
+      const startIndex = (dayOfMonth - 1) * 3;  // بدء من أول تأمل في هذا اليوم
+
+      // عرض 3 تأملات في اليوم
+      const todaysDevotions = devotions.slice(startIndex, startIndex + 3);
+
+      todaysDevotions.forEach(devotion => {
+        const devotionCard = document.createElement('div');
+        devotionCard.classList.add('devotion-card');
+
+        devotionCard.innerHTML = `
+          <h3>${devotion.title}</h3>
+          <p>${devotion.content}</p>
+          <small>${devotion.type}</small>
+          <div class="quote">" ${devotion.quote} "</div>
+          <a href="#" class="read-more">اقرأ المزيد</a>
+        `;
+
+        devotionsContainer.appendChild(devotionCard);
+      });
+    }
+
+    // تنفيذ عند تحميل الصفحة
+    window.onload = displayDevotions;
+  </script>
+</body>
+    </html>
