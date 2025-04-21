@@ -11,12 +11,7 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
-      opacity: 0;
       transition: opacity 1s ease;
-    }
-
-    body.loaded {
-      opacity: 1;
     }
 
     header {
@@ -111,6 +106,34 @@
       background-color: #45a049;
     }
 
+    /* الوضع الليلي */
+    body.dark-mode {
+      background-color: #1c1c1c;
+      color: #fff;
+    }
+
+    body.dark-mode .content {
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+
+    body.dark-mode .devotion-card {
+      background-color: #3a3a3a !important;
+      color: #fff;
+    }
+
+    body.dark-mode .devotion-card .quote {
+      color: #ddd;
+    }
+
+    body.dark-mode .read-more {
+      background-color: #777;
+    }
+
+    body.dark-mode .read-more:hover {
+      background-color: #999;
+    }
+
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -160,7 +183,6 @@
       { title: "الاتكال على الله", type: "اتكال", content: "اتكل على الرب بكل قلبك ولا تعتمد على فهمك.", quote: "تَوَكَّلْتُ عَلَى اللَّهِ" },
       { title: "الوداعة قوة الروح", type: "وداعة", content: "الوديع يرث الأرض لأن قوته ليست من العالم بل من الله.", quote: "طُوبَى لِلْوُدَعَاء" },
       { title: "الحق يحرركم", type: "حق", content: "اعرف الحق، والحق يحررك من قيود الخوف والخطيئة.", quote: "أَنَا هُوَ الطَّرِيقُ وَالْحَقُّ وَالْحَيَاةُ" }
-      // أكمل الباقي حسب الحاجة
     ];
 
     function displayDevotions() {
@@ -190,42 +212,6 @@
     }
 
     window.onload = displayDevotions;
-  </script>
-
-  <!-- سكريبت الظهور بعد التحميل -->
-  <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.body.classList.add("loaded");
-      }, 800);
-    });
-
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("open");
-    }
-
-    function openFullScreen(img) {
-      const container = document.getElementById("fullscreen-container");
-      const fullImg = document.getElementById("fullscreen-image");
-      fullImg.src = img.src;
-      container.style.display = "flex";
-    }
-
-    function closeFullScreen() {
-      document.getElementById("fullscreen-container").style.display = "none";
-    }
-
-    function start() {
-      window.location.href = "main.html";
-    }
-
-    function changeLanguage(lang) {
-      alert("سيتم تحويل اللغة إلى: " + lang);
-    }
-
-    function sayAmen() {
-      alert("آمين!");
-    }
   </script>
 </body>
 </html>
