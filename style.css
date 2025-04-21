@@ -1832,4 +1832,125 @@ body.dark-mode .saint-card {
 
 .custom-button:hover {
   background-color: #45a049;
-} 
+}
+/* خط عام */
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  transition: all 0.3s ease;
+}
+
+/* تنسيق عام للنصوص */
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+/* صناديق للمحتوى */
+.card {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)),
+              url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Jesus_and_Mary.jpg/800px-Jesus_and_Mary.jpg') center/cover no-repeat;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* الوضع الليلي */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+body.dark-mode header {
+  background-blend-mode: darken;
+}
+
+/* زر الوضع الليلي */
+#darkToggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* زر العودة لأعلى */
+#toTop {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* تفاعل الروابط */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* استجابة على الجوال */
+@media (max-width: 768px) {
+  .card {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  header {
+    padding: 40px 15px;
+  }
+
+  #darkToggle {
+    top: 10px;
+    left: 10px;
+  }
+
+  #toTop {
+    left: 10px;
+  }
+  }
