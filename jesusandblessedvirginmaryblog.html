@@ -155,5 +155,96 @@ function copyPrayer() {
   });
 }
 </script>
+  
+  </footer>
+
+  <!-- سكريبت الظهور بعد التحميل -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 800);
+    });
+
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    function openFullScreen(img) {
+      const container = document.getElementById("fullscreen-container");
+      const fullImg = document.getElementById("fullscreen-image");
+      fullImg.src = img.src;
+      container.style.display = "flex";
+    }
+
+    function closeFullScreen() {
+      document.getElementById("fullscreen-container").style.display = "none";
+    }
+
+    function start() {
+      window.location.href = "main.html";
+    }
+
+    function changeLanguage(lang) {
+      alert("سيتم تحويل اللغة إلى: " + lang);
+    }
+  </script>
+<script>
+function sayAmen() {
+  alert("آمين!");
+}
+
+function lightCandle() {
+  const candleBtn = event.target;
+  candleBtn.classList.toggle("candle-lit");
+  candleBtn.innerText = candleBtn.classList.contains("candle-lit") ? "أُضيئت شمعة" : "أضئ شمعة";
+}
+
+function copyPrayer() {
+  const prayer = document.getElementById("good-friday-prayer").innerText;
+  navigator.clipboard.writeText(prayer).then(() => {
+    alert("تم نسخ الصلاة!");
+  });
+}
+function lightCandle() {
+  const container = document.getElementById('candleContainer');
+  const candle = document.createElement('div');
+  candle.classList.add('candle');
+
+  const flame = document.createElement('div');
+  flame.classList.add('flame');
+
+  candle.appendChild(flame);
+  container.appendChild(candle);
+}
+function lightPrayer() {
+  const section = document.getElementById("prayerSection");
+  section.classList.add("glow");
+}
+</script>
+<script>
+  // إظهار الزر عند التمرير
+  window.onscroll = function () {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // تنفيذ الرجوع للأعلى
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+</script>
+</body>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="رجوع لأعلى">↑</button>
+</html>
 </body>
 </html>
