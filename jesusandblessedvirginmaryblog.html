@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مدونة روحية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>مدونة روحية</h1>
+  <div class="tabs">
+    <div class="tab active" onclick="showPost(0)">الرب يسوع</div>
+    <div class="tab" onclick="showPost(1)">العذراء مريم</div>
+    <div class="tab" onclick="showPost(2)">القيامة</div>
+  </div>
+
+  <div id="posts">
+    <!-- منشور الرب يسوع -->
+    <div class="card" id="post0">
+      <h2>سيرة الرب يسوع ابن الله</h2>
+      <p>1. الرب يسوع هو ابن الله الحي، جاء ليخلص العالم.</p>
+      <p>2. وُلد في مذود بتواضع ليعلّمنا المحبة والبساطة.</p>
+      <p>3. عاش بلا خطيئة، وكان مثال الطهارة والقداسة.</p>
+      <p>4. أحب الخطاة، وغفر للزناة، وشفى المرضى.</p>
+      <p>5. مشى بين الناس وصنع خيرًا في كل مكان.</p>
+      <p>6. بكلماته هدأ العواصف، وبلمساته أقام الموتى.</p>
+      <p>7. دُعي المعلّم، وهو أعظم من كل معلّمي الأرض.</p>
+      <p>8. علّمنا أن نحب أعداءنا ونصلي لأجل مضطهدينا.</p>
+      <p>9. دخل أورشليم كملك وديع، لا كفاتح متكبر.</p>
+      <p>10. غسل أرجل التلاميذ ليعلمنا الاتضاع.</p>
+      <p>11. سلّم نفسه للموت طوعًا من أجل خطايانا.</p>
+      <p>12. صُلِب بين لصين، لكنه غفر لصالبيه.</p>
+      <p>13. مات ودفن، لكنه لم يبق في القبر.</p>
+      <p>14. قام في اليوم الثالث، وأظهر مجده للعالم.</p>
+      <p>15. هو الطريق والحق والحياة.</p>
+      <p>16. لا يأتي أحد إلى الآب إلا به.</p>
+      <p>17. هو الراعي الصالح الذي يبذل نفسه عن الخراف.</p>
+      <p>18. مجده لا يزول، ومحبته لا تنتهي.</p>
+      <p>19. الرب يسوع هو البداية والنهاية.</p>
+      <p>20. من يؤمن به ينال الحياة الأبدية.</p>
+    </div>
+
+    <!-- منشور العذراء مريم -->
+    <div class="card" id="post1" style="display:none;">
+      <h2>العذراء مريم الطاهرة</h2>
+      <p>1. مريم هي الأم الطاهرة التي اختارها الله من بين النساء.</p>
+      <p>2. قال لها الملاك: "السلام لكِ، الرب معكِ".</p>
+      <p>3. امتلأت نعمة وطهارة، وصارت أم الكلمة المتجسد.</p>
+      <p>4. حملت يسوع في أحشائها وهي عذراء.</p>
+      <p>5. قالت "ليكن لي كقولك" بتواضع كامل.</p>
+      <p>6. زارت أليصابات وامتلأت الأرض تهليلاً.</p>
+      <p>7. غنت: "تعظم نفسي الرب وتبتهج روحي بالله مخلصي".</p>
+      <p>8. رافقت ابنها في الخدمة حتى الصليب.</p>
+      <p>9. شاركت آلامه بقلب أمٍ مليء بالإيمان.</p>
+      <p>10. كانت صامتة، متأملة، قوية بالإيمان.</p>
+      <p>11. العذراء شفيعة المؤمنين وملجأ الخطاة.</p>
+      <p>12. تطلب من ابنها الرحمة لكل من يلجأ إليها.</p>
+      <p>13. هي باب السماء، ومصدر الرجاء.</p>
+      <p>14. مجدها من الله، وتواضعها رفعها فوق الملائكة.</p>
+      <p>15. كل جيل يطوبها ويكرمها.</p>
+      <p>16. ظهرت في أماكن كثيرة تشهد لمحبة الله.</p>
+      <p>17. شفاعتها قوية ومحبّتها لا تزول.</p>
+      <p>18. العذراء أم الكنيسة وأم كل المؤمنين.</p>
+      <p>19. نصرخ إليها في الشدائد، فتسرع بالإجابة.</p>
+      <p>20. السلام لكِ يا مريم، يا أم النور، يا أم الله.</p>
+    </div>
+
+    <!-- منشور القيامة -->
+    <div class="card" id="post2" style="display:none;">
+      <h2>المسيح قام! حقًا قام!</h2>
+      <p>1. في فجر اليوم الثالث، أشرق النور من القبر وامتلأت الخليقة فرحًا.</p>
+      <p>2. قيامة المسيح هي إعلان النصر على الموت والخطيئة.</p>
+      <p>3. لم يُترك القبر فارغًا فحسب، بل امتلأت القلوب رجاءً حيًا.</p>
+      <p>4. بصليبه افتدانا، وبقيامته أعطانا الحياة الأبدية.</p>
+      <p>5. هو لا يُعرف بين الأموات، بل بين الأحياء إلى الأبد.</p>
+      <p>6. قيامة الرب يسوع شهادة أبدية على محبته غير المحدودة.</p>
+      <p>7. الموت لم يعد نهاية، بل بوابة للحياة في المسيح.</p>
+      <p>8. يسوع قام ليقيمنا معه، لنكون شركاء المجد.</p>
+      <p>9. كل دمعة حزن على الصليب تحوّلت إلى ترنيمة فرح في القيامة.</p>
+      <p>10. الحجر الذي دُحرج من على القبر، دحرج معه كل يأس في قلوبنا.</p>
+      <p>11. نحن أبناء القيامة، أبناء النور، لا نخشى ظلمة الموت.</p>
+      <p>12. بقيامته، أظهر أنه الإله الحقيقي وحده، المنتصر الأبدي.</p>
+      <p>13. المجد لك أيها القائم من بين الأموات، واهب الحياة.</p>
+      <p>14. كل جرح نال جسده صار بركة لنا وشفاء.</p>
+      <p>15. في القيامة، أعاد الله تشكيل معنى الحياة والموت.</p>
+      <p>16. نعيش كل يوم برجاء، لأن القبر لم يُغلق على ربنا.</p>
+      <p>17. الرب يسوع قام، وقيامته هي بداية خلاص كل من يؤمن به.</p>
+      <p>18. القيامة هي صرخة الحب الأقوى من الألم، والأقوى من الموت.</p>
+      <p>19. فلنحتفل لا بيوم فقط، بل بحياة كلها قيامة معه.</p>
+      <p>20. المسيح قام، فلتقم قلوبنا من كل ما هو باطل، لنحيا له إلى الأبد.</p>
+    </div>
+
+    <!-- التعليقات -->
+    <div class="comment-box">
+      <textarea id="commentInput" placeholder="اكتب تعليقك هنا..."></textarea>
+      <button onclick="addComment()">أضف تعليق</button>
+      <div class="comments-list" id="commentsList"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentPost = 0;
+
+  function showPost(index) {
+    document.querySelectorAll('.tab').forEach((tab, i) => {
+      tab.classList.toggle('active', i === index);
+    });
+
+    for (let i = 0; i < 3; i++) {
+      document.getElementById(`post${i}`).style.display = (i === index) ? 'block' : 'none';
+    }
+
+    currentPost = index;
+    loadComments();
+  }
+
+  function addComment() {
+    const input = document.getElementById("commentInput");
+    const comment = input.value.trim();
+    if (!comment) return;
+    const key = `comments_post_${currentPost}`;
+    const comments = JSON.parse(localStorage.getItem(key)) || [];
+    comments.push(comment);
+    localStorage.setItem(key, JSON.stringify(comments));
+    input.value = '';
+    loadComments();
+  }
+
+  function loadComments() {
+    const key = `comments_post_${currentPost}`;
+    const comments = JSON.parse(localStorage.getItem(key)) || [];
+    const list = document.getElementById("commentsList");
+    list.innerHTML = comments.map(c => `<p>${c}</p>`).join('');
+  }
+
+  window.onload = loadComments;
+</script>
+المسيح و القديسه  العذراء مريم الطاهره <script>
+function sayAmen() {
+  alert("آمين!");
+}
+
+function lightCandle() {
+  const candleBtn = event.target;
+  candleBtn.classList.toggle("candle-lit");
+  candleBtn.innerText = candleBtn.classList.contains("candle-lit") ? "أُضيئت شمعة" : "أضئ شمعة";
+}
+
+function copyPrayer() {
+  const prayer = document.getElementById("good-friday-prayer").innerText;
+  navigator.clipboard.writeText(prayer).then(() => {
+    alert("تم نسخ الصلاة!");
+  });
+}
+</script>
+</body>
+</html>
