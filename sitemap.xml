@@ -1,56 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/main.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/support.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/index.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/prayers.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/calendar.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/media.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/motherofjesus.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/quotes.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/jesusandblessedvirginmaryblog.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/holyweek.html</loc>
-<lastmod>2025-04-22T16:43:17+00:00</lastmod>
-<priority>0.80</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/السيرة</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/الدعم</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/الصلوات</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/التقويم</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/مكتبة-الوسائط</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/اتصل-بنا</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/اقوال-وايات</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/تاملات-يوميه-في-الانجيل</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/مدونه-الرب-يسوع-والعذراء-مريم</loc>
+  </url>
+  <url>
+    <loc>https://jesusandblessedmarymotherofjesus33.github.io/jesus/اسبوع-الالام-واحد-القيامه-المجيد-وسبت-النور-امين</loc>
+  </url>
 </urlset>
