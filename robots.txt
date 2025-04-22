@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jesusandblessedmarymotherofjesus33.github.io/jesus/sitemap.xml
