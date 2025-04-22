@@ -2302,3 +2302,155 @@ p {
   color: #333;
   text-align: center;
   }
+/* تعيين تنسيق عام للصفحة */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #f0f0f0, #ffff00, #00bfff); /* تدرج بين الأزرق والأصفر */
+  color: #333;
+  overflow-x: hidden;
+  animation: backgroundAnimation 10s infinite alternate; /* حركة الخلفية */
+}
+
+/* تأثير أنيميشن لظهور المحتوى تدريجيًا */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* الأنيميشن للألوان المتحركة */
+@keyframes colorAnimation {
+  0% {
+    background-color: yellow;
+  }
+  33% {
+    background-color: red;
+  }
+  66% {
+    background-color: blue;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+/* تعيين تأثيرات الأنيميشن على النصوص والعناصر */
+* {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+h1, h2, h3, p {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+h1 {
+  animation-delay: 0.5s;
+}
+
+h2 {
+  animation-delay: 1s;
+}
+
+h3 {
+  animation-delay: 1.5s;
+}
+
+p {
+  animation-delay: 2s;
+}
+
+/* تصميم الهيدر */
+header {
+  background: linear-gradient(45deg, #ffff00, #ff0000, #0000ff); /* تدرج متحرك بين الأصفر والأحمر والأزرق */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  animation: colorAnimation 5s infinite alternate; /* حركة الألوان في الهيدر */
+}
+
+/* تصميم الفوتر */
+footer {
+  background: linear-gradient(45deg, #ffff00, #ff0000, #0000ff); /* تدرج متحرك بين الأصفر والأحمر والأزرق */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  animation: colorAnimation 5s infinite alternate; /* حركة الألوان في الفوتر */
+}
+
+/* تصميم القائمة الجانبية */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: yellow;
+  transition: left 0.3s ease-in-out;
+  padding: 20px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* زر فتح وغلق القائمة الجانبية */
+.sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sidebar-toggle:hover {
+  background-color: #ddd;
+}
+
+/* تصميم الصليب الذهبي */
+.cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: gold;
+  z-index: 10;
+}
+
+/* تأثير لمرور سلس للمحتوى */
+html {
+  scroll-behavior: smooth;
+}
+
+/* تأثير الحركة للخلفية */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(45deg, #ffff00, #ff0000, #0000ff);
+  }
+  100% {
+    background: linear-gradient(45deg, #00bfff, #ffff00, #ff0000);
+  }
+  }
