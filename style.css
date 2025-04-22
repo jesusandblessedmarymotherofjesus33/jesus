@@ -1954,160 +1954,160 @@ a:hover {
     left: 10px;
   }
   }
-/* === الخط العام === */
+/* === الخط العام ===/* تعيين تنسيق عام للصفحة */
 body {
-  font-family: 'Lateef', serif;
-  background: #fdfdfd;
-  color: #222;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 2;
-  scroll-behavior: smooth;
-  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #f0f0f0, #ffff00, #00bfff); /* تدرج بين الأزرق والأصفر */
+  color: #333;
+  overflow-x: hidden;
+  animation: backgroundAnimation 10s infinite alternate; /* حركة الخلفية */
 }
 
-/* === الوضع الليلي === */
-body.dark-mode {
-  background: #121212;
-  color: #eee;
-}
-body.dark-mode .card,
-body.dark-mode .prayer-section,
-body.dark-mode footer,
-body.dark-mode .sidebar {
-  background: #1e1e1e;
-  color: #ddd;
+/* تأثير أنيميشن لظهور المحتوى تدريجيًا */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* === الهيدر === */
-.holy-header {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('christandmary.jpg') center/cover no-repeat;
-  padding: 60px 20px;
-  text-align: center;
+/* الأنيميشن للألوان المتحركة */
+@keyframes colorAnimation {
+  0% {
+    background-color: yellow;
+  }
+  33% {
+    background-color: red;
+  }
+  66% {
+    background-color: blue;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+/* تعيين تأثيرات الأنيميشن على النصوص والعناصر */
+* {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+h1, h2, h3, p {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+h1 {
+  animation-delay: 0.5s;
+}
+
+h2 {
+  animation-delay: 1s;
+}
+
+h3 {
+  animation-delay: 1.5s;
+}
+
+p {
+  animation-delay: 2s;
+}
+
+/* تصميم الهيدر */
+header {
+  background: linear-gradient(45deg, #ffff00, #ff0000, #0000ff); /* تدرج متحرك بين الأصفر والأحمر والأزرق */
   color: white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-.holy-header img {
-  max-width: 160px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.holy-title {
-  font-size: 2em;
-  margin: 10px 0;
-  animation: fadeInDown 2s ease;
-}
-
-/* === أقسام المحتوى === */
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  animation: fadeIn 1s ease both;
-}
-
-section:nth-child(even) {
-  background: #f5f5f5;
-}
-
-.dark-mode section:nth-child(even) {
-  background: #181818;
-}
-
-/* === بطاقات / عناصر متكررة === */
-.prayer-section, .card, .gallery-container, footer {
-  background: white;
-  border-radius: 12px;
   padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  transition: background 0.3s, color 0.3s;
+  text-align: center;
+  font-size: 2em;
+  animation: colorAnimation 5s infinite alternate; /* حركة الألوان في الهيدر */
 }
 
-.gallery-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin: 10px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-.gallery-container img:hover {
-  transform: scale(1.05);
-}
-
-/* === الزرار === */
-button, .custom-button {
-  background-color: #007BFF;
+/* تصميم الفوتر */
+footer {
+  background: linear-gradient(45deg, #ffff00, #ff0000, #0000ff); /* تدرج متحرك بين الأصفر والأحمر والأزرق */
   color: white;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 10px;
-  transition: background 0.3s ease;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  animation: colorAnimation 5s infinite alternate; /* حركة الألوان في الفوتر */
 }
 
-button:hover, .custom-button:hover {
-  background-color: #0056b3;
-}
-
-/* === الوضع الليلي زر + الرجوع لأعلى === */
-#darkToggle, #toTop, #scrollTopBtn {
-  position: fixed;
-  background-color: #333;
-  color: white;
-  padding: 10px 14px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 999;
-  font-size: 18px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-
-#darkToggle {
-  top: 20px;
-  left: 20px;
-}
-
-#toTop, #scrollTopBtn {
-  bottom: 30px;
-  left: 20px;
-  display: none;
-}
-
-/* === السايد بار === */
+/* تصميم القائمة الجانبية */
 .sidebar {
-  background-color: white;
   position: fixed;
   top: 0;
-  right: -250px;
-  height: 100%;
+  left: -250px;
   width: 250px;
-  overflow-y: auto;
-  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-  transition: right 0.4s ease;
+  height: 100%;
+  background-color: yellow;
+  transition: left 0.3s ease-in-out;
   padding: 20px;
-  z-index: 1001;
 }
+
 .sidebar.open {
-  right: 0;
+  left: 0;
 }
+
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
+
 .sidebar ul li {
-  margin-bottom: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
 }
-.sidebar a {
-  text-decoration: none;
-  color: #007BFF;
-  font-weight: bold;
+
+/* زر فتح وغلق القائمة الجانبية */
+.sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sidebar-toggle:hover {
+  background-color: #ddd;
+}
+
+/* تصميم الصليب الذهبي */
+.cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: gold;
+  z-index: 10;
+}
+
+/* تأثير لمرور سلس للمحتوى */
+html {
+  scroll-behavior: smooth;
+}
+
+/* تأثير الحركة للخلفية */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(45deg, #ffff00, #ff0000, #0000ff);
+  }
+  100% {
+    background: linear-gradient(45deg, #00bfff, #ffff00, #ff0000);
+  }
+}
+
+/* === السايد بار === *
 }
 
 /* === الفوتر === */
