@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>أنواع القداسات</title>
+  <style>
+    body {
+      background: linear-gradient(to top, #fff5e6, #fcead6);
+      font-family: 'Amiri', serif;
+      color: #4b2e1e;
+      text-align: center;
+      padding: 30px;
+      direction: rtl;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      max-width: 700px;
+      margin: auto;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #8b0000;
+      margin-bottom: 20px;
+    }
+
+    .time-msg {
+      font-size: 1.2em;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    .reflection, .description {
+      margin-top: 20px;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 1em;
+      margin: 15px 0;
+      border-radius: 10px;
+      border: 1px solid #8b0000;
+      background-color: #fff0e1;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #8b0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #a83232;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>اختر نوع القداس</h1>
+
+    <div id="status" class="time-msg">الكنيسة مفتوحة دائمًا، تعالوا إلى حضن الآب السماوي في كل وقت.</div>
+
+    <label for="massType">أنواع القداسات:</label>
+    <br>
+    <select id="massType" onchange="showLinkAndDescription()">
+      <option value="">-- اختر نوع القداس --</option>
+      <option value="basil">القداس الباسيلي (الأكثر استخدامًا في الكنيسة، يتميز بالبساطة والتركيز على الله الآب)</option>
+      <option value="gregorian">القداس الغريغوري (يُستخدم في الأعياد ويمجّد الله الابن)</option>
+      <option value="cyril">القداس الكيرلسي (قديم جدًا، يُنسب للقديس كيرلس، ويُستخدم في بعض المناسبات)</option>
+      <option value="ethiopian">القداس الحبشي (طقس إثيوبي مميز بالموسيقى والتراتيل الفريدة)</option>
+    </select>
+
+    <div id="description" class="description"></div>
+    <div id="massLink" style="margin-top: 20px;"></div>
+
+    <div class="reflection">
+      <p>القداس هو رحلة حب مقدسة، فيها نرتفع عن الأرض ونحيا في السماء.</p>
+      <p>كل نوع من القداسات يحمل طابعًا روحانيًا خاصًا، يعكس جمال الليتورجيا القبطية وتنوعها.</p>
+      <p>«ذوقوا وانظروا ما أطيب الرب» – تعالوا نسبّح مع الملائكة ونُقدم له قلوبنا.</p>
+    </div>
+  </div>
+
+  <script>
+    const links = {
+      basil: "https://www.youtube.com/watch?v=Jn1N2QLf0cY",
+      gregorian: "https://www.youtube.com/watch?v=BCaOgEaLFnI",
+      cyril: "https://www.youtube.com/watch?v=R7mfRYSKMeo",
+      ethiopian: "https://www.youtube.com/watch?v=jmtDniNedEA"
+    };
+
+    const descriptions = {
+      basil: "القداس الباسيلي هو الأكثر استخدامًا في الكنيسة القبطية، وضعه القديس باسيليوس الكبير، ويتميز ببساطته وروحانيته العميقة، ويركز على الله الآب.",
+      gregorian: "القداس الغريغوري يتميز بجماله الأدبي والروحي، ويُستخدم في الأعياد، ويحتوي على تأملات موجهة إلى الله الابن.",
+      cyril: "القداس الكيرلسي يُنسب إلى القديس كيرلس الأول، وهو من أقدم القداسات ويحتوي على عمق لاهوتي وروحي كبير.",
+      ethiopian: "القداس الحبشي ينتمي للكنيسة الإثيوبية الأرثوذكسية ويتميز بالألحان الفريدة والتراتيل التقليدية العميقة."
+    };
+
+    function showLinkAndDescription() {
+      const type = document.getElementById("massType").value;
+      const container = document.getElementById("massLink");
+      const desc = document.getElementById("description");
+
+      if (type && links[type]) {
+        container.innerHTML = `<a href="${links[type]}" target="_blank">مشاهدة القداس</a>`;
+        desc.innerHTML = descriptions[type];
+      } else {
+        container.innerHTML = '';
+        desc.innerHTML = '';
+      }
+    }
+  </script>
+
+</body>
+  </html>
