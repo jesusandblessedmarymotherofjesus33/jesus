@@ -1649,3 +1649,62 @@ nav a:hover {
 /* إعدادات الخطوط */
 body, html {
   font-family: 'Arial', sans-serif;
+body {
+  background-color: #000; /* خلفية سوداء */
+  color: #f0f0f0; /* نص رمادي فاتح */
+  font-family: 'Cairo', sans-serif;
+}
+
+.day-content {
+  border-bottom: 1px solid #444;
+  padding: 20px;
+}
+
+h2, h3, h4 {
+  color: #fff; /* عناوين بلون أبيض */
+}
+
+.prayer p {
+  color: #ddd;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  border: 2px solid #444;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+nav a {
+  color: #ccc;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}.holy-header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #333;
+}
+
+.holy-image {
+  max-width: 200px;
+  border-radius: 50%;
+  border: 3px solid #555;
+  box-shadow: 0 0 10px #333;
+  margin-bottom: 10px;
+}
+
+.holy-title {
+  color: #f5f5f5;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+/* إعدادات الخطوط */
+body, html {
+  font-family: 'Arial', sans-serif;
