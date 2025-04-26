@@ -361,3 +361,253 @@ function openFullScreen(imgElement) {
 function closeFullScreen() {
     document.getElementById("fullscreen-container").style.display = "none";
   }
+/* 🌟 تنسيق عام للموقع */
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(to right, #1a1a1a, #3a3a3a);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* 🌟 رأس الصفحة */
+header {
+    background: linear-gradient(to right, #0f9b0f, #00c9ff);
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* 🌟 زر القائمة الجانبية */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 1001;
+}
+
+.menu-toggle:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+
+/* 🌟 زر إغلاق القائمة */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #f1c40f;
+}
+
+/* 🌟 القائمة الجانبية */
+.sidebar {
+    width: 260px;
+    height: 100%;
+    position: fixed;
+    left: -260px;
+    top: 0;
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    padding-top: 60px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+    transition: left 0.4s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    color: #f1c40f;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 18px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #f1c40f;
+    color: #2c3e50;
+}
+
+/* 🌟 القائمة المنسدلة */
+.dropdown-menu {
+    display: none;
+    background: #2c3e50;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 12px;
+    font-size: 18px;
+}
+
+.dropdown-menu li:hover {
+    background: #f1c40f;
+    color: #2c3e50;
+}
+
+/* 🌟 زر البدء */
+button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+    margin-top: 25px;
+}
+
+button:hover {
+    background: #219150;
+    transform: scale(1.05);
+}
+
+/* 🌟 تحسين عرض الصفحة */
+.home {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.home h2 {
+    font-size: 30px;
+    color: #f1c40f;
+}
+
+.home p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* 🌟 تعديل عند فتح القائمة */
+body.menu-open {
+    margin-left: 260px;
+}
+
+/* 🌟 تنسيق قسم التعريف */
+.about-site {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 50px auto;
+    width: 85%;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-site h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-site p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.about-site:hover {
+    transform: scale(1.05);
+}
+
+/* 🌟 تنسيق قسم الصورة */
+.image-section {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.image-section h2 {
+    font-size: 26px;
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+.image-section img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+}
+
+/* 🌟 تنسيق قسم الصلاة */
+.prayer-section {
+    text-align: center;
+    background: linear-gradient(to right, #434343, #000000);
+    color: white;
+    padding: 40px 20px;
+    margin: 50px auto;
+    width: 85%;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.prayer-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f1c40f;
+}
+
+.prayer-text {
+    font-size: 22px;
+    line-height: 2;
+    font-weight: bold;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.prayer-section:hover .prayer-text {
+    font-size: 24px;
+  }
