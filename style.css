@@ -2018,3 +2018,184 @@ body {
 ');
   </style>
 </head>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+  color: #333;
+  overflow-x: hidden;
+  animation: fadeInBody 1s ease forwards;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  animation: slideDown 1s ease forwards;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: white;
+  color: #4e54c8;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+main h2 {
+  font-size: 2rem;
+  color: #4e54c8;
+  margin-bottom: 20px;
+  animation: fadeInText 2s ease forwards;
+}
+
+main p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  animation: fadeInText 2.5s ease forwards;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #4e54c8;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: fadeInButton 2s ease forwards;
+}
+
+.btn:hover {
+  background-color: #6c6ff7;
+  transform: scale(1.05);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  animation: fadeInImage 2s ease forwards;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  animation: slideUp 1s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInButton {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInImage {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-100px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(100px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+      }
+
+/* تصميم الصليب الذهبي */
+.cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: gold;
+  z-index: 10;
+}
+');
