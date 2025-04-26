@@ -3,6 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tags كاملة للصفحة -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="مجموعة مميزة من الصلوات المسيحية اليومية، تشمل صلاة الرب، صلاة العذراء مريم، صلوات القديسين والملائكة. صل معنا وتواصل بالروح مع الله.">
+<meta name="keywords" content="صلوات مسيحية, صلاة الرب, أبانا الذي في السموات, صلاة العذراء مريم, صلاة القديسين, صلاة الملاك ميخائيل, صلاة الملاك جبرائيل, صلاة الملاك رافائيل, صلاة الملاك سوريايل, صلاة البابا كيرلس, صلوات يومية, صلوات قصيرة, صلاة اليوم, صلاة شفاعة, صلوات مكتوبة, صلوات تقوية الايمان, صلاة تسبيح, صلوات مسيحية عربية">
+<meta name="author" content="اسم الموقع أو اسمك الشخصي">
+
+<!-- Open Graph Tags للسوشيال ميديا -->
+<meta property="og:title" content="الصلوات المسيحية اليومية">
+<meta property="og:description" content="صلوات مسيحية مكتوبة يوميًا: صلوات الرب، العذراء، القديسين والملائكة. انضم إلينا في الصلاة اليومية.">
+<meta property="og:image" content="رابط_الصورة_هنا.jpg">
+<meta property="og:url" content="رابط_موقعك_هنا">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="صلوات مسيحية يومية">
+<meta name="twitter:description" content="مجموعة رائعة من الصلوات المسيحية المكتوبة. صلاة اليوم مع صلوات القديسين والعذراء والملائكة.">
+<meta name="twitter:image" content="رابط_الصورة_هنا.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>الصلوات</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -353,33 +375,6 @@ function toggleDarkMode() {
     — القديس باسيليوس الكبير`
   ];
 
-  const today = new Date().getDate();
-  const prayerIndex = (today - 1) % prayers.length;
-  const prayerText = prayers[prayerIndex];
-  document.getElementById("prayer-text").textContent = prayerText;
-
-  function sharePrayer() {
-    const url = `https://wa.me/?text=${encodeURIComponent(prayerText + "\n\n" + window.location.href)}`;
-    window.open(url, '_blank');
-  }
-
-  function submitComment() {
-    const commentInput = document.getElementById("comment-input");
-    const container = document.getElementById("comment-container");
-    const comment = commentInput.value.trim();
-    if (comment !== "") {
-      const now = new Date();
-      const date = now.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
-      const time = now.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
-      const li = document.createElement("li");
-      li.innerHTML = `<div class="bg-gray-100 dark:bg-gray-700 p-2 rounded-md">
-        <p>${comment}</p>
-        <span class="text-xs text-gray-500">تم الإرسال في ${date} - ${time}</span>
-      </div>`;
-      container.prepend(li);
-      commentInput.value = "";
-    }
-  }
-</script>
+  
 </body>
 </html>
