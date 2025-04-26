@@ -707,3 +707,113 @@ footer {
         font-size: 18px;
     }
   }
+/* إعدادات أساسية */
+body {
+    font-family: "Tajawal", sans-serif;
+    background: #000; /* أسود كامل */
+    color: #fff; /* أبيض كامل */
+    margin: 0;
+    padding: 0;
+}
+
+/* رأس الموقع */
+header {
+    background: #141414; /* رمادي غامق */
+    color: #ffcc00; /* دهبي واضح */
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 32px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px #ffcc00;
+}
+
+/* قسم الصلاة */
+.prayer-section {
+    background: #1a1a1a;
+    margin: 40px auto;
+    padding: 35px;
+    width: 85%;
+    max-width: 850px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(255, 204, 0, 0.3);
+    text-align: center;
+}
+
+/* عنوان القسم */
+.prayer-section h2 {
+    color: #00bcd4; /* أزرق سماوي */
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* نص الصلاة */
+.prayer-text {
+    color: #eeeeee;
+    font-size: 22px;
+    line-height: 1.9;
+    font-weight: 500;
+}
+
+/* زر ابدأ أو تحميل */
+button {
+    background: linear-gradient(45deg, #ff5722, #ff9800);
+    border: none;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 22px;
+    border-radius: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #e65100, #ff6f00);
+    transform: scale(1.1);
+}
+
+/* فوتر */
+footer {
+    background: #141414;
+    color: #999;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+/* سكشن منفصل خاص بصلاة السلام لك يا مريم */
+.mary-prayer-section {
+    background: #222;
+    margin: 50px auto;
+    padding: 35px;
+    width: 85%;
+    max-width: 850px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 188, 212, 0.3);
+}
+
+.mary-prayer-section h2 {
+    color: #ff4081; /* وردي فاتح */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.mary-prayer-section .prayer-text {
+    color: #f5f5f5;
+    font-size: 21px;
+    line-height: 1.8;
+}
+
+/* متجاوب */
+@media (max-width: 600px) {
+    .prayer-section, .mary-prayer-section {
+        width: 95%;
+        padding: 25px;
+    }
+    
+    .prayer-text {
+        font-size: 20px;
+    }
+      }
