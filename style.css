@@ -55,7 +55,7 @@ nav a:hover {
   font-weight: bold;
 }
 /* إعدادات
-/* 🌟 تنسيق عام للموقع */
+/* 🌟 تنسيق عام للموقع */اع
 body {
     font-family: "Arial", sans-serif;
     background: linear-gradient(to right, #283048, #859398);
@@ -610,4 +610,100 @@ body.menu-open {
 
 .prayer-section:hover .prayer-text {
     font-size: 24px;
+  }
+/* 🌟 تنسيق عام */
+body {
+    font-family: "Tajawal", sans-serif;
+    background: #121212; /* خلفية غامقة */
+    color: #ffffff; /* نص أبيض */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+/* 🌟 رأس الصفحة */
+header {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f1c40f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* 🌟 سكشن عام للصلاة */
+.prayer-section {
+    background: #1c1c1c; /* أغمق شوية من البودي */
+    margin: 30px auto;
+    padding: 30px 20px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(241, 196, 15, 0.2);
+    transition: all 0.4s ease;
+}
+
+.prayer-section:hover {
+    transform: scale(1.03);
+}
+
+/* 🌟 عنوان كل صلاة */
+.prayer-section h2 {
+    color: #f39c12;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+/* 🌟 نص الصلاة */
+.prayer-text {
+    font-size: 20px;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.prayer-section:hover .prayer-text {
+    color: #ffffff;
+}
+
+/* 🌟 زر تحميل أو ابدأ */
+button {
+    background: #e67e22;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #d35400;
+    transform: scale(1.05);
+}
+
+/* 🌟 فوتر */
+footer {
+    background: #0f2027;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* 🌟 ميديا كويري للموبايل */
+@media (max-width: 600px) {
+    .prayer-section {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .prayer-text {
+        font-size: 18px;
+    }
   }
