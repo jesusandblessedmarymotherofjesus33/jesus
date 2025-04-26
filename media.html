@@ -1,205 +1,71 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مكتبة الوسائط</title>
-  
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .media-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .media-item {
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 250px;
-            background-color: #f9f9f9;
-        }
-        .media-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .media-item video {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .media-item h3 {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #333;
-        }
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 1em;
-            color: #888;
-        }
+<section class="saint-section">
+  <div class="saint-card">
+    <h2>الرب يسوع المسيح</h2>
+    <p>
+      الرب يسوع المسيح هو ابن الله المتجسد، وُلد من العذراء مريم في بيت لحم. عاش حياة ملؤها التعليم والمحبة،
+      وأتم خلاص البشرية من خلال صلبه وقيامته. دعا الناس إلى التوبة وعلّمهم عن محبة الله.
+    </p>
+    <h4>بعض معجزاته:</h4>
+    <ul>
+      <li>تحويل الماء إلى خمر في عرس قانا الجليل</li>
+      <li>شفاء المرضى والأبرص والأعمى</li>
+      <li>إقامة لعازر من الموت</li>
+      <li>المشي على الماء وتهدئة البحر</li>
+      <li>إشباع الجموع من خمس خبزات وسمكتين</li>
+    </ul>
+  </div>
+
+  <div class="saint-card">
+    <h2>السيدة العذراء مريم</h2>
+    <p>
+      السيدة العذراء مريم هي أم النور ووالدة الإله، المختارة من بين النساء لتكون وعاء التجسد الإلهي. حياتها كانت
+      مثالاً للطهارة والتواضع، وما زالت شفاعتها حية ومؤثرة في حياة المؤمنين حتى اليوم.
+    </p>
+    <h4>بعض معجزاتها:</h4>
+    <ul>
+      <li>ظهورها في كنيسة الزيتون سنة 1968</li>
+      <li>شفاءات عديدة من أمراض مستعصية بشفاعتها</li>
+      <li>نزول زيت وطيب من أيقونتها في بيوت كثيرة</li>
+      <li>حماية مؤمنين من الحوادث والخطر بشفاعتها</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ستايل خاص بالقسم ده -->
+<style>
+.saint-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 20px;
+}
+.saint-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.saint-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.saint-card h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+.saint-card p {
+  font-size: 16px;
+  color: #555;
+}
+.saint-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+.saint-card li {
+  margin-bottom: 8px;
+  color: #333;
+}
     </style>
-</head>
-<body>
-    <header>
-        <h1>مكتبة الوسائط</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="prayers.html">الصلوات</a></li>
-                <li><a href="calendar.html">التقويم</a></li>
-                <li><a href="media.html">مكتبة الوسائط</a></li>
-                <li><a href="contact.html">اتصل بنا</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="media-container">
-        <!-- صورة 1 -->
-        <div class="media-item">
-            <img src="jabm.jpg" alt="صورة القديسة مريم">
-            <h3>صورة القديسة مريم</h3>
-        </div>
-
-        <!-- صورة 2 -->
-        <div class="media-item">
-            <img src="jabm.jpg" alt="صورة الكنيسة">
-            <h3>صورة الكنيسة</h3>
-        </div>
-
-        <!-- فيديو 1 -->
-        <div class="media-item">
-            <video controls>
-                <source src="path/to/video1.mp4" type="video/mp4">
-                <p>متصفحك لا يدعم الفيديو.</p>
-            </video>
-            <h3>فيديو عن القديسين</h3>
-        </div>
-
-        <!-- فيديو 2 -->
-        <div class="media-item">
-            <video controls>
-                <source src="path/to/video2.mp4" type="video/mp4">
-                <p>متصفحك لا يدعم الفيديو.</p>
-            </video>
-            <h3>فيديو عن حياة البابا كيرلس</h3>
-        </div>
-
-        <!-- صورة 3 -->
-        <div class="media-item">
-            <img src="jabm.jpg" alt="صورة الميلاد">
-            <h3>صورة ميلاد المسيح</h3>
-        </div>
-
-        <!-- صورة الملاك ميخائيل -->
-        <div class="media-item">
-            <img src="anglemikaill.jpg" alt="صورة الملاك ميخائيل">
-            <h3>صورة الملاك ميخائيل</h3>
-        </div>
-
-        <!-- صورة جميع الملائكة -->
-        <div class="media-item">
-            <img src="angles.jpg" alt="صورة جميع الملائكة">
-            <h3>صورة جميع الملائكة</h3>
-        </div>
-    </div>
-    </footer>
-    <script src="script.js"></script>
-    <!-- سكريبت الظهور بعد التحميل -->
-  <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.body.classList.add("loaded");
-      }, 800);
-    });
-
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("open");
-    }
-
-    function openFullScreen(img) {
-      const container = document.getElementById("fullscreen-container");
-      const fullImg = document.getElementById("fullscreen-image");
-      fullImg.src = img.src;
-      container.style.display = "flex";
-    }
-
-    function closeFullScreen() {
-      document.getElementById("fullscreen-container").style.display = "none";
-    }
-
-    function start() {
-      window.location.href = "main.html";
-    }
-
-    function changeLanguage(lang) {
-      alert("سيتم تحويل اللغة إلى: " + lang);
-    }
-  </script>
-<script>
-function sayAmen() {
-  alert("آمين!");
-}
-
-function lightCandle() {
-  const candleBtn = event.target;
-  candleBtn.classList.toggle("candle-lit");
-  candleBtn.innerText = candleBtn.classList.contains("candle-lit") ? "أُضيئت شمعة" : "أضئ شمعة";
-}
-
-function copyPrayer() {
-  const prayer = document.getElementById("good-friday-prayer").innerText;
-  navigator.clipboard.writeText(prayer).then(() => {
-    alert("تم نسخ الصلاة!");
-  });
-}
-function lightCandle() {
-  const container = document.getElementById('candleContainer');
-  const candle = document.createElement('div');
-  candle.classList.add('candle');
-
-  const flame = document.createElement('div');
-  flame.classList.add('flame');
-
-  candle.appendChild(flame);
-  container.appendChild(candle);
-}
-function lightPrayer() {
-  const section = document.getElementById("prayerSection");
-  section.classList.add("glow");
-}
-</script>
-<script>
-  // إظهار الزر عند التمرير
-  window.onscroll = function () {
-    const btn = document.getElementById("scrollTopBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
-
-  // تنفيذ الرجوع للأعلى
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-<script>
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-</script>
-</script>
-</body>
-<button onclick="scrollToTop()" id="scrollTopBtn" title="رجوع لأعلى">↑</button>
-</html>
-
-</body>
-</html>
