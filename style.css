@@ -815,5 +815,111 @@ footer {
     
     .prayer-text {
         font-size: 20px;
-    }
+  }
       }
+*{
+    padding: 0 ;
+    margin: 0 ;
+}
+header{
+    background-color: #40ffa2 ;
+    text-align: center  ;
+    color: blue ;
+    border-bottom: solid 5px #555aff ;
+    text-shadow: 5px 5px 5px #15ccff ;
+}
+header a{
+    text-decoration: none ;
+    text-shadow: 5px 5px 5px #5000f1 ;
+}
+a:hover{
+    babackground-color: #7cff00;
+    background-radius: 5px ;
+    color: blue ;
+}
+.prayers{
+    background-color: #310e00 ;
+    border-bottom: solid 5px red ;
+    color: blue ;
+    text-align: center ;
+    text-shadow: 10px 5px 5px #92dbc0 ;
+}
+.prayers:hover{
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    color: #c9dba4 ;
+}
+.btn {
+    color: #fff;
+    background-color: #3a5cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.btn:hover {
+    background-color: #0a49f5;
+}
+.about{
+    background: #fff22a;
+    margin: 5 ;
+    padding: 15 ;
+    border: solid 5px green ;
+    border-radius: 25px ;
+    text-align: center ;
+    text-shadow: 5px 5px 5px #ffdd55 ;
+    box-shadow: 5px 5px 5px #7fff83 ;
+}
+.about:hover{
+    color: #ffffbf ;
+}
+.verses{
+    background: url(jesus.jpg) no-repeat;
+    color: blue ;
+    text-shadow: 5px 5px 5px #bbff2a ;
+    border-bottom: solid 5px #bbff2a ;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+p{
+    text-align: center ;
+}
+h1{
+    text-align: center ;
+}
+footer{
+    background: #b2ff95;
+    color: blue ;
+    text-align:  center;
+    text-shadow: 5px 5px 5px #faff00 ;
+    border-bottom: solid 5px green ;
+}
+footer:hover{
+    color: blue ;
+}
+footer a{
+    color: #fff;
+    background-color: #3a5cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.9355em 2.1855em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+footer a:hover{
+    background-color: #0a49f5;
+}
