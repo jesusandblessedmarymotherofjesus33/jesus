@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقويم الكنيسه - موقع المسيح والعدرا</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+          <meta name="keywords" content="المسيح والعدرا، البابا كيرلس ، الشفاعةت ، الاجبيه ،الانجيل ،الااناجيل، الااناجيل المقدسه،امين،المار جرجس المار مينا ، مار بقطر شو، مار مينا، المسيح والعدرا، الكنيسه ،الملاك ميخائيل ،الملاك جبرائيل، المرلاك رافائيل، الملاك سوريال الملايكه ،امين">
+    <meta name="description" content="استكشف كلمات الحياة من الأناجيل المقدسة، اقرا الان كلمه الحياه التي وهبها لنا رب الارباب وملك الملوك شفاعه ام النور تكون معنا امين">
+    <link rel="icon" href="favicon.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">المسيح والعذراء</a>
+        <button class="menu-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="articles.html">مقالات روحية</a></li>
+            <li><a href="tamagedalmasihwaladra.html">تسابيح وتمجيد</a></li>
+            <li><a href="church-history.html">تاريخ الكنيسة</a></li>
+            <li><a href="media.html">ميديا وعظات</a></li>
+            <li><a href="mircles.html">معجزات القديسين</a></li>
+            <li><a href="calender.html">التقويم الكنسي</a></li>
+            <li><a href="prayers.html">صلوات عامة</a></li>
+                     <li><a href="index2.html">المدونه</a></li>
+            <li><a href="agpiyah.html">صلوات الأجبية</a></li>
+            </ul>
+    </div>
+<style>
+    /* Calendar Page Specific Styles */
+.calendar-section {
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.calendar-section .section-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.8em;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.calendar-section .section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 120px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+.calendar-section .section-description {
+    font-size: 1.15em;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.calendar-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 20px;
+}
+
+.calendar-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.calendar-card .card-icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.calendar-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar-card h3 {
+    font-family: 'Amiri', serif;
+    font-size: 1.6em;
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.calendar-card .calendar-date {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.calendar-card .calendar-type {
+    font-size: 0.95em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.calendar-card .read-more-calendar {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    align-self: flex-start;
+}
+
+.calendar-card .read-more-calendar:hover {
+    background-color: #367ABE;
+}
+
+.calendar-card .read-more-calendar i {
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+/* Modal for calendar event details (similar to miracle modal) */
+#calendarModal .modal-title {
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+#calendarModal .calendar-modal-date {
+    font-size: 1.3em;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+}
+#calendarModal .calendar-modal-type {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    display: block;
+}
+#calendarModal .modal-body {
+    font-size: 1.1em;
+    line-height: 1.9;
+}
+
+/* Responsive adjustments for Calendar Page */
+@media (max-width: 992px) {
+    .calendar-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .calendar-section .section-title {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .calendar-section {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+    .calendar-section .section-title {
+        font-size: 2em;
+        padding-bottom: 10px;
+    }
+    .calendar-section .section-title::after {
+        width: 80px;
+        height: 4px;
+    }
+    .calendar-section .section-description {
+        font-size: 1em;
+        margin-bottom: 25px;
+    }
+    .calendar-card h3 {
+        font-size: 1.3em;
+    }
+    .calendar-card .card-icon {
+        font-size: 2.5em;
+    }
+}
+/* Page Header (عنوان الصفحة) - يستخدم في كل الصفحات */
+.page-header {
+    background-color: var(--background-medium); /* لون خلفية متوسط الفاتح */
+    padding: 60px 20px; /* تباعد داخلي */
+    text-align: center; /* محاذاة النص للوسط */
+    border-bottom: 4px solid var(--primary-color); /* شريط أزرق مميز في الأسفل */
+    margin-bottom: 50px; /* مسافة من الأسفل */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* ظل خفيف */
+}
+
+.page-header h1 {
+    font-family: 'Amiri', serif; /* خط مميز للعناوين */
+    font-size: 3.5em; /* حجم الخط */
+    color: var(--heading-color); /* لون العنوان */
+    margin: 0; /* إزالة الهوامش الافتراضية */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* ظل خفيف للنص */
+}
+
+.page-header p {
+    font-size: 1.3em; /* حجم الخط */
+    color: var(--secondary-color); /* لون النص الثانوي */
+    margin-top: 15px; /* مسافة من الأعلى */
+    max-width: 800px; /* أقصى عرض للفقرة */
+    margin-left: auto; /* توسيط الفقرة */
+    margin-right: auto; /* توسيط الفقرة */
+}
+
+/* Responsive adjustments for Header */
+@media (max-width: 992px) {
+    .page-header h1 {
+        font-size: 2.8em;
+    }
+    .page-header p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 50px 15px;
+        margin-bottom: 40px;
+    }
+    .page-header h1 {
+        font-size: 2.2em;
+    }
+    .page-header p {
+        font-size: 1em;
+    }
+}
+/* Footer (التذييل) */
+.footer {
+    background-color: var(--heading-color); /* لون خلفية داكن */
+    color: white; /* لون النص أبيض */
+    text-align: center; /* محاذاة النص للوسط */
+    padding: 40px 20px; /* تباعد داخلي */
+    margin-top: 60px; /* مسافة من الأعلى */
+    font-size: 0.95em; /* حجم الخط */
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.15); /* ظل علوي خفيف */
+}
+
+.footer .social-icons {
+    margin-top: 15px; /* مسافة من الأعلى */
+    margin-bottom: 20px; /* مسافة من الأسفل */
+}
+
+.footer .social-icons a {
+    color: white; /* لون الأيقونات أبيض */
+    font-size: 1.6em; /* حجم الأيقونات */
+    margin: 0 12px; /* مسافة بين الأيقونات */
+    text-decoration: none; /* إزالة خط تحت الروابط */
+    transition: color 0.3s ease, transform 0.2s ease; /* تأثيرات عند التحويم */
+}
+
+.footer .social-icons a:hover {
+    color: var(--primary-color); /* تغيير اللون عند التحويم */
+    transform: translateY(-3px); /* حركة بسيطة للأعلى عند التحويم */
+}
+/* Sidebar specific colors (هذه المتغيرات يجب أن تكون في بداية ملف style.css) */
+:root {
+    --sidebar-bg: #212529; /* خلفية القائمة الجانبية (داكنة) */
+    --sidebar-text: #f8f9fa; /* لون النص في القائمة الجانبية */
+    --sidebar-hover: #4A90E2; /* لون عند التحويم على الروابط (نفس primary-color) */
+}
+
+/* Sidebar (القائمة الجانبية) */
+.sidebar {
+    height: 100%; /* ارتفاع كامل الشاشة */
+    width: 0; /* مخفية بشكل افتراضي (عرض صفر) */
+    position: fixed; /* لتكون ثابتة على الشاشة */
+    z-index: 2000; /* قيمة Z-index أعلى لتغطية كل شيء (الناف بار والمحتوى) */
+    top: 0; /* تبدأ من أعلى الشاشة */
+    right: 0; /* تظهر من اليمين (لأن الموقع RTL) */
+    background-color: var(--sidebar-bg); /* لون الخلفية */
+    overflow-x: hidden; /* إخفاء أي محتوى يخرج عن العرض الأفقي */
+    transition: 0.5s; /* سرعة الانتقال عند الفتح والغلق */
+    padding-top: 60px; /* تباعد من الأعلى لإفساح مكان لزر الإغلاق */
+    display: flex; /* استخدام فليكس بوكس لترتيب المحتوى */
+    flex-direction: column; /* ترتيب العناصر عمودياً */
+    justify-content: center; /* توسيط العناصر رأسياً */
+    align-items: center; /* توسيط العناصر أفقياً */
+    text-align: center; /* محاذاة النص للوسط */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2); /* ظل لإظهار أنها طبقة منفصلة */
+}
+
+/* حالة التفعيل: عندما تكون القائمة مفتوحة */
+.sidebar.active {
+    width: 100%; /* تغطي الشاشة بالكامل عند التفعيل (خاصة على الجوالات) */
+}
+
+/* زر الإغلاق داخل القائمة الجانبية */
+.sidebar .close-btn {
+    position: absolute; /* لتحديد موضعه بحرية */
+    top: 20px; /* مسافة من الأعلى */
+    left: 25px; /* مسافة من اليسار (لأن الموقع RTL، زر الإغلاق على اليسار) */
+    font-size: 3em; /* حجم كبير للخط */
+    color: var(--sidebar-text); /* لون النص */
+    text-decoration: none; /* إزالة خط تحت النص */
+    cursor: pointer; /* تغيير شكل المؤشر عند التحويم */
+    transition: color 0.3s ease; /* تأثير تغيير اللون */
+}
+
+.sidebar .close-btn:hover {
+    color: var(--primary-color); /* تغيير اللون عند التحويم */
+}
+
+/* قائمة الروابط داخل القائمة الجانبية */
+.sidebar ul {
+    list-style: none; /* إزالة النقاط الافتراضية للقائمة */
+    padding: 0; /* إزالة التباعد الداخلي الافتراضي */
+    width: 100%; /* عرض كامل داخل السايد بار */
+}
+
+.sidebar ul li {
+    margin: 20px 0; /* مسافة بين عناصر القائمة */
+}
+
+.sidebar ul li a {
+    padding: 15px 0; /* تباعد داخلي للروابط */
+    text-decoration: none; /* إزالة خط تحت الروابط */
+    font-size: 2.2em; /* حجم خط كبير للروابط */
+    color: var(--sidebar-text); /* لون النص */
+    display: block; /* لجعل الرابط يملأ السطر بالكامل وقابل للضغط على مساحة أكبر */
+    transition: 0.3s; /* سرعة الانتقال عند التحويم */
+    font-weight: 700; /* خط سميك */
+}
+
+.sidebar ul li a:hover {
+    color: var(--sidebar-hover); /* تغيير لون النص عند التحويم */
+    background-color: rgba(255,255,255,0.1); /* خلفية شفافة خفيفة عند التحويم */
+}
+
+/* Responsive adjustments for Sidebar (تعديلات على الشاشات الصغيرة) */
+@media (max-width: 768px) {
+    .sidebar.active {
+        width: 100%; /* تغطي كامل الشاشة على الجوالات لتجربة أفضل */
+    }
+    .sidebar ul li a {
+        font-size: 1.8em; /* حجم خط أصغر قليلاً على الجوالات */
+    }
+}
+        :root {
+            --primary-color: #007bff; /* أزرق سماوي - لون روحي */
+            --secondary-color: #6c757d; /* رمادي دافئ */
+            --accent-color: #28a745; /* أخضر - للتميز */
+            --background-light: #f8f9fa; /* خلفية فاتحة */
+            --background-dark: #e9ecef; /* خلفية أغمق قليلاً */
+            --text-color: #343a40; /* لون نص داكن */
+            --heading-color: #212529; /* لون عناوين أغمق */
+            --card-background: #ffffff;
+            --border-color: #dee2e6;
+            --hover-shadow: rgba(0, 0, 0, 0.15);
+
+            /* Sidebar specific colors */
+            --sidebar-bg: #212529; /* خلفية القائمة الجانبية (داكنة) */
+            --sidebar-text: #f8f9fa; /* لون النص في القائمة الجانبية */
+            --sidebar-hover: #0056b3; /* لون عند التحويم على الروابط */
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-color);
+            direction: rtl;
+            text-align: right;
+            overflow-x: hidden; /* لمنع ظهور شريط التمرير الأفقي عند فتح القائمة */
+        }
+
+        /* Hero Section - القسم العلوي البارز */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x600/6a82fb/ffffff?text=صورة+المسيح+والعذراء'); /* استبدل هذه الصورة بصورة مناسبة */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-family: 'Amiri', serif; /* خط كلاسيكي للعناوين الرئيسية */
+            font-size: 3.8em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-section p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.5;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .hero-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+        }
+
+        .hero-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* General Container */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: var(--heading-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Features/Services Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px var(--hover-shadow);
+        }
+
+        .feature-card .icon-container {
+            background-color: var(--primary-color);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+        }
+
+        .feature-card h3 {
+            color: var(--heading-color);
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 1.0em;
+            color: var(--secondary-color);
+        }
+
+        /* About Section (اختياري) */
+        .about-section {
+            background-color: var(--background-dark);
+            padding: 60px 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .about-section .about-content {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1em;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .about-section .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Latest Content Section */
+        .latest-content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .content-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--hover-shadow);
+        }
+
+        .content-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-card .card-body {
+            padding: 20px;
+        }
+
+        .content-card .card-body h4 {
+            color: var(--heading-color);
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .content-card .card-body p {
+            font-size: 0.95em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .content-card .read-more-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .content-card .read-more-link:hover {
+            color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--heading-color); /* لون داكن للتذييل */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.95em;
+        }
+
+        .footer .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Sidebar Specific Styles --- */
+        .navbar {
+            background-color: var(--heading-color);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar .logo {
+            color: white;
+            font-family: 'Amiri', serif;
+            font-size: 1.8em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 1001; /* فوق أي شيء آخر */
+           .sidebar {
+            height: 100%;
+            width: 0; /* مخفية بشكل افتراضي */
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            right: 0; /* تظهر من اليمين */
+            background-color: var(--sidebar-bg);
+            overflow-x: hidden;
+            transition: 0.5s; /* سرعة الانتقال */
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .sidebar.active {
+            width: 100%; /* تغطي الشاشة بالكامل عند التفعيل */
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 25px; /* زر الإغلاق على اليسار */
+            font-size: 3em;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            padding: 15px 0;
+            text-decoration: none;
+            font-size: 2.2em;
+            color: var(--sidebar-text);
+            display: block;
+            transition: 0.3s;
+            font-weight: 700;
+        }
+
+        .sidebar ul li a:hover {
+            color: var(--primary-color);
+            background-color: rgba(255,255,255,0.1);
+        }
+        /* --- End Sidebar Specific Styles --- */
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 15px;
+            }
+            .hero-section h1 {
+                font-size: 2.8em;
+            }
+            .hero-section p {
+                font-size: 1.2em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .features-grid, .latest-content-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                margin: 30px auto;
+                padding: 0 15px;
+            }
+            .navbar .logo {
+                font-size: 1.5em;
+            }
+            .sidebar ul li a {
+                font-size: 1.8em; /* خط أصغر قليلاً على الجوال */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section h1 {
+                font-size: 2.2em;
+            }
+            .hero-section p {
+                font-size: 1em;
+            }
+            .hero-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            .feature-card {
+                padding: 20px;
+            }
+            .feature-card .icon-container {
+                width: 60px;
+                height: 60px;
+                font-size: 2em;
+            }
+            .sidebar .close-btn {
+                font-size: 2.5em;
+            }
+        }       }
+</style>
+    <header class="page-header">
+        <h1>التقويم الكنسي</h1>
+        <p>استكشف الأعياد والأصوام الرئيسية في الكنيسة القبطية الأرثوذكسية لعام 2025.</p>
+    </header>
+
+    <div class="container">
+        <section class="calendar-section">
+            <h2 class="section-title">أعياد وأصوام 2025</h2>
+            <p class="section-description">هذه قائمة بأهم الأعياد والأصوام حسب التقويم القبطي الأرثوذكسي لعام 2025 (1741-1742 شهداء).</p>
+
+            <div class="calendar-grid">
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-star"></i></div>
+                    <div class="card-body">
+                        <h3>عيد الميلاد المجيد</h3>
+                        <p class="calendar-date">الثلاثاء 7 يناير 2025</p>
+                        <p class="calendar-type">عيد سيدي كبير</p>
+                        <button class="read-more-calendar" onclick="openCalendarMonal('event1')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-cross"></i></div>
+                    <div class="card-body">
+                        <h3>بدء صوم يونان</h3>
+                        <p class="calendar-date">الاثنين 24 فبراير 2025</p>
+                        <p class="calendar-type">صوم درجة أولى</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event2')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-church"></i></div>
+                    <div class="card-body">
+                        <h3>بدء الصوم الكبير</h3>
+                        <p class="calendar-date">الاثنين 24 فبراير 2025</p>
+                        <p class="calendar-type">صوم درجة أولى</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event3')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-bell"></i></div>
+                    <div class="card-body">
+                        <h3>عيد البشارة المجيد</h3>
+                        <p class="calendar-date">الاثنين 7 أبريل 2025</p>
+                        <p class="calendar-type">عيد سيدي كبير</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event4')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-palm-tree"></i></div>
+                    <div class="card-body">
+                        <h3>أحد الشعانين</h3>
+                        <p class="calendar-date">الأحد 13 أبريل 2025</p>
+                        <p class="calendar-type">عيد سيدي كبير</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event5')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-egg"></i></div>
+                    <div class="card-body">
+                        <h3>عيد القيامة المجيد</h3>
+                        <p class="calendar-date">الأحد 20 أبريل 2025</p>
+                        <p class="calendar-type">عيد سيدي كبير</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event6')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+                    <div class="card-body">
+                        <h3>عيد الصعود المجيد</h3>
+                        <p class="calendar-date">الخميس 29 مايو 2025</p>
+                        <p class="calendar-type">عيد سيدي كبير</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event7')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-fire-flame-simple"></i></div>
+                    <div class="card-body">
+                        <h3>عيد العنصرة</h3>
+                        <p class="calendar-date">الأحد 8 يونيو 2025</p>
+                        <p class="calendar-type">عيد سيدي كبير</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event8')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-book-bible"></i></div>
+                    <div class="card-body">
+                        <h3>بدء صوم الرسل</h3>
+                        <p class="calendar-date">الاثنين 9 يونيو 2025</p>
+                        <p class="calendar-type">صوم درجة ثانية</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event9')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-dove"></i></div>
+                    <div class="card-body">
+                        <h3>عيد الرسل</h3>
+                        <p class="calendar-date">السبت 12 يوليو 2025</p>
+                        <p class="calendar-type">عيد سيدي</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event10')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-female"></i></div>
+                    <div class="card-body">
+                        <h3>بدء صوم السيدة العذراء</h3>
+                        <p class="calendar-date">الخميس 7 أغسطس 2025</p>
+                        <p class="calendar-type">صوم درجة ثانية</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event11')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-bible"></i></div>
+                    <div class="card-body">
+                        <h3>عيد صعود جسد العذراء</h3>
+                        <p class="calendar-date">الجمعة 22 أغسطس 2025</p>
+                        <p class="calendar-type">عيد سيدي</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event12')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="card-body">
+                        <h3>عيد النيروز</h3>
+                        <p class="calendar-date">الخميس 11 سبتمبر 2025</p>
+                        <p class="calendar-type">عيد رأس السنة القبطية</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event13')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-icon"><i class="fas fa-gift"></i></div>
+                    <div class="card-body">
+                        <h3>بدء صوم الميلاد المجيد</h3>
+                        <p class="calendar-date">الثلاثاء 25 نوفمبر 2025</p>
+                        <p class="calendar-type">صوم درجة ثانية</p>
+                        <button class="read-more-calendar" onclick="openCalendarModal('event14')">
+                            المزيد <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                </div>
+        </section>
+    </div>
+
+    <div id="calendarModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeCalendarModal()">&times;</span>
+            <h2 id="calendarModalTitle" class="modal-title"></h2>
+            <p id="calendarModalDate" class="calendar-modal-date"></p>
+            <p id="calendarModalType" class="calendar-modal-type"></p>
+            <div id="calendarModalBody" class="modal-body"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>تابعنا على وسائل التواصل الاجتماعي:</p>
+        <div class="social-icons">
+            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>© 2025 موقع المسيح والعذراء. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>// Existing sidebar toggle function (keep this)
+function toggleSidebar() {
+    const sidebar = document.getElementById('mySidebar');
+    sidebar.classList.toggle('active');
+}
+
+// ----------------------------------------------------
+// New: Data for Calendar Events (أحداث التقويم)
+// ----------------------------------------------------
+const calendarEventsData = {
+    'event1': {
+        title: 'عيد الميلاد المجيد',
+        date: 'الثلاثاء 7 يناير 2025 (29 كيهك 1741 قبطي)',
+        type: 'عيد سيدي كبير',
+        description: 'يُحتفل به بميلاد السيد المسيح، وهو أحد أهم الأعياد في الكنيسة القبطية الأرثوذكسية. يسبقه صوم الميلاد لمدة 43 يومًا.',
+        details: `
+            <p>يعد عيد الميلاد المجيد من الأعياد السيدية الكبرى السبعة في الكنيسة القبطية الأرثوذكسية. يتم الاحتفال به في 29 كيهك من كل عام قبطي، والذي يوافق 7 يناير في التقويم الميلادي، وقد يوافق 6 يناير في بعض السنوات الكبيسة.</p>
+            <p>يُعد هذا العيد تتويجًا لصوم الميلاد الذي يستمر 43 يومًا، ويتميز بالقداسات الإلهية الخاصة والترانيم والفرح الروحي بميلاد المخلص.</p>
+        `
+    },
+    'event2': {
+        title: 'بدء صوم يونان',
+        date: 'الاثنين 24 فبراير 2025 (17 أمشير 1741 قبطي)',
+        type: 'صوم درجة أولى',
+        description: 'صوم مدته 3 أيام يسبق الصوم الكبير بأسبوعين، ويُعرف أيضًا بصوم نينوى.',
+        details: `
+            <p>صوم يونان هو صوم من الدرجة الأولى (لا يؤكل فيه السمك) ومدته ثلاثة أيام تليها يوم جمعة تعرف بجمعة فصح يونان. يُصام تذكارًا لصوم أهل نينوى وتوبتهم استجابة لإنذار النبي يونان.</p>
+            <p>يأتي هذا الصوم عادةً قبل الصوم الكبير بأسبوعين، ويُعتبر تهيئة روحية لدخوله.</p>
+        `
+    },
+    'event3': {
+        title: 'بدء الصوم الكبير',
+        date: 'الاثنين 24 فبراير 2025 (17 أمشير 1741 قبطي)',
+        type: 'صوم درجة أولى',
+        description: 'أقدس وأطول الأصوام في الكنيسة، ومدته 55 يومًا، ويختتم بأسبوع الآلام وعيد القيامة.',
+        details: `
+            <p>الصوم الكبير هو أطول وأقدس أصوام الكنيسة القبطية الأرثوذكسية، ومدته 55 يومًا. ينقسم إلى أسبوع الاستعداد، ثم صوم الأربعين المقدسة (التي صامها السيد المسيح)، ثم أسبوع الآلام.</p>
+            <p>يُعد صومًا من الدرجة الأولى، يتميز بالنسك والصلوات المكثفة والقراءات الروحية العميقة استعدادًا للاحتفال بعيد القيامة المجيد.</p>
+        `
+    },
+    'event4': {
+        title: 'عيد البشارة المجيد',
+        date: 'الاثنين 7 أبريل 2025 (29 برمهات 1741 قبطي)',
+        type: 'عيد سيدي كبير',
+        description: 'يُحتفل فيه ببشارة الملاك جبرائيل للسيدة العذراء بميلاد السيد المسيح.',
+        details: `
+            <p>عيد البشارة المجيد هو أحد الأعياد السيدية الكبرى، ويُحتفل به في 29 برمهات قبطي (يوافق 7 أبريل ميلادي عادةً). يذكر هذا العيد البشارة الملائكية للسيدة العذراء مريم بأنها ستحبل وتلد ابنًا هو المسيح المخلص.</p>
+            <p>يُعد هذا العيد بداية للتجسد الإلهي وخلاص البشرية.</p>
+        `
+    },
+    'event5': {
+        title: 'أحد الشعانين',
+        date: 'الأحد 13 أبريل 2025 (5 برمودة 1741 قبطي)',
+        type: 'عيد سيدي كبير',
+        description: 'دخول السيد المسيح الظافر إلى أورشليم قبل صلبه، ويُعرف أيضًا بأحد السعف.',
+        details: `
+            <p>أحد الشعانين هو الأحد السابع من الصوم الكبير، ويُعد من الأعياد السيدية الكبرى. في هذا اليوم، تحتفل الكنيسة بدخول السيد المسيح الظافر إلى أورشليم قبل صلبه بأيام قليلة، حيث استقبله الجموع بالفرح والسعف والتهليل.</p>
+            <p>يُعرف أيضًا بأحد السعف، وتُصلى فيه صلوات خاصة تذكر نبوءات دخول الملك المتواضع إلى مدينته.</p>
+        `
+    },
+    'event6': {
+        title: 'عيد القيامة المجيد',
+        date: 'الأحد 20 أبريل 2025 (12 برمودة 1741 قبطي)',
+        type: 'عيد سيدي كبير',
+        description: 'أعظم الأعياد المسيحية، ويُحتفل فيه بقيامة السيد المسيح من الأموات.',
+        details: `
+            <p>عيد القيامة المجيد هو قمة الأعياد المسيحية وأساس الإيمان المسيحي، ويُحتفل فيه بقيامة السيد المسيح من الأموات وظهوره لتلاميذه. هذا العيد متغير الموعد ويرتبط بحسابات فلكية كنسية دقيقة.</p>
+            <p>يلي هذا العيد فترة الخماسين المقدسة التي تمتد 50 يومًا، وهي فترة فرح لا تُصام فيها الأربعاء والجمعة.</p>
+        `
+    },
+    'event7': {
+        title: 'عيد الصعود المجيد',
+        date: 'الخميس 29 مايو 2025 (21 بشنس 1741 قبطي)',
+        type: 'عيد سيدي كبير',
+        description: 'يُحتفل فيه بصعود السيد المسيح إلى السموات بعد قيامته بأربعين يومًا.',
+        details: `
+            <p>عيد الصعود المجيد هو أحد الأعياد السيدية الكبرى، ويُحتفل به بعد 40 يومًا من عيد القيامة المجيد. يذكر هذا العيد صعود السيد المسيح إلى السماء وجلوسه عن يمين الآب بعد أن أتم عمل الفداء.</p>
+            <p>يُعد هذا العيد إتمامًا لمرحلة القيامة وبداية لانتظار حلول الروح القدس.</p>
+        `
+    },
+    'event8': {
+        title: 'عيد العنصرة',
+        date: 'الأحد 8 يونيو 2025 (1 بؤونة 1741 قبطي)',
+        type: 'عيد سيدي كبير',
+        description: 'يُحتفل فيه بحلول الروح القدس على التلاميذ بعد صعود السيد المسيح بخمسين يومًا.',
+        details: `
+            <p>عيد العنصرة، أو عيد الخمسين، هو أحد الأعياد السيدية الكبرى، ويُحتفل به بعد 50 يومًا من عيد القيامة المجيد. يذكر هذا العيد حلول الروح القدس على التلاميذ في علّية صهيون، وهو اليوم الذي تأسست فيه الكنيسة.</p>
+            <p>يعتبر هذا العيد إتمامًا لوعد السيد المسيح بإرسال الروح القدس المعزي، وبداية لخدمة الكرازة حول العالم.</p>
+        `
+    },
+    'event9': {
+        title: 'بدء صوم الرسل',
+        date: 'الاثنين 9 يونيو 2025 (2 بؤونة 1741 قبطي)',
+        type: 'صوم درجة ثانية',
+        description: 'صوم يليه عيد استشهاد القديسين بطرس وبولس، ويُسمح فيه بأكل السمك.',
+        details: `
+            <p>صوم الرسل هو صوم من الدرجة الثانية (يُسمح فيه بأكل السمك بعد فترة الانقطاع). يبدأ في اليوم التالي لعيد العنصرة مباشرة، وتنتهي مدته المتغيرة بعيد استشهاد القديسين بطرس وبولس.</p>
+            <p>يُصام هذا الصوم تذكارًا لجهاد الرسل الأطهار في الخدمة والتبشير.</p>
+        `
+    },
+    'event10': {
+        title: 'عيد الرسل',
+        date: 'السبت 12 يوليو 2025 (5 أبيب 1741 قبطي)',
+        type: 'عيد سيدي',
+        description: 'عيد استشهاد القديسين بطرس وبولس، ويُعد نهاية صوم الرسل.',
+        details: `
+            <p>عيد استشهاد القديسين بطرس وبولس هو عيد سيدي يحتفل به في 5 أبيب قبطي (12 يوليو ميلادي). يمثل هذا العيد نهاية صوم الرسل وهو يوم احتفالي بذكرى عمودي الكنيسة الرسولين العظيمين.</p>
+            <p>تقوم الكنيسة بتكريم هذين الرسولين على جهادهما وتضحيتهما من أجل نشر الإيمان المسيحي.</p>
+        `
+    },
+    'event11': {
+        title: 'بدء صوم السيدة العذراء',
+        date: 'الخميس 7 أغسطس 2025 (1 مسرى 1741 قبطي)',
+        type: 'صوم درجة ثانية',
+        description: 'صوم مدته 15 يومًا يسبق عيد صعود جسد السيدة العذراء، ويُسمح فيه بأكل السمك.',
+        details: `
+            <p>صوم السيدة العذراء مريم هو صوم من الدرجة الثانية (يُسمح فيه بأكل السمك بعد فترة الانقطاع) ومدته 15 يومًا. يبدأ في 1 مسرى قبطي (7 أغسطس ميلادي) وينتهي بعيد صعود جسد السيدة العذراء.</p>
+            <p>يُصام هذا الصوم تكريمًا للسيدة العذراء وتشفعًا بها.</p>
+        `
+    },
+    'event12': {
+        title: 'عيد صعود جسد العذراء',
+        date: 'الجمعة 22 أغسطس 2025 (16 مسرى 1741 قبطي)',
+        type: 'عيد سيدي',
+        description: 'يُحتفل فيه بانتقال جسد السيدة العذراء مريم إلى السماء.',
+        details: `
+            <p>عيد إظهار صعود جسد السيدة العذراء مريم هو عيد سيدي يحتفل به في 16 مسرى قبطي (22 أغسطس ميلادي)، وهو نهاية صوم السيدة العذراء. يُعتقد في الكنيسة أن جسدها الطاهر صعد إلى السماء بعد نياحتها.</p>
+            <p>يُعد هذا العيد مناسبة للفرح والتبجيل للسيدة العذراء، والدة الإله.</p>
+        `
+    },
+    'event13': {
+        title: 'عيد النيروز',
+        date: 'الخميس 11 سبتمبر 2025 (1 توت 1742 قبطي)',
+        type: 'عيد رأس السنة القبطية',
+        description: 'رأس السنة القبطية وبداية عام الشهداء، وهو مرتبط بالتقويم الزراعي المصري القديم.',
+        details: `
+            <p>عيد النيروز هو رأس السنة القبطية وبداية عام الشهداء (1742 شهداء في هذه الحالة). يوافق 1 توت قبطي (11 سبتمبر ميلادي، أو 12 سبتمبر في السنوات الكبيسة). يُعتبر عيدًا قديمًا يربط بين التقويم الزراعي المصري القديم والتاريخ المسيحي.</p>
+            <p>يتميز هذا العيد بالاحتفالات الروحية والتذكير ببطولات الشهداء المسيحيين.</p>
+        `
+    },
+    'event14': {
+        title: 'بدء صوم الميلاد المجيد',
+        date: 'الثلاثاء 25 نوفمبر 2025 (16 هاتور 1742 قبطي)',
+        type: 'صوم درجة ثانية',
+        description: 'صوم مدته 43 يومًا استعدادًا لعيد الميلاد المجيد، ويُسمح فيه بأكل السمك.',
+        details: `
+            <p>صوم الميلاد المجيد هو صوم من الدرجة الثانية (يُسمح فيه بأكل السمك بعد فترة الانقطاع) ومدته 43 يومًا. يبدأ في 16 هاتور قبطي (25 نوفمبر ميلادي) وينتهي في 29 كيهك (عيد الميلاد المجيد في 7 يناير).</p>
+            <p>يُصام هذا الصوم استعدادًا وتجهيزًا للاحتفال بميلاد السيد المسيح.</p>
+        `
+    }
+    // Add more events as needed for other years or details
+};
+
+// New: Functions for Calendar Modal
+function openCalendarModal(eventId) {
+    const event = calendarEventsData[eventId];
+    if (event) {
+        document.getElementById('calendarModalTitle').innerText = event.title;
+        document.getElementById('calendarModalDate').innerText = event.date;
+        document.getElementById('calendarModalType').innerText = event.type;
+        document.getElementById('calendarModalBody').innerHTML = event.description + (event.details ? '<hr>' + event.details : ''); // Optionally add more details
+        document.getElementById('calendarModal').style.display = 'block';
+    }
+}
+
+function closeCalendarModal() {
+    document.getElementById('calendarModal').style.display = 'none';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const calendarModal = document.getElementById('calendarModal');
+    const sidebar = document.getElementById('mySidebar'); // Add sidebar check
+    if (event.target == calendarModal) {
+        calendarModal.style.display = 'none';
+    }
+    // Close sidebar if clicked outside
+    if (sidebar.classList.contains('active') && !event.target.closest('.sidebar') && !event.target.closest('.menu-toggle')) {
+        toggleSidebar();
+    }
+}
+</script>
+
+</body>
+</html>

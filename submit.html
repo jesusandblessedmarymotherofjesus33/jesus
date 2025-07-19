@@ -6,7 +6,7 @@
         <meta name="keywords" content="المسيح والعدرا، البابا كيرلس ، الشفاعةت ، الاجبيه ،الانجيل ،الااناجيل، الااناجيل المقدسه،امين،المار جرجس المار مينا ، مار بقطر شو، مار مينا، المسيح والعدرا، الكنيسه ،الملاك ميخائيل ،الملاك جبرائيل، المرلاك رافائيل، الملاك سوريال الملايكه ،امين">
     <meta name="description" content="استكشف كلمات الحياة من الأناجيل المقدسة، اقرا الان كلمه الحياه التي وهبها لنا رب الارباب وملك الملوك شفاعه ام النور تكون معنا امين">
     <link rel="icon" href="favicon.jpg">
-  <title>تواصل معنا - المسيح والعدرا</title>
+  <title>إنشاء تدوينة جديدة - المسيح والعدرا</title>
   <style>
     body {
       font-family: 'Cairo', sans-serif;
@@ -35,7 +35,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    input, textarea, select, button {
+    input, textarea, button {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
@@ -59,8 +59,8 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-      background: #cfff80;
-      border-top: 1px solid ##afff6a;
+      background: white;
+      border-top: 1px solid #ddd;
       display: flex;
       justify-content: space-around;
       padding: 10px 0;
@@ -69,7 +69,7 @@
 
     .navbar a {
       text-decoration: none;
-      color: #b900ff;
+      color: #c60036;
       font-size: 14px;
       text-align: center;
     }
@@ -81,24 +81,73 @@
 </head>
 <body>
 
-  <!-- البانر -->
   <div class="banner">
-    <h1>تواصل معنا</h1>
+    <h1>إنشاء تدوينة جديدة</h1>
   </div>
-<form name="contact" method="POST" data-netlify="true">
-  <input type="text" name="name" placeholder="الاسم" required />
-  <input type="email" name="email" placeholder="البريد الإلكتروني" required />
-  <textarea name="message" placeholder="رسالتك" required></textarea>
+
+  <form name="post" method="post" id="postForm" data-netlify="true">
+    <input type="text" id="title" placeholder="عنوان التدوينة" required>
+    <textarea id="content" placeholder="محتوى التدوينة" rows="8" required></textarea>
+    <input type="text" id="author" placeholder="اسم الناشر" required>
+    <button type="submit">إنشاء التدوينة</button>
+  </form>
+<form name="file-upload" method="POST" data-netlify="true" enctype="multipart/form-data">
+  <h2>ارفع ملفك هنا</h2>
+
+  <input type="file" name="file" required />
+  
+  <input type="hidden" name="form-name" value="file-upload" />
+
   <button type="submit">إرسال</button>
 </form>
-
-  <!-- الناف بار -->
   <div class="navbar">
     <a href="index.html">الرئيسية</a>
+    <a href="index2.html">المدونه</a>
     <a href="submit.html">إضافة تدوينة</a>
     <a href="about.html">عن الموقع</a>
     <a href="support.html">دعم</a>
   </div>
+
+  <script>
+    document.getElementById('postForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('content').value.replace(/\n/g, '<br>');
+      const author = document.getElementById('author').value;
+
+      const htmlContent = `
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title}</title>
+  <style>
+    body { font-family: 'Cairo', sans-serif; background: #f7f7f7; margin: 0; padding: 20px; }
+    .post { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .title { font-size: 22px; font-weight: bold; margin-bottom: 10px; color: #c60036; }
+    .content { font-size: 16px; line-height: 1.6; margin-bottom: 20px; }
+    .author { font-size: 14px; color: #555; text-align: left; }
+  </style>
+</head>
+<body>
+  <div class="post">
+    <div class="title">${title}</div>
+    <div class="content">${content}</div>
+    <div class="author">بقلم: ${author}</div>
+  </div>
+</body>
+</html>
+`;
+
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = title.replace(/\s+/g, '_') + ".html";
+      link.click();
+    });
+  </script>
 
 </body>
 </html>

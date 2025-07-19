@@ -6,61 +6,76 @@
         <meta name="keywords" content="المسيح والعدرا، البابا كيرلس ، الشفاعةت ، الاجبيه ،الانجيل ،الااناجيل، الااناجيل المقدسه،امين،المار جرجس المار مينا ، مار بقطر شو، مار مينا، المسيح والعدرا، الكنيسه ،الملاك ميخائيل ،الملاك جبرائيل، المرلاك رافائيل، الملاك سوريال الملايكه ،امين">
     <meta name="description" content="استكشف كلمات الحياة من الأناجيل المقدسة، اقرا الان كلمه الحياه التي وهبها لنا رب الارباب وملك الملوك شفاعه ام النور تكون معنا امين">
     <link rel="icon" href="favicon.jpg">
-  <title>تواصل معنا - المسيح والعدرا</title>
+  <title>المسيح والعدرا</title>
   <style>
     body {
-      font-family: 'Cairo', sans-serif;
       margin: 0;
+      font-family: 'Cairo', sans-serif;
       background-color: #f7f7f7;
       padding-bottom: 70px;
     }
 
+    /* البانر */
     .banner {
       background: linear-gradient(to bottom, #c60036, #8b0025);
       color: white;
       text-align: center;
       padding: 20px 10px;
+      position: relative;
+    }
+
+    .banner img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 10px;
     }
 
     .banner h1 {
-      margin: 0;
+      margin: 10px 0 5px;
       font-size: 24px;
     }
 
-    form {
+    .banner p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* التدوينات */
+    .post {
       background-color: white;
-      margin: 20px;
-      padding: 20px;
+      margin: 15px;
+      padding: 15px;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    input, textarea, select, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+    .post-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .post-content {
       font-size: 15px;
+      margin-bottom: 10px;
     }
 
-    button {
-      background-color: #c60036;
-      color: white;
-      border: none;
-      cursor: pointer;
+    .post-author {
+      font-size: 13px;
+      color: #666;
+      text-align: left;
     }
 
-    button:hover {
-      background-color: #8b0025;
-    }
-
+    /* الناف بار */
     .navbar {
       position: fixed;
       bottom: 0;
       width: 100%;
-      background: #cfff80;
-      border-top: 1px solid ##afff6a;
+      background: white;
+      border-top: 1px solid #ddd;
       display: flex;
       justify-content: space-around;
       padding: 10px 0;
@@ -69,7 +84,7 @@
 
     .navbar a {
       text-decoration: none;
-      color: #b900ff;
+      color: #c60036;
       font-size: 14px;
       text-align: center;
     }
@@ -77,20 +92,38 @@
     .navbar a:hover {
       color: #000;
     }
+    .btn{
+        background: blue;
+        border: blue 5px 5px ;
+        border-radius: 5px 5px 5px ;
+    }
+    .btn:hover{
+        bach
+    }
   </style>
 </head>
 <body>
 
   <!-- البانر -->
   <div class="banner">
-    <h1>تواصل معنا</h1>
+    <img src="almasihwaldra.jpg" alt="صورة العدرا">
+    <h1>المسيح والعدرا</h1>
+    <p>مدونة روحية لمشاركة المعجزات، الترانيم، والإيمان</p>
   </div>
-<form name="contact" method="POST" data-netlify="true">
-  <input type="text" name="name" placeholder="الاسم" required />
-  <input type="email" name="email" placeholder="البريد الإلكتروني" required />
-  <textarea name="message" placeholder="رسالتك" required></textarea>
-  <button type="submit">إرسال</button>
-</form>
+
+  <!-- التدوينتين -->
+  <div class="post">
+    <div class="post-title">ظهور العدرا في الوراق</div>
+    <div class="post-content">سنة 2009، تجمّع الآلاف في كنيسة الوراق بعد ظهور العدرا بشكل نوراني رائع فوق الكنيسة، وتم توثيق ذلك بالصور والفيديو.</div>
+    <div class="post-author">بقلم: مايكل سامي</div>
+  </div>
+
+  <div class="post">
+    <div class="post-title">شفاء مريض بالسرطان بشفاعة العدرا</div>
+    <div class="post-content">تم شفاء شاب من السرطان بعد زيارة كنيسة الزيتون والصلاة أمام أيقونة العدرا لمدة 3 أيام.</div>
+    <div class="post-author">بقلم: مريم فادي</div>
+   
+  </div>   
 
   <!-- الناف بار -->
   <div class="navbar">
@@ -98,7 +131,7 @@
     <a href="submit.html">إضافة تدوينة</a>
     <a href="about.html">عن الموقع</a>
     <a href="support.html">دعم</a>
-  </div>
-
+<script>
+</script>
 </body>
 </html>

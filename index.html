@@ -3,181 +3,554 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="الرب يسوع,القديسه الطاهره العذراء مريم ,البابا كيرلس السادس,مار مينا العجائيبي ,مار جرجس العجائيبي ,القديسه فيلومينا العجائيبيه ,قصص مسيحيه, ترانيم مسيحيه ,الملاك ميخائيل, الملاك جبرائيل,الملاك سوريال,الملائيكه,معجزات, الرب يسوع والقديسه الطاهره العذراء مريم">
-    <meta name="description" content="هذا الموقع تم انشائه لتنزيل الترانيم الدينيه المسيحيه التي تشمل ترانيم و مدائح و تماجيد و السير لكل القديسيين والشهداء والملائيكه والانبياء والرسل و المعجزات لكل القديسيين و الشهداء و الملائيكه و الانبياء و الرسل باذن يسوع امين">
-    <link rel="stylesheet" href="style.css">
+    <title>المسيح والعدرا </title>
     <link rel="icon" href="favicon.jpg">
-    <title>الرب يسوع و القديسه الطاهره العذراء مريم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+          <meta name="keywords" content="المسيح والعدرا، البابا كيرلس ، الشفاعةت ، الاجبيه ،الانجيل ،الااناجيل، الااناجيل المقدسه،امين،المار جرجس المار مينا ، مار بقطر شو، مار مينا، المسيح والعدرا، الكنيسه ،الملاك ميخائيل ،الملاك جبرائيل، المرلاك رافائيل، الملاك سوريال الملايكه ،امين">
+    <meta name="description" content="استكشف كلمات الحياة من الأناجيل المقدسة، اقرا الان كلمه الحياه التي وهبها لنا رب الارباب وملك الملوك شفاعه ام النور تكون معنا امين">
+    <link rel="icon" href="favicon.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #007bff; /* أزرق سماوي - لون روحي */
+            --secondary-color: #6c757d; /* رمادي دافئ */
+            --accent-color: #28a745; /* أخضر - للتميز */
+            --background-light: #f8f9fa; /* خلفية فاتحة */
+            --background-dark: #e9ecef; /* خلفية أغمق قليلاً */
+            --text-color: #343a40; /* لون نص داكن */
+            --heading-color: #212529; /* لون عناوين أغمق */
+            --card-background: #ffffff;
+            --border-color: #dee2e6;
+            --hover-shadow: rgba(0, 0, 0, 0.15);
+
+            /* Sidebar specific colors */
+            --sidebar-bg: #212529; /* خلفية القائمة الجانبية (داكنة) */
+            --sidebar-text: #f8f9fa; /* لون النص في القائمة الجانبية */
+            --sidebar-hover: #0056b3; /* لون عند التحويم على الروابط */
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-color);
+            direction: rtl;
+            text-align: right;
+            overflow-x: hidden; /* لمنع ظهور شريط التمرير الأفقي عند فتح القائمة */
+        }
+
+        /* Hero Section - القسم العلوي البارز */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x600/6a82fb/ffffff?text=صورة+المسيح+والعذراء'); /* استبدل هذه الصورة بصورة مناسبة */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-family: 'Amiri', serif; /* خط كلاسيكي للعناوين الرئيسية */
+            font-size: 3.8em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-section p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.5;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .hero-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+        }
+
+        .hero-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* General Container */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: var(--heading-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Features/Services Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px var(--hover-shadow);
+        }
+
+        .feature-card .icon-container {
+            background-color: var(--primary-color);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+        }
+
+        .feature-card h3 {
+            color: var(--heading-color);
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 1.0em;
+            color: var(--secondary-color);
+        }
+
+        /* About Section (اختياري) */
+        .about-section {
+            background-color: var(--background-dark);
+            padding: 60px 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .about-section .about-content {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1em;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .about-section .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Latest Content Section */
+        .latest-content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .content-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--hover-shadow);
+        }
+
+        .content-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-card .card-body {
+            padding: 20px;
+        }
+
+        .content-card .card-body h4 {
+            color: var(--heading-color);
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .content-card .card-body p {
+            font-size: 0.95em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .content-card .read-more-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .content-card .read-more-link:hover {
+            color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--heading-color); /* لون داكن للتذييل */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.95em;
+        }
+
+        .footer .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Sidebar Specific Styles --- */
+        .navbar {
+            background-color: var(--heading-color);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar .logo {
+            color: white;
+            font-family: 'Amiri', serif;
+            font-size: 1.8em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 1001; /* فوق أي شيء آخر */
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0; /* مخفية بشكل افتراضي */
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            right: 0; /* تظهر من اليمين */
+            background-color: var(--sidebar-bg);
+            overflow-x: hidden;
+            transition: 0.5s; /* سرعة الانتقال */
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .sidebar.active {
+            width: 100%; /* تغطي الشاشة بالكامل عند التفعيل */
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 25px; /* زر الإغلاق على اليسار */
+            font-size: 3em;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            padding: 15px 0;
+            text-decoration: none;
+            font-size: 2.2em;
+            color: var(--sidebar-text);
+            display: block;
+            transition: 0.3s;
+            font-weight: 700;
+        }
+
+        .sidebar ul li a:hover {
+            color: var(--primary-color);
+            background-color: rgba(255,255,255,0.1);
+        }
+        /* --- End Sidebar Specific Styles --- */
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 15px;
+            }
+            .hero-section h1 {
+                font-size: 2.8em;
+            }
+            .hero-section p {
+                font-size: 1.2em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .features-grid, .latest-content-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                margin: 30px auto;
+                padding: 0 15px;
+            }
+            .navbar .logo {
+                font-size: 1.5em;
+            }
+            .sidebar ul li a {
+                font-size: 1.8em; /* خط أصغر قليلاً على الجوال */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section h1 {
+                font-size: 2.2em;
+            }
+            .hero-section p {
+                font-size: 1em;
+            }
+            .hero-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            .feature-card {
+                padding: 20px;
+            }
+            .feature-card .icon-container {
+                width: 60px;
+                height: 60px;
+                font-size: 2em;
+            }
+            .sidebar .close-btn {
+                font-size: 2.5em;
+            }
+            .almasihwaldra{
+            border: #8f00ff5f 5px 5px 5px;
+                border-radius: 5px 5px 5px ;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="header-content">
-            <h1>الرب يسوع والقديسه الطاهره العذراء مريم</h1>
-            <div class="header-controls">
-                <button id="open-sidebar-btn" class="icon-btn" aria-label="Open Sidebar Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+    <nav class="navbar">
+        <a href="#" class="logo">المسيح والعدرا</a>
+        <button class="menu-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i> </button>
+    </nav>
 
-    <aside id="my-sidebar" class="sidebar">
-        <div class="sidebar-header">
-            <h2>القائمة</h2>
-            <button id="close-sidebar-btn" class="icon-btn" aria-label="Close Sidebar Menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="sidebar-search-container">
-            <input type="text" id="sidebar-search-input" placeholder="ابحث في الموقع..." class="search-input">
-            <button id="sidebar-search-btn" class="icon-btn"><i class="fas fa-search"></i></button>
-        </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="#verses-section">الآيات</a></li>
-                <li><a href="#prayers-section">الصلوات</a></li>
-                <li><a href="#hymns-section">الترانيم</a></li>
-                <li><a href="#saints-stories-section">قصص القديسين</a></li>
-                <li><a href="#miracles-section">المعجزات</a></li>
-                <li><a href="#daily-devotions-section">تأملات يومية</a></li>
-                <li><a href="#about-section">عنا</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="articles.html">مقالات روحية</a></li>
+            <li><a href="tamagedalmasihwaladra.html">تسابيح وتمجيد</a></li>
+            <li><a href="church-history.html">تاريخ الكنيسة</a></li>
+            <li><a href="media.html">ميديا وعظات</a></li>
+            <li><a href="mircles.html">معجزات القديسين</a></li>
+            <li><a href="calender.html">التقويم الكنسي</a></li>
+            <li><a href="prayers.html">صلوات عامة</a></li>
+                     <li><a href="index2.html">المدونه</a></li>
+            <li><a href="agpiyah.html">صلوات الأجبية</a></li>
             </ul>
-        </nav>
-    </aside>
+    </div>
 
-    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <section id="hero" class="hero-section">
+        <h1>موقع المسيح والعدرا</h1>
+        <p>مرحباً بكم في رحاب الإيمان والمحبة. مصدركم للتعاليم الروحية، التأملات، والمقالات الملهمة عن حياة الرب يسوع المسيح والسيدة القديسه الطاهره العذراء  مريم ام النور.</p>
+        <p class="almasihwaldra">يمكنك اضافه تدوينات في مدونه المسيح والعدرا <a href="index2.html">مدونه المسيح والعدرا</a> مدونه المسيح والعدرا</p>
+        <a href="#about-section" class="hero-button">اكتشف المزيد عنا</a>
+    </section>
 
-    <main id="main-content">
-        <section id="verses-section" class="section-container verses-section fade-in-section">
-            <h1>مرحبًا بك في قسم الآيات</h1>
-            <div class="verses-grid">
-                <p class="verse-box box fade-in-item" data-search-term="تَوَكَّلْ عَلَى الرَّبِّ بِكُلِّ قَلْبِكَ، وَعَلَى فَهْمِكَ لاَ تَعْتَمِدْ.” (أمثال 5:3)">
-                    تَوَكَّلْ عَلَى الرَّبِّ بِكُلِّ قَلْبِكَ، وَعَلَى فَهْمِكَ لاَ تَعْتَمِدْ.” (أمثال 5:3)
-                </p>
-                <p class="verse-box box fade-in-item" data-search-term="أَمَا أَمَرْتُكَ؟ تَشَدَّدْ وَتَشَجَّعْ! لاَ تَرْهَبْ وَلاَ تَرْتَعِبْ لأَنَّ الرَّبَّ إِلهَكَ مَعَكَ حَيْثُمَا تَذْهَبُ.” (يشوع 9:1)">
-                    أَمَا أَمَرْتُكَ؟ تَشَدَّدْ وَتَشَجَّعْ! لاَ تَرْهَبْ وَلاَ تَرْتَعِبْ لأَنَّ الرَّبَّ إِلهَكَ مَعَكَ حَيْثُمَا تَذْهَبُ.” (يشوع 9:1)
-                </p>
-                <p class="verse-box box fade-in-item" data-search-term="اَلْغِلْمَانُ يُعْيُونَ وَيَتْعَبُونَ، وَالْفِتْيَانُ يَتَعَثَّرُونَ تَعَثُّرًا. وَأَمَّا مُنْتَظِرُو الرَّبِّ فَيُجَدِّدُونَ قُوَّةً. يَرْفَعُونَ أَجْنِحَةً كَالنُّسُورِ. يَرْكُضُونَ وَلاَ يَتْعَبُونَ. يَمْشُونَ وَلاَ يُعْيُونَ.” (إشعياء 30:40-31)">
-                    اَلْغِلْمَانُ يُعْيُونَ وَيَتْعَبُونَ، وَالْفِتْيَانُ يَتَعَثَّرُونَ تَعَثُّرًا. وَأَمَّا مُنْتَظِرُو الرَّبِّ فَيُجَدِّدُونَ قُوَّةً. يَرْفَعُونَ أَجْنِحَةً كَالنُّسُورِ. يَرْكُضُونَ وَلاَ يَتْعَبُونَ. يَمْشُونَ وَلاَ يُعْيُونَ.” (إشعياء 30:40-31)
-                </p>
-                <p class="verse-box box fade-in-item" data-search-term="“لاَ تَخَفْ لأَنِّي مَعَكَ. لاَ تَتَلَفَّتْ لأَنِّي إِلهُكَ. قَدْ أَيَّدْتُكَ وَأَعَنْتُكَ وَعَضَدْتُكَ بِيَمِينِ بِرِّي.” (إشعياء 10:41)">
-                    “لاَ تَخَفْ لأَنِّي مَعَكَ. لاَ تَتَلَفَّتْ لأَنِّي إِلهُكَ. قَدْ أَيَّدْتُكَ وَأَعَنْتُكَ وَعَضَدْتُكَ بِيَمِينِ بِرِّي.” (إشعياء 10:41)
-                </p>
-                <p class="verse-box box fade-in-item" data-search-term="تَعَالَوْا إِلَيَّ يَا جَمِيعَ الْمُتْعَبِينَ وَالثَّقِيلِي الأَحْمَالِ، وَأَنَا أُرِيحُكُمْ.” (متى 28:11)">
-                    تَعَالَوْا إِلَيَّ يَا جَمِيعَ الْمُتْعَبِينَ وَالثَّقِيلِي الأَحْمَالِ، وَأَنَا أُرِيحُكُمْ.” (متى 28:11)
-                </p>
-                <p class="verse-box box fade-in-item" data-search-term="فَاذْهَبُوا وَتَلْمِذُوا جَمِيعَ الأُمَمِ وَعَمِّدُوهُمْ بِاسْمِ الآب وَالابْنِ وَالرُّوحِ الْقُدُسِ. وَعَلِّمُوهُمْ أَنْ يَحْفَظُوا جَمِيعَ مَا أَوْصَيْتُكُمْ بِهِ. وَهَا أَنَا مَعَكُمْ كُلَّ الأَيَّامِ إِلَى انْقِضَاءِ الدَّهْرِ. آمِينَ.” (متى 19:28-20)">
-                    فَاذْهَبُوا وَتَلْمِذُوا جَمِيعَ الأُمَمِ وَعَمِّدُوهُمْ بِاسْمِ الآب وَالابْنِ وَالرُّوحِ الْقُدُسِ. وَعَلِّمُوهُمْ أَنْ يَحْفَظُوا جَمِيعَ مَا أَوْصَيْتُكُمْ بِهِ. وَهَا أَنَا مَعَكُمْ كُلَّ الأَيَّامِ إِلَى انْقِضَاءِ الدَّهْرِ. آمِينَ.” (متى 19:28-20)
-                </p>
-                <p class="verse-box box fade-in-item" data-search-term="“لأَنَّهُ هكَذَا أَحَبَّ اللهُ الْعَالَمَ حَتَّى بَذَلَ ابْنَهُ الْوَحِيدَ، لِكَيْ لاَ يَهْلِكَ كُلُّ مَنْ يُؤْمِنُ بِهِ، بَلْ تَكُونُ لَهُ الْحَيَاةُ الأَبَدِيَّةُ.” (يوحنا 16:3)">
-                    “لأَنَّهُ هكَذَا أَحَبَّ اللهُ الْعَالَمَ حَتَّى بَذَلَ ابْنَهُ الْوَحِيدَ، لِكَيْ لاَ يَهْلِكَ كُلُّ مَنْ يُؤْمِنُ بِهِ، بَلْ تَكُونُ لَهُ الْحَيَاةُ الأَبَدِيَّةُ.” (يوحنا 16:3)
-                </p>
-                <p class="verse-box box fade-in-item" data-search-term="قَالَ لَهُ يَسُوعُ: «أَنَا هُوَ الطَّرِيقُ وَالْحَقُّ وَالْحَيَاةُ. لَيْسَ أَحَدٌ يَأْتِي إِلَى الآبِ إِلاَّ بِي.” (يوحنا 6:14)">
-                    قَالَ لَهُ يَسُوعُ: «أَنَا هُوَ الطَّرِيقُ وَالْحَقُّ وَالْحَيَاةُ. لَيْسَ أَحَدٌ يَأْتِي إِلَى الآبِ إِلاَّ بِي.” (يوحنا 6:14)
-                </p>
+    <div id="features" class="container">
+        <h2 class="section-title">ماذا نقدم؟</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon-container">
+                    <i class="fas fa-book-open"></i> </div>
+                <h3>مقالات وبحوث</h3>
+                <p>مكتبة غنية بالمقالات الروحية واللاهوتية المتعمقة حول الكتاب المقدس، حياة القديسين، والعقيدة المسيحية.</p>
             </div>
-        </section>
+            <div class="feature-card">
+                <div class="icon-container">
+                    <i class="fas fa-play-circle"></i> </div>
+                <h3>وسائط متعددة</h3>
+                <p>فيديوهات تعليمية، عظات مؤثرة، ترانيم روحية، وصور فنية تلامس الروح.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-container">
+                    <i class="fas fa-star"></i> </div>
+                <h3>تأملات يومية</h3>
+                <p>تأملات قصيرة وملهمة تساعدك على بدء يومك بسلام وتجديد روحك.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-container">
+                    <i class="fas fa-comments"></i> </div>
+                <h3>تواصل مجتمعي</h3>
+                <p>فرصة للمشاركة وطرح الأسئلة في بيئة داعمة ومحبة للأخوة المسيحية.</p>
+            </div>
+        </div>
+    </div>
 
-        <section id="prayers-section" class="section-container prayers-section fade-in-section">
-            <h1>ابانا الذي في السموات</h1>
-            <p class="box prayer-box fade-in-item" data-search-term="ابانا الذي في السموات ليتقدس اسمك ليات ملكوتك لتكن مشيئتك كما في السماء كذلك علي الارض خبزنا الذي للغد اعطانا اليوم واغفر لنا ذنوبنا كما نغفر نحن ايضاً للمذنبيين الينا ولا تدخلنا في تجربه لكن نجنا من الشرير بالمسيح يسوع ربنا لان لك الملك والقوه والمجد الي الابد امين">
-                ابانا الذي في السموات ليتقدس اسمك ليات ملكوتك لتكن مشيئتك كما في السماء كذلك علي الارض خبزنا الذي للغد اعطانا اليوم واغفر لنا ذنوبنا كما نغفر نحن ايضاً للمذنبيين الينا ولا تدخلنا في تجربه لكن نجنا من الشرير بالمسيح يسوع ربنا لان لك الملك والقوه والمجد الي الابد امين
-            </p>
-            <h1>صلاه تمجيد الي ربنا والهنا ومخلصنا يسوع المسيح</h1>
-            <p class="box prayer-box fade-in-item" data-search-term="ياربي يسوع المسيح يا الهي ومخلصي وربي لك كامل المجد والكرامه والعزه والجلاله ولك كل شيء يا ملك الكون يا عظيم يا رحيم يا غفور يا من بدمك غفرت جميع خطايا البشر يا الهنا ومخلصنا وفادينا و ربنا يسوع المسيح لك كامل المجد والقوه والعزه والجلاله امين">
-                ياربي يسوع المسيح يا الهي ومخلصي وربي لك كامل المجد والكرامه والعزه والجلاله ولك كل شيء يا ملك الكون يا عظيم يا رحيم يا غفور يا من بدمك غفرت جميع خطايا البشر يا الهنا ومخلصنا وفادينا و ربنا يسوع المسيح لك كامل المجد والقوه والعزه والجلاله امين
-            </p>
-            <h1>السلام لك يا مريم</h1>
-            <p class="box prayer-box fade-in-item" data-search-term="السلام لك يا مريم يا ممتلئه نعمه الرب معك مباركه انت في النساء مباركه هي ثمره بطنك سيدنا يسوع المسيح يا قديسه يا طاهره يا والده اللّه صلي من اجلنا نحن الخطاه الان وكل اوان وفي ساعه موتنا امين">
-                السلام لك يا مريم يا ممتلئه نعمه الرب معك مباركه انت في النساء مباركه هي ثمره بطنك سيدنا يسوع المسيح يا قديسه يا طاهره يا والده اللّه صلي من اجلنا نحن الخطاه الان وكل اوان وفي ساعه موتنا امين
-            </p>
-            <h1>صلاه تكريم الي القديسه الطاهره العذراء مريم</h1>
-            <p class="box prayer-box fade-in-item" data-search-term="يا قديسه يا طاهره يا والده اللّه الحي يا ام مخلصنا الذي بدمه غفرت خطايا كل البشر السلام لك يا قديسه يا طاهره يا والده اللّه الحي اشفعي فينا يا المخلص يا شفيعه في الكل يا طاهره يا ام النور يا من حليت الحديد للرسول متياس اشفعي فينا امين">
-                يا قديسه يا طاهره يا والده اللّه الحي يا ام مخلصنا الذي بدمه غفرت خطايا كل البشر السلام لك يا قديسه يا طاهره يا والده اللّه الحي اشفعي فينا يا المخلص يا شفيعه في الكل يا طاهره يا ام النور يا من حليت الحديد للرسول متياس اشفعي فينا امين
-            </p>
-            <h1>صلاه تمجيد الي الرب يسوع المسيح مخلصنا وفادينا</h1>
-            <p class="box prayer-box fade-in-item" data-search-term="يا ربنا والهنا ومخلصنا يسوع المسيح يا الهنا ومخلصنا يا عظيم يا من فاديتنا بدمك يا عظيم يا رحيم يا من برحمتك تحننت علي جميع البشر وخلصتنا بدمك يالهنا يا اعظم من الكل ويا ارحم من الكل ويا اقوي من الكل ويا اقدر من الكل ويا اقدس من الكل لك المجد والعزه والجلاله والعظمه والبهاء والملك الي الابد والي ابد الابدين امين">
-                يا ربنا والهنا ومخلصنا يسوع المسيح يا الهنا ومخلصنا يا عظيم يا من فاديتنا بدمك يا عظيم يا رحيم يا من برحمتك تحننت علي جميع البشر وخلصتنا بدمك يالهنا يا اعظم من الكل ويا ارحم من الكل ويا اقوي من الكل ويا اقدر من الكل ويا اقدس من الكل لك المجد والعزه والجلاله والعظمه والبهاء والملك الي الابد والي ابد الابدين امين
-            </p>
-        </section>
+    <section id="about-section" class="about-section">
+        <div class="container">
+            <h2 class="section-title">رسالتنا</h2>
+            <div class="about-content">
+                <p>يهدف موقع "المسيح والعذراء" إلى أن يكون منارة روحية للمسيحيين حول العالم، ونافذة لكل من يرغب في التعرف بعمق على حياة وتعاليم ربنا يسوع المسيح، وقداسة والدة الإله مريم العذراء.</p>
+                <p>نحن نؤمن بأهمية نشر الكلمة المقدسة، وتعزيز الإيمان، وتقديم محتوى روحي غني يدعم النمو الروحي ويقوي العلاقة بالله.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="hymns-section" class="section-container hymns-section fade-in-section">
-            <h1>ترانيم ومدايح</h1>
-            <div class="hymns-grid">
-                <div class="hymn-card box fade-in-item" data-search-term="ترنيمة يا سيدى كم كان قاسياً ترنيمة روحية عميقة عن آلام السيد المسيح.">
-                    <h3>ترنيمة: يا سيدى كم كان قاسياً</h3>
-                    <p>ترنيمة روحية عميقة عن آلام السيد المسيح.</p>
-                    <a href="https://www.youtube.com/watch?v=EXAMPLE_VIDEO_ID_1" target="_blank" class="play-btn">استمع</a>
-                </div>
-                <div class="hymn-card box fade-in-item" data-search-term="ترنيمة إلهي راعيّ ترنيمة مريحة عن رعاية الله لنا.">
-                    <h3>ترنيمة: إلهي راعيّ</h3>
-                    <p>ترنيمة مريحة عن رعاية الله لنا.</p>
-                    <a href="https://www.youtube.com/watch?v=EXAMPLE_VIDEO_ID_2" target="_blank" class="play-btn">استمع</a>
+    <div id="latest-content" class="container">
+        <h2 class="section-title">أحدث ما لدينا</h2>
+        <div class="latest-content-grid">
+            <div class="content-card">
+                <img src="https://via.placeholder.com/400x200/8d8b9d/ffffff?text=صورة+مقال" alt="صورة مقال">
+                <div class="card-body">
+                    <h4>أهمية الصلاة في حياة المؤمن</h4>
+                    <p>مقال يستعرض بعمق أهمية الصلاة كركيزة أساسية في رحلة الإيمان المسيحي...</p>
+                    <a href="articles.html#article1" class="read-more-link">اقرأ المقال <i class="fas fa-arrow-left"></i></a>
                 </div>
             </div>
-        </section>
 
-        <section id="saints-stories-section" class="section-container fade-in-section">
-            <h1>قصص القديسين</h1>
-            <p>هذا القسم مخصص لقصص القديسين.</p>
-            <div class="grid-layout">
-                <div class="box fade-in-item" data-search-term="قصة مار جرجس">
-                    <h3>مار جرجس</h3>
-                    <p>نبذة عن حياة القديس مار جرجس وشهادته.</p>
-                </div>
-                <div class="box fade-in-item" data-search-term="قصة القديسة فيلومينا">
-                    <h3>القديسة فيلومينا</h3>
-                    <p>نبذة عن حياة القديسة فيلومينا ومعجزاتها.</p>
+            <div class="content-card">
+                <img src="https://via.placeholder.com/400x200/c7a9c7/ffffff?text=صورة+فيديو" alt="صورة فيديو">
+                <div class="card-body">
+                    <h4>فيديو: العذراء مريم - رمز الطهارة</h4>
+                    <p>فيديو قصير يتناول حياة السيدة العذراء مريم ودورها العظيم في تاريخ الخلاص...</p>
+                    <a href="media.html#video1" class="read-more-link">شاهد الفيديو <i class="fas fa-arrow-left"></i></a>
                 </div>
             </div>
-        </section>
 
-        <section id="miracles-section" class="section-container fade-in-section">
-            <h1>المعجزات</h1>
-            <p>هنا ستجد قصص المعجزات.</p>
-            <div class="grid-layout">
-                <div class="box fade-in-item" data-search-term="معجزة زيت القديس">
-                    <h3>معجزة زيت القديس</h3>
-                    <p>قصة معجزة حدثت بشفاعة أحد القديسين.</p>
+            <div class="content-card">
+                <img src="https://via.placeholder.com/400x200/a9c7e0/ffffff?text=صورة+تأمل" alt="صورة تأمل">
+                <div class="card-body">
+                    <h4>تأمل اليوم: "الخبز الحي النازل من السماء"</h4>
+                    <p>تأمل يومي في آية من الإنجيل وكيف يمكننا تطبيقها في حياتنا اليومية...</p>
+                    <a href="articles.html#meditation1" class="read-more-link">اقرأ التأمل <i class="fas fa-arrow-left"></i></a>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section id="daily-devotions-section" class="section-container fade-in-section">
-            <h1>تأملات يومية</h1>
-            <p>تأملات قصيرة وآيات يومية.</p>
-            <div class="grid-layout">
-                <div class="box fade-in-item" data-search-term="تأمل اليوم">
-                    <h3>تأمل يوم 2024-06-03</h3>
-                    <p>آية: "أَنَا هُوَ نُورُ الْعَالَمِ." (يوحنا 8:12)</p>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="about-section" class="section-container about-section fade-in-section" data-search-term="اهلا بك في موقع الرب يسوع والقديسه الطاهره العذراء مريم سوف تجد قسم للايات وكروت القديسيين وترانيم وسير القديسسين وكل هذا في صفحه لوحدها">
-            <p>اهلا بك في موقع الرب يسوع والقديسه الطاهره العذراء مريم
-            سوف تجد قسم للايات وكروت القديسيين وترانيم وسير القديسسين وكل هذا في صفحه لوحدها
-            </p>
-        </section>
-
-        <section id="contact" class="section-container contact-section fade-in-section" data-search-term="اهلا بك في قسم الدعم ان واجهتك اي مشكله في الموقع او اي شي يمكنك الضغط علي زر support وستفتح لك صفحه الدعم">
-            <h1>اهلا بك في قسم الدعم</h1>
-            <p>ان واجهتك اي مشكله في الموقع او اي شي يمكنك الضغط علي زر support وستفتح لك صفحه الدعم
-                <a href="support.html" class="btn">الدعم</a>
-            </p>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <p>قريباً سوف يتم تحديث الصفحه واضافه صفحات جديده </p>
-     
+    <footer class="footer">
+        <p>تابعنا على وسائل التواصل الاجتماعي:</p>
+        <div class="social-icons">
+            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 موقع المسيح والعدرا جميع الحقوق محفوظة.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            if (sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                // لإزالة التمرير من الجسم عند إغلاق القائمة
+                document.body.style.overflow = ''; 
+            } else {
+                sidebar.classList.add('active');
+                // لمنع التمرير في الخلفية عند فتح القائمة
+                document.body.style.overflow = 'hidden'; 
+            }
+        }
+
+        // إغلاق القائمة عند النقر على رابط داخلها (اختياري)
+        document.querySelectorAll('.sidebar ul li a').forEach(item => {
+            item.addEventListener('click', event => {
+                toggleSidebar(); // إغلاق القائمة بعد النقر على الرابط
+            });
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RRBE75X9BS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RRBE75X9BS');
+</script>
 </body>
 </html>

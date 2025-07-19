@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صلوات الأجبية - موقع المسيح والعذراء</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="المسيح والعدرا, المسيح, العدرا'،الاجبيه،صلوات، القديسيين ،البابا كيرلس السادس، مار مينا العجائبي ام النور ،واللده الاله، شفعاه ام النور صلوات ،شفاعات ،مار جرجس ،كنائس ،. كنيسه الزيتون، ظهو ام النور بكنيستها في الزيتون، امين">
+    <meta name="description" content="الان    جميع ثلوات الاجبيه صلوات السواعي صلوات الاجبيه كامله جديد اقرا الان">
+</head>
+<body>
+<style>
+    /* Agpeya Page Specific Styles */
+.agpeya-section {
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.agpeya-section .section-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.8em;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.agpeya-section .section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 120px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+.agpeya-section .section-description {
+    font-size: 1.15em;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agpeya-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.agpeya-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 20px;
+}
+
+.agpeya-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.agpeya-card .agpeya-icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.agpeya-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.agpeya-card h3 {
+    font-family: 'Amiri', serif;
+    font-size: 1.6em;
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.agpeya-card .agpeya-time {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.agpeya-card p {
+    font-size: 0.95em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.agpeya-card .read-more-agpeya {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    align-self: flex-start;
+}
+
+.agpeya-card .read-more-agpeya:hover {
+    background-color: #367ABE;
+}
+
+.agpeya-card .read-more-agpeya i {
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+/* Modal for Agpeya details */
+#agpeyaModal .modal-title {
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+#agpeyaModal .agpeya-modal-time {
+    font-size: 1.3em;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    display: block;
+}
+#agpeyaModal .modal-body {
+    font-size: 1.1em;
+    line-height: 2.0;
+    font-family: 'Amiri', serif;
+    white-space: pre-wrap; /* Preserve formatting for prayer text */
+    text-align: justify; /* Justify text for better readability of long prayers */
+}
+
+/* Responsive adjustments for Agpeya Page */
+@media (max-width: 992px) {
+    .agpeya-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .agpeya-section .section-title {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .agpeya-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .agpeya-section {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+    .agpeya-section .section-title {
+        font-size: 2em;
+        padding-bottom: 10px;
+    }
+    .agpeya-section .section-title::after {
+        width: 80px;
+        height: 4px;
+    }
+    .agpeya-section .section-description {
+        font-size: 1em;
+        margin-bottom: 25px;
+    }
+    .agpeya-card h3 {
+        font-size: 1.3em;
+    }
+    .agpeya-card .agpeya-icon {
+        font-size: 2.5em;
+    }
+}
+  :root {
+            --primary-color: #007bff; /* أزرق سماوي - لون روحي */
+            --secondary-color: #6c757d; /* رمادي دافئ */
+            --accent-color: #28a745; /* أخضر - للتميز */
+            --background-light: #f8f9fa; /* خلفية فاتحة */
+            --background-dark: #e9ecef; /* خلفية أغمق قليلاً */
+            --text-color: #343a40; /* لون نص داكن */
+            --heading-color: #212529; /* لون عناوين أغمق */
+            --card-background: #ffffff;
+            --border-color: #dee2e6;
+            --hover-shadow: rgba(0, 0, 0, 0.15);
+
+            /* Sidebar specific colors */
+            --sidebar-bg: #212529; /* خلفية القائمة الجانبية (داكنة) */
+            --sidebar-text: #f8f9fa; /* لون النص في القائمة الجانبية */
+            --sidebar-hover: #0056b3; /* لون عند التحويم على الروابط */
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-color);
+            direction: rtl;
+            text-align: right;
+            overflow-x: hidden; /* لمنع ظهور شريط التمرير الأفقي عند فتح القائمة */
+        }
+
+        /* Hero Section - القسم العلوي البارز */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x600/6a82fb/ffffff?text=صورة+المسيح+والعذراء'); /* استبدل هذه الصورة بصورة مناسبة */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-family: 'Amiri', serif; /* خط كلاسيكي للعناوين الرئيسية */
+            font-size: 3.8em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-section p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.5;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .hero-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+        }
+
+        .hero-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* General Container */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: var(--heading-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Features/Services Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px var(--hover-shadow);
+        }
+
+        .feature-card .icon-container {
+            background-color: var(--primary-color);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+        }
+
+        .feature-card h3 {
+            color: var(--heading-color);
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 1.0em;
+            color: var(--secondary-color);
+        }
+
+        /* About Section (اختياري) */
+        .about-section {
+            background-color: var(--background-dark);
+            padding: 60px 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .about-section .about-content {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1em;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .about-section .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Latest Content Section */
+        .latest-content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .content-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--hover-shadow);
+        }
+
+        .content-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-card .card-body {
+            padding: 20px;
+        }
+
+        .content-card .card-body h4 {
+            color: var(--heading-color);
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .content-card .card-body p {
+            font-size: 0.95em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .content-card .read-more-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .content-card .read-more-link:hover {
+            color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--heading-color); /* لون داكن للتذييل */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.95em;
+        }
+
+        .footer .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Sidebar Specific Styles --- */
+        .navbar {
+            background-color: var(--heading-color);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar .logo {
+            color: white;
+            font-family: 'Amiri', serif;
+            font-size: 1.8em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 1001; /* فوق أي شيء آخر */
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0; /* مخفية بشكل افتراضي */
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            right: 0; /* تظهر من اليمين */
+            background-color: var(--sidebar-bg);
+            overflow-x: hidden;
+            transition: 0.5s; /* سرعة الانتقال */
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .sidebar.active {
+            width: 100%; /* تغطي الشاشة بالكامل عند التفعيل */
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 25px; /* زر الإغلاق على اليسار */
+            font-size: 3em;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            padding: 15px 0;
+            text-decoration: none;
+            font-size: 2.2em;
+            color: var(--sidebar-text);
+            display: block;
+            transition: 0.3s;
+            font-weight: 700;
+        }
+
+        .sidebar ul li a:hover {
+            color: var(--primary-color);
+            background-color: rgba(255,255,255,0.1);
+        }
+        /* --- End Sidebar Specific Styles --- */
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 15px;
+            }
+            .hero-section h1 {
+                font-size: 2.8em;
+            }
+            .hero-section p {
+                font-size: 1.2em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .features-grid, .latest-content-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                margin: 30px auto;
+                padding: 0 15px;
+            }
+            .navbar .logo {
+                font-size: 1.5em;
+            }
+            .sidebar ul li a {
+                font-size: 1.8em; /* خط أصغر قليلاً على الجوال */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section h1 {
+                font-size: 2.2em;
+            }
+            .hero-section p {
+                font-size: 1em;
+            }
+            .hero-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            .feature-card {
+                padding: 20px;
+            }
+            .feature-card .icon-container {
+                width: 60px;
+                height: 60px;
+                font-size: 2em;
+            }
+            .sidebar .close-btn {
+                font-size: 2.5em;
+            }
+        }
+        
+</style>
+    <nav class="navbar">
+        <a href="index.html" class="logo">المسيح والعذراء</a>
+        <button class="menu-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="articles.html">مقالات روحية</a></li>
+            <li><a href="tamagedalmasihwaladra.html">تسابيح وتمجيد</a></li>
+            <li><a href="church-history.html">تاريخ الكنيسة</a></li>
+            <li><a href="media.html">ميديا وعظات</a></li>
+            <li><a href="mircles.html">معجزات القديسين</a></li>
+            <li><a href="calender.html">التقويم الكنسي</a></li>
+            <li><a href="prayers.html">صلوات عامة</a></li>
+                     <li><a href="index2.html">المدونه</a></li>
+            <li><a href="agpiyah.html">صلوات الأجبية</a></li>
+            </ul>
+    </div>
+
+    <header class="page-header">
+        <h1>صلوات الأجبية</h1>
+        <p>اكتشف صلوات الساعات السبع من كتاب الأجبية المقدس للحياة الروحية اليومية.</p>
+    </header>
+
+    <div class="container">
+        <section class="agpeya-section">
+            <h2 class="section-title">صلوات الساعات السبع</h2>
+            <p class="section-description">تحتوي الأجبية على سبع صلوات تُصلى على مدار اليوم، بالإضافة إلى صلاة الستار.</p>
+
+            <div class="agpeya-grid">
+                <div class="agpeya-card">
+                    <div class="agpeya-icon"><i class="fas fa-sun"></i></div>
+                    <div class="card-body">
+                        <h3>صلاة باكر</h3>
+                        <p class="agpeya-time">الساعة الأولى (عند شروق الشمس)</p>
+                        <p>صلاة الصباح الباكر لطلب بركة الله مع بداية اليوم.</p>
+                        <button class="read-more-agpeya" onclick="openAgpeyaModal('agpeya1')">
+                            اقرأ الصلاة <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agpeya-card">
+                    <div class="agpeya-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="card-body">
+                        <h3>صلاة الساعة الثالثة</h3>
+                        <p class="agpeya-time">حوالي 9 صباحًا</p>
+                        <p>تذكار صلب المسيح وحلول الروح القدس على التلاميذ.</p>
+                        <button class="read-more-agpeya" onclick="openAgpeyaModal('agpeya2')">
+                            اقرأ الصلاة <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agpeya-card">
+                    <div class="agpeya-icon"><i class="fas fa-sun-haze"></i></div>
+                    <div class="card-body">
+                        <h3>صلاة الساعة السادسة</h3>
+                        <p class="agpeya-time">حوالي 12 ظهرًا</p>
+                        <p>تذكار صلب المسيح وظلمة الساعة السادسة.</p>
+                        <button class="read-more-agpeya" onclick="openAgpeyaModal('agpeya3')">
+                            اقرأ الصلاة <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agpeya-card">
+                    <div class="agpeya-icon"><i class="fas fa-cloud-sun"></i></div>
+                    <div class="card-body">
+                        <h3>صلاة الساعة التاسعة</h3>
+                        <p class="agpeya-time">حوالي 3 عصرًا</p>
+                        <p>تذكار موت المسيح على الصليب وفتح الفردوس.</p>
+                        <button class="read-more-agpeya" onclick="openAgpeyaModal('agpeya4')">
+                            اقرأ الصلاة <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agpeya-card">
+                    <div class="agpeya-icon"><i class="fas fa-sunset"></i></div>
+                    <div class="card-body">
+                        <h3>صلاة الغروب</h3>
+                        <p class="agpeya-time">الساعة الحادية عشرة (عند غروب الشمس)</p>
+                        <p>تذكار إنزال جسد المسيح من على الصليب.</p>
+                        <button class="read-more-agpeya" onclick="openAgpeyaModal('agpeya5')">
+                            اقرأ الصلاة <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agpeya-card">
+                    <div class="agpeya-icon"><i class="fas fa-moon"></i></div>
+                    <div class="card-body">
+                        <h3>صلاة النوم</h3>
+                        <p class="agpeya-time">الساعة الثانية عشرة (عند النوم)</p>
+                        <p>صلاة المساء قبل الخلود للنوم للتوبة والشكر.</p>
+                        <button class="read-more-agpeya" onclick="openAgpeyaModal('agpeya6')">
+                            اقرأ الصلاة <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agpeya-card">
+                    <div class="agpeya-icon"><i class="fas fa-moon-stars"></i></div>
+                    <div class="card-body">
+                        <h3>صلاة نصف الليل</h3>
+                        <p class="agpeya-time">في منتصف الليل</p>
+                        <p>تذكار المجيء الثاني للمسيح.</p>
+                        <button class="read-more-agpeya" onclick="openAgpeyaModal('agpeya7')">
+                            اقرأ الصلاة <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agpeya-card">
+                    <div class="agpeya-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="card-body">
+                        <h3>صلاة الستار</h3>
+                        <p class="agpeya-time">خاصة بالآباء الكهنة والرهبان</p>
+                        <p>صلاة خاصة للتغطية والستر الإلهي.</p>
+                        <button class="read-more-agpeya" onclick="openAgpeyaModal('agpeya8')">
+                            اقرأ الصلاة <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                </div>
+        </section>
+    </div>
+
+    <div id="agpeyaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeAgpeyaModal()">&times;</span>
+            <h2 id="agpeyaModalTitle" class="modal-title"></h2>
+            <p id="agpeyaModalTime" class="agpeya-modal-time"></p>
+            <div id="agpeyaModalBody" class="modal-body"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>تابعنا على وسائل التواصل الاجتماعي:</p>
+        <div class="social-icons">
+            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>© 2025 موقع المسيح والعذراء. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>// Existing sidebar toggle function (keep this)
+function toggleSidebar() {
+    const sidebar = document.getElementById('mySidebar');
+    sidebar.classList.toggle('active');
+}
+
+// Existing data for Calendar Events (keep this)
+const calendarEventsData = {
+    // ... (Your existing calendar event data) ...
+};
+
+// Existing functions for Calendar Modal (keep these)
+function openCalendarModal(eventId) {
+    // ... (Your existing calendar modal function) ...
+}
+
+function closeCalendarModal() {
+    // ... (Your existing calendar modal function) ...
+}
+
+// Existing data for Prayer Details (keep this)
+const prayersData = {
+    // ... (Your existing prayer data, including 'prayer7') ...
+};
+
+// Existing Functions for Prayer Modal (keep these)
+function openPrayerModal(prayerId) {
+    // ... (Your existing prayer modal function) ...
+}
+
+function closePrayerModal() {
+    // ... (Your existing prayer modal function) ...
+}
+
+// ----------------------------------------------------
+// New: Data for Agpeya Prayers (صلوات الأجبية)
+// ----------------------------------------------------
+const agpeyaPrayersData = {
+    'agpeya1': {
+        title: 'صلاة باكر',
+        time: 'الساعة الأولى (عند شروق الشمس - 6 صباحًا بتوقيتنا اليومي)',
+        body: `
+            صلاة باكر
+مقدمة كل ساعة
+الصلاة الربانية
+صلاة الشكر
+المزمور الخمسون
+بدء الصلاة: هلم نسجد
+البولس من رسالة أفسس (4: 1-5)
+من إيمان الكنيسة
+بدء صلاة باكر
+(1) المزمور الأول
+(2) المزمور الثاني
+(3) المزمور الثالث
+(4) المزمور الرابع
+(5) المزمور الخامس
+(6) المزمور السادس
+(7) المزمور الثامن
+(8) المزمور الحادي عشر
+ (9) المزمور الثاني عشر
+(10) المزمور الرابع عشر
+(11) المزمور الخامس عشر
+(12) المزمور الثامن عشر
+(13) المزمور الرابع والعشرون
+(14) المزمور السادس والعشرون
+(15) المزمور الثاني والستون
+(16) المزمور السادس والستون
+(17) المزمور التاسع والستون
+(18) المزمور المائة والثاني عشر
+(19) المزمور المائة والثاني والأربعون
+(إنجيل يوحنا 1: 1ـ17)
+القطع
+
+تسبحة الملائكة
+الثلاث تقديسات
+السلام لك
+بدء قانون الإيمان
+قانون الإيمان المقدس الأرثوذكسي
+قدوس قدوس قدوس
+
+        `
+    },
+    'agpeya2': {
+        title: 'صلاة الساعة الثالثة',
+        time: 'حوالي 9 صباحًا',
+        body: `
+            بسم الآب والابن والروح القدس الإله الواحد. آمين.
+
+            (صلوات البداية، ثم مزامير الساعة الثالثة: 22، 23، 24، 25، 26، 27)
+
+            <b>مقدمة صلاة الساعة الثالثة:</b> أيها الروح القدس، روح الحق، روح المعزي، روح القداسة، روح المحبة، هلم واسكن فينا، وطهرنا من كل دنس، وخلص أيها الصالح نفوسنا.
+
+            (تسبحة ثيؤطوكية الساعة الثالثة، ثم قطع صلاة الساعة الثالثة، ثم تحليل صلاة الساعة الثالثة)
+
+            <b>خلاصة:</b> تذكارًا لحلول الروح القدس على التلاميذ في يوم الخمسين، وصلب المسيح. نطلب فيها تعزية الروح القدس وإرشادنا، وأن يطهرنا من الخطايا.
+        `
+    },
+    'agpeya3': {
+        title: 'صلاة الساعة السادسة',
+        time: 'حوالي 12 ظهرًا',
+        body: `
+            بسم الآب والابن والروح القدس الإله الواحد. آمين.
+
+            (صلوات البداية، ثم مزامير الساعة السادسة: 53، 54، 55، 56، 57، 58)
+
+            <b>مقدمة صلاة الساعة السادسة:</b> أيها الكلمة الإلهي، يا من اتخذ جسدًا لأجل خلاصنا، وتألم ومات وقام في اليوم الثالث. اذكر آلامك من أجلنا، وخلص نفوسنا.
+
+            (تسبحة ثيؤطوكية الساعة السادسة، ثم قطع صلاة الساعة السادسة، ثم تحليل صلاة الساعة السادسة)
+
+            <b>خلاصة:</b> تذكار لصلب المسيح والظلمة التي حلت بالأرض في الساعة السادسة. نطلب فيها مغفرة الخطايا والرحمة، متذكرين آلام المسيح الخلاصية.
+        `
+    },
+    'agpeya4': {
+        title: 'صلاة الساعة التاسعة',
+        time: 'حوالي 3 عصرًا',
+        body: `
+            بسم الآب والابن والروح القدس الإله الواحد. آمين.
+
+            (صلوات البداية، ثم مزامير الساعة التاسعة: 84، 85، 86، 87، 88، 89)
+
+            <b>مقدمة صلاة الساعة التاسعة:</b> أيها المسيح إلهنا، يا من مت على الصليب في الساعة التاسعة من أجل خطايانا، وفتحت الفردوس باللص اليمين. اذكرنا يا رب متى جئت في ملكوتك.
+
+            (تسبحة ثيؤطوكية الساعة التاسعة، ثم قطع صلاة الساعة التاسعة، ثم تحليل صلاة الساعة التاسعة)
+
+            <b>خلاصة:</b> تذكار لموت المسيح على الصليب، وفتح الفردوس. نطلب فيها أن نكون مستحقين لملكوت السماوات، وأن يغفر لنا خطايانا.
+        `
+    },
+    'agpeya5': {
+        title: 'صلاة الغروب',
+        time: 'الساعة الحادية عشرة (عند غروب الشمس - 6 مساءً تقريبًا)',
+        body: `
+            بسم الآب والابن والروح القدس الإله الواحد. آمين.
+
+            (صلوات البداية، ثم مزامير صلاة الغروب: 119 (جزء)، 120، 121، 122، 123، 124، 125)
+
+            <b>مقدمة صلاة الغروب:</b> أيها الكلمة الإلهي، يا من أنزلت من الصليب ووضعت في القبر، أقمنا معك من موت الخطية، وأحيي نفوسنا بنعمتك.
+
+            (تسبحة ثيؤطوكية الغروب، ثم قطع صلاة الغروب، ثم تحليل صلاة الغروب)
+
+            <b>خلاصة:</b> تذكار لإنزال جسد المسيح من الصليب ودفنه. نطلب فيها ستر الله وحمايته مع نهاية اليوم، وأن يغفر لنا خطايا اليوم.
+        `
+    },
+    'agpeya6': {
+        title: 'صلاة النوم',
+        time: 'الساعة الثانية عشرة (عند النوم)',
+        body: `
+            بسم الآب والابن والروح القدس الإله الواحد. آمين.
+
+            (صلوات البداية، ثم مزامير صلاة النوم: 4، 6، 12، 15، 30، 31، 32، 33، 34، 35، 90، 116، 117، 118 (جزء)، 131، 132، 133)
+
+            <b>مقدمة صلاة النوم:</b> أيها المسيح إلهنا، يا من قبلت توبة اللص في الساعة الأخيرة، اقبل توبتنا نحن الخطاة في هذه الساعة الأخيرة من النهار.
+
+            (تسبحة ثيؤطوكية النوم، ثم قطع صلاة النوم، ثم تحليل صلاة النوم)
+
+            <b>خلاصة:</b> صلاة للتوبة والشكر قبل النوم. نطلب فيها راحة للنفس والجسد، وحفظ من الأفكار الشريرة والأحلام الرديئة، وطلب مغفرة الخطايا.
+        `
+    },
+    'agpeya7': {
+        title: 'صلاة نصف الليل',
+        time: 'في منتصف الليل',
+        body: `
+            بسم الآب والابن والروح القدس الإله الواحد. آمين.
+
+            (صلوات البداية، ثم مزامير صلاة نصف الليل (ثلاثة أجزاء، كل جزء بعده تحليل): 119 (الجزء الأول: الساعات الأولى من الليل)، 119 (الجزء الثاني: الساعات الوسطى من الليل)، 119 (الجزء الثالث: الساعات الأخيرة من الليل)
+            بالإضافة إلى المزامير: 50، 100، 101، 102، 103، 104، 105، 106، 107، 108، 109، 110، 111، 113، 114، 115، 130، 134، 135، 136، 137، 138، 139، 140، 141، 142، 143، 144، 145، 146، 147، 148، 149، 150)
+
+            <b>مقدمة صلاة نصف الليل:</b> أيها الرب الإله، يا من هو في كل مكان ولا يحويه مكان، ويا من هو حاضر في كل زمان. أشرق علينا بنورك الذي يضيء في الظلمة، وخلص نفوسنا.
+
+            (تسبحة ثيؤطوكية نصف الليل، ثم قطع صلاة نصف الليل، ثم تحليل صلاة نصف الليل)
+
+            <b>خلاصة:</b> تذكارًا لمجيء المسيح الثاني في منتصف الليل. تتكون من ثلاثة أجزاء رئيسية (ثلاثة هدامات) تمثل فئات مختلفة من المصلين (أفراد، جماعة، كنيسة). صلاة للتسبيح، التوبة، واليقظة الروحية استعدادًا لمجيء الرب.
+        `
+    },
+    'agpeya8': {
+        title: 'صلاة الستار',
+        time: 'خاصة بالآباء الكهنة والرهبان، تُصلى قبل صلاة النوم أو في أي وقت مناسب لطلب الستر الإلهي.',
+        body: `
+            بسم الآب والابن والروح القدس الإله الواحد. آمين.
+
+            (صلوات البداية، ثم مزامير صلاة الستار: 16، 29، 63، 91، 102 (جزء)، 139 (جزء))
+
+            <b>مقدمة صلاة الستار:</b> أيها الرب يسوع المسيح، يا من حُملت جسدًا من أجل خلاصنا، وحبلكِ يا والدة الإله النقية العفيفة. استرنا بظل جناحيك، واحفظنا من كل شر.
+
+            (تسبحة ثيؤطوكية الستار، ثم قطع صلاة الستار، ثم تحليل صلاة الستار)
+
+            <b>خلاصة:</b> صلاة خاصة يطلب فيها المؤمن الستر الإلهي، وحماية الله من الأعداء الظاهرين والخفيين، ومن كل تجربة أو شر. تُصلى عادة من الكهنة والرهبان، ويمكن للمؤمنين الصلاة بها أيضًا لطلب الستر.
+        `
+    }
+    // Add more agpeya prayers here if needed
+};
+
+// New: Functions for Agpeya Modal
+function openAgpeyaModal(agpeyaId) {
+    const agpeya = agpeyaPrayersData[agpeyaId];
+    if (agpeya) {
+        document.getElementById('agpeyaModalTitle').innerText = agpeya.title;
+        document.getElementById('agpeyaModalTime').innerText = agpeya.time;
+        document.getElementById('agpeyaModalBody').innerHTML = agpeya.body;
+        document.getElementById('agpeyaModal').style.display = 'block';
+    }
+}
+
+function closeAgpeyaModal() {
+    document.getElementById('agpeyaModal').style.display = 'none';
+}
+
+// Close modal or sidebar when clicking outside of it (ensure this is the last window.onclick)
+window.onclick = function(event) {
+    const prayerModal = document.getElementById('prayerModal');
+    const calendarModal = document.getElementById('calendarModal');
+    const agpeyaModal = document.getElementById('agpeyaModal'); // New: Check for agpeya modal
+    const sidebar = document.getElementById('mySidebar');
+
+    // Close prayer modal if it's open and user clicks outside
+    if (prayerModal && event.target == prayerModal) {
+        prayerModal.style.display = 'none';
+    }
+    // Close calendar modal if it's open and user clicks outside
+    if (calendarModal && event.target == calendarModal) {
+        calendarModal.style.display = 'none';
+    }
+    // Close agpeya modal if it's open and user clicks outside
+    if (agpeyaModal && event.target == agpeyaModal) {
+        agpeyaModal.style.display = 'none';
+    }
+    // Close sidebar if it's open and user clicks outside
+    if (sidebar.classList.contains('active') && !event.target.closest('.sidebar') && !event.target.closest('.menu-toggle')) {
+        toggleSidebar();
+    }
+}
+</script>
+
+</body>
+</html>

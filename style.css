@@ -1,3275 +1,667 @@
-body {
-  background-color: #000; /* خلفية سوداء */
-  color: #f0f0f0; /* نص رمادي فاتح */
-  font-family: 'Cairo', sans-serif;
-}
-
-.day-content {
-  border-bottom: 1px solid #444;
-  padding: 20px;
-}
-
-h2, h3, h4 {
-  color: #fff; /* عناوين بلون أبيض */
-}
-
-.prayer p {
-  color: #ddd;
-  line-height: 1.7;
-}
-
-img {
-  max-width: 100%;
-  border: 2px solid #444;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-nav a {
-  color: #ccc;
-  padding: 10px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #fff;
-  text-decoration: underline;
-}.holy-header {
-  text-align: center;
-  padding: 20px;
-  border-bottom: 2px solid #333;
-}
-
-.holy-image {
-  max-width: 200px;
-  border-radius: 0%;
-  border: 3px solid #555;
-  box-shadow: 0 0 10px #333;
-  margin-bottom: 0px;
-}
-
-.holy-title {
-  color: #f5f5f5;
-  font-size: 20px;
-  line-height: 1.6;
-  font-weight: bold;
-}
-/* إعدادات
-/* 🌟 تنسيق عام للموقع */اع
-body {
-    font-family: "Arial", sans-serif;
-    background: linear-gradient(to right, #283048, #859398);
-    color: white;
-    margin: 0;
-    padding: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-/* 🌟 رأس الصفحة */
-header {
-    background: linear-gradient(to right, #1f4037, #99f2c8);
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* 🌟 زر القائمة الجانبية */
-.menu-toggle {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.menu-toggle:hover {
-    background: #c0392b;
-}
-
-/* 🌟 القائمة الجانبية */
-.sidebar {
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    left: -250px;
-    top: 0;
-    background: linear-gradient(to bottom, #2c3e50, #34495e);
-    padding-top: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease-in-out;
-}
-
-.sidebar.open {
-    left: 0;
-}
-
-.sidebar h2 {
-    color: #f1c40f;
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 15px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.sidebar ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    transition: background 0.3s;
-}
-
-.sidebar ul li a:hover {
-    background: #f1c40f;
-    color: black;
-}
-
-/* 🌟 القائمة المنسدلة */
-.dropdown-menu {
-    display: none;
-    background: #34495e;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li {
-    padding: 10px;
-    color: white;
-    cursor: pointer;
-}
-
-.dropdown-menu li:hover {
-    background: #f1c40f;
-    color: black;
-}
-
-/* 🌟 زر البدء */
-button {
-    background: #27ae60;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s;
-    margin-top: 20px;
-}
-
-button:hover {
-    background: #219150;
-    transform: scale(1.05);
-}
-
-/* 🌟 تحسين عرض الصفحة */
-.home {
-    text-align: center;
-    padding: 50px;
-}
-
-.home h2 {
-    font-size: 28px;
-    color: #f1c40f;
-}
-
-.home p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* 🌟 تعديل تصميم الصفحة عند فتح القائمة */
-body.menu-open {
-    margin-left: 250px;
-}
-/* 🌟 زر فتح القائمة */
-
-.menu-toggle {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.menu-toggle:hover {
-    background: #c0392b;
-    transform: scale(1.1);
-}
-
-/* 🌟 زر إغلاق القائمة */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #f1c40f;
-}
-
-/* 🌟 القائمة الجانبية */
-.sidebar {
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    left: -250px;
-    top: 0;
-    background: linear-gradient(to bottom, #2c3e50, #34495e);
-    padding-top: 50px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease-in-out;
-}
-
-.sidebar.open {
-    left: 0;
-}
-
-/* 🌟 تعديل عند فتح القائمة */
-body.menu-open {
-    margin-left: 250px;
-}
-/* 🌟 تنسيق قسم التعريف */
-.about-site {
-    background: linear-gradient(to right, #1f4037, #99f2c8);
-    color: white;
-    text-align: center;
-    padding: 40px;
-    margin: 40px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-site h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.about-site p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* 🌟 تأثير عند تمرير الماوس */
-.about-site:hover {
-    transform: scale(1.05);
-}
-/* 🌟 تنسيق قسم الصورة */
-.image-section {
-    text-align: center;
-    margin: 40px auto;
-}
-
-.image-section h2 {
-    font-size: 24px;
-    color: #f1c40f;
-    margin-bottom: 15px;
-}
-
-/* 🌟 تصميم الصورة */
-.image-section img {
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* 🌟 تأثير عند تمرير الماوس */
-.image-section img:hover {
-    transform: scale(1.05);
-}
-/* 🌟 تنسيق قسم الصلاة */
-.prayer-section {
-    text-align: center;
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
-    color: white;
-    padding: 30px;
-    margin: 40px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.prayer-section h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: #f1c40f;
-}
-
-/* 🌟 تنسيق نص الصلاة */
-.prayer-text {
-    font-size: 20px;
-    line-height: 1.8;
-    font-weight: bold;
-    transition: font-size 0.3s ease-in-out;
-}
-
-/* 🌟 تكبير النص عند التفاعل */
-.prayer-section:hover .prayer-text {
-    font-size: 22px;
-}
-// فتح الصورة بالحجم الكامل
-function openFullScreen(imgElement) {
-    let fullscreenContainer = document.getElementById("fullscreen-container");
-    let fullscreenImage = document.getElementById("fullscreen-image");
-
-    fullscreenImage.src = imgElement.src;
-    fullscreenContainer.style.display = "flex";
-}
-
-// إغلاق وضع التكبير عند النقر
-function closeFullScreen() {
-    document.getElementById("fullscreen-container").style.display = "none";
-  }
-/* 🌟 تنسيق عام للموقع */
-body {
-    font-family: "Arial", sans-serif;
-    background: linear-gradient(to right, #1a1a1a, #3a3a3a);
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-/* 🌟 رأس الصفحة */
-header {
-    background: linear-gradient(to right, #0f9b0f, #00c9ff);
-    color: white;
-    padding: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* 🌟 زر القائمة الجانبية */
-.menu-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    font-size: 26px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
-    z-index: 1001;
-}
-
-.menu-toggle:hover {
-    background: #c0392b;
-    transform: scale(1.1);
-}
-
-/* 🌟 زر إغلاق القائمة */
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #f1c40f;
-}
-
-/* 🌟 القائمة الجانبية */
-.sidebar {
-    width: 260px;
-    height: 100%;
-    position: fixed;
-    left: -260px;
-    top: 0;
-    background: linear-gradient(to bottom, #2c3e50, #34495e);
-    padding-top: 60px;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
-    transition: left 0.4s ease-in-out;
-    z-index: 1000;
-}
-
-.sidebar.open {
-    left: 0;
-}
-
-.sidebar h2 {
-    color: #f1c40f;
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 25px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 18px 0;
-    text-align: center;
-}
-
-.sidebar ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
-    transition: background 0.3s, color 0.3s;
-}
-
-.sidebar ul li a:hover {
-    background: #f1c40f;
-    color: #2c3e50;
-}
-
-/* 🌟 القائمة المنسدلة */
-.dropdown-menu {
-    display: none;
-    background: #2c3e50;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li {
-    padding: 12px;
-    font-size: 18px;
-}
-
-.dropdown-menu li:hover {
-    background: #f1c40f;
-    color: #2c3e50;
-}
-
-/* 🌟 زر البدء */
-button {
-    background: #27ae60;
-    color: white;
-    border: none;
-    padding: 18px 35px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.3s;
-    margin-top: 25px;
-}
-
-button:hover {
-    background: #219150;
-    transform: scale(1.05);
-}
-
-/* 🌟 تحسين عرض الصفحة */
-.home {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.home h2 {
-    font-size: 30px;
-    color: #f1c40f;
-}
-
-.home p {
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-/* 🌟 تعديل عند فتح القائمة */
-body.menu-open {
-    margin-left: 260px;
-}
-
-/* 🌟 تنسيق قسم التعريف */
-.about-site {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    margin: 50px auto;
-    width: 85%;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-site h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.about-site p {
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-.about-site:hover {
-    transform: scale(1.05);
-}
-
-/* 🌟 تنسيق قسم الصورة */
-.image-section {
-    text-align: center;
-    margin: 50px auto;
-}
-
-.image-section h2 {
-    font-size: 26px;
-    color: #f1c40f;
-    margin-bottom: 20px;
-}
-
-.image-section img {
-    width: 80%;
-    max-width: 500px;
-    border-radius: 0px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-section img:hover {
-    transform: scale(1.05);
-}
-
-/* 🌟 تنسيق قسم الصلاة */
-.prayer-section {
-    text-align: center;
-    background: linear-gradient(to right, #434343, #000000);
-    color: white;
-    padding: 40px 20px;
-    margin: 50px auto;
-    width: 85%;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.prayer-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #f1c40f;
-}
-
-.prayer-text {
-    font-size: 22px;
-    line-height: 2;
-    font-weight: bold;
-    transition: font-size 0.3s ease-in-out;
-}
-
-.prayer-section:hover .prayer-text {
-    font-size: 24px;
-  }
-/* 🌟 تنسيق عام */
-body {
-    font-family: "Tajawal", sans-serif;
-    background: #121212; /* خلفية غامقة */
-    color: #ffffff; /* نص أبيض */
-    margin: 0;
-    padding: 0;
-    line-height: 1.7;
-}
-
-/* 🌟 رأس الصفحة */
-header {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    padding: 20px;
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #f1c40f;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-}
-
-/* 🌟 سكشن عام للصلاة */
-.prayer-section {
-    background: #1c1c1c; /* أغمق شوية من البودي */
-    margin: 30px auto;
-    padding: 30px 20px;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(241, 196, 15, 0.2);
-    transition: all 0.4s ease;
-}
-
-.prayer-section:hover {
-    transform: scale(1.03);
-}
-
-/* 🌟 عنوان كل صلاة */
-.prayer-section h2 {
-    color: #f39c12;
-    margin-bottom: 15px;
-    font-size: 26px;
-}
-
-/* 🌟 نص الصلاة */
-.prayer-text {
-    font-size: 20px;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-.prayer-section:hover .prayer-text {
-    color: #ffffff;
-}
-
-/* 🌟 زر تحميل أو ابدأ */
-button {
-    background: #e67e22;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background 0.3s, transform 0.3s;
-}
-
-button:hover {
-    background: #d35400;
-    transform: scale(1.05);
-}
-
-/* 🌟 فوتر */
-footer {
-    background: #0f2027;
-    color: #bdc3c7;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 16px;
-}
-
-/* 🌟 ميديا كويري للموبايل */
-@media (max-width: 600px) {
-    .prayer-section {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .prayer-text {
-        font-size: 18px;
-    }
-  }
-/* إعدادات أساسية */
-body {
-    font-family: "Tajawal", sans-serif;
-    background: #000; /* أسود كامل */
-    color: #fff; /* أبيض كامل */
-    margin: 0;
-    padding: 0;
-}
-
-/* رأس الموقع */
-header {
-    background: #141414; /* رمادي غامق */
-    color: #ffcc00; /* دهبي واضح */
-    text-align: center;
-    padding: 25px 10px;
-    font-size: 32px;
-    font-weight: bold;
-    box-shadow: 0 2px 10px #ffcc00;
-}
-
-/* قسم الصلاة */
-.prayer-section {
-    background: #1a1a1a;
-    margin: 40px auto;
-    padding: 35px;
-    width: 85%;
-    max-width: 850px;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(255, 204, 0, 0.3);
-    text-align: center;
-}
-
-/* عنوان القسم */
-.prayer-section h2 {
-    color: #00bcd4; /* أزرق سماوي */
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-/* نص الصلاة
-body {
-  background-color: #000; /* خلفية سوداء */
-  color: #f0f0f0; /* نص رمادي فاتح */
-  font-family: 'Cairo', sans-serif;
-}
-
-.day-content {
-  border-bottom: 1px solid #444;
-  padding: 20px;
-}
-
-h2, h3, h4 {
-  color: #fff; /* عناوين بلون أبيض */
-}
-
-.prayer p {
-  color: #ddd;
-  line-height: 1.7;
-}
-
-img {
-  max-width: 100%;
-  border: 2px solid #444;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-nav a {
-  color: #ccc;
-  padding: 10px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #fff;
-  text-decoration: underline;
-}.holy-header {
-  text-align: center;
-  padding: 20px;
-  border-bottom: 2px solid #333;
-}
-
-.holy-image {
-  max-width: 200px;
-  border-radius: 0%;
-  border: 3px solid #555;
-  box-shadow: 0 0 10px #333;
-  margin-bottom: 0px;
-}
-
-.holy-title {
-  color: #f5f5f5;
-  font-size: 20px;
-  line-height: 1.6;
-  font-weight: bold;
-}
-/* إعدادات
-/* 🌟 تنسيق عام للموقع */اع
-body {
-    font-family: "Arial", sans-serif;
-    background: linear-gradient(to right, #283048, #859398);
-    color: white;
-    margin: 0;
-    padding: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-/* 🌟 رأس الصفحة */
-header {
-    background: linear-gradient(to right, #1f4037, #99f2c8);
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* 🌟 زر القائمة الجانبية */
-.menu-toggle {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.menu-toggle:hover {
-    background: #c0392b;
-}
-
-/* 🌟 القائمة الجانبية */
-.sidebar {
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    left: -250px;
-    top: 0;
-    background: linear-gradient(to bottom, #2c3e50, #34495e);
-    padding-top: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease-in-out;
-}
-
-.sidebar.open {
-    left: 0;
-}
-
-.sidebar h2 {
-    color: #f1c40f;
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 15px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.sidebar ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    transition: background 0.3s;
-}
-
-.sidebar ul li a:hover {
-    background: #f1c40f;
-    color: black;
-}
-
-/* 🌟 القائمة المنسدلة */
-.dropdown-menu {
-    display: none;
-    background: #34495e;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li {
-    padding: 10px;
-    color: white;
-    cursor: pointer;
-}
-
-.dropdown-menu li:hover {
-    background: #f1c40f;
-    color: black;
-}
-
-/* 🌟 زر البدء */
-button {
-    background: #27ae60;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s;
-    margin-top: 20px;
-}
-
-button:hover {
-    background: #219150;
-    transform: scale(1.05);
-}
-
-/* 🌟 تحسين عرض الصفحة */
-.home {
-    text-align: center;
-    padding: 50px;
-}
-
-.home h2 {
-    font-size: 28px;
-    color: #f1c40f;
-}
-
-.home p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* 🌟 تعديل تصميم الصفحة عند فتح القائمة */
-body.menu-open {
-    margin-left: 250px;
-}
-/* 🌟 زر فتح القائمة */
-
-.menu-toggle {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.menu-toggle:hover {
-    background: #c0392b;
-    transform: scale(1.1);
-}
-
-/* 🌟 زر إغلاق القائمة */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #f1c40f;
-}
-
-/* 🌟 القائمة الجانبية */
-.sidebar {
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    left: -250px;
-    top: 0;
-    background: linear-gradient(to bottom, #2c3e50, #34495e);
-    padding-top: 50px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease-in-out;
-}
-
-.sidebar.open {
-    left: 0;
-}
-
-/* 🌟 تعديل عند فتح القائمة */
-body.menu-open {
-    margin-left: 250px;
-}
-/* 🌟 تنسيق قسم التعريف */
-.about-site {
-    background: linear-gradient(to right, #1f4037, #99f2c8);
-    color: white;
-    text-align: center;
-    padding: 40px;
-    margin: 40px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-site h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.about-site p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* 🌟 تأثير عند تمرير الماوس */
-.about-site:hover {
-    transform: scale(1.05);
-}
-/* 🌟 تنسيق قسم الصورة */
-.image-section {
-    text-align: center;
-    margin: 40px auto;
-}
-
-.image-section h2 {
-    font-size: 24px;
-    color: #f1c40f;
-    margin-bottom: 15px;
-}
-
-/* 🌟 تصميم الصورة */
-.image-section img {
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* 🌟 تأثير عند تمرير الماوس */
-.image-section img:hover {
-    transform: scale(1.05);
-}
-/* 🌟 تنسيق قسم الصلاة */
-.prayer-section {
-    text-align: center;
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
-    color: white;
-    padding: 30px;
-    margin: 40px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.prayer-section h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: #f1c40f;
-}
-
-/* 🌟 تنسيق نص الصلاة */
-.prayer-text {
-    font-size: 20px;
-    line-height: 1.8;
-    font-weight: bold;
-    transition: font-size 0.3s ease-in-out;
-}
-
-/* 🌟 تكبير النص عند التفاعل */
-.prayer-section:hover .prayer-text {
-    font-size: 22px;
-}
-// فتح الصورة بالحجم الكامل
-function openFullScreen(imgElement) {
-    let fullscreenContainer = document.getElementById("fullscreen-container");
-    let fullscreenImage = document.getElementById("fullscreen-image");
-
-    fullscreenImage.src = imgElement.src;
-    fullscreenContainer.style.display = "flex";
-}
-
-// إغلاق وضع التكبير عند النقر
-function closeFullScreen() {
-    document.getElementById("fullscreen-container").style.display = "none";
-  }
-/* 🌟 تنسيق عام للموقع */
-body {
-    font-family: "Arial", sans-serif;
-    background: linear-gradient(to right, #1a1a1a, #3a3a3a);
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-/* 🌟 رأس الصفحة */
-header {
-    background: linear-gradient(to right, #0f9b0f, #00c9ff);
-    color: white;
-    padding: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* 🌟 زر القائمة الجانبية */
-.menu-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    font-size: 26px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
-    z-index: 1001;
-}
-
-.menu-toggle:hover {
-    background: #c0392b;
-    transform: scale(1.1);
-}
-
-/* 🌟 زر إغلاق القائمة */
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #f1c40f;
-}
-
-/* 🌟 القائمة الجانبية */
-.sidebar {
-    width: 260px;
-    height: 100%;
-    position: fixed;
-    left: -260px;
-    top: 0;
-    background: linear-gradient(to bottom, #2c3e50, #34495e);
-    padding-top: 60px;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
-    transition: left 0.4s ease-in-out;
-    z-index: 1000;
-}
-
-.sidebar.open {
-    left: 0;
-}
-
-.sidebar h2 {
-    color: #f1c40f;
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 25px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 18px 0;
-    text-align: center;
-}
-
-.sidebar ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
-    transition: background 0.3s, color 0.3s;
-}
-
-.sidebar ul li a:hover {
-    background: #f1c40f;
-    color: #2c3e50;
-}
-
-/* 🌟 القائمة المنسدلة */
-.dropdown-menu {
-    display: none;
-    background: #2c3e50;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li {
-    padding: 12px;
-    font-size: 18px;
-}
-
-.dropdown-menu li:hover {
-    background: #f1c40f;
-    color: #2c3e50;
-}
-
-/* 🌟 زر البدء */
-button {
-    background: #27ae60;
-    color: white;
-    border: none;
-    padding: 18px 35px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.3s;
-    margin-top: 25px;
-}
-
-button:hover {
-    background: #219150;
-    transform: scale(1.05);
-}
-
-/* 🌟 تحسين عرض الصفحة */
-.home {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.home h2 {
-    font-size: 30px;
-    color: #f1c40f;
-}
-
-.home p {
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-/* 🌟 تعديل عند فتح القائمة */
-body.menu-open {
-    margin-left: 260px;
-}
-
-/* 🌟 تنسيق قسم التعريف */
-.about-site {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    margin: 50px auto;
-    width: 85%;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-site h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.about-site p {
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-.about-site:hover {
-    transform: scale(1.05);
-}
-
-/* 🌟 تنسيق قسم الصورة */
-.image-section {
-    text-align: center;
-    margin: 50px auto;
-}
-
-.image-section h2 {
-    font-size: 26px;
-    color: #f1c40f;
-    margin-bottom: 20px;
-}
-
-.image-section img {
-    width: 80%;
-    max-width: 500px;
-    border-radius: 0px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-section img:hover {
-    transform: scale(1.05);
-}
-
-/* 🌟 تنسيق قسم الصلاة */
-.prayer-section {
-    text-align: center;
-    background: linear-gradient(to right, #434343, #000000);
-    color: white;
-    padding: 40px 20px;
-    margin: 50px auto;
-    width: 85%;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.prayer-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #f1c40f;
-}
-
-.prayer-text {
-    font-size: 22px;
-    line-height: 2;
-    font-weight: bold;
-    transition: font-size 0.3s ease-in-out;
-}
-
-.prayer-section:hover .prayer-text {
-    font-size: 24px;
-  }
-/* 🌟 تنسيق عام */
-body {
-    font-family: "Tajawal", sans-serif;
-    background: #121212; /* خلفية غامقة */
-    color: #ffffff; /* نص أبيض */
-    margin: 0;
-    padding: 0;
-    line-height: 1.7;
-}
-
-/* 🌟 رأس الصفحة */
-header {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    padding: 20px;
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #f1c40f;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-}
-
-/* 🌟 سكشن عام للصلاة */
-.prayer-section {
-    background: #1c1c1c; /* أغمق شوية من البودي */
-    margin: 30px auto;
-    padding: 30px 20px;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(241, 196, 15, 0.2);
-    transition: all 0.4s ease;
-}
-
-.prayer-section:hover {
-    transform: scale(1.03);
-}
-
-/* 🌟 عنوان كل صلاة */
-.prayer-section h2 {
-    color: #f39c12;
-    margin-bottom: 15px;
-    font-size: 26px;
-}
-
-/* 🌟 نص الصلاة */
-.prayer-text {
-    font-size: 20px;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-.prayer-section:hover .prayer-text {
-    color: #ffffff;
-}
-
-/* 🌟 زر تحميل أو ابدأ */
-button {
-    background: #e67e22;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background 0.3s, transform 0.3s;
-}
-
-button:hover {
-    background: #d35400;
-    transform: scale(1.05);
-}
-
-/* 🌟 فوتر */
-footer {
-    background: #0f2027;
-    color: #bdc3c7;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 16px;
-}
-
-/* 🌟 ميديا كويري للموبايل */
-@media (max-width: 600px) {
-    .prayer-section {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .prayer-text {
-        font-size: 18px;
-    }
-  }
-/* إعدادات أساسية */
-body {
-    font-family: "Tajawal", sans-serif;
-    background: #000; /* أسود كامل */
-    color: #fff; /* أبيض كامل */
-    margin: 0;
-    padding: 0;
-}
-
-/* رأس الموقع */
-header {
-    background: #141414; /* رمادي غامق */
-    color: #ffcc00; /* دهبي واضح */
-    text-align: center;
-    padding: 25px 10px;
-    font-size: 32px;
-    font-weight: bold;
-    box-shadow: 0 2px 10px #ffcc00;
-}
-
-/* قسم الصلاة */
-.prayer-section {
-    background: #1a1a1a;
-    margin: 40px auto;
-    padding: 35px;
-    width: 85%;
-    max-width: 850px;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(255, 204, 0, 0.3);
-    text-align: center;
-}
-
-/* عنوان القسم */
-.prayer-section h2 {
-    color: #00bcd4; /* أزرق سماوي */
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-/* نص الصلاة */
-.prayer-text {
-    color: #eeeeee;
-    font-size: 22px;
-    line-height: 1.9;
-    font-weight: 500;
-}
-
-/* زر ابدأ أو تحميل */
-button {
-    background: linear-gradient(45deg, #ff5722, #ff9800);
-    border: none;
-    color: #fff;
-    padding: 15px 40px;
-    font-size: 22px;
-    border-radius: 50px;
-    margin-top: 30px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: linear-gradient(45deg, #e65100, #ff6f00);
-    transform: scale(1.1);
-}
-
-/* فوتر */
-footer {
-    background: #141414;
-    color: #999;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    font-size: 16px;
-}
-
-/* سكشن منفصل خاص بصلاة السلام لك يا مريم */
-.mary-prayer-section {
-    background: #222;
-    margin: 50px auto;
-    padding: 35px;
-    width: 85%;
-    max-width: 850px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 8px 30px rgba(0, 188, 212, 0.3);
-}
-
-.mary-prayer-section h2 {
-    color: #ff4081; /* وردي فاتح */
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.mary-prayer-section .prayer-text {
-    color: #f5f5f5;
-    font-size: 21px;
-    line-height: 1.8;
-}
-
-/* متجاوب */
-@media (max-width: 600px) {
-    .prayer-section, .mary-prayer-section {
-        width: 95%;
-        padding: 25px;
-    }
-    
-    .prayer-text {
-        font-size: 20px;
-  }
-      }
-*{
-    padding: 0 ;
-    margin: 0 ;
-}
-header{
-    background-color: #40ffa2 ;
-    text-align: center  ;
-    color: blue ;
-    border-bottom: solid 5px #555aff ;
-    text-shadow: 5px 5px 5px #15ccff ;
-}
-header a{
-    text-decoration: none ;
-    text-shadow: 5px 5px 5px #5000f1 ;
-}
-a:hover{
-    babackground-color: #7cff00;
-    background-radius: 5px ;
-    color: blue ;
-}
-.prayers{
-    background-color: #310e00 ;
-    border-bottom: solid 5px red ;
-    color: blue ;
-    text-align: center ;
-    text-shadow: 10px 5px 5px #92dbc0 ;
-}
-.prayers:hover{
-    padding: 0.9375em 2.1875em;
-    letter-spacing: 1px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    color: #c9dba4 ;
-}
-.btn {
-    color: #fff;
-    background-color: #3a5cf4;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 600;
-    display: inline-block;
-    padding: 0.9375em 2.1875em;
-    letter-spacing: 1px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-}
-
-.btn:hover {
-    background-color: #0a49f5;
-}
-.about{
-    background: #fff22a;
-    margin: 5 ;
-    padding: 15 ;
-    border: solid 5px green ;
-    border-radius: 25px ;
-    text-align: center ;
-    text-shadow: 5px 5px 5px #ffdd55 ;
-    box-shadow: 5px 5px 5px #7fff83 ;
-}
-.about:hover{
-    color: #ffffbf ;
-}
-.verses{
-    background: url(jesus.jpg) no-repeat;
-    color: blue ;
-    text-shadow: 5px 5px 5px #bbff2a ;
-    border-bottom: solid 5px #bbff2a ;
-    width: 100%;
-    min-height: 100vh;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-p{
-    text-align: center ;
-}
-h1{
-    text-align: center ;
-}
-footer{
-    background: #b2ff95;
-    color: blue ;
-    text-align:  center;
-    text-shadow: 5px 5px 5px #faff00 ;
-    border-bottom: solid 5px green ;
-}
-footer:hover{
-    color: blue ;
-}
-footer a{
-    color: #fff;
-    background-color: #3a5cf4;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 500;
-    display: inline-block;
-    padding: 0.9355em 2.1855em;
-    letter-spacing: 1px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-}
-footer a:hover{
-    background-color: #0a49f5;
-}
-/* تنسيقات عامة */
+/* General Styles */
 :root {
-    --primary-color: #61dafb;
-    --secondary-color: #282c34;
-    --text-color: #333;
-    --white-color: #fff;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #FFC107; /* Amber */
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --text-color: #555;
+    --white: #fff;
+    --sidebar-bg: #34495E; /* Dark Blue Gray */
+    --sidebar-link-hover: #2C3E50;
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
     color: var(--text-color);
-    direction: rtl; /* لضمان الاتجاه من اليمين لليسار */
-    padding-top: 80px; /* لترك مسافة للهيدر الثابت */
+    background-color: var(--light-color);
+    direction: rtl; /* For Arabic content */
+    text-align: right; /* For Arabic content */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* تنسيقات الهيدر */
-.main-header {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: var(--box-shadow);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* للانتقال الناعم عند السكرول */
-}
-
-.main-header.scrolled {
-    background-color: rgba(40, 44, 52, 0.95); /* خلفية أغمق قليلاً عند السكرول */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.header-content {
+.container {
+    width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
 }
 
-.main-header h1 {
-    font-size: 1.8em; /* تحديد حجم النص باستخدام em */
-    margin: 0;
+a {
+    text-decoration: none;
     color: var(--primary-color);
 }
 
-/* تنسيقات قائمة التنقل (Navbar) */
-.main-nav ul {
+ul {
     list-style: none;
-    display: flex; /* لعرض عناصر القائمة أفقياً */
-    margin: 0;
-    padding: 0;
 }
 
-.main-nav ul li {
-    margin-left: 25px; /* مسافة بين العناصر */
-}
-
-.main-nav ul li a {
-    color: var(--white-color);
-    text-decoration: none;
-    font-size: 1.1em;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-/* تنسيقات الأقسام العامة */
-.section-container {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 40px auto;
-    background-color: var(--white-color);
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-}
-
-.section-container h1 {
-    font-size: 2.2em;
-    margin-bottom: 30px;
-    color: var(--secondary-color);
-}
-
-/* قسم الآيات */
-.verses-section {
-    background-image: url('jesus.jpg'); /* تأكد من وجود الصورة في نفس مسار ملف CSS أو حدد المسار الصحيح */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* لتثبيت الخلفية عند التمرير */
-    color: var(--white-color); /* لجعل النص الأبيض يظهر على الخلفية الداكنة */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* ظل للنص لتحسين القراءة */
-}
-
-.verses-section h1 {
-    color: var(--white-color); /* عنوان قسم الآيات أبيض */
-}
-
-.verses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 300px كحد أدنى، عمود واحد على الشاشات الصغيرة */
-    gap: 30px; /* مسافة بين الصناديق */
-    margin-top: 40px;
-}
-
-/* تنسيقات صناديق الآيات والصلوات */
-.box {
-    background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
-    backdrop-filter: blur(5px); /* تأثير ضبابي للخلفية الشفافة */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    padding: 25px;
-    font-size: 1.1em;
-    line-height: 1.8;
-    text-align: justify;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0; /* مخفية في البداية لظهورها بالـ JS */
-    transform: translateY(20px); /* تتحرك من الأسفل لظهورها بالـ JS */
-}
-
-.box:hover {
-    transform: translateY(-5px) scale(1.02); /* تأثير رفع وتكبير بسيط عند التحويم */
-    background-color: rgba(255, 255, 255, 0.2); /* تصبح أقل شفافية عند التحويم */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.prayer-box {
-    color: var(--text-color); /* لون نص الصلاة */
-    background-color: rgba(255, 255, 255, 0.8); /* خلفية بيضاء شبه شفافة للصلوات */
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* مسافة بين صناديق الصلوات */
-    text-shadow: none; /* إزالة الظل من نص الصلاة */
-}
-
-.prayer-box:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-}
-
-/* حالة الظهور بالـ JavaScript */
-.fade-in-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* قسم عنا (about) و تواصل معنا (contact) */
-.about-section p, .contact-section p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.contact-section .btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.contact-section .btn:hover {
-    background-color: #4ac0e0;
-    transform: translateY(-2px);
-}
-
-
-/* الفوتر */
-.main-footer {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 0.9em;
-    border-top: 5px solid var(--primary-color);
-}
-
-.main-footer p {
+h1, h2, h3 {
+    color: var(--dark-color);
     margin-bottom: 15px;
 }
 
-.main-footer .social-links img {
-    width: 30px; /* حجم الأيقونات */
-    height: 30px;
-    margin: 0 10px;
-    border-radius: 50%; /* لجعل الأيقونات دائرية */
-    transition: transform 0.3s ease;
+p {
+    margin-bottom: 10px;
 }
 
-.main-footer .social-links img:hover {
-    transform: scale(1.1);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main-header h1 {
-        margin-bottom: 15px;
-    }
-
-    .main-nav ul li {
-        margin: 0 10px;
-    }
-
-    .section-container {
-        padding: 40px 15px;
-        margin: 20px auto;
-    }
-
-    .verses-grid {
-        grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة */
-    }
-}
-
-/* تنسيقات عامة */
-:root {
-    --primary-color: #61dafb;
-    --secondary-color: #282c34;
-    --text-color: #333;
-    --white-color: #fff;
-    --background-color: #f4f4f4;
-    --box-bg-color: #fff;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --border-color: rgba(0, 0, 0, 0.1);
-    --verse-box-bg: rgba(255, 255, 255, 0.1);
-    --verse-box-border: rgba(255, 255, 255, 0.3);
-    --prayer-box-bg: rgba(255, 255, 255, 0.8);
-    --header-scrolled-bg: rgba(40, 44, 52, 0.95);
-}
-
-/* الوضع الليلي */
-body.dark-mode {
-    --text-color: #f4f4f4;
-    --background-color: #1a1a2e;
-    --box-bg-color: #2e3b5e;
-    --secondary-color: #3e2e5e; /* لون أغمق للهيدر والفوتر في الوضع الليلي */
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    --border-color: rgba(255, 255, 255, 0.1);
-    --verse-box-bg: rgba(0, 0, 0, 0.3);
-    --verse-box-border: rgba(255, 255, 255, 0.1);
-    --prayer-box-bg: rgba(46, 59, 94, 0.9);
-    --header-scrolled-bg: rgba(30, 30, 45, 0.95);
-
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    direction: rtl;
-    padding-top: 80px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* للتحول الناعم بين الأوضاع */
-}
-
-/* تنسيقات الهيدر */
-.main-header {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: var(--box-shadow);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.main-header.scrolled {
-    background-color: var(--header-scrolled-bg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-.main-header h1 {
-    font-size: 1.8em;
-    margin: 0;
-    color: var(--primary-color);
-}
-
-/* تنسيقات قائمة التنقل (Navbar) */
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav ul li {
-    margin-left: 25px;
-}
-
-.main-nav ul li a {
-    color: var(--white-color);
-    text-decoration: none;
-    font-size: 1.1em;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-/* Header Controls (أزرار البحث والوضع الليلي) */
-.header-controls {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* مسافة بين الأزرار */
-}
-
-.icon-btn {
-    background: none;
-    border: none;
-    color: var(--white-color);
-    font-size: 1.3em;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.2s ease;
-    padding: 5px;
-}
-
-.icon-btn:hover {
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-/* شريط البحث */
-.search-bar-container {
-    background-color: var(--secondary-color);
+/* Buttons */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
     padding: 10px 20px;
-    display: none; /* مخفي افتراضياً */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1);
-}
-
-.search-bar-container.active {
-    display: flex; /* يظهر لما يكون active */
-}
-
-.search-input {
-    width: 60%;
-    max-width: 500px;
-    padding: 8px 15px;
-    border: 1px solid var(--primary-color);
-    border-radius: 20px;
-    background-color: var(--white-color);
-    color: var(--text-color);
-    font-size: 1em;
-    text-align: right; /* لمحاذاة النص لليمين للعربية */
-}
-
-body.dark-mode .search-input {
-    background-color: #3a4a6e;
-    color: var(--white-color);
-    border-color: var(--primary-color);
-}
-
-.search-input::placeholder {
-    color: #999;
-}
-
-body.dark-mode .search-input::placeholder {
-    color: #bbb;
-}
-
-.search-bar-container .close-btn {
-    margin-right: 10px; /* مسافة بين زر الإغلاق وحقل البحث */
-    font-size: 1.5em;
-    color: var(--white-color);
-}
-body.dark-mode .search-bar-container .close-btn {
-    color: var(--primary-color); /* لون زر الإغلاق في الوضع الليلي */
-}
-
-/* تنسيقات الأقسام العامة */
-.section-container {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 40px auto;
-    background-color: var(--box-bg-color);
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.section-container h1 {
-    font-size: 2.2em;
-    margin-bottom: 30px;
-    color: var(--secondary-color);
-    transition: color 0.3s ease;
-}
-
-/* قسم الآيات */
-.verses-section {
-    background-image: url('jesus.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: var(--white-color);
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    position: relative;
-    z-index: 1;
-}
-
-/* طبقة شفافة فوق صورة الخلفية */
-.verses-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* طبقة سوداء شفافة بنسبة 40% */
-    z-index: -1;
-}
-
-.verses-section h1 {
-    color: var(--white-color);
-}
-
-.verses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-/* تنسيقات صناديق الآيات والصلوات */
-.box {
-    background-color: var(--verse-box-bg);
-    backdrop-filter: blur(5px);
-    border: 1px solid var(--verse-box-border);
-    border-radius: 10px;
-    padding: 25px;
-    font-size: 1.1em;
-    line-height: 1.8;
-    text-align: justify;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.box:hover {
-    transform: translateY(-5px) scale(1.02);
-    background-color: var(--verse-box-hover-bg, rgba(255, 255, 255, 0.2));
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-body.dark-mode .box:hover {
-    background-color: rgba(0, 0, 0, 0.4); /* لون هوفر للبوكسات في الدارك مود */
-}
-
-
-.prayer-box {
-    color: var(--text-color);
-    background-color: var(--prayer-box-bg);
-    border: 1px solid var(--border-color);
-    margin-bottom: 20px;
-    text-shadow: none;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
-}
-
-.prayer-box:hover {
-    background-color: var(--prayer-box-hover-bg, rgba(255, 255, 255, 0.95));
-}
-body.dark-mode .prayer-box:hover {
-    background-color: rgba(46, 59, 94, 0.95);
-}
-
-
-/* حالة الظهور بالـ JavaScript */
-.fade-in-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* قسم الترانيم */
-.hymns-section {
-    background-color: var(--background-color);
-}
-
-.hymn-card {
-    background-color: var(--box-bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--box-shadow);
-}
-body.dark-mode .hymn-card {
-    background-color: #3e2e5e;
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.hymn-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hymn-card h3 {
-    color: var(--secondary-color);
-}
-body.dark-mode .hymn-card h3 {
-    color: var(--primary-color);
-}
-
-.hymn-card p {
-    color: var(--text-color);
-}
-body.dark-mode .hymn-card p {
-    color: #ccc;
-}
-
-.hymn-card .play-btn {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-.hymn-card .play-btn:hover {
-    background-color: #4ac0e0;
-}
-
-
-/* قسم عنا (about) و تواصل معنا (contact) */
-.about-section p, .contact-section p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.contact-section .btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 12px 25px;
-    text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
-.contact-section .btn:hover {
-    background-color: #4ac0e0;
-    transform: translateY(-2px);
+.btn-primary:hover {
+    background: #45a049;
 }
 
-
-/* الفوتر */
-.main-footer {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 0.9em;
-    border-top: 5px solid var(--primary-color);
-    transition: background-color 0.3s ease, color 0.3s ease, border-top-color 0.3s ease;
+.btn-secondary {
+    background: var(--secondary-color);
 }
 
-.main-footer p {
-    margin-bottom: 15px;
+.btn-secondary:hover {
+    background: #FFB300;
 }
 
-.main-footer .social-links i {
-    font-size: 1.8em;
-    color: var(--white-color);
-    margin: 0 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.main-footer .social-links i:hover {
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main-header h1 {
-        margin-bottom: 15px;
-    }
-
-    .main-nav ul li {
-        margin: 0 10px;
-    }
-
-    .section-container {
-        padding: 40px 15px;
-        margin: 20px auto;
-    }
-
-    .verses-grid, .hymns-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .search-input {
-        width: 90%;
-    }
-}
-/* تنسيقات عامة */
-:root {
-    --primary-color: #61dafb;
-    --secondary-color: #282c34;
-    --text-color: #333;
-    --white-color: #fff;
-    --background-color: #f4f4f4;
-    --box-bg-color: #fff;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --border-color: rgba(0, 0, 0, 0.1);
-    --verse-box-bg: rgba(255, 255, 255, 0.1);
-    --verse-box-border: rgba(255, 255, 255, 0.3);
-    --prayer-box-bg: rgba(255, 255, 255, 0.8);
-    --header-scrolled-bg: rgba(40, 44, 52, 0.95);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    direction: rtl;
-    padding-top: 80px; /* مسافة للهيدر الثابت */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* تنسيقات الهيدر */
+/* Header */
 .main-header {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: var(--box-shadow);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.main-header.scrolled {
-    background-color: var(--header-scrolled-bg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background: var(--white);
+    color: var(--dark-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .main-header h1 {
-    font-size: 1.8em;
     margin: 0;
-    color: var(--primary-color);
-}
-
-/* تنسيقات قائمة التنقل (Navbar) */
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav ul li {
-    margin-left: 25px;
-    position: relative; /* مهم للقائمة المنسدلة */
-}
-
-.main-nav ul li a {
-    color: var(--white-color);
-    text-decoration: none;
-    font-size: 1.1em;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-/* القائمة المنسدلة (Dropdown) */
-.dropdown .dropbtn {
-    display: block;
-    padding: 5px 0;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none; /* مخفي افتراضياً */
-    position: absolute;
-    background-color: var(--secondary-color); /* نفس لون الهيدر أو لون مختلف */
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1; /* أعلى من المحتوى لكن تحت شريط البحث Overlay */
-    border-radius: 5px;
-    top: 100%; /* تظهر أسفل الـ dropbtn مباشرة */
-    right: 0; /* تظهر لليمين عشان اتجاه الموقع عربي */
-    /* ممكن تغير left: 0 لو عايزها تبدأ من الشمال */
-    padding: 10px 0;
-}
-
-.dropdown-content a {
-    color: var(--white-color);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: right;
-    transition: background-color 0.3s ease;
-    font-size: 1em;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--primary-color); /* لون مميز عند الـ hover */
-    color: var(--secondary-color); /* لون النص عند الـ hover */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block; /* تظهر القائمة عند الـ hover */
-}
-
-
-/* Header Controls (زر البحث فقط) */
-.header-controls {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.icon-btn {
-    background: none;
-    border: none;
-    color: var(--white-color);
-    font-size: 1.3em;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.2s ease;
-    padding: 5px;
-}
-
-.icon-btn:hover {
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-/* شريط البحث كـ Overlay */
-.search-bar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(40, 44, 52, 0.95);
-    z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.search-bar-container.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.search-input {
-    width: 80%;
-    max-width: 600px;
-    padding: 15px 20px;
-    border: 2px solid var(--primary-color);
-    border-radius: 30px;
-    background-color: var(--white-color);
-    color: var(--text-color);
-    font-size: 1.2em;
-    text-align: right;
-    outline: none;
-}
-
-.search-input::placeholder {
-    color: #aaa;
-}
-
-.search-bar-container .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     font-size: 2em;
-    color: var(--white-color);
+}
+
+.main-header .menu-btn {
     background: none;
     border: none;
+    font-size: 2em;
     cursor: pointer;
-    transition: color 0.3s ease;
+    color: var(--dark-color);
+    padding: 5px 10px;
+    display: block; /* Always show for sidebar toggle */
 }
 
-/* تنسيقات الأقسام العامة */
-.section-container {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 40px auto;
-    background-color: var(--box-bg-color);
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+.main-header .top-nav ul {
+    display: flex;
 }
 
-.section-container h1 {
-    font-size: 2.2em;
-    margin-bottom: 30px;
-    color: var(--secondary-color);
-    transition: color 0.3s ease;
-}
-
-/* قسم الآيات */
-.verses-section {
-    background-image: url('jesus.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: var(--white-color);
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    position: relative;
-    z-index: 1;
-}
-
-/* طبقة شفافة فوق صورة الخلفية */
-.verses-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: -1;
-}
-
-.verses-section h1 {
-    color: var(--white-color);
-}
-
-.verses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-/* تنسيقات صناديق الآيات والصلوات */
-.box {
-    background-color: var(--verse-box-bg);
-    backdrop-filter: blur(5px);
-    border: 1px solid var(--verse-box-border);
-    border-radius: 10px;
-    padding: 25px;
-    font-size: 1.1em;
-    line-height: 1.8;
-    text-align: justify;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.box:hover {
-    transform: translateY(-5px) scale(1.02);
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.prayer-box {
-    color: var(--text-color);
-    background-color: var(--prayer-box-bg);
-    border: 1px solid var(--border-color);
-    margin-bottom: 20px;
-    text-shadow: none;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
-}
-
-.prayer-box:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-}
-
-/* حالة الظهور بالـ JavaScript */
-.fade-in-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* قسم الترانيم */
-.hymns-section {
-    background-color: var(--background-color);
-}
-
-.hymn-card {
-    background-color: var(--box-bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--box-shadow);
-}
-
-.hymn-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hymn-card h3 {
-    color: var(--secondary-color);
-}
-
-.hymn-card p {
-    color: var(--text-color);
-}
-
-.hymn-card .play-btn {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-.hymn-card .play-btn:hover {
-    background-color: #4ac0e0;
-}
-
-/* تنسيقات الأقسام الجديدة الافتراضية (قصص القديسين، المعجزات، تأملات يومية) */
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-.grid-layout .box {
-    background-color: var(--box-bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--box-shadow);
-    text-align: center; /* لتوسيط المحتوى داخل البوكس */
-    padding: 20px;
-    font-size: 1em;
-}
-.grid-layout .box h3 {
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-.grid-layout .box p {
-    color: var(--text-color);
-}
-.grid-layout .box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: var(--box-bg-color); /* للتأكد من عدم تغيير اللون عند الـ hover */
-}
-
-
-/* قسم عنا (about) و تواصل معنا (contact) */
-.about-section p, .contact-section p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.contact-section .btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 12px 25px;
-    text-decoration: none;
+.main-header .top-nav ul li a {
+    color: var(--dark-color);
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-section .btn:hover {
-    background-color: #4ac0e0;
-    transform: translateY(-2px);
-}
-
-/* الفوتر */
-.main-footer {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 0.9em;
-    border-top: 5px solid var(--primary-color);
-    transition: background-color 0.3s ease, color 0.3s ease, border-top-color 0.3s ease;
-}
-
-.main-footer p {
-    margin-bottom: 15px;
-}
-
-.main-footer .social-links i {
-    font-size: 1.8em;
-    color: var(--white-color);
-    margin: 0 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.main-footer .social-links i:hover {
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main-header h1 {
-        margin-bottom: 15px;
-    }
-
-    .main-nav ul li {
-        margin: 0 10px;
-    }
-
-    /* القائمة المنسدلة في الموبايل */
-    .dropdown {
-        width: 100%; /* تأخذ عرض القائمة بالكامل */
-        margin-bottom: 10px;
-    }
-
-    .dropdown .dropbtn {
-        width: 100%;
-        text-align: center;
-        border: 1px solid rgba(255,255,255,0.2);
-        padding: 10px 0;
-        border-radius: 5px;
-    }
-
-    .dropdown-content {
-        position: static; /* تظهر في تدفق الصفحة العادي */
-        box-shadow: none;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        width: 100%;
-        border-radius: 0;
-        padding: 0;
-    }
-
-    .dropdown-content a {
-        padding-right: 30px; /* إزاحة للداخل */
-    }
-
-    .section-container {
-        padding: 40px 15px;
-        margin: 20px auto;
-    }
-
-    .verses-grid, .hymns-grid, .grid-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .search-input {
-        width: 90%;
-    }
-/* تنسيقات عامة */
-:root {
-    --primary-color: #61dafb;
-    --secondary-color: #282c34;
-    --text-color: #333;
-    --white-color: #fff;
-    --background-color: #f4f4f4;
-    --box-bg-color: #fff;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --border-color: rgba(0, 0, 0, 0.1);
-    --verse-box-bg: rgba(255, 255, 255, 0.1);
-    --verse-box-border: rgba(255, 255, 255, 0.3);
-    --prayer-box-bg: rgba(255, 255, 255, 0.8);
-    --header-scrolled-bg: rgba(40, 44, 52, 0.95);
-    --sidebar-width: 280px; /* عرض القائمة الجانبية */
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    direction: rtl;
-    padding-top: 80px; /* مسافة للهيدر الثابت */
-    overflow-x: hidden; /* لمنع ظهور شريط التمرير الأفقي عند تحريك المحتوى */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* تنسيقات الهيدر */
-.main-header {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: var(--box-shadow);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.main-header.scrolled {
-    background-color: var(--header-scrolled-bg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between; /* اللوجو على اليمين وزر القائمة على الشمال */
-    align-items: center;
-    height: 100%;
-}
-
-.main-header h1 {
-    font-size: 1.8em;
-    margin: 0;
+.main-header .top-nav ul li a:hover {
+    background: var(--light-color);
     color: var(--primary-color);
 }
 
-/* Header Controls (زر فتح القائمة الجانبية) */
-.header-controls {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.icon-btn {
-    background: none;
-    border: none;
-    color: var(--white-color);
-    font-size: 1.3em;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.2s ease;
-    padding: 5px;
-}
-
-.icon-btn:hover {
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-/* ------------------------------------ */
-/* تنسيقات القائمة الجانبية (Sidebar) */
-/* ------------------------------------ */
+/* Sidebar */
 .sidebar {
     height: 100%;
-    width: var(--sidebar-width);
+    width: 0;
     position: fixed;
-    z-index: 1050; /* أعلى من الهيدر والـ overlay */
+    z-index: 1000;
     top: 0;
-    right: calc(-1 * var(--sidebar-width)); /* مخفية تماماً خارج الشاشة لليمين */
-    background-color: var(--secondary-color);
+    right: 0; /* Position from right for RTL */
+    background-color: var(--sidebar-bg);
     overflow-x: hidden;
-    transition: right 0.5s ease; /* للتحريك السلس */
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
 }
 
-.sidebar.open {
-    right: 0; /* تظهر على الشاشة */
+.sidebar.active {
+    width: 280px; /* Adjust as needed */
 }
 
-.sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.sidebar-header h2 {
-    color: var(--primary-color);
-    margin: 0;
-    font-size: 1.8em;
-}
-
-.sidebar-header .icon-btn {
-    font-size: 1.8em;
-    color: var(--white-color);
-}
-
-/* شريط البحث داخل السايدبار */
-.sidebar-search-container {
-    padding: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.sidebar-search-container .search-input {
-    flex-grow: 1; /* يأخذ المساحة المتاحة */
-    padding: 10px 15px;
-    border: 1px solid var(--primary-color);
-    border-radius: 20px;
-    background-color: var(--white-color);
-    color: var(--text-color);
-    font-size: 1em;
-    text-align: right;
-    outline: none;
-}
-.sidebar-search-container .search-input::placeholder {
-    color: #aaa;
-}
-
-.sidebar-search-container .icon-btn {
-    font-size: 1.2em;
-    color: var(--primary-color);
-    background-color: var(--white-color);
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0; /* لا ينكمش */
-}
-.sidebar-search-container .icon-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-
-/* روابط القائمة الجانبية */
-.sidebar-nav ul {
-    list-style: none;
+.sidebar .close-btn {
+    position: absolute;
+    top: 15px;
+    left: 25px; /* Position close button on the left for RTL */
+    font-size: 36px;
+    margin-left: 50px;
+    color: var(--white);
+    background: none;
+    border: none;
+    cursor: pointer;
     padding: 0;
-    margin: 0;
 }
 
-.sidebar-nav ul li a {
-    padding: 15px 20px;
+.sidebar nav ul {
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    padding: 15px 25px;
     text-decoration: none;
     font-size: 1.2em;
-    color: var(--white-color);
+    color: var(--white);
     display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
-.sidebar-nav ul li a:hover {
-    background-color: rgba(97, 218, 251, 0.2); /* Primary color with transparency */
-    color: var(--primary-color);
+.sidebar nav ul li a i {
+    margin-left: 15px; /* Margin for icon in RTL */
+    font-size: 1.4em;
 }
 
-/* Overlay للخلفية عند فتح السايدبار */
-.sidebar-overlay {
+.sidebar nav ul li a:hover {
+    background-color: var(--sidebar-link-hover);
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
+    background-color: rgba(0,0,0,0.7);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay.active {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1040; /* أقل من السايدبار وأعلى من المحتوى */
-    display: none; /* مخفي افتراضياً */
 }
 
-/* تحريك المحتوى الرئيسي عند فتح السايدبار */
-#main-content {
-    transition: transform 0.5s ease;
+/* Main Content */
+.main-content {
+    padding-top: 20px;
+    transition: margin-right 0.5s; /* Adjust for RTL */
 }
 
-body.sidebar-open #main-content {
-    /* لا يوجد تحريك للمحتوى في هذا التصميم، فقط Overlay */
-    /* إذا أردت تحريك المحتوى، استخدم: transform: translateX(-var(--sidebar-width)); */
-}
-
-
-/* ------------------------------------ */
-/* تنسيقات الأقسام الرئيسية (باقي الصفحة) */
-/* ------------------------------------ */
-.section-container {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 40px auto;
-    background-color: var(--box-bg-color);
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
+/* Hero Section */
+.hero-section {
+    background: url('https://via.placeholder.com/1500x600?text=خلفية+روحية') no-repeat center center/cover;
+    color: var(--white);
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.section-container h1 {
-    font-size: 2.2em;
-    margin-bottom: 30px;
-    color: var(--secondary-color);
-    transition: color 0.3s ease;
-}
-
-/* قسم الآيات */
-.verses-section {
-    background-image: url('jesus.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: var(--white-color);
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     position: relative;
-    z-index: 1;
+    padding: 20px;
 }
 
-/* طبقة شفافة فوق صورة الخلفية */
-.verses-section::before {
-    content: "";
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: -1;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
 }
 
-.verses-section h1 {
-    color: var(--white-color);
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
 }
 
-.verses-grid {
+.hero-text h2 {
+    color: var(--white);
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+/* About Section */
+.about-section {
+    background: var(--white);
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background: var(--light-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.feature-item i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+/* Featured Content */
+.featured-content {
+    padding: 50px 0;
+    text-align: center;
+    background: #fdfdfd;
+}
+
+.featured-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.featured-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
 
-/* تنسيقات صناديق الآيات والصلوات */
-.box {
-    background-color: var(--verse-box-bg);
-    backdrop-filter: blur(5px);
-    border: 1px solid var(--verse-box-border);
+.content-card {
+    background: var(--white);
     border-radius: 10px;
-    padding: 25px;
-    font-size: 1.1em;
-    line-height: 1.8;
-    text-align: justify;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
-    opacity: 0;
-    transform: translateY(20px);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: right; /* For RTL */
 }
 
-.box:hover {
-    transform: translateY(-5px) scale(1.02);
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.prayer-box {
-    color: var(--text-color);
-    background-color: var(--prayer-box-bg);
-    border: 1px solid var(--border-color);
-    margin-bottom: 20px;
-    text-shadow: none;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
-}
-
-.prayer-box:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-}
-
-/* حالة الظهور بالـ JavaScript */
-.fade-in-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* قسم الترانيم */
-.hymns-section {
-    background-color: var(--background-color);
-}
-
-.hymn-card {
-    background-color: var(--box-bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--box-shadow);
-}
-
-.hymn-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hymn-card h3 {
-    color: var(--secondary-color);
-}
-
-.hymn-card p {
-    color: var(--text-color);
-}
-
-.hymn-card .play-btn {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-.hymn-card .play-btn:hover {
-    background-color: #4ac0e0;
-}
-
-/* تنسيقات الأقسام الجديدة الافتراضية (قصص القديسين، المعجزات، تأملات يومية) */
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-.grid-layout .box {
-    background-color: var(--box-bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    padding: 20px;
-    font-size: 1em;
-}
-.grid-layout .box h3 {
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-.grid-layout .box p {
-    color: var(--text-color);
-}
-.grid-layout .box:hover {
+.content-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: var(--box-bg-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-
-/* قسم عنا (about) و تواصل معنا (contact) */
-.about-section p, .contact-section p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 20px;
+.content-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
 }
 
-.contact-section .btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.contact-section .btn:hover {
-    background-color: #4ac0e0;
-    transform: translateY(-2px);
-}
-
-/* الفوتر */
-.main-footer {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 0.9em;
-    border-top: 5px solid var(--primary-color);
-    transition: background-color 0.3s ease, color 0.3s ease, border-top-color 0.3s ease;
-}
-
-.main-footer p {
-    margin-bottom: 15px;
-}
-
-.main-footer .social-links i {
-    font-size: 1.8em;
-    color: var(--white-color);
-    margin: 0 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.main-footer .social-links i:hover {
+.content-card h3 {
+    padding: 15px;
+    font-size: 1.6em;
+    margin-bottom: 0;
     color: var(--primary-color);
-    transform: scale(1.1);
+}
+
+.content-card p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    color: var(--text-color);
+}
+
+.content-card .btn-secondary {
+    margin: 0 15px 15px 0; /* Adjust margin for RTL */
+}
+
+/* Footer */
+.main-footer {
+    background: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+.main-footer .social-links {
+    margin-top: 15px;
+}
+
+.main-footer .social-links a {
+    color: var(--white);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.main-footer .social-links a:hover {
+    color: var(--primary-color);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: row; /* رجعها صف عشان اللوجو والزر يكونوا جنب بعض */
-        justify-content: space-between;
+    .main-header .top-nav {
+        display: none; /* Hide top nav on smaller screens, rely on sidebar */
     }
 
     .main-header h1 {
-        margin-bottom: 0; /* إلغاء المسافة اللي كانت للموبايل */
-        font-size: 1.5em; /* تصغير الخط قليلاً في الهيدر */
+        font-size: 1.8em;
     }
 
-    /* السايدبار في وضع الموبايل */
-    .sidebar {
-        width: 250px; /* عرض أصغر للموبايل */
-        right: -250px;
-    }
-    .sidebar.open {
-        right: 0;
+    .hero-text h2 {
+        font-size: 2.5em;
     }
 
-    body.sidebar-open {
-        overflow: hidden; /* لمنع التمرير عندما تكون القائمة مفتوحة */
+    .hero-text p {
+        font-size: 1.1em;
     }
 
-    .section-container {
-        padding: 40px 15px;
-        margin: 20px auto;
-    }
-
-    .verses-grid, .hymns-grid, .grid-layout {
+    .features-grid, .content-grid {
         grid-template-columns: 1fr;
     }
+}
 
-    /* شريط البحث في السايدبار (لموبايل) */
-    .sidebar-search-container .search-input {
-        width: 100%; /* تأكد أنه يأخذ كامل العرض */
+@media (max-width: 480px) {
+    .main-header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .hero-text h2 {
+        font-size: 2em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+}
+/* Modal (Lightbox) Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top, higher than sidebar */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Some padding for smaller screens */
+}
+
+.modal.active {
+    display: flex; /* Show when active */
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px; /* Max width for readability */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+    max-height: 90vh; /* Limit height to enable scrolling inside */
+    overflow-y: auto; /* Enable scrolling for modal content */
+    text-align: right; /* RTL */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    color: var(--dark-color);
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 20px; /* Position to the left for RTL */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color);
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block; /* Remove extra space below image */
+    margin-left: auto; /* Center image for RTL if it's smaller than max-width */
+    margin-right: auto;
+}
+
+.modal-content h3 {
+    font-size: 2.2em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.modal-content .article-meta {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+#modal-article-full-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Responsive for Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+    .modal-content h3 {
+        font-size: 1.8em;
+    }
+    .modal-content .article-meta {
+        font-size: 0.9em;
+    }
+    #modal-article-full-content p {
+        font-size: 1em;
+    }
+    .close-button {
+        font-size: 30px;
+        top: 5px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 15px;
+    }
+    .modal-content h3 {
+        font-size: 1.6em;
+    }
+}
+/* --- أنماط البوكس المنبثق (Modal) --- */
+.modal {
+    display: none; /* مخفي افتراضيًا */
+    position: fixed; /* يبقى في مكانه عند التمرير */
+    z-index: 1001; /* يظهر فوق كل شيء آخر، أعلى من القائمة الجانبية */
+    left: 0;
+    top: 0;
+    width: 100%; /* عرض كامل */
+    height: 100%; /* ارتفاع كامل */
+    overflow: auto; /* تمكين التمرير إذا كان المحتوى كبيرًا */
+    background-color: rgba(0,0,0,0.8); /* خلفية سوداء مع شفافية */
+    justify-content: center; /* توسيط أفقي */
+    align-items: center; /* توسيط عمودي */
+    padding: 20px; /* هامش داخلي للشاشات الصغيرة */
+}
+
+.modal.active {
+    display: flex; /* إظهار البوكس عند تفعيل الكلاس */
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px; /* أقصى عرض لسهولة القراءة */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3); /* ظل أنيق */
+    position: relative;
+    animation: fadeIn 0.3s ease-out; /* حركة ظهور سلسة */
+    max-height: 90vh; /* تحديد أقصى ارتفاع لتمكين التمرير داخل البوكس */
+    overflow-y: auto; /* تمكين التمرير الرأسي لمحتوى البوكس */
+    text-align: right; /* محاذاة النص لليمين للعربية */
+}
+
+/* حركة الظهور (Animation) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    color: var(--dark-color);
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 20px; /* موقع زر الإغلاق لليسار (RTL) */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color);
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content h3 {
+    font-size: 2.2em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.modal-content .article-meta {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+#modal-article-full-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* --- تعديلات Responsive للـ Modal --- */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+    .modal-content h3 {
+        font-size: 1.8em;
+    }
+    .modal-content .article-meta {
+        font-size: 0.9em;
+    }
+    #modal-article-full-content p {
+        font-size: 1em;
+    }
+    .close-button {
+        font-size: 30px;
+        top: 5px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 15px;
+    }
+    .modal-content h3 {
+        font-size: 1.6em;
     }
 }
