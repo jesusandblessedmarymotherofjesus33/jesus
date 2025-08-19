@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة المسيح والعذراء</title>
+    <link rel="icon" href="/favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cairo+Play:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+  /* Blog Page Specific Styles */
+.blog-container {
+    padding-top: 2rem;
+}
+
+.add-post-btn {
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    margin-top: 1.5rem;
+}
+
+.add-post-btn i {
+    margin-left: 8px;
+}
+
+.add-post-btn:hover {
+    background-color: #fdd835;
+    transform: translateY(-2px);
+}
+
+.moderation-note {
+    background-color: #E3F2FD;
+    color: #1565C0;
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    border-right: 5px solid #2196F3;
+}
+
+.moderation-note i {
+    margin-left: 10px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.post-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border-right: 5px solid var(--primary-color);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.post-content p {
+    font-size: 1rem;
+    color: var(--text-color-dark);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.modal .close-btn {
+    color: #aaa;
+    float: left;
+    font-size: 36px;
+    font-weight: bold;
+    transition: color var(--transition-speed);
+}
+
+.modal .close-btn:hover,
+.modal .close-btn:focus {
+    color: var(--text-color-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.modal form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.modal form input[type="text"],
+.modal form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+    resize: vertical;
+}
+
+.modal form input[type="text"]:focus,
+.modal form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(45, 88, 140, 0.2);
+    outline: none;
+}
+
+.modal .submit-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.modal .submit-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    background-color: #E8F5E9; /* Light Green */
+    color: #2E7D32; /* Dark Green */
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    .modal-content {
+        padding: 20px;
+    }
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+  }
+  <syle/>
+    <nav class="navbar">
+        <a href="index.html" class="logo">المسيح والعذراء</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة الجانبية">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <div class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="bible.html">الأناجيل المقدسة</a></li>
+            <li><a href="agpiyah.html">صلوات الأجبية</a></li>
+            <li><a href="calender.html">التقويم الكنسي</a></li>
+            <li><a href="sermons.html">عظات ومقالات</a></li>
+            <li><a href="mircles.html">معجزات القديسين</a></li>
+            <li><a href="about.html">عن الموقع</a></li>
+        </ul>
+    </div>
+
+    <header class="page-header" style="background-image: linear-gradient(rgba(45, 88, 140, 0.7), rgba(45, 88, 140, 0.7)), url('https://via.placeholder.com/1920x400/2D588C/ffffff?text=Christ+and+Virgin+Mary');">
+        <h1>مدونة الموقع</h1>
+        <p>مساحة لمشاركة الإيمان، الشهادات، والتأملات الروحية</p>
+        <button class="add-post-btn" onclick="openModal()"><i class="fas fa-plus"></i> إضافة تدوينة</button>
+    </header>
+
+    <div class="container blog-container">
+        
+        <p class="moderation-note">
+            <i class="fas fa-shield-alt"></i> تتم مراجعة جميع التدوينات قبل نشرها لضمان توافقها مع الإيمان المسيحي الأرثوذكسي ومبادئ الموقع.
+        </p>
+        
+        <div class="posts-grid" id="posts-container">
+            <div class="post-card">
+                <h3 class="post-title">عنوان التدوينة التجريبية</h3>
+                <p class="post-meta">بواسطة: كاتب زائر | 19 أغسطس 2025</p>
+                <div class="post-content">
+                    <p>هذا نموذج لتدوينة يمكن إرسالها من قبل الزوار. سيتم عرض التدوينة هنا بعد مراجعتها واعتمادها من قبل إدارة الموقع. يمكنك إرسال أفكارك، تأملاتك الروحية، أو شهاداتك ليراها الآخرون ويتبركوا بها.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="addPostModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h2>إضافة تدوينة جديدة</h2>
+            </div>
+            <form id="postForm" onsubmit="submitPost(event)">
+                <label for="postTitle">عنوان التدوينة:</label>
+                <input type="text" id="postTitle" name="postTitle" required>
+
+                <label for="authorName">اسم الكاتب:</label>
+                <input type="text" id="authorName" name="authorName" required>
+
+                <label for="postContent">محتوى التدوينة:</label>
+                <textarea id="postContent" name="postContent" rows="10" required></textarea>
+
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> إرسال</button>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>تابعنا على وسائل التواصل الاجتماعي:</p>
+        <div class="social-icons">
+            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>© 2025 موقع المسيح والعذراء. جميع موقع محفوظة.</p>
+    </fosidebar
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            sidebar.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        document.querySelectorAll('.sidebar ul li a').forEach(item => {
+            item.addEventListener('click', () => {
+                toggleSidebar();
+            });
+        });
+
+        const modal = document.getElementById("addPostModal");
+        const formMessage = document.getElementById("formMessage");
+
+        function openModal() {
+            modal.style.display = "block";
+            document.body.style.overflow = 'hidden';
+            formMessage.style.display = 'none'; // Hide message on open
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+            document.body.style.overflow = '';
+        }
+
+        function submitPost(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const title = document.getElementById('postTitle').value;
+            const author = document.getElementById('authorName').value;
+            const content = document.getElementById('postContent').value;
+
+            // This is a simulated submission. In a real website, this data would be sent to a server.
+            console.log("تم استلام تدوينة جديدة:");
+            console.log("العنوان:", title);
+            console.log("الكاتب:", author);
+            console.log("المحتوى:", content);
+
+            // Display success message to the user
+            formMessage.innerHTML = '<i class="fas fa-check-circle"></i> تم إرسال تدوينتك بنجاح! سيتم مراجعتها قبل النشر.';
+            formMessage.style.display = 'block';
+            
+            // Clear the form fields
+            document.getElementById('postForm').reset();
+            
+            // Optionally, close the modal after a short delay
+            setTimeout(closeModal, 3000);
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+      </html>
