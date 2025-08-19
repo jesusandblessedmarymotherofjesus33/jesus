@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المقالات - المسيح والعدرا</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cairo+Play:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="favicon.jpg">
     <meta name="keywords" content="المسيح والعدرا، صلوات ،الاجبيه، مقالات ،مقالت متنوعه، اقرا الان، حول الايمان المسيحي ، معجزات ، مقالات معجزات ام النور ، مقالات ظهور ام النور بكنيسه الزيتون، البابا كيرلس السادس ، المار مينا ، الملاك ميخائيل ، الملاك جبرائيل ، الملاك سوريال، الملاك رافا ئيل ، المار جرجس ، انبا ابرام ،انبا كاراس ،انبا شنوده رئيس المتوحديدن ابونا فلتاوس ابونا عبد المسيح الحبشي امالنور،امين">
@@ -14,7 +17,7 @@
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="logo">المسيح والعدرا</a>
+        <a href="index.html" class="logo">المسيح والعذراء</a>
         <button class="menu-toggle" onclick="toggleSidebar()">
             <i class="fas fa-bars"></i>
         </button>
@@ -31,9 +34,9 @@
             <li><a href="mircles.html">معجزات القديسين</a></li>
             <li><a href="calender.html">التقويم الكنسي</a></li>
             <li><a href="prayers.html">صلوات عامة</a></li>
-                     <li><a href="index2.html">المدونه</a></li>
+            <li><a href="index2.html">المدونه</a></li>
             <li><a href="agpiyah.html">صلوات الأجبية</a></li>
-            </ul>
+        </ul>
     </div>
 
     <header class="page-header">
@@ -54,397 +57,7 @@
                     </button>
                 </div>
             </div>
-<style>
-    :root {
-    --primary-color: #007bff; /* أزرق سماوي - لون روحي */
-    --secondary-color: #6c757d; /* رمادي دافئ */
-    --accent-color: #28a745; /* أخضر - للتميز */
-    --background-light: #f8f9fa; /* خلفية فاتحة */
-    --background-dark: #e9ecef; /* خلفية أغمق قليلاً */
-    --text-color: #343a40; /* لون نص داكن */
-    --heading-color: #212529; /* لون عناوين أغمق */
-    --card-background: #ffffff;
-    --border-color: #dee2e6;
-    --hover-shadow: rgba(0, 0, 0, 0.15);
 
-    /* Sidebar specific colors */
-    --sidebar-bg: #212529; /* خلفية القائمة الجانبية (داكنة) */
-    --sidebar-text: #f8f9fa; /* لون النص في القائمة الجانبية */
-    --sidebar-hover: #0056b3; /* لون عند التحويم على الروابط */
-}
-
-body {
-    font-family: 'Cairo', sans-serif;
-    line-height: 1.7;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-color);
-    direction: rtl;
-    text-align: right;
-    overflow-x: hidden; /* لمنع ظهور شريط التمرير الأفقي عند فتح القائمة */
-}
-
-/* Navbar (شريط التنقل) */
-.navbar {
-    background-color: var(--heading-color);
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.navbar .logo {
-    color: white;
-    font-family: 'Amiri', serif;
-    font-size: 1.8em;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 1001; /* فوق أي شيء آخر */
-}
-
-/* Sidebar (القائمة الجانبية) */
-.sidebar {
-    height: 100%;
-    width: 0; /* مخفية بشكل افتراضي */
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0; /* تظهر من اليمين */
-    background-color: var(--sidebar-bg);
-    overflow-x: hidden;
-    transition: 0.5s; /* سرعة الانتقال */
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.sidebar.active {
-    width: 100%; /* تغطي الشاشة بالكامل عند التفعيل */
-}
-
-.sidebar .close-btn {
-    position: absolute;
-    top: 20px;
-    left: 25px; /* زر الإغلاق على اليسار */
-    font-size: 3em;
-    color: var(--sidebar-text);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    padding: 15px 0;
-    text-decoration: none;
-    font-size: 2.2em;
-    color: var(--sidebar-text);
-    display: block;
-    transition: 0.3s;
-    font-weight: 700;
-}
-
-.sidebar ul li a:hover {
-    color: var(--primary-color);
-    background-color: rgba(255,255,255,0.1);
-}
-
-/* Page Header (عنوان الصفحة) */
-.page-header {
-    background-color: var(--background-dark);
-    padding: 60px 20px;
-    text-align: center;
-    border-bottom: 3px solid var(--primary-color);
-    margin-bottom: 40px;
-}
-
-.page-header h1 {
-    font-family: 'Amiri', serif;
-    font-size: 3em;
-    color: var(--heading-color);
-    margin: 0;
-}
-
-.page-header p {
-    font-size: 1.2em;
-    color: var(--secondary-color);
-    margin-top: 10px;
-}
-
-/* General Container (للمحتوى الرئيسي) */
-.container {
-    max-width: 1100px;
-    margin: 0 auto 50px auto; /* إضافة مسافة سفلية */
-    padding: 0 20px;
-}
-
-/* Articles Grid (شبكة المقالات) */
-.articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.article-card {
-    background-color: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.article-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 10px 25px var(--hover-shadow);
-}
-
-.article-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.article-card .card-body {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.article-card h3 {
-    color: var(--heading-color);
-    font-size: 1.5em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
-.article-card p {
-    font-size: 0.95em;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-    flex-grow: 1; /* لتمديد الوصف ليملأ المساحة */
-}
-
-.article-card .read-more {
-    display: inline-flex; /* لضبط الأيقونة والنص */
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border: none;
-    align-self: flex-start; /* ليكون الزر في بداية السطر */
-}
-
-.article-card .read-more:hover {
-    background-color: #0056b3;
-}
-
-.article-card .read-more i {
-    margin-left: 8px; /* مسافة بين النص والأيقونة */
-    font-size: 0.9em;
-}
-
-/* Modal (Popup) Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 2000; /* Sit on top of everything */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
-    padding-top: 50px;
-    animation: fadeIn 0.3s ease-out forwards; /* تأثير الظهور */
-}
-
-.modal-content {
-    background-color: var(--card-background);
-    margin: 3% auto; /* Adjust margin for better centering */
-    padding: 30px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    position: relative;
-    animation: slideInFromTop 0.4s ease-out forwards; /* تأثير الانزلاق */
-}
-
-.close-button {
-    color: var(--secondary-color);
-    float: left; /* for RTL */
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-.close-button:hover,
-.close-button:focus {
-    color: var(--accent-color);
-}
-
-.modal-title {
-    font-family: 'Amiri', serif;
-    color: var(--heading-color);
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 2.2em;
-    text-align: right;
-    padding-left: 50px; /* لتجنب تداخل العنوان مع زر الإغلاق */
-}
-
-.modal-body {
-    max-height: 60vh; /* Limit height for scrolling */
-    overflow-y: auto; /* Enable scrolling for long content */
-    font-size: 1.05em;
-    color: var(--text-color);
-    line-height: 1.8;
-    padding-right: 15px; /* مسافة للتمرير */
-}
-
-/* Scrollbar styles for modal body */
-.modal-body::-webkit-scrollbar {
-    width: 8px;
-}
-.modal-body::-webkit-scrollbar-track {
-    background: var(--background-dark);
-    border-radius: 10px;
-}
-.modal-body::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 10px;
-}
-.modal-body::-webkit-scrollbar-thumb:hover {
-    background: #0056b3;
-}
-
-/* Animations (للمودال) */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideInFromTop {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-
-/* Footer */
-.footer {
-    background-color: var(--heading-color);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 60px;
-    font-size: 0.95em;
-}
-
-.footer .social-icons a {
-    color: white;
-    font-size: 1.5em;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer .social-icons a:hover {
-    color: var(--primary-color);
-}
-
-/* Responsive Design (التصميم المتجاوب) */
-@media (max-width: 768px) {
-    .page-header h1 {
-        font-size: 2.2em;
-    }
-    .page-header p {
-        font-size: 1em;
-    }
-    .articles-grid {
-        grid-template-columns: 1fr;
-    }
-    .container {
-        padding: 0 15px;
-    }
-    .sidebar ul li a {
-        font-size: 1.8em;
-    }
-    .modal-content {
-        width: 95%;
-        margin: 2% auto;
-        padding: 20px;
-    }
-    .modal-title {
-        font-size: 1.8em;
-        padding-left: 0;
-    }
-    .close-button {
-        font-size: 3em;
-    }
-    .navbar .logo {
-        font-size: 1.5em;
-    }
-}
-
-@media (max-width: 480px) {
-    .page-header {
-        padding: 40px 15px;
-    }
-    .page-header h1 {
-        font-size: 1.8em;
-    }
-    .feature-card {
-        padding: 20px;
-    }
-    .feature-card .icon-container {
-        width: 60px;
-        height: 60px;
-        font-size: 2em;
-    }
-    .sidebar .close-btn {
-        font-size: 2.5em;
-    }
-}
-</style>
             <div class="article-card">
                 <img src="https://via.placeholder.com/400x220/c7a9c7/ffffff?text=تعاليم+المسيح" alt="تعاليم يسوع">
                 <div class="card-body">
@@ -455,7 +68,7 @@ body {
                     </button>
                 </div>
             </div>
-
+            
             <div class="article-card">
                 <img src="https://via.placeholder.com/400x220/a9c7e0/ffffff?text=مريم+العذراء" alt="السيدة العذراء">
                 <div class="card-body">
@@ -466,49 +79,7 @@ body {
                     </button>
                 </div>
             </div>
-
-            <div class="article-card">
-                <img src="https://via.placeholder.com/400x220/d1e2c9/ffffff?text=الإيمان+والتحديات" alt="الإيمان والتحديات">
-                <div class="card-body">
-                    <h3>دور الإيمان في التغلب على تحديات الحياة</h3>
-                    <p>كيف يمكن للإيمان الحقيقي أن يمنحنا القوة والصبر لمواجهة الصعوبات والتحديات اليومية.</p>
-                    <button class="read-more" data-article-id="faith-challenges">
-                        اقرأ المزيد <i class="fas fa-arrow-left"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="article-card">
-                <img src="https://via.placeholder.com/400x220/e0e0e0/333333?text=الكتاب+المقدس" alt="الكتاب المقدس">
-                <div class="card-body">
-                    <h3>الكتاب المقدس: دليلك للحياة الروحية</h3>
-                    <p>مقال عن أهمية قراءة الكتاب المقدس ودراسته، وكيف يكون نوراً لنا في رحلتنا الإيمانية.</p>
-                    <button class="read-more" data-article-id="bible-guide">
-                        اقرأ المزيد <i class="fas fa-arrow-left"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="article-card">
-                <img src="https://via.placeholder.com/400x220/b3cde0/ffffff?text=الحب+المسيحي" alt="المحبة المسيحية">
-                <div class="card-body">
-                    <h3>المحبة المسيحية: أساس حياتنا</h3>
-                    <p>استكشاف للمحبة كأعظم الفضائل المسيحية، وكيف تتجلى في علاقاتنا ومعاملاتنا اليومية.</p>
-                    <button class="read-more" data-article-id="christian-love">
-                        اقرأ المزيد <i class="fas fa-arrow-left"></i>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div id="articleModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle" class="modal-title"></h2>
-            <div id="modalBody" class="modal-body">
-                </div>
+            
         </div>
     </div>
 
@@ -520,11 +91,10 @@ body {
             <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
             <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
         </div>
-        <p>&copy; 2025 موقع المسيح والعدرا. جميع الحقوق محفوظة.</p>
+        <p>© 2025 موقع المسيح والعذراء. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script>
-        // Sidebar functions (وظائف القائمة الجانبية)
         function toggleSidebar() {
             var sidebar = document.getElementById("mySidebar");
             if (sidebar.classList.contains('active')) {
@@ -535,143 +105,11 @@ body {
                 document.body.style.overflow = 'hidden';
             }
         }
-
         document.querySelectorAll('.sidebar ul li a').forEach(item => {
             item.addEventListener('click', event => {
                 toggleSidebar();
             });
         });
-
-        // Modal functions (وظائف النافذة المنبثقة)
-        var modal = document.getElementById("articleModal");
-        var modalTitle = document.getElementById("modalTitle");
-        var modalBody = document.getElementById("modalBody");
-
-        // Object to store article content
-        var articles = {
-            "prayer-importance": {
-                title: "أهمية الصلاة في حياة المؤمن",
-                content: `
-                    <p>الصلاة هي جوهر الحياة الروحية المسيحية، فهي ليست مجرد طقس أو عادة، بل هي حوار حي وشخصي مع الله الآب، من خلال ابنه يسوع المسيح، وفي قوة الروح القدس. إنها الرئة التي تتنفس بها الروح، والغذاء الذي يقوي الإيمان، وهي الوسيلة التي نتصل بها بمصدر كل قوة وحكمة ومحبة.</p>
-                    <p><strong>لماذا الصلاة مهمة؟</strong></p>
-                    <ul>
-                        <li><strong>بناء العلاقة:</strong> مثل أي علاقة، تتطلب العلاقة مع الله التواصل. الصلاة هي وسيلتنا للتعبير عن حبنا، شكرنا، طلباتنا، واعترافاتنا له.</li>
-                        <li><strong>السلام الداخلي:</strong> في عالم مليء بالضغوط والقلق، توفر الصلاة ملاذاً للسلام. عندما نلقي همومنا على الرب، نختبر سلامًا يفوق كل فهم.</li>
-                        <li><strong>النمو الروحي:</strong> من خلال الصلاة، نتعلم الاستماع إلى صوت الله، نفهم مشيئته، وننمو في النعمة والمعرفة.</li>
-                        <li><strong>القوة الروحية:</strong> الصلاة تمنحنا قوة لمقاومة التجارب، ومواجهة التحديات، والقيام بالصالح.</li>
-                        <li><strong>الشركة مع القديسين:</strong> الصلاة تربطنا ليس فقط بالله، بل أيضًا بكنيسته المجاهدة والمنتصرة.</li>
-                    </ul>
-                    <p>لتكن الصلاة جزءًا لا يتجزأ من يومك. خصص وقتاً ثابتاً لها، حتى لو كان قصيراً، ودع قلبك يتكلم مع خالقه. تذكر قول الكتاب المقدس: "صلوا بلا انقطاع." (1 تسالونيكي 5: 17)</p>
-                `
-            },
-            "jesus-teachings": {
-                title: "فهم تعاليم يسوع المسيح",
-                content: `
-                    <p>تعاليم يسوع المسيح هي حجر الزاوية للمسيحية، وهي رسالة عالمية تتجاوز الزمان والثقافات. لم تكن مجرد كلمات، بل كانت طريقة حياة، دعوة للتحول الداخلي، ونموذجًا للمحبة اللامحدودة. يمكن تلخيص جوهر تعاليمه في مبادئ رئيسية:</p>
-                    <p><strong>مبادئ تعاليم المسيح:</strong></p>
-                    <ol>
-                        <li><strong>وصية المحبة العظمى:</strong> "تحب الرب إلهك من كل قلبك ومن كل نفسك ومن كل فكرك... وتحب قريبك كنفسك." (متى 22: 37-39). هذه الوصية هي أساس كل التعاليم الأخرى.</li>
-                        <li><strong>المغفرة والتسامح:</strong> علم المسيح المغفرة للخطاة، وأمرنا أن نسامح بعضنا البعض "سبعين مرة سبع مرات" (متى 18: 22)، حتى لأعدائنا.</li>
-                        <li><strong>ملكوت الله:</strong> تحدث يسوع كثيراً عن ملكوت الله، الذي ليس مكاناً جغرافياً، بل هو سيادة الله في قلوب الناس وحياتهم، ويأتي ببره وعدله وسلامه.</li>
-                        <li><strong>التواضع والخدمة:</strong> جسّد المسيح التواضع عندما غسل أقدام تلاميذه، وعلم أن "من أراد أن يكون فيكم أولًا فليكن لكم عبدًا." (متى 20: 27).</li>
-                        <li><strong>البحث عن الحق:</strong> دعا المسيح أتباعه إلى البحث عن الحق ومعرفته، مؤكداً أن "الحق يحرركم." (يوحنا 8: 32).</li>
-                    </ol>
-                    <p>تعتبر تعاليم المسيح دليلاً للحياة الصالحة، تدعونا إلى تجاوز المظاهر والتركيز على نقاوة القلب وخدمة الله والإنسان.</p>
-                `
-            },
-            "mary-purity": {
-                title: "السيدة العذراء مريم: رمز الطهارة والإيمان",
-                content: `
-                    <p>السيدة العذراء مريم، والدة الإله، تحتل مكانة فريدة ومقدسة في الإيمان المسيحي. حياتها هي شهادة للإيمان المطلق، الطاعة المتواضعة، والنقاوة الكاملة. لم تكن مجرد وعاء جسدي للخلاص، بل كانت شريكة في خطة الله بطاعتها وتفانيها.</p>
-                    <p><strong>لماذا مريم العذراء رمز؟</strong></p>
-                    <ul>
-                        <li><strong>الطهارة البتولية:</strong> تجسد مريم الطهارة الكاملة، ليس فقط جسديًا بل روحيًا أيضًا، مما جعلها مستحقة لأن تحمل الإله المتجسد.</li>
-                        <li><strong>الإيمان والطاعة:</strong> عندما بشرها الملاك جبرائيل، أجابت: "هوذا أنا أمة الرب. ليكن لي كقولك." (لوقا 1: 38)، مظهرة إيماناً لا يتزعزع وطاعة كاملة لمشيئة الله، حتى عندما لم تفهم كل شيء.</li>
-                        <li><strong>الصبر والثبات:</strong> مرت مريم بآلام عظيمة، من الهروب إلى مصر إلى وقوفها عند الصليب، لكنها ظلت ثابتة في إيمانها وصبرها.</li>
-                        <li><strong>الشفاعة:</strong> يعتقد العديد من المسيحيين أن مريم تشفع لأولادها أمام ابنها، وهي "أقوى الشفعاء" لدى الله.</li>
-                        <li><strong>قدوة للمؤمنين:</strong> حياتها تعلمنا التواضع، المحبة، الصمت التأملي، الصبر في الشدائد، وكيف نضع الله في المقام الأول في حياتنا.</li>
-                    </ul>
-                    <p>حياة العذراء مريم هي درس حي في كيفية عيش حياة مقدسة، مليئة بالإيمان، والتسليم الكامل لمشيئة الله، لتكون بذلك مثالاً لنا جميعاً.</p>
-                `
-            },
-            "faith-challenges": {
-                title: "دور الإيمان في التغلب على تحديات الحياة",
-                content: `
-                    <p>الحياة مليئة بالتحديات؛ من الصعوبات الشخصية إلى الأزمات العالمية. في هذه الأوقات، يصبح الإيمان ليس مجرد معتقد، بل مرساة قوية تحافظ على النفس من الغرق في بحر اليأس والقلق. الإيمان المسيحي يمنحنا منظورًا مختلفًا للتحديات، ويرانا فرصًا للنمو والاعتماد على الله.</p>
-                    <p><strong>كيف يساعدنا الإيمان؟</strong></p>
-                    <ul>
-                        <li><strong>مصدر للقوة:</strong> "أستطيع كل شيء في المسيح الذي يقويني." (فيلبي 4: 13). الإيمان يمنحنا قوة غير بشرية لمواجهة الصعاب.</li>
-                        <li><strong>الأمل والثبات:</strong> حتى في أحلك الظروف، الإيمان يمنحنا رجاءً بأن الله يعمل كل شيء للخير، وأن هناك نورًا في نهاية النفق.</li>
-                        <li><strong>السلام الداخلي:</strong> عندما نثق في عناية الله وسيادته، نختبر سلامًا حتى وسط الاضطرابات، لأننا نعلم أنه معنا ولن يتركنا.</li>
-                        <li><strong>النمو الشخصي:</strong> غالبًا ما تؤدي التحديات إلى نمو روحي وعقلي أكبر. الإيمان يساعدنا على رؤية هذه التجارب كفرص للتنقية والتطوير.</li>
-                        <li><strong>المنظور الأبدي:</strong> الإيمان يذكرنا بأن معاناتنا الحالية مؤقتة، وأن مكافأتنا الأبدية في السماء تفوق أي ألم نمر به.</li>
-                    </ul>
-                    <p>لا يعني الإيمان عدم وجود التحديات، بل يعني الثقة بأن الله سيقودنا خلالها. إنه دعوة لتسليم همومنا له والاعتماد على قوته لا على قوتنا الذاتية.</p>
-                `
-            },
-            "bible-guide": {
-                title: "الكتاب المقدس: دليلك للحياة الروحية",
-                content: `
-                    <p>الكتاب المقدس، كلمة الله الحية والفعالة، هو كنز لا يقدر بثمن لكل مؤمن. إنه ليس مجرد كتاب تاريخي أو أدبي، بل هو دليل إلهي للحياة، منارة تنير دروبنا، ومصدر للحكمة الإلهية في عالم مضطرب. قراءة الكتاب المقدس ودراسته ليست مجرد عادة، بل هي أساس لنمو روحي مستمر وعلاقة عميقة مع الله.</p>
-                    <p><strong>لماذا الكتاب المقدس هو دليلك؟</strong></p>
-                    <ul>
-                        <li><strong>كشف عن الله:</strong> من خلاله نتعرف على طبيعة الله، صفاته، محبته، عدله، وخطته لخلاص البشرية.</li>
-                        <li><strong>إرشاد للحياة:</strong> يقدم لنا مبادئ إلهية للعيش ببر وتقوى، وكيفية التعامل مع العلاقات، الأخلاق، والتحديات اليومية.</li>
-                        <li><strong>تغذية للروح:</strong> كلمة الله هي غذاء الروح الذي يقوينا ويثبتنا في الإيمان، ويجدد أذهاننا.</li>
-                        <li><strong>تمييز الحق من الباطل:</strong> في عالم مليء بالارتباك، الكتاب المقدس هو المرجع النهائي للحق، يساعدنا على تمييز ما هو صحيح من ما هو خطأ.</li>
-                        <li><strong>وعد بالبركة:</strong> "طوبى للرجل الذي يجد حكمة، وللرجل الذي ينال فهمًا." (أمثال 3: 13). قراءة كلمة الله والعمل بها يجلب البركة لحياتنا.</li>
-                    </ul>
-                    <p>اجعل الكتاب المقدس رفيقك اليومي. اقرأه بتأمل، ادرسه بعمق، ودع روحه القدوس يرشدك لتطبيق تعاليمه في كل جانب من جوانب حياتك.</p>
-                `
-            },
-            "christian-love": {
-                title: "المحبة المسيحية: أساس حياتنا",
-                content: `
-                    <p>في قلب الإيمان المسيحي تكمن وصية المحبة. ليست المحبة مجرد شعور، بل هي اختيار يومي، فعل تضحية، وطريقة حياة. المسيح نفسه جسّد المحبة الكاملة في حياته وموته، وأوصانا أن نحب بعضنا بعضًا كما أحبنا هو. (يوحنا 13: 34-35).</p>
-                    <p><strong>مظاهر المحبة المسيحية:</strong></p>
-                    <ul>
-                        <li><strong>المحبة لله:</strong> هي الوصية الأولى والعظمى، تعني إعطاء الله الأولوية المطلقة في حياتنا، وعبادته بقلب كامل.</li>
-                        <li><strong>محبة القريب:</b> "تحب قريبك كنفسك." (متى 22: 39). هذه المحبة تتجاوز حدود الألفة والقرابة لتشمل كل إنسان، حتى الأعداء.</li>
-                        <li><strong>الخدمة والتضحية:</strong> المحبة الحقيقية تتجلى في خدمة الآخرين وتلبية احتياجاتهم، حتى لو تطلب الأمر تضحية شخصية.</li>
-                        <li><strong>الغفران:</strong> المحبة تغفر وتنسى الإساءات، ولا تحمل ضغينة. "المحبة لا تسقط أبدًا." (1 كورنثوس 13: 8).</li>
-                        <li><strong>اللطف والصبر:</strong> "المحبة تتأنى وترفق. المحبة لا تحسد. المحبة لا تتفاخر، ولا تنتفخ." (1 كورنثوس 13: 4).</li>
-                    </ul>
-                    <p>دع المحبة المسيحية تكون القوة الدافعة لكل أفعالك وكلماتك. عندما نحب كما أحبنا المسيح، نصبح شهودًا حقيقيين لمملكته على الأرض ونعكس مجد الله في حياتنا.</p>
-                `
-            }
-        };
-
-        // Open Modal function
-        function openModal(articleId) {
-            var article = articles[articleId];
-            if (article) {
-                modalTitle.innerHTML = article.title;
-                modalBody.innerHTML = article.content;
-                modal.style.display = "block";
-                document.body.style.overflow = 'hidden'; // Prevent scrolling of body
-            }
-        }
-
-        // Close Modal function
-        function closeModal() {
-            modal.style.display = "none";
-            document.body.style.overflow = ''; // Restore scrolling of body
-        }
-
-        // Add event listeners to "Read More" buttons
-        document.querySelectorAll(".read-more").forEach(button => {
-            button.onclick = function() {
-                var articleId = this.dataset.articleId;
-                openModal(articleId);
-            }
-        });
-
-        // Close modal when clicking outside of it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
     </script>
 
 </body>

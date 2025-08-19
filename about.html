@@ -1,99 +1,99 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>المسيح والعدرا - عن الموقع</title>
-        <meta name="keywords" content="المسيح والعدرا، البابا كيرلس ، الشفاعةت ، الاجبيه ،الانجيل ،الااناجيل، الااناجيل المقدسه،امين،المار جرجس المار مينا ، مار بقطر شو، مار مينا، المسيح والعدرا، الكنيسه ،الملاك ميخائيل ،الملاك جبرائيل، المرلاك رافائيل، الملاك سوريال الملايكه ،امين">
-    <meta name="description" content="استكشف كلمات الحياة من الأناجيل المقدسة، اقرا الان كلمه الحياه التي وهبها لنا رب الارباب وملك الملوك شفاعه ام النور تكون معنا امين">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المسيح والعذراء - عن الموقع</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cairo+Play:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="favicon.jpg">
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      background-color: #f7f7f7;
-      padding-bottom: 70px;
-    }
-
-    .banner {
-      background: linear-gradient(to bottom, #c60036, #8b0025);
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-    }
-
-    .banner h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    .content {
-      background-color: white;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    .navbar {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: white;
-      border-top: 1px solid #ddd;
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-      box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
-    }
-
-    .navbar a {
-      text-decoration: none;
-      color: #c60036;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    .navbar a:hover {
-      color: #000;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="المسيح والعدرا، عن الموقع، رسالة الموقع، تدوينات مسيحية، ترانيم، معجزات، تأملات روحية، أخبار كنسية، الكنيسة القبطية، خدمة مسيحية، المسيحية">
+    <meta name="description" content="تعرف على موقع المسيح والعذراء، رسالتنا في مشاركة الترانيم والمعجزات والتأملات الروحية، وكيف يمكنك المساهمة في نشر كلمة الله.">
 </head>
 <body>
 
-  <div class="banner">
-    <h1>عن موقع المسيح والعدرا</h1>
-  </div>
+    <nav class="navbar">
+        <a href="index.html" class="logo">المسيح والعذراء</a>
+        <button class="menu-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
 
-  <div class="content">
-    <p>
-      <strong>مرحبًا بك في موقع <span style="color:#c60036">المسيح والعدرا</span>!</strong>
-    </p>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">×</a>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="articles.html">مقالات روحية</a></li>
+            <li><a href="tamagedalmasihwaladra.html">تسابيح وتمجيد</a></li>
+            <li><a href="church-history.html">تاريخ الكنيسة</a></li>
+            <li><a href="media.html">ميديا وعظات</a></li>
+            <li><a href="mircles.html">معجزات القديسين</a></li>
+            <li><a href="calender.html">التقويم الكنسي</a></li>
+            <li><a href="prayers.html">صلوات عامة</a></li>
+            <li><a href="index2.html">المدونه</a></li>
+            <li><a href="agpiyah.html">صلوات الأجبية</a></li>
+            <li><a href="about.html">عن الموقع</a></li>
+        </ul>
+    </div>
 
-    <p>هذا الموقع هو مساحة مفتوحة لجميع المسيحيين لمشاركة الترانيم، المعجزات، التأملات الروحية، والأخبار التي تمجّد اسم المسيح والسيدة العذراء.</p>
+    <header class="page-header">
+        <h1>عن موقع المسيح والعذراء</h1>
+        <p>نحن نسعى لنكون مصدر إلهام ومشاركة للمحتوى الروحي المسيحي الأصيل.</p>
+    </header>
 
-    <p><strong>كيف تستخدم الموقع؟</strong></p>
-    <ul>
-      <li>يمكنك قراءة آخر التدوينات من الصفحة الرئيسية.</li>
-      <li>إذا أردت إضافة تدوينة خاصة بك، انتقل إلى صفحة <a href="submit.html">"إضافة تدوينة"</a>.</li>
-      <li>املأ النموذج (العنوان، المحتوى، اسمك)، واضغط على "إنشاء التدوينة".</li>
-      <li>سيتم تحميل ملف HTML جاهز، ويمكنك إرساله لنا ليتم مراجعته ونشره.</li>
-    </ul>
+    <div class="container">
+        <div class="content-card">
+            <p>
+                <strong>مرحبًا بك في موقع <span style="color: var(--primary-color);">المسيح والعذراء</span>!</strong>
+            </p>
 
-    <p><strong>من يشرف على المحتوى؟</strong></p>
-    <p>هناك إدارة بسيطة تقوم بمراجعة التدوينات قبل نشرها، لضمان أن كل ما يُنشر يكون لائق ومحترم وغير مخالف للإيمان المسيحي.</p>
+            <p>هذا الموقع هو مساحة مفتوحة لجميع المسيحيين لمشاركة الترانيم، المعجزات، التأملات الروحية، والأخبار التي تمجّد اسم المسيح والسيدة العذراء. نؤمن بأن مشاركة كلمة الله وشهادات الإيمان تُثري حياتنا الروحية وتعمق علاقتنا بالرب.</p>
 
-    <p><strong>شكرًا لمساهمتك ومحبتك في نشر كلمة ربنا!</strong></p>
-  </div>
+            <p><strong>كيف يمكنك المساهمة في الموقع؟</strong></p>
+            <ul>
+                <li>يمكنك قراءة آخر التدوينات والمقالات الروحية من الصفحة الرئيسية.</li>
+                <li>إذا أردت إضافة تدوينة خاصة بك، انتقل إلى صفحة <a href="submit.html">"إضافة تدوينة"</a>.</li>
+                <li>املأ النموذج بالمعلومات المطلوبة (العنوان، المحتوى، اسمك إن أردت)، واضغط على "إنشاء التدوينة".</li>
+                <li>بعد ذلك، سيتم تحميل ملف HTML جاهز، ويمكنك إرساله لنا ليتم مراجعته ونشره على الموقع.</li>
+            </ul>
 
-  <div class="navbar">
-    <a href="index.html">الرئيسية</a>
-    <a href="submit.html">إضافة تدوينة</a>
-    <a href="about.html">عن الموقع</a>
-    <a href="support.html">دعم</a>
-  </div>
+            <p><strong>جودة ومصداقية المحتوى:</strong></p>
+            <p>لضمان أعلى مستويات الجودة والمصداقية، يقوم فريق إشراف متخصص بمراجعة جميع التدوينات والمساهمات قبل نشرها. نلتزم بأن يكون كل ما يُنشر لائقًا ومحترمًا ومتوافقًا تمامًا مع الإيمان المسيحي الأرثوذكسي.</p>
+
+            <p><strong>شكرًا لمساهمتك ومحبتك في نشر كلمة ربنا! نصلي أن يكون هذا الموقع بركة لك ولكثيرين.</strong></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>تابعنا على وسائل التواصل الاجتماعي:</p>
+        <div class="social-icons">
+            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>© 2025 موقع المسيح والعذراء. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            if (sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                document.body.style.overflow = '';
+            } else {
+                sidebar.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        document.querySelectorAll('.sidebar ul li a').forEach(item => {
+            item.addEventListener('click', event => {
+                toggleSidebar();
+            });
+        });
+    </script>
 
 </body>
 </html>

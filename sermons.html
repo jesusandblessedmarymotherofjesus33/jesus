@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>العظات - المسيح والعذراء</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <title>عظات روحية - المسيح والعذراء</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cairo+Play:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-       <meta name="keywords" content="المسيح والعدرا، البابا كيرلس ، الشفاعةت ، الاجبيه ،الانجيل ،الااناجيل، الااناجيل المقدسه،امين،المار جرجس المار مينا ، مار بقطر شو، مار مينا، المسيح والعدرا، الكنيسه ،الملاك ميخائيل ،الملاك جبرائيل، المرلاك رافائيل، الملاك سوريال الملايكه ،امين">
-    <meta name="description" content="استكشف كلمات الحياة من الأناجيل المقدسة، اقرا الان كلمه الحياه التي وهبها لنا رب الارباب وملك الملوك شفاعه ام النور تكون معنا امين">
     <link rel="icon" href="favicon.jpg">
-   <link rel="icon" href="favicon.jpg">
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="عظات روحية، عظات مسيحية، عظات صوتية، عظات مكتوبة، تأملات، أباء الكنيسة، عظات البابا شنودة، عظات البابا كيرلس، عظات أبونا داود لمعي، عظات أبونا تادرس يعقوب">
+    <meta name="description" content="مجموعة من العظات الروحية الملهمة لمجموعة من أباء الكنيسة القديسين والكهنة الأفاضل، لتقوية إيمانك وتغذية روحك.">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="logo">المسيح والعدرا</a>
+        <a href="index.html" class="logo">المسيح والعذراء</a>
         <button class="menu-toggle" onclick="toggleSidebar()">
             <i class="fas fa-bars"></i>
         </button>
     </nav>
 
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">×</a>
-         <ul>
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <ul>
             <li><a href="index.html">الرئيسية</a></li>
             <li><a href="articles.html">مقالات روحية</a></li>
             <li><a href="tamagedalmasihwaladra.html">تسابيح وتمجيد</a></li>
@@ -32,735 +34,34 @@
             <li><a href="mircles.html">معجزات القديسين</a></li>
             <li><a href="calender.html">التقويم الكنسي</a></li>
             <li><a href="prayers.html">صلوات عامة</a></li>
-                     <li><a href="index2.html">المدونه</a></li>
+            <li><a href="index2.html">المدونه</a></li>
             <li><a href="agpiyah.html">صلوات الأجبية</a></li>
-            </ul>
+        </ul>
     </div>
-<style>
-    :root {
-    --primary-color: #4A90E2; /* أزرق سماوي حيوي */
-    --secondary-color: #6c757d; /* رمادي دافئ */
-    --accent-color: #28a745; /* أخضر - للتميز */
-    --background-light: #f8f9fa; /* خلفية فاتحة جدًا */
-    --background-medium: #e9ecef; /* خلفية أغمق قليلاً */
-    --text-color: #343a40; /* لون نص داكن */
-    --heading-color: #212529; /* لون عناوين أغمق */
-    --card-background: #ffffff; /* خلفية البطاقات بيضاء */
-    --border-color: #dee2e6; /* لون حدود خفيف */
-    --hover-shadow: rgba(0, 0, 0, 0.15); /* ظل عند التحويم */
 
-    /* Sidebar specific colors */
-    --sidebar-bg: #212529; /* خلفية القائمة الجانبية (داكنة) */
-    --sidebar-text: #f8f9fa; /* لون النص في القائمة الجانبية */
-    --sidebar-hover: #4A90E2; /* لون عند التحويم على الروابط (نفس primary-color) */
-}
-
-body {
-    font-family: 'Cairo', sans-serif;
-    line-height: 1.7;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-color);
-    direction: rtl; /* اتجاه النص من اليمين لليسار */
-    text-align: right; /* محاذاة النص لليمين */
-    overflow-x: hidden; /* منع شريط التمرير الأفقي غير المرغوب فيه */
-}
-
-/* Navbar (شريط التنقل) */
-.navbar {
-    background-color: var(--heading-color);
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky; /* لجعل الشريط ثابتًا عند التمرير */
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-.navbar .logo {
-    color: white;
-    font-family: 'Amiri', serif; /* خط مميز للشعار */
-    font-size: 1.8em;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.navbar .logo:hover {
-    color: var(--primary-color);
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 1001; /* للتأكد من ظهوره فوق العناصر الأخرى */
-    transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
-    color: var(--primary-color);
-}
-
-/* Sidebar (القائمة الجانبية) */
-.sidebar {
-    height: 100%;
-    width: 0; /* مخفية بشكل افتراضي */
-    position: fixed;
-    z-index: 2000; /* قيمة Z-index أعلى لتغطية كل شيء */
-    top: 0;
-    right: 0; /* تظهر من اليمين */
-    background-color: var(--sidebar-bg);
-    overflow-x: hidden;
-    transition: 0.5s; /* سرعة الانتقال */
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.2); /* ظل لإظهار أنها طبقة منفصلة */
-}
-
-.sidebar.active {
-    width: 100%; /* تغطي الشاشة بالكامل عند التفعيل */
-}
-
-.sidebar .close-btn {
-    position: absolute;
-    top: 20px;
-    left: 25px; /* زر الإغلاق على اليسار */
-    font-size: 3em;
-    color: var(--sidebar-text);
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.sidebar .close-btn:hover {
-    color: var(--primary-color);
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    padding: 15px 0;
-    text-decoration: none;
-    font-size: 2.2em;
-    color: var(--sidebar-text);
-    display: block;
-    transition: 0.3s;
-    font-weight: 700;
-}
-
-.sidebar ul li a:hover {
-    color: var(--sidebar-hover);
-    background-color: rgba(255,255,255,0.1);
-}
-
-/* Page Header (عنوان الصفحة) - يستخدم في كل الصفحات */
-.page-header {
-    background-color: var(--background-medium);
-    padding: 60px 20px;
-    text-align: center;
-    border-bottom: 4px solid var(--primary-color); /* شريط أزرق مميز */
-    margin-bottom: 50px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.page-header h1 {
-    font-family: 'Amiri', serif;
-    font-size: 3.5em;
-    color: var(--heading-color);
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.page-header p {
-    font-size: 1.3em;
-    color: var(--secondary-color);
-    margin-top: 15px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* General Container (للمحتوى الرئيسي) */
-.container {
-    max-width: 1200px;
-    margin: 0 auto 80px auto; /* مسافة سفلية قبل الفوتر */
-    padding: 0 25px;
-}
-
-/* Feature Cards for Index Page (بطاقات الميزات للصفحة الرئيسية) */
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 35px;
-    margin-top: 40px;
-}
-
-.feature-card {
-    background-color: var(--card-background);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--border-color);
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 35px var(--hover-shadow);
-}
-
-.feature-card .icon-container {
-    width: 80px;
-    height: 80px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 20px auto;
-    font-size: 2.8em;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.feature-card h2 {
-    font-family: 'Amiri', serif;
-    font-size: 1.8em;
-    color: var(--heading-color);
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.feature-card p {
-    font-size: 1.05em;
-    color: var(--text-color);
-    margin-bottom: 20px;
-}
-
-.feature-card .btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 25px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: none;
-    cursor: pointer;
-}
-
-.feature-card .btn:hover {
-    background-color: #367ABE;
-    transform: translateY(-2px);
-}
-
-/* Articles Grid (شبكة المقالات) - يستخدم في صفحة المقالات */
-.articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.article-card {
-    background-color: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.article-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 10px 25px var(--hover-shadow);
-}
-
-.article-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.article-card .card-body {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.article-card h3 {
-    color: var(--heading-color);
-    font-size: 1.5em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
-.article-card p {
-    font-size: 0.95em;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-    flex-grow: 1; /* لتمديد الوصف ليملأ المساحة */
-}
-
-.article-card .read-more {
-    display: inline-flex; /* لضبط الأيقونة والنص */
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border: none;
-    align-self: flex-start; /* ليكون الزر في بداية السطر */
-}
-
-.article-card .read-more:hover {
-    background-color: #367ABE;
-}
-
-.article-card .read-more i {
-    margin-left: 8px; /* مسافة بين النص والأيقونة */
-    font-size: 0.9em;
-}
-
-/* Modal (Popup) Styles - للنافذة المنبثقة للمقالات */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3000; /* Sit on top of everything (أعلى من Sidebar) */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.7); /* Black w/ more opacity */
-    padding-top: 50px;
-    animation: fadeIn 0.3s ease-out forwards; /* تأثير الظهور */
-}
-
-.modal-content {
-    background-color: var(--card-background);
-    margin: 3% auto; /* Adjust margin for better centering */
-    padding: 30px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    position: relative;
-    animation: slideInFromTop 0.4s ease-out forwards; /* تأثير الانزلاق */
-}
-
-.close-button {
-    color: var(--secondary-color);
-    float: left; /* for RTL layout */
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-.close-button:hover,
-.close-button:focus {
-    color: var(--primary-color);
-}
-
-.modal-title {
-    font-family: 'Amiri', serif;
-    color: var(--heading-color);
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 2.2em;
-    text-align: right;
-    padding-left: 50px; /* لتجنب تداخل العنوان مع زر الإغلاق */
-}
-
-.modal-body {
-    max-height: 60vh; /* Limit height for scrolling */
-    overflow-y: auto; /* Enable scrolling for long content */
-    font-size: 1.05em;
-    color: var(--text-color);
-    line-height: 1.8;
-    padding-right: 15px; /* مسافة للتمرير */
-}
-
-/* Scrollbar styles for modal body */
-.modal-body::-webkit-scrollbar {
-    width: 8px;
-}
-.modal-body::-webkit-scrollbar-track {
-    background: var(--background-medium);
-    border-radius: 10px;
-}
-.modal-body::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 10px;
-}
-.modal-body::-webkit-scrollbar-thumb:hover {
-    background: #367ABE;
-}
-
-/* Animations (للمودال) */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideInFromTop {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-
-/* Media and Sermons Sections Styles - (أقسام الميديا والعظات) */
-.media-section {
-    margin-bottom: 60px;
-    padding: 30px; /* زيادة التباعد الداخلي للقسم */
-    background-color: var(--card-background);
-    border-radius: 12px; /* حواف أكثر دائرية */
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* ظل أقوى قليلاً */
-    border: 1px solid var(--border-color);
-}
-
-.media-section .section-title {
-    font-family: 'Amiri', serif;
-    font-size: 2.8em; /* حجم أكبر للعناوين */
-    color: var(--heading-color);
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 15px; /* مسافة أكبر للشريط السفلي */
-}
-
-.media-section .section-title::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 100px; /* شريط أطول */
-    height: 5px; /* شريط أسمك */
-    background-color: var(--primary-color);
-    border-radius: 3px;
-}
-
-.media-section .section-description {
-    font-size: 1.15em;
-    color: var(--secondary-color);
-    text-align: center;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* لبطاقات أكبر قليلاً */
-    gap: 30px;
-}
-
-.media-card {
-    background-color: var(--background-light);
-    border: 1px solid var(--border-color);
-    border-radius: 10px; /* حواف أكثر دائرية */
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.media-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.media-card iframe {
-    width: 100%;
-    height: 220px; /* ارتفاع متناسق مع صور المقالات */
-    border: none;
-    display: block;
-}
-
-.media-card img {
-    width: 100%;
-    height: 220px; /* ارتفاع متناسق */
-    object-fit: cover; /* لضمان تغطية الصورة للمساحة دون تشوه */
-    display: block;
-}
-
-.media-card .card-body {
-    padding: 18px; /* تباعد داخلي أكبر */
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.media-card h3 {
-    font-size: 1.4em; /* حجم أكبر للعناوين داخل البطاقات */
-    color: var(--heading-color);
-    margin-top: 0;
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
-.media-card p {
-    font-size: 0.95em;
-    color: var(--secondary-color);
-    margin-bottom: 0;
-}
-
-
-/* Footer */
-.footer {
-    background-color: var(--heading-color);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 60px;
-    font-size: 0.95em;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
-}
-
-.footer .social-icons {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-.footer .social-icons a {
-    color: white;
-    font-size: 1.6em;
-    margin: 0 12px;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.footer .social-icons a:hover {
-    color: var(--primary-color);
-    transform: translateY(-3px);
-}
-
-/* Responsive Design (التصميم المتجاوب) */
-@media (max-width: 992px) {
-    .page-header h1 {
-        font-size: 2.8em;
-    }
-    .page-header p {
-        font-size: 1.1em;
-    }
-    .feature-grid, .articles-grid, .media-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 25px;
-    }
-    .container {
-        padding: 0 20px;
-    }
-    .modal-content {
-        max-width: 700px;
-    }
-    .modal-title {
-        font-size: 2em;
-    }
-    .media-section .section-title {
-        font-size: 2.2em;
-    }
-    .media-card iframe, .media-card img {
-        height: 200px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar .logo {
-        font-size: 1.6em;
-    }
-    .menu-toggle {
-        font-size: 1.8em;
-    }
-    .page-header {
-        padding: 50px 15px;
-        margin-bottom: 40px;
-    }
-    .page-header h1 {
-        font-size: 2.2em;
-    }
-    .page-header p {
-        font-size: 1em;
-    }
-    .sidebar.active {
-        width: 100%; /* تغطي كامل الشاشة على الجوالات */
-    }
-    .sidebar ul li a {
-        font-size: 1.8em;
-    }
-    .feature-grid, .articles-grid, .media-grid {
-        grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة */
-        gap: 20px;
-    }
-    .feature-card {
-        padding: 25px;
-    }
-    .feature-card .icon-container {
-        width: 70px;
-        height: 70px;
-        font-size: 2.5em;
-    }
-    .modal-content {
-        width: 95%;
-        margin: 2% auto;
-        padding: 20px;
-    }
-    .modal-title {
-        font-size: 1.8em;
-        padding-left: 0;
-    }
-    .close-button {
-        font-size: 3em;
-        top: 10px;
-        left: 15px;
-    }
-    .modal-body {
-        font-size: 1em;
-    }
-    .media-section {
-        padding: 20px;
-        margin-bottom: 40px;
-    }
-    .media-section .section-title {
-        font-size: 2em;
-        padding-bottom: 10px;
-    }
-    .media-section .section-title::after {
-        width: 80px;
-        height: 4px;
-    }
-    .media-section .section-description {
-        font-size: 1em;
-        margin-bottom: 25px;
-    }
-    .media-card iframe, .media-card img {
-        height: 180px;
-    }
-}
-
-@media (max-width: 480px) {
-    .page-header {
-        padding: 40px 15px;
-    }
-    .page-header h1 {
-        font-size: 1.8em;
-    }
-    .page-header p {
-        font-size: 0.9em;
-    }
-    .sidebar .close-btn {
-        font-size: 2.5em;
-    }
-    .feature-card h2, .article-card h3, .media-card h3 {
-        font-size: 1.3em;
-    }
-    .feature-card p, .article-card p, .media-card p {
-        font-size: 0.9em;
-    }
-    .modal-body {
-        max-height: 50vh;
-    }
-    .media-card iframe, .media-card img {
-        height: 160px;
-    }
-}
-</style>
     <header class="page-header">
-        <h1>مكتبة عظات مُلهمة</h1>
-        <p>استمع وتأمل في عظات روحية عميقة لمجموعة من الآباء الكهنة والمعلمين الروحيين لتنمو في فهم كلمة الله.</p>
+        <h1>عظات روحية</h1>
+        <p>استمع وتأمل في كلمة الله من خلال عظات مختارة لأباء الكنيسة.</p>
     </header>
 
     <div class="container">
+        <div class="sermons-grid">
+            
+            <div class="sermon-card">
+                <img src="https://via.placeholder.com/400x220/8d8b9d/ffffff?text=عظة" alt="صورة عظة">
+                <h3>عظة عن الصلاة</h3>
+                <p>مقطع صوتي أو فيديو عن أهمية الصلاة في حياتنا الروحية.</p>
+                <a href="#" class="read-more">استمع الآن <i class="fas fa-arrow-left"></i></a>
+            </div>
 
-        <section class="media-section"> <h2 class="section-title">أحدث العظات</h2>
-            <p class="section-description">مجموعة مختارة من العظات التي تغذي الروح وتضيء الفكر.</p>
-            <div class="media-grid video-grid">
-                <div class="media-card">
-                    <iframe src="https://www.youtube.com/embed/P6e61V-H8a8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h3>عظة: كيف تقف أمام الله؟</h3>
-                        <p>عظة روحية لأبونا داود لمعي عن الاستعداد للوقوف أمام الله.</p>
-                    </div>
-                </div>
+            <div class="sermon-card">
+                <img src="https://via.placeholder.com/400x220/c7a9c7/ffffff?text=عظة+مكتوبة" alt="صورة عظة مكتوبة">
+                <h3>عظة مكتوبة: قوة الإيمان</h3>
+                <p>عظة مكتوبة للقراءة عن الإيمان وكيفية زيادته.</p>
+                <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
 
-                <div class="media-card">
-                    <iframe src="https://www.youtube.com/embed/D3cR3uE2m3I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h3>عظة: حياة التسليم</h3>
-                        <p>تأمل لقداسة البابا تواضروس الثاني حول أهمية التسليم لمشيئة الله.</p>
-                    </div>
-                </div>
-
-                <div class="media-card">
-                    <iframe src="https://www.youtube.com/embed/SjV-j2B2M6o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h3>عظة: الأبدية</h3>
-                        <p>عظة عميقة لأبونا تادرس يعقوب ملطي عن الحياة الأبدية ومفهومها.</p>
-                    </div>
-                </div>
-
-                <div class="media-card">
-                    <iframe src="https://www.youtube.com/embed/v9L1Mv14oI0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h3>عظة: المسيح في سفر النشيد</h3>
-                        <p>شرح رائع لأبونا أنطونيوس فكري عن الرموز المسيحية في سفر النشيد.</p>
-                    </div>
-                </div>
-                
-                <div class="media-card">
-                    <iframe src="https://www.youtube.com/embed/2_x1W7Q8c6I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h3>عظة: أهمية التوبة</h3>
-                        <p>عظة مؤثرة عن قوة التوبة ودورها في حياتنا الروحية.</p>
-                    </div>
-                </div>
-
-                <div class="media-card">
-                    <iframe src="https://www.youtube.com/embed/U3l0rI6aWlI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                       <h3>عظة: الاقتداء بالقديسين</h3>
-                        <p>تعلم من حياة القديسين وكيف يمكن أن تكون قدوة لنا اليوم.</p>
-                    </div>
-                </div>
-
-                </div>
-        </section>
-
+        </div>
     </div>
 
     <footer class="footer">
@@ -775,7 +76,6 @@ body {
     </footer>
 
     <script>
-        // Sidebar functions (وظائف القائمة الجانبية)
         function toggleSidebar() {
             var sidebar = document.getElementById("mySidebar");
             if (sidebar.classList.contains('active')) {
@@ -786,13 +86,11 @@ body {
                 document.body.style.overflow = 'hidden';
             }
         }
-
         document.querySelectorAll('.sidebar ul li a').forEach(item => {
             item.addEventListener('click', event => {
                 toggleSidebar();
             });
         });
     </script>
-
 </body>
 </html>

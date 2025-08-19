@@ -3,417 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المسيح والعدرا </title>
-    <link rel="icon" href="favicon.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-          <meta name="keywords" content="المسيح والعدرا، البابا كيرلس ، الشفاعةت ، الاجبيه ،الانجيل ،الااناجيل، الااناجيل المقدسه،امين،المار جرجس المار مينا ، مار بقطر شو، مار مينا، المسيح والعدرا، الكنيسه ،الملاك ميخائيل ،الملاك جبرائيل، المرلاك رافائيل، الملاك سوريال الملايكه ،امين">
-    <meta name="description" content="استكشف كلمات الحياة من الأناجيل المقدسة، اقرا الان كلمه الحياه التي وهبها لنا رب الارباب وملك الملوك شفاعه ام النور تكون معنا امين">
-    <link rel="icon" href="favicon.jpg">
+    <title>المسيح والعذراء - موقع روحي قبطي أرثوذكسي</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cairo+Play:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #007bff; /* أزرق سماوي - لون روحي */
-            --secondary-color: #6c757d; /* رمادي دافئ */
-            --accent-color: #28a745; /* أخضر - للتميز */
-            --background-light: #f8f9fa; /* خلفية فاتحة */
-            --background-dark: #e9ecef; /* خلفية أغمق قليلاً */
-            --text-color: #343a40; /* لون نص داكن */
-            --heading-color: #212529; /* لون عناوين أغمق */
-            --card-background: #ffffff;
-            --border-color: #dee2e6;
-            --hover-shadow: rgba(0, 0, 0, 0.15);
-
-            /* Sidebar specific colors */
-            --sidebar-bg: #212529; /* خلفية القائمة الجانبية (داكنة) */
-            --sidebar-text: #f8f9fa; /* لون النص في القائمة الجانبية */
-            --sidebar-hover: #0056b3; /* لون عند التحويم على الروابط */
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-light);
-            color: var(--text-color);
-            direction: rtl;
-            text-align: right;
-            overflow-x: hidden; /* لمنع ظهور شريط التمرير الأفقي عند فتح القائمة */
-        }
-
-        /* Hero Section - القسم العلوي البارز */
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x600/6a82fb/ffffff?text=صورة+المسيح+والعذراء'); /* استبدل هذه الصورة بصورة مناسبة */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-        }
-
-        .hero-section h1 {
-            font-family: 'Amiri', serif; /* خط كلاسيكي للعناوين الرئيسية */
-            font-size: 3.8em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-
-        .hero-section p {
-            font-size: 1.5em;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            line-height: 1.5;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-        }
-
-        .hero-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
-        }
-
-        .hero-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
-        }
-
-        /* General Container */
-        .container {
-            max-width: 1100px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-        /* Section Styling */
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5em;
-            color: var(--heading-color);
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        /* Features/Services Section */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .feature-card {
-            background-color: var(--card-background);
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 5px solid var(--primary-color);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 10px 25px var(--hover-shadow);
-        }
-
-        .feature-card .icon-container {
-            background-color: var(--primary-color);
-            color: white;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2.5em;
-            margin: 0 auto 20px auto;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
-        }
-
-        .feature-card h3 {
-            color: var(--heading-color);
-            font-size: 1.6em;
-            margin-bottom: 15px;
-        }
-
-        .feature-card p {
-            font-size: 1.0em;
-            color: var(--secondary-color);
-        }
-
-        /* About Section (اختياري) */
-        .about-section {
-            background-color: var(--background-dark);
-            padding: 60px 20px;
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        .about-section .about-content {
-            max-width: 800px;
-            margin: auto;
-            font-size: 1.1em;
-            color: var(--text-color);
-            line-height: 1.8;
-        }
-
-        .about-section .about-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Latest Content Section */
-        .latest-content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .content-card {
-            background-color: var(--card-background);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid var(--border-color);
-        }
-
-        .content-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px var(--hover-shadow);
-        }
-
-        .content-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .content-card .card-body {
-            padding: 20px;
-        }
-
-        .content-card .card-body h4 {
-            color: var(--heading-color);
-            font-size: 1.3em;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .content-card .card-body p {
-            font-size: 0.95em;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        .content-card .read-more-link {
-            display: inline-block;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .content-card .read-more-link:hover {
-            color: #0056b3;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--heading-color); /* لون داكن للتذييل */
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-            font-size: 0.95em;
-        }
-
-        .footer .social-icons a {
-            color: white;
-            font-size: 1.5em;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer .social-icons a:hover {
-            color: var(--primary-color);
-        }
-
-        /* --- Sidebar Specific Styles --- */
-        .navbar {
-            background-color: var(--heading-color);
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .navbar .logo {
-            color: white;
-            font-family: 'Amiri', serif;
-            font-size: 1.8em;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .menu-toggle {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2em;
-            cursor: pointer;
-            z-index: 1001; /* فوق أي شيء آخر */
-        }
-
-        .sidebar {
-            height: 100%;
-            width: 0; /* مخفية بشكل افتراضي */
-            position: fixed;
-            z-index: 1000;
-            top: 0;
-            right: 0; /* تظهر من اليمين */
-            background-color: var(--sidebar-bg);
-            overflow-x: hidden;
-            transition: 0.5s; /* سرعة الانتقال */
-            padding-top: 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .sidebar.active {
-            width: 100%; /* تغطي الشاشة بالكامل عند التفعيل */
-        }
-
-        .sidebar .close-btn {
-            position: absolute;
-            top: 20px;
-            left: 25px; /* زر الإغلاق على اليسار */
-            font-size: 3em;
-            color: var(--sidebar-text);
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            width: 100%;
-        }
-
-        .sidebar ul li {
-            margin: 20px 0;
-        }
-
-        .sidebar ul li a {
-            padding: 15px 0;
-            text-decoration: none;
-            font-size: 2.2em;
-            color: var(--sidebar-text);
-            display: block;
-            transition: 0.3s;
-            font-weight: 700;
-        }
-
-        .sidebar ul li a:hover {
-            color: var(--primary-color);
-            background-color: rgba(255,255,255,0.1);
-        }
-        /* --- End Sidebar Specific Styles --- */
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 80px 15px;
-            }
-            .hero-section h1 {
-                font-size: 2.8em;
-            }
-            .hero-section p {
-                font-size: 1.2em;
-            }
-            .section-title {
-                font-size: 2em;
-            }
-            .features-grid, .latest-content-grid {
-                grid-template-columns: 1fr;
-            }
-            .container {
-                margin: 30px auto;
-                padding: 0 15px;
-            }
-            .navbar .logo {
-                font-size: 1.5em;
-            }
-            .sidebar ul li a {
-                font-size: 1.8em; /* خط أصغر قليلاً على الجوال */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-section h1 {
-                font-size: 2.2em;
-            }
-            .hero-section p {
-                font-size: 1em;
-            }
-            .hero-button {
-                padding: 12px 25px;
-                font-size: 1em;
-            }
-            .feature-card {
-                padding: 20px;
-            }
-            .feature-card .icon-container {
-                width: 60px;
-                height: 60px;
-                font-size: 2em;
-            }
-            .sidebar .close-btn {
-                font-size: 2.5em;
-            }
-            .almasihwaldra{
-            border: #8f00ff5f 5px 5px 5px;
-                border-radius: 5px 5px 5px ;
-            }
-        }
-    </style>
+    <link rel="icon" href="/favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="favicon.jpg">
+    <meta name="keywords" content="المسيح، العذراء مريم، أرثوذكسي، قبطي، دين مسيحي، روحانيات، كتاب مقدس، صلوات، تسابيح، تاريخ كنيسة، معجزات، عظات، تأملات">
+    <meta name="description" content="موقع المسيح والعذراء هو وجهتك الروحية الشاملة للمحتوى القبطي الأرثوذكسي. اكتشف الإنجيل، المقالات الروحية، التسابيح، تاريخ الكنيسة، المعجزات، والمزيد.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="#" class="logo">المسيح والعدرا</a>
+        <a href="index.html" class="logo">المسيح والعذراء</a>
         <button class="menu-toggle" onclick="toggleSidebar()">
-            <i class="fas fa-bars"></i> </button>
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <div id="mySidebar" class="sidebar">
@@ -427,89 +34,75 @@
             <li><a href="mircles.html">معجزات القديسين</a></li>
             <li><a href="calender.html">التقويم الكنسي</a></li>
             <li><a href="prayers.html">صلوات عامة</a></li>
-                     <li><a href="index2.html">المدونه</a></li>
+            <li><a href="index2.html">المدونه</a></li>
             <li><a href="agpiyah.html">صلوات الأجبية</a></li>
-            </ul>
+        </ul>
     </div>
 
-    <section id="hero" class="hero-section">
-        <h1>موقع المسيح والعدرا</h1>
-        <p>مرحباً بكم في رحاب الإيمان والمحبة. مصدركم للتعاليم الروحية، التأملات، والمقالات الملهمة عن حياة الرب يسوع المسيح والسيدة القديسه الطاهره العذراء  مريم ام النور.</p>
-        <p class="almasihwaldra">يمكنك اضافه تدوينات في مدونه المسيح والعدرا <a href="index2.html">مدونه المسيح والعدرا</a> مدونه المسيح والعدرا</p>
-        <a href="#about-section" class="hero-button">اكتشف المزيد عنا</a>
-    </section>
-
-    <div id="features" class="container">
-        <h2 class="section-title">ماذا نقدم؟</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="icon-container">
-                    <i class="fas fa-book-open"></i> </div>
-                <h3>مقالات وبحوث</h3>
-                <p>مكتبة غنية بالمقالات الروحية واللاهوتية المتعمقة حول الكتاب المقدس، حياة القديسين، والعقيدة المسيحية.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon-container">
-                    <i class="fas fa-play-circle"></i> </div>
-                <h3>وسائط متعددة</h3>
-                <p>فيديوهات تعليمية، عظات مؤثرة، ترانيم روحية، وصور فنية تلامس الروح.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon-container">
-                    <i class="fas fa-star"></i> </div>
-                <h3>تأملات يومية</h3>
-                <p>تأملات قصيرة وملهمة تساعدك على بدء يومك بسلام وتجديد روحك.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon-container">
-                    <i class="fas fa-comments"></i> </div>
-                <h3>تواصل مجتمعي</h3>
-                <p>فرصة للمشاركة وطرح الأسئلة في بيئة داعمة ومحبة للأخوة المسيحية.</p>
-            </div>
-        </div>
-    </div>
-
-    <section id="about-section" class="about-section">
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="container">
-            <h2 class="section-title">رسالتنا</h2>
-            <div class="about-content">
-                <p>يهدف موقع "المسيح والعذراء" إلى أن يكون منارة روحية للمسيحيين حول العالم، ونافذة لكل من يرغب في التعرف بعمق على حياة وتعاليم ربنا يسوع المسيح، وقداسة والدة الإله مريم العذراء.</p>
-                <p>نحن نؤمن بأهمية نشر الكلمة المقدسة، وتعزيز الإيمان، وتقديم محتوى روحي غني يدعم النمو الروحي ويقوي العلاقة بالله.</p>
-            </div>
+            <h1>أهلاً بك في موقع المسيح والعذراء</h1>
+            <p>اكتشف طريق الإيمان والروحانية من خلال الكتاب المقدس، الصلوات، المقالات، والمزيد.</p>
+            <a href="#about" class="btn">اكتشف المزيد</a>
         </div>
-    </section>
+    </header>
 
-    <div id="latest-content" class="container">
-        <h2 class="section-title">أحدث ما لدينا</h2>
-        <div class="latest-content-grid">
-            <div class="content-card">
-                <img src="https://via.placeholder.com/400x200/8d8b9d/ffffff?text=صورة+مقال" alt="صورة مقال">
-                <div class="card-body">
-                    <h4>أهمية الصلاة في حياة المؤمن</h4>
-                    <p>مقال يستعرض بعمق أهمية الصلاة كركيزة أساسية في رحلة الإيمان المسيحي...</p>
-                    <a href="articles.html#article1" class="read-more-link">اقرأ المقال <i class="fas fa-arrow-left"></i></a>
+    <main>
+        
+        <section id="about" class="section-padding about-section">
+            <div class="container">
+                <h2 class="text-center">عن الموقع</h2>
+                <p class="text-center lead">
+                    نحن منصة روحية مكرسة لتقديم محتوى قبطي أرثوذكسي غني ومُلهِم.
+                </p>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-bible icon"></i>
+                        <h3>الكتاب المقدس</h3>
+                        <p>استكشف الأناجيل المقدسة وتعمق في كلمة الله التي تهدينا وتنير دروبنا.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-book-open icon"></i>
+                        <h3>مقالات روحية</h3>
+                        <p>اقرأ مقالات عن الإيمان، الحياة المسيحية، والمعجزات التي تقوي روحك.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-history icon"></i>
+                        <h3>تاريخ الكنيسة</h3>
+                        <p>تعرف على تاريخ الكنيسة العريق وقصص القديسين والشهداء العظام.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="content-card">
-                <img src="https://via.placeholder.com/400x200/c7a9c7/ffffff?text=صورة+فيديو" alt="صورة فيديو">
-                <div class="card-body">
-                    <h4>فيديو: العذراء مريم - رمز الطهارة</h4>
-                    <p>فيديو قصير يتناول حياة السيدة العذراء مريم ودورها العظيم في تاريخ الخلاص...</p>
-                    <a href="media.html#video1" class="read-more-link">شاهد الفيديو <i class="fas fa-arrow-left"></i></a>
+        <section id="featured" class="section-padding featured-section">
+            <div class="container">
+                <h2 class="text-center">أبرز المحتويات</h2>
+                <div class="featured-grid">
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/600x400/8d8b9d/ffffff?text=الصلوات" alt="صورة الصلوات">
+                        <h3>صلوات الأجبية</h3>
+                        <p>صلوات يومية لجميع فئات الأوقات، لتقديس حياتك والاقتراب من الله.</p>
+                        <a href="agpiyah.html" class="btn btn-outline">اقرأ الآن</a>
+                    </div>
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/600x400/c7a9c7/ffffff?text=معجزات" alt="صورة المعجزات">
+                        <h3>معجزات القديسين</h3>
+                        <p>قصص حقيقية لمعجزات القديسين التي تظهر قوة الإيمان وتدعم رجاءنا.</p>
+                        <a href="mircles.html" class="btn btn-outline">اكتشفها</a>
+                    </div>
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/600x400/a9c7e0/ffffff?text=الترانيم" alt="صورة الترانيم">
+                        <h3>تسابيح وتمجيد</h3>
+                        <p>مكتبة غنية من التسابيح والترانيم الروحية التي تمجد الله والعذراء.</p>
+                        <a href="tamagedalmasihwaladra.html" class="btn btn-outline">استمع الآن</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="content-card">
-                <img src="https://via.placeholder.com/400x200/a9c7e0/ffffff?text=صورة+تأمل" alt="صورة تأمل">
-                <div class="card-body">
-                    <h4>تأمل اليوم: "الخبز الحي النازل من السماء"</h4>
-                    <p>تأمل يومي في آية من الإنجيل وكيف يمكننا تطبيقها في حياتنا اليومية...</p>
-                    <a href="articles.html#meditation1" class="read-more-link">اقرأ التأمل <i class="fas fa-arrow-left"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <footer class="footer">
         <p>تابعنا على وسائل التواصل الاجتماعي:</p>
@@ -519,7 +112,7 @@
             <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
             <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
         </div>
-        <p>&copy; 2025 موقع المسيح والعدرا جميع الحقوق محفوظة.</p>
+        <p>© 2025 موقع المسيح والعذراء. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script>
@@ -527,30 +120,17 @@
             var sidebar = document.getElementById("mySidebar");
             if (sidebar.classList.contains('active')) {
                 sidebar.classList.remove('active');
-                // لإزالة التمرير من الجسم عند إغلاق القائمة
-                document.body.style.overflow = ''; 
+                document.body.style.overflow = '';
             } else {
                 sidebar.classList.add('active');
-                // لمنع التمرير في الخلفية عند فتح القائمة
-                document.body.style.overflow = 'hidden'; 
+                document.body.style.overflow = 'hidden';
             }
         }
-
-        // إغلاق القائمة عند النقر على رابط داخلها (اختياري)
         document.querySelectorAll('.sidebar ul li a').forEach(item => {
             item.addEventListener('click', event => {
-                toggleSidebar(); // إغلاق القائمة بعد النقر على الرابط
+                toggleSidebar();
             });
         });
     </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RRBE75X9BS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RRBE75X9BS');
-</script>
 </body>
 </html>

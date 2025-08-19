@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أم النور - السيدة العذراء - المسيح والعذراء</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cairo+Play:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.jpg">
+    <meta name="keywords" content="أم النور، السيدة العذراء مريم، والدة الإله، شفاعة، مسيح، قداسة، ترانيم للعذراء، كنيسة، إيمان">
+    <meta name="description" content="صفحة مخصصة للاحتفال بأم النور، السيدة العذراء مريم، وتقديم نبذة عن حياتها، فضائلها، وشفاعتها القوية.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">المسيح والعذراء</a>
+        <button class="menu-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="articles.html">مقالات روحية</a></li>
+            <li><a href="tamagedalmasihwaladra.html">تسابيح وتمجيد</a></li>
+            <li><a href="church-history.html">تاريخ الكنيسة</a></li>
+            <li><a href="media.html">ميديا وعظات</a></li>
+            <li><a href="mircles.html">معجزات القديسين</a></li>
+            <li><a href="calender.html">التقويم الكنسي</a></li>
+            <li><a href="prayers.html">صلوات عامة</a></li>
+            <li><a href="index2.html">المدونه</a></li>
+            <li><a href="agpiyah.html">صلوات الأجبية</a></li>
+        </ul>
+    </div>
+
+    <header class="page-header">
+        <h1>أم النور: السيدة العذراء مريم</h1>
+        <p>تأمل في حياة والدة الإله، شفيعتنا العظيمة أمام عرش النعمة.</p>
+    </header>
+
+    <div class="container">
+        <div class="content-card">
+            <h2>مَن هي أم النور؟</h2>
+            <p>
+                "أم النور" هو لقب محبب للسيدة العذراء مريم، والدة الإله. وهي التي حملت في أحشائها يسوع المسيح، نور العالم، وأعطته لنا كنعمة خلاص.
+            </p>
+            <h2>شفاعتها وحبها</h2>
+            <p>
+                تُعرف العذراء مريم بحنانها العظيم وشفاعتها القوية. يؤمن الأقباط الأرثوذكس بأنها تتدخل باستمرار في حياة أبنائها، وتظهر في العديد من المعجزات لتقدم العون والمساعدة لكل من يطلب شفاعتها.
+            </p>
+            <h2>ترانيم وتسابيح</h2>
+            <p>
+                أُلفَت العديد من الترانيم والتسابيح لتمجيد العذراء مريم، تعبيرًا عن حب الكنيسة وعشقها لها. هذه الترانيم تعد جزءًا أساسيًا من الطقس القبطي، وتُردد في الصلوات والاحتفالات الخاصة بها.
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>تابعنا على وسائل التواصل الاجتماعي:</p>
+        <div class="social-icons">
+            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>© 2025 موقع المسيح والعذراء. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            if (sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                document.body.style.overflow = '';
+            } else {
+                sidebar.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        document.querySelectorAll('.sidebar ul li a').forEach(item => {
+            item.addEventListener('click', event => {
+                toggleSidebar();
+            });
+        });
+    </script>
+</body>
+</html>

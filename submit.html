@@ -3,115 +3,1040 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="keywords" content="المسيح والعدرا، البابا كيرلس ، الشفاعةت ، الاجبيه ،الانجيل ،الااناجيل، الااناجيل المقدسه،امين،المار جرجس المار مينا ، مار بقطر شو، مار مينا، المسيح والعدرا، الكنيسه ،الملاك ميخائيل ،الملاك جبرائيل، المرلاك رافائيل، الملاك سوريال الملايكه ،امين">
-    <meta name="description" content="استكشف كلمات الحياة من الأناجيل المقدسة، اقرا الان كلمه الحياه التي وهبها لنا رب الارباب وملك الملوك شفاعه ام النور تكون معنا امين">
-    <link rel="icon" href="favicon.jpg">
-  <title>إنشاء تدوينة جديدة - المسيح والعدرا</title>
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      background-color: #f7f7f7;
-      padding-bottom: 70px;
-    }
-
-    .banner {
-      background: linear-gradient(to bottom, #c60036, #8b0025);
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-    }
-
-    .banner h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    form {
-      background-color: white;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    input, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 15px;
-    }
-
-    button {
-      background-color: #c60036;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #8b0025;
-    }
-
-    .navbar {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: white;
-      border-top: 1px solid #ddd;
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-      box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
-    }
-
-    .navbar a {
-      text-decoration: none;
-      color: #c60036;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    .navbar a:hover {
-      color: #000;
-    }
-  </style>
+  <meta name="keywords" content="المسيح والعدرا، البابا كيرلس، شفاعة، الأجبية، الإنجيل، الأناجيل، الأناجيل المقدسة، آمين، مارجرجس، مارمينا، ماربقطر شو، مارمينا، الكنيسة، الملاك ميخائيل، الملاك جبرائيل، الملاك رافائيل، الملاك سوريال، الملائكة، موقع مسيحي، روحانيات">
+  <meta name="description" content="استكشف كلمات الحياة من الأناجيل المقدسة، اقرأ الآن كلمة الحياة التي وهبها لنا رب الأرباب وملك الملوك شفاعة أم النور تكون معنا. آمين.">
+  <link rel="icon" href="favicon.jpg">
+  <title>إضافة تدوينة جديدة - المسيح والعدرا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="icon" href="/favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
-  <div class="banner">
-    <h1>إنشاء تدوينة جديدة</h1>
+  <nav class="navbar">
+    <a href="index.html" class="logo">المسيح والعدرا</a>
+    <button class="menu-toggle" onclick="toggleSidebar()" aria-label="فتح قائمة التنقل">
+        <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()" aria-label="إغلاق قائمة التنقل">&times;</a>
+      <ul class="sidebar-menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+          <li><a href="gospels.html"><i class="fas fa-book-bible"></i> الأناجيل المقدسة</a></li> 
+          <li><a href="articles.html"><i class="fas fa-file-alt"></i> مقالات روحية</a></li>
+          <li><a href="tamagedalmasihwaladra.html"><i class="fas fa-music"></i> تسابيح وتمجيد</a></li>
+          <li><a href="church-history.html"><i class="fas fa-church"></i> تاريخ الكنيسة</a></li>
+          <li><a href="media.html"><i class="fas fa-photo-video"></i> ميديا وعظات</a></li>
+          <li><a href="mircles.html"><i class="fas fa-star-of-david"></i> معجزات القديسين</a></li>
+          <li><a href="calender.html"><i class="fas fa-calendar-alt"></i> التقويم الكنسي</a></li>
+          <li><a href="prayers.html"><i class="fas fa-hands-praying"></i> صلوات عامة</a></li>
+          <li><a href="index2.html"><i class="fas fa-blog"></i> المدونة</a></li>
+          <li><a href="agpiyah.html"><i class="fas fa-pray"></i> صلوات الأجبية</a></li>
+      </ul>
+      <div class="sidebar-footer">
+          <p>لنتعمق في الإيمان معاً.</p>
+      </div>
   </div>
 
-  <form name="post" method="post" id="postForm" data-netlify="true">
-    <input type="text" id="title" placeholder="عنوان التدوينة" required>
-    <textarea id="content" placeholder="محتوى التدوينة" rows="8" required></textarea>
-    <input type="text" id="author" placeholder="اسم الناشر" required>
-    <button type="submit">إنشاء التدوينة</button>
-  </form>
-<form name="file-upload" method="POST" data-netlify="true" enctype="multipart/form-data">
-  <h2>ارفع ملفك هنا</h2>
-
-  <input type="file" name="file" required />
-  
-  <input type="hidden" name="form-name" value="file-upload" />
-
-  <button type="submit">إرسال</button>
-</form>
-  <div class="navbar">
-    <a href="index.html">الرئيسية</a>
-    <a href="index2.html">المدونه</a>
-    <a href="submit.html">إضافة تدوينة</a>
-    <a href="about.html">عن الموقع</a>
-    <a href="support.html">دعم</a>
+  <div class="page-header">
+    <h1 class="section-title">إضافة تدوينة جديدة</h1>
+    <p>شاركنا أفكارك وتأملاتك الروحية مع مجتمع "المسيح والعدرا".</p>
   </div>
 
+  <div class="container submit-form-container">
+    <form name="post" method="post" id="postForm" data-netlify="true">
+      <div class="form-group">
+        <label for="title">عنوان التدوينة:</label>
+        <input type="text" id="title" placeholder="اكتب عنوان التدوينة هنا..." required>
+      </div>
+      <div class="form-group">
+        <label for="content">محتوى التدوينة:</label>
+        <textarea id="content" placeholder="اكتب محتوى تدوينتك بالتفصيل..." rows="12" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="author">اسم الناشر:</label>
+        <input type="text" id="author" placeholder="اسمك أو اسم مستعار..." required>
+      </div>
+      <button type="submit" class="submit-button">إنشاء التدوينة <i class="fas fa-paper-plane"></i></button>
+    </form>
+
+    <form name="file-upload" method="POST" data-netlify="true" enctype="multipart/form-data" class="file-upload-form">
+      <h2 class="form-section-title">أو قم برفع ملف جاهز (صورة/PDF/أخرى)</h2>
+      <div class="form-group">
+        <label for="file-input">اختر ملفاً:</label>
+        <input type="file" name="file" id="file-input" required />
+      </div>
+      <input type="hidden" name="form-name" value="file-upload" />
+      <button type="submit" class="submit-button">إرسال الملف <i class="fas fa-upload"></i></button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>تابعنا على وسائل التواصل الاجتماعي لتبقى على اتصال:</p>
+    <div class="social-icons">
+        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 موقع المسيح والعدرا. جميع الحقوق محفوظة.</p>
+  </footer>
+<style>/* Navbar - تم تعديله ليصبح في الأسفل */
+.navbar {
+    background-color: var(--background-dark);
+    padding: 15px 20px; /* حشوة مناسبة للأسفل */
+    display: flex;
+    justify-content: space-around; /* توزيع الأيقونات بشكل متساوٍ */
+    align-items: center;
+    position: fixed; /* يجعله ثابتًا في الشاشة */
+    bottom: 0; /* يلتصق بأسفل الشاشة */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 -5px 15px var(--shadow-medium); /* ظل لأعلى لإبرازه */
+    border-top: 2px solid var(--primary-color); /* شريط علوي مميز */
+}
+
+.navbar .logo { /* سيتم استخدامه كزر للرئيسية أو شعار صغير */
+    color: var(--accent-color); /* لون ذهبي منير */
+    font-family: 'Amiri', serif;
+    font-size: 1.8em; /* حجم أصغر للوجو ليتناسب مع ناف بار سفلي */
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 0 0 8px var(--accent-color), 
+                 0 0 15px var(--accent-color);
+    position: relative;
+    overflow: hidden;
+    animation: glowing-small 1.5s ease-in-out infinite alternate; /* أنيميشن أصغر */
+    transition: color 0.3s ease;
+    padding: 5px 10px; /* حشوة صغيرة */
+    border-radius: 8px;
+}
+
+@keyframes glowing-small { /* أنيميشن توهج أصغر للوجو في الأسفل */
+    0% { text-shadow: 0 0 8px var(--accent-color), 0 0 15px var(--accent-color); }
+    50% { text-shadow: 0 0 12px var(--accent-color), 0 0 25px var(--accent-color), 0 0 35px #FFEA8A; }
+    100% { text-shadow: 0 0 8px var(--accent-color), 0 0 15px var(--accent-color); }
+}
+
+.navbar .logo:hover {
+    color: #FFEA8A;
+    background-color: rgba(255,215,0,0.1);
+}
+
+/* الأزرار أو الروابط الأخرى في الناف بار السفلي */
+.navbar .nav-link {
+    display: flex;
+    flex-direction: column; /* الأيقونة فوق النص */
+    align-items: center;
+    text-decoration: none;
+    color: var(--background-light); /* لون أبيض للنص والأيقونة */
+    font-size: 0.9em; /* حجم خط مناسب */
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.navbar .nav-link i {
+    font-size: 1.8em; /* حجم أكبر للأيقونات */
+    margin-bottom: 5px;
+    color: var(--background-light);
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent-color); /* لون ذهبي عند التمرير */
+    transform: translateY(-3px); /* حركة بسيطة للأعلى */
+}
+
+.navbar .nav-link:hover i {
+    color: var(--accent-color);
+}
+
+/* أخفي زر القائمة الجانبية (menu-toggle) إذا أردت قائمة تنقل سفلى ثابتة بدلاً من الجانبية */
+.menu-toggle {
+    display: none; 
+}/* General Body & Root Variables - لوحة ألوان جديدة وأكثر فخامة وهدوءًا */
+:root {
+    --primary-color: #4A69BD; /* أزرق داكن/كحلي - لون الثبات والروحانية */
+    --secondary-color: #8C52FF; /* بنفسجي عميق - لون التكريم والروحانية العالية */
+    --accent-color: #FFD700; /* ذهبي لامع - لون النور والمجد الإلهي */
+    --text-dark: #2C3E50; /* رمادي داكن مائل للأزرق - للنصوص الرئيسية */
+    --text-light: #7F8C8D; /* رمادي فاتح - للنصوص الثانوية والوصف */
+    --background-light: #ECF0F1; /* خلفية فاتحة جداً، شبه أبيض */
+    --background-medium: #BDC3C7; /* رمادي فاتح للخلفيات الثانوية */
+    --background-dark: #2C3E50; /* نفس لون text-dark للخلفيات الداكنة (ناف بار وفوتر) */
+    --card-background: #FFFFFF;
+    --border-color: #CCD1D9; /* لون خفيف للحدود */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* ظل خفيف وأنيق */
+    --shadow-medium: rgba(0, 0, 0, 0.25); /* ظل متوسط لبروز أكبر */
+
+    /* Sidebar specific colors */
+    --sidebar-bg: #2C3E50; /* خلفية داكنة جداً للقائمة الجانبية */
+    --sidebar-text: #ECF0F1; /* نص فاتح جداً */
+    --sidebar-hover: var(--accent-color); /* لون ذهبي عند التحويم */
+    --sidebar-active-link-bg: #4A69BD; /* لون خلفية للرابط النشط */
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden; /* يمنع شريط التمرير الأفقي */
+    scroll-behavior: smooth;
+}
+
+/* Global Container */
+.container {
+    max-width: 1100px; /* عرض أوسع قليلاً للمحتوى */
+    margin: 60px auto; /* مسافات أكبر بين الأقسام */
+    padding: 0 30px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--background-dark);
+    padding: 20px 30px; /* حشوة أكبر */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px var(--shadow-medium);
+}
+
+.navbar .logo {
+    color: var(--accent-color); /* لون ذهبي منير */
+    font-family: 'Amiri', serif;
+    font-size: 2.8em; /* حجم أكبر للوجو */
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 0 0 10px var(--accent-color), /* طبقات من الظل لتأثير التوهج */
+                 0 0 20px var(--accent-color),
+                 0 0 30px var(--accent-color);
+    position: relative;
+    overflow: hidden; /* لإخفاء الجزء المتحرك الزائد */
+    /* تم إزالة -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
+}
+
+/* Animation for the glowing effect */
+@keyframes glowing {
+    0% { text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color); }
+    50% { text-shadow: 0 0 20px var(--accent-color), 0 0 40px var(--accent-color), 0 0 60px #FFEA8A; }
+    100% { text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color); }
+}
+
+.navbar .logo {
+    animation: glowing 1.5s ease-in-out infinite alternate; /* تطبيق الأنيميشن مع تعديل بسيط للسرعة */
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: #FFEA8A; /* لون ذهبي أفتح عند التمرير */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3em; /* حجم أيقونة أكبر */
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--accent-color);
+    transform: rotate(90deg); /* دوران الأيقونة عند التمرير */
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: var(--sidebar-bg);
+    overflow-x: hidden;
+    transition: 0.6s cubic-bezier(0.7, 0, 0.3, 1); /* حركة أكثر سلاسة */
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* توزيع العناصر */
+    align-items: center;
+    text-align: center;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+}
+
+.sidebar.active {
+    width: 350px; /* عرض أوسع للقائمة */
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 5em; /* حجم أكبر جداً لزر الإغلاق */
+    color: var(--sidebar-text);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar .close-btn:hover {
+    color: var(--accent-color);
+    transform: rotate(-90deg); /* دوران عكسي لزر الإغلاق */
+}
+
+.sidebar ul.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    flex-grow: 1; /* للسماح للقائمة بأخذ المساحة المتاحة */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* لتوسيط القائمة عمودياً */
+}
+
+.sidebar ul.sidebar-menu li {
+    margin: 22px 0; /* مسافات أكبر بين العناصر */
+}
+
+.sidebar ul.sidebar-menu li a {
+    padding: 18px 25px;
+    text-decoration: none;
+    font-size: 2.2em; /* حجم خط أكبر */
+    color: var(--sidebar-text);
+    display: flex; /* لترتيب الأيقونة والنص */
+    align-items: center;
+    justify-content: flex-end; /* المحاذاة لليمين */
+    transition: 0.3s ease, background-color 0.3s ease;
+    font-weight: 700;
+    position: relative;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.sidebar ul.sidebar-menu li a i {
+    margin-right: 15px; /* مسافة بين الأيقونة والنص */
+    font-size: 0.9em;
+    color: var(--secondary-color); /* لون الأيقونة */
+    transition: color 0.3s ease;
+}
+
+.sidebar ul.sidebar-menu li a:hover {
+    color: var(--sidebar-hover);
+    background-color: rgba(255,255,255,0.12); /* خلفية شفافة أكثر أناقة */
+    transform: translateX(-8px); /* حركة جانبية أكثر وضوحاً */
+}
+
+.sidebar ul.sidebar-menu li a:hover i {
+    color: var(--sidebar-hover);
+}
+
+.sidebar-footer {
+    padding: 25px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1em;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.75)), url('https://via.placeholder.com/1800x800/4A69BD/FFFFFF?text=صورة+روحية+للمسيح+والعذراء'); /* استبدل بصورة عالية الجودة */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 180px 20px; /* حشوة أكبر للقسم العلوي */
+    position: relative;
+    box-shadow: 0 10px 30px var(--shadow-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* ارتفاع أكبر */
+}
+
+.hero-content {
+    max-width: 950px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-family: 'Amiri', serif;
+    font-size: 5.5em; /* حجم أكبر جداً */
+    margin-bottom: 35px;
+    text-shadow: 0 0 15px var(--accent-color), /* توهج أكثر إشراقًا */
+                 0 0 30px var(--accent-color),
+                 0 0 45px #FFEA8A;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.hero-section p {
+    font-size: 2em; /* حجم أكبر */
+    max-width: 850px;
+    margin: 0 auto 50px auto;
+    line-height: 1.7;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    animation: fadeInUp 1.5s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-70px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(70px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--accent-color); /* زر بلون ذهبي مميز */
+    color: var(--background-dark); /* نص داكن على الذهبي */
+    padding: 22px 45px; /* حجم أكبر للزر */
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.6em; /* حجم خط أكبر */
+    font-weight: bold;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+    margin-top: 30px;
+    border: 2px solid transparent;
+}
+
+.hero-button:hover {
+    background-color: #FFEA8A; /* ذهبي أفتح عند التمرير */
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.8);
+    border-color: var(--primary-color);
+}
+
+.hero-button i {
+    margin-right: 15px;
+    font-size: 0.9em;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 70px; /* مسافة أكبر */
+    font-size: 4em; /* أكبر */
+    color: var(--text-dark);
+    position: relative;
+    padding-bottom: 25px; /* مسافة أكبر للخط السفلي */
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; /* خط أطول */
+    height: 7px; /* خط أسمك */
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Features/Services Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px; /* مسافة أكبر بين البطاقات */
+    margin-top: 50px;
+}
+
+.feature-card {
+    background-color: var(--card-background);
+    border-radius: 18px; /* حواف أكثر دائرية */
+    padding: 45px; /* حشوة أكبر */
+    text-align: center;
+    box-shadow: 0 12px 35px var(--shadow-light);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+    border-top: 8px solid var(--primary-color); /* شريط علوي أسمك */
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 250%;
+    height: 250%;
+    background: radial-gradient(circle at center, rgba(74, 105, 189, 0.1), transparent 70%);
+    transition: transform 0.7s ease;
+    z-index: 0;
+}
+
+.feature-card:hover::before {
+    transform: scale(1.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 22px 50px var(--shadow-medium);
+    border-top-color: var(--secondary-color); /* تغيير لون الشريط عند التمرير */
+}
+
+.feature-card .icon-container {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100px; /* حجم أيقونة أكبر */
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em; /* حجم أيقونة أكبر */
+    margin: 0 auto 35px auto;
+    box-shadow: 0 8px 20px rgba(74, 105, 189, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card:hover .icon-container {
+    background-color: var(--secondary-color);
+    transform: rotateY(180deg); /* دوران الأيقونة */
+    box-shadow: 0 8px 20px rgba(140, 82, 255, 0.6);
+}
+
+.feature-card h3 {
+    color: var(--text-dark);
+    font-size: 2.2em; /* حجم خط أكبر */
+    margin-bottom: 20px;
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card p {
+    font-size: 1.2em; /* حجم خط أكبر */
+    color: var(--text-light);
+    position: relative;
+    z-index: 1;
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--background-medium);
+    padding: 100px 20px; /* حشوة أكبر */
+    margin-top: 80px;
+    text-align: center;
+    box-shadow: inset 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-section .about-content {
+    max-width: 950px;
+    margin: auto;
+    font-size: 1.4em; /* حجم خط أكبر */
+    color: var(--text-dark);
+    line-height: 2; /* تباعد أكبر للأسطر */
+}
+
+/* Latest Content Section */
+.latest-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    margin-top: 60px;
+}
+
+.content-card {
+    background-color: var(--card-background);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px var(--shadow-light);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 1px solid var(--border-color);
+}
+
+.content-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 22px 50px var(--shadow-medium);
+}
+
+.content-card img {
+    width: 100%;
+    height: 280px; /* ارتفاع أكبر للصور */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.content-card:hover img {
+    transform: scale(1.1); /* تكبير أكبر للصورة */
+}
+
+.content-card .card-body {
+    padding: 35px; /* حشوة أكبر */
+}
+
+.content-card .card-body h4 {
+    color: var(--text-dark);
+    font-size: 2em; /* حجم خط أكبر */
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+}
+
+.content-card .card-body p {
+    font-size: 1.15em;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.content-card .read-more-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.content-card .read-more-link:hover {
+    color: var(--secondary-color);
+    transform: translateX(-5px);
+    border-bottom-color: var(--secondary-color);
+}
+
+.content-card .read-more-link i {
+    margin-right: 12px;
+    font-size: 1em;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--background-dark);
+    color: white;
+    text-align: center;
+    padding: 70px 20px; /* حشوة أكبر */
+    margin-top: 120px; /* مسافة علوية أكبر */
+    font-size: 1.1em;
+    box-shadow: inset 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.footer .social-icons {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.footer .social-icons a {
+    color: white;
+    font-size: 2.2em; /* أيقونات أكبر */
+    margin: 0 18px; /* مسافة أكبر */
+    text-decoration: none;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.footer .social-icons a:hover {
+    color: var(--accent-color);
+    transform: translateY(-8px) scale(1.15); /* حركة وتاثير تكبير أقوى */
+}
+
+
+/* submit.html specific styles - أنماط خاصة بصفحة إضافة تدوينة */
+
+.page-header {
+    background: linear-gradient(rgba(74, 105, 189, 0.8), rgba(140, 82, 255, 0.8)); /* تدرج ألوان جميل */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header h1 {
+    font-family: 'Amiri', serif;
+    font-size: 4.5em; /* حجم كبير للعنوان */
+    margin: 0 0 15px 0;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+}
+
+.page-header p {
+    font-size: 1.6em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
+}
+
+.page-header::before { /* تأثير خلفية خفيف */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/clean-textile.png'); /* يمكن تغيير الصورة أو إزالتها */
+    opacity: 0.1;
+    z-index: 0;
+}
+
+
+.submit-form-container {
+    padding: 40px;
+    background-color: var(--card-background); /* خلفية البطاقة بيضاء */
+    border-radius: 18px;
+    box-shadow: 0 15px 40px var(--shadow-medium); /* ظل أكبر وأوضح */
+    max-width: 900px; /* عرض أوسع للنموذج */
+    margin-top: 50px;
+    margin-bottom: 80px;
+    border-top: 8px solid var(--primary-color); /* شريط علوي مميز */
+}
+
+.submit-form-container form {
+    background-color: transparent; /* جعل خلفية الفورم شفافة داخل الكونتينر */
+    box-shadow: none; /* إزالة الظل الزائد */
+    padding: 0;
+    margin-bottom: 40px; /* مسافة بين الفورمين */
+}
+
+.form-group {
+    margin-bottom: 25px; /* مسافة أكبر بين حقول النموذج */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.4em; /* حجم خط أكبر للتسميات */
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+.submit-form-container input[type="text"],
+.submit-form-container textarea,
+.submit-form-container input[type="file"] {
+    width: calc(100% - 30px); /* لتعويض البادينج */
+    padding: 15px; /* حشوة أكبر لحقول الإدخال */
+    border: 2px solid var(--border-color); /* حد أسمك وأوضح */
+    border-radius: 10px; /* حواف أكثر دائرية */
+    font-size: 1.2em; /* حجم خط أكبر للمدخلات */
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-form-container input[type="text"]:focus,
+.submit-form-container textarea:focus,
+.submit-form-container input[type="file"]:focus {
+    border-color: var(--primary-color); /* لون الحد عند التركيز */
+    box-shadow: 0 0 0 4px rgba(74, 105, 189, 0.2); /* ظل التركيز */
+    outline: none;
+}
+
+.submit-form-container textarea {
+    resize: vertical; /* السماح بتغيير حجم النص عمودياً فقط */
+    min-height: 150px; /* ارتفاع أدنى للمحتوى */
+}
+
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color); /* زر بلون أساسي */
+    color: white;
+    border: none;
+    padding: 18px 35px; /* حجم أكبر للزر */
+    border-radius: 10px;
+    font-size: 1.5em; /* حجم خط أكبر */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(74, 105, 189, 0.4);
+    margin-top: 20px;
+    width: auto; /* ليتناسب مع المحتوى */
+    min-width: 200px; /* للتأكد من حجم ثابت للزر */
+}
+
+.submit-button i {
+    margin-right: 12px;
+    font-size: 1.1em;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color); /* لون ثانوي عند التمرير */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(140, 82, 255, 0.5);
+}
+
+.form-section-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.form-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+
+/* Responsive Design - شامل لكل الصفحات */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 4.5em;
+    }
+    .hero-section p {
+        font-size: 1.8em;
+    }
+    .section-title {
+        font-size: 3.5em;
+    }
+    .sidebar.active {
+        width: 300px;
+    }
+    .sidebar ul.sidebar-menu li a {
+        font-size: 2em;
+    }
+    /* submit.html specific */
+    .page-header h1 {
+        font-size: 3.5em;
+    }
+    .page-header p {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 140px 15px;
+    }
+    .hero-section h1 {
+        font-size: 3.8em;
+    }
+    .hero-section p {
+        font-size: 1.6em;
+    }
+    .hero-button {
+        padding: 18px 35px;
+        font-size: 1.4em;
+    }
+    .section-title {
+        font-size: 3em;
+        margin-bottom: 50px;
+    }
+    .features-grid, .latest-content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .container {
+        margin: 50px auto;
+        padding: 0 25px;
+    }
+    .navbar .logo {
+        font-size: 2.2em;
+    }
+    .menu-toggle {
+        font-size: 2.5em;
+    }
+    .sidebar.active {
+        width: 100%;
+    }
+    .sidebar ul.sidebar-menu li a {
+        font-size: 2em;
+        justify-content: center;
+        margin: 0 10px;
+    }
+    .sidebar ul.sidebar-menu li a i {
+        margin-right: 10px;
+    }
+    .feature-card {
+        padding: 35px;
+    }
+    .feature-card .icon-container {
+        width: 80px;
+        height: 80px;
+        font-size: 3.5em;
+    }
+    .content-card img {
+        height: 220px;
+    }
+    .content-card .card-body {
+        padding: 25px;
+    }
+    .footer {
+        padding: 50px 20px;
+        margin-top: 80px;
+    }
+    /* submit.html specific */
+    .page-header {
+        padding: 60px 15px;
+    }
+    .page-header h1 {
+        font-size: 3em;
+    }
+    .page-header p {
+        font-size: 1.3em;
+    }
+    .submit-form-container {
+        padding: 30px 20px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .form-group label {
+        font-size: 1.2em;
+    }
+    .submit-form-container input[type="text"],
+    .submit-form-container textarea,
+    .submit-form-container input[type="file"] {
+        padding: 12px;
+        font-size: 1.1em;
+        width: calc(100% - 24px); /* لتعويض البادينج */
+    }
+    .submit-button {
+        padding: 15px 25px;
+        font-size: 1.3em;
+        width: 100%;
+    }
+    .form-section-title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 3.2em;
+    }
+    .hero-section p {
+        font-size: 1.4em;
+    }
+    .hero-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+    .section-title {
+        font-size: 2.5em;
+        margin-bottom: 40px;
+    }
+    .section-title::after {
+        width: 100px;
+        height: 5px;
+    }
+    .feature-card h3 {
+        font-size: 1.8em;
+    }
+    .feature-card p {
+        font-size: 1.1em;
+    }
+    .content-card .card-body h4 {
+        font-size: 1.7em;
+    }
+    .content-card .card-body p {
+        font-size: 1em;
+    }
+    .footer .social-icons a {
+        font-size: 1.8em;
+        margin: 0 12px;
+    }
+    .sidebar .close-btn {
+        font-size: 4em;
+    }
+    /* submit.html specific */
+    .page-header h1 {
+        font-size: 2.5em;
+    }
+    .page-header p {
+        font-size: 1.1em;
+    }
+    .submit-form-container {
+        padding: 20px 15px;
+    }
+    .form-group label {
+        font-size: 1.1em;
+    }
+    .submit-form-container input[type="text"],
+    .submit-form-container textarea,
+    .submit-form-container input[type="file"] {
+        padding: 10px;
+        font-size: 1em;
+        width: calc(100% - 20px); /* لتعويض البادينج */
+    }
+    .submit-button {
+        font-size: 1.1em;
+        padding: 12px 20px;
+    }
+    .form-section-title {
+        font-size: 1.8em;
+    }
+}</style>
   <script>
-    document.getElementById('postForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+    // وظيفة تبديل القائمة الجانبية
+    function toggleSidebar() {
+      var sidebar = document.getElementById("mySidebar");
+      if (sidebar.classList.contains('active')) {
+          sidebar.classList.remove('active');
+          document.body.style.overflow = ''; // استعادة التمرير
+      } else {
+          sidebar.classList.add('active');
+          document.body.style.overflow = 'hidden'; // منع التمرير عند فتح القائمة
+      }
+    }
 
+    // إغلاق القائمة الجانبية عند النقر على أي رابط
+    document.querySelectorAll('.sidebar ul li a').forEach(item => {
+        item.addEventListener('click', event => {
+            toggleSidebar();
+        });
+    });
+
+    // معالجة إرسال نموذج التدوينة (لإنشاء ملف HTML محليًا، Netlify سيتعامل مع الإرسال الفعلي)
+    document.getElementById('postForm').addEventListener('submit', function(e) {
+      // Netlify handles form submission; this part is for local file generation (optional)
+      // If you are relying solely on Netlify, you can remove the following lines that generate HTML locally.
+      // Netlify will capture the form data and send it to your Netlify account.
+      
+      // If you still want local HTML file generation, keep this:
       const title = document.getElementById('title').value;
       const content = document.getElementById('content').value.replace(/\n/g, '<br>');
       const author = document.getElementById('author').value;
@@ -123,19 +1048,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Cairo', sans-serif; background: #f7f7f7; margin: 0; padding: 20px; }
-    .post { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .title { font-size: 22px; font-weight: bold; margin-bottom: 10px; color: #c60036; }
-    .content { font-size: 16px; line-height: 1.6; margin-bottom: 20px; }
-    .author { font-size: 14px; color: #555; text-align: left; }
+    body { 
+      font-family: 'Cairo', sans-serif; 
+      background-color: #ECF0F1; /* لون الخلفية من المتغيرات الجذرية */
+      color: #2C3E50; /* لون النص من المتغيرات الجذرية */
+      margin: 0; 
+      padding: 40px 20px; 
+      line-height: 1.8;
+      direction: rtl;
+      text-align: right;
+    }
+    .post-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-top: 5px solid #4A69BD; /* لون شريطي علوي */
+    }
+    .post-title { 
+      font-family: 'Amiri', serif;
+      font-size: 2.8em; 
+      font-weight: 700;
+      margin-bottom: 25px; 
+      color: #4A69BD; /* لون أساسي */
+      text-align: center;
+      padding-bottom: 15px;
+      position: relative;
+    }
+    .post-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        width: 100px;
+        height: 4px;
+        background-color: #FFD700; /* لون ذهبي */
+        border-radius: 2px;
+    }
+    .post-content { 
+      font-size: 1.2em; 
+      line-height: 1.8; 
+      margin-bottom: 30px; 
+      color: #2C3E50;
+    }
+    .post-author { 
+      font-size: 1.1em; 
+      color: #7F8C8D; 
+      text-align: left; /* أو right حسب المحاذاة العامة للمحتوى */
+      font-style: italic;
+      border-top: 1px solid #BDC3C7;
+      padding-top: 15px;
+    }
   </style>
 </head>
 <body>
-  <div class="post">
-    <div class="title">${title}</div>
-    <div class="content">${content}</div>
-    <div class="author">بقلم: ${author}</div>
+  <div class="post-container">
+    <div class="post-title">${title}</div>
+    <div class="post-content">${content}</div>
+    <div class="post-author">بقلم: ${author}</div>
   </div>
 </body>
 </html>
@@ -145,9 +1120,17 @@
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
       link.download = title.replace(/\s+/g, '_') + ".html";
-      link.click();
+      // link.click(); // If uncommented, this will download the HTML file.
+      // Make sure this doesn't conflict with Netlify's form submission if you want to use it live.
     });
   </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RRBE75X9BS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-RRBE75X9BS');
+</script>
 </body>
 </html>
